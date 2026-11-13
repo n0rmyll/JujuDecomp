@@ -41,7 +41,7 @@ def triangles(primitive, count):
     raise ValueError(f'Unsupported primitive {primitive:#x}')
 
 
-def decode_mesh(data):
+def decode_mesh(data, capture_skin=False):
     if len(data) < 0x94 or data[0] != 19:
         raise ValueError('Unsupported model subtype (only 19 is decoded)')
     arrays = {0: (word(data, 0x50), word(data, 0x54), 12),
@@ -53,6 +53,7 @@ def decode_mesh(data):
             raise ValueError('Invalid vertex array range')
     vertices, primitives, lookup = [], [], {}
     registers = {}
+    palette = {}
     node = word(data, 0x78)
     seen = set()
     if not node:
@@ -84,7 +85,12 @@ def decode_mesh(data):
                 continue
             if command in (0x20, 0x28, 0x30, 0x38, 0x61):
                 # Matrix index loads / BP state don't change the source attribute indices.
-                unpack(data, 'I', cursor)
+                value = unpack(data, 'I', cursor)[0]
+                if command == 0x20:
+                    address = value & 0xfff
+                    if address%12:
+                        raise ValueError('Unaligned position matrix palette load')
+                    palette[address//12] = value >> 16
                 cursor += 4
                 continue
             if command & 0x80:
@@ -119,9 +125,17 @@ def decode_mesh(data):
                         if attr not in arrays or index >= arrays[attr][0]:
                             raise ValueError(f'Attribute {attr} index {index} outside source array')
                         attrs[attr] = index
-                    if any(matrix):
+                    if any(matrix) and not capture_skin:
                         raise ValueError('Nonzero matrix index requires skeletal transforms')
-                    key = tuple(sorted(attrs.items()))
+                    joint = None
+                    if capture_skin:
+                        matrix_index = matrix[0] if low & 1 else registers.get(0x30, 0) & 63
+                        if matrix_index%3 or matrix_index//3 not in palette:
+                            raise ValueError('Unresolved position matrix palette slot')
+                        joint = palette[matrix_index//3]
+                        if any(matrix[1:]):
+                            raise ValueError('Texture matrix indices are not yet supported')
+                    key = (tuple(sorted(attrs.items())), joint)
                     if key not in lookup:
                         position = unpack(data, '3f', arrays[0][1]+attrs[0]*12)
                         normal = unpack(data, '3b', arrays[1][1]+attrs[1]*3) if 1 in attrs else None
@@ -132,7 +146,7 @@ def decode_mesh(data):
                         if not all(math.isfinite(v) for v in position+(coords or ())):
                             raise ValueError('Non-finite vertex data')
                         lookup[key] = len(vertices)
-                        vertices.append(dict(position=position, normal=normal, uv=coords))
+                        vertices.append(dict(position=position, normal=normal, uv=coords, joint=joint))
                     corners.append(lookup[key])
                 for a, b, c in triangles(command & 0xf8, count):
                     tri = (corners[a], corners[b], corners[c])
@@ -181,8 +195,9 @@ def write_glb(mesh, target, textures=None):
     attrs = dict(POSITION=accessor([v['position'] for v in vertices], 3, 5126))
     if all(v['normal'] is not None for v in vertices):
         attrs['NORMAL'] = accessor([v['normal'] for v in vertices], 3, 5126)
-    if all(v['uv'] is not None for v in vertices):
-        attrs['TEXCOORD_0'] = accessor([v['uv'] for v in vertices], 2, 5126)
+    if any(v['uv'] is not None for v in vertices):
+        # Untextured primitives can share this buffer with textured primitives.
+        attrs['TEXCOORD_0'] = accessor([v['uv'] or (0., 0.) for v in vertices], 2, 5126)
     for primitive in mesh['primitives']:
         material = dict(name=f'source_material_{primitive["material_index"]}', doubleSided=True,
                         pbrMetallicRoughness=dict(metallicFactor=0, roughnessFactor=1))

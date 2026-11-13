@@ -1,0 +1,79 @@
+{
+  "function": "fn_800E72BC",
+  "source": "analysis/split/asm/auto_03_800E5FA0_text.s",
+  "start": "0x800E72BC",
+  "instruction_count": 102,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x800E72F4",
+      "target": "fn_801EF9F8"
+    },
+    {
+      "site": "0x800E72FC",
+      "target": "fn_801B48C4"
+    },
+    {
+      "site": "0x800E7320",
+      "target": "fn_80295974"
+    },
+    {
+      "site": "0x800E733C",
+      "target": "fn_802062A8"
+    },
+    {
+      "site": "0x800E7358",
+      "target": "fn_8018B65C"
+    },
+    {
+      "site": "0x800E7374",
+      "target": "fn_8018B8D0"
+    },
+    {
+      "site": "0x800E737C",
+      "target": "fn_801BA4CC"
+    },
+    {
+      "site": "0x800E7384",
+      "target": "fn_801EBB18"
+    },
+    {
+      "site": "0x800E7394",
+      "target": "fn_801EF4A0"
+    },
+    {
+      "site": "0x800E73A8",
+      "target": "fn_801C399C"
+    },
+    {
+      "site": "0x800E73BC",
+      "target": "fn_801DB5E4"
+    },
+    {
+      "site": "0x800E73CC",
+      "target": "fn_80205DF0"
+    },
+    {
+      "site": "0x800E73F8",
+      "target": "fn_80111A28"
+    },
+    {
+      "site": "0x800E7408",
+      "target": "fn_8010F4F0"
+    },
+    {
+      "site": "0x800E7418",
+      "target": "fn_8010F4F0"
+    },
+    {
+      "site": "0x800E7428",
+      "target": "fn_8010F4F0"
+    },
+    {
+      "site": "0x800E7430",
+      "target": "fn_80111FF0"
+    }
+  ],
+  "strings": []
+}

@@ -1,0 +1,10 @@
+{
+  "function": "fn_801C37A0",
+  "source": "analysis/split/asm/auto_03_801C2D70_text.s",
+  "start": "0x801C37A0",
+  "instruction_count": 127,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [],
+  "strings": []
+}

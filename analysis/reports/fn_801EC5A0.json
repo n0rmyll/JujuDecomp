@@ -1,0 +1,27 @@
+{
+  "function": "fn_801EC5A0",
+  "source": "analysis/split/asm/auto_03_801E4890_text.s",
+  "start": "0x801EC5A0",
+  "instruction_count": 44,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801EC5B0",
+      "target": "_savegpr_27"
+    },
+    {
+      "site": "0x801EC5CC",
+      "target": "fn_801EBEB4"
+    },
+    {
+      "site": "0x801EC630",
+      "target": "fn_801EC504"
+    },
+    {
+      "site": "0x801EC63C",
+      "target": "_restgpr_27"
+    }
+  ],
+  "strings": []
+}

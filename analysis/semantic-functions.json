@@ -2,8 +2,8 @@
   "revision": "GJUE78 rev 0",
   "dol_sha256": "49faf28a7d2e25422c145754ef41b0c8a8dfcd83e688db1c39ecf21f6e34b706",
   "scope": "Complete routine semantics; callback callees and original ABI are separate; not a binary matching manifest",
-  "complete_functions": 100,
-  "original_bytes": 4932,
+  "complete_functions": 200,
+  "original_bytes": 8820,
   "routines": [
     {
       "address": "0x8020F9C8",
@@ -703,6 +703,706 @@
       "original_bytes": 100,
       "source": "src/recovered/leaf_helpers.c",
       "symbol": "tak_leaf_801AE384",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801A1798",
+      "original_bytes": 40,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801A1798",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801A1C30",
+      "original_bytes": 32,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801A1C30",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801A1C50",
+      "original_bytes": 32,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801A1C50",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801A1C70",
+      "original_bytes": 24,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801A1C70",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801A2210",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801A2210",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801A2220",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801A2220",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801AE290",
+      "original_bytes": 24,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801AE290",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B0170",
+      "original_bytes": 32,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B0170",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B3660",
+      "original_bytes": 40,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B3660",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B5620",
+      "original_bytes": 20,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B5620",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B6A14",
+      "original_bytes": 20,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B6A14",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B6A28",
+      "original_bytes": 20,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B6A28",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B6A3C",
+      "original_bytes": 32,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B6A3C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B6A5C",
+      "original_bytes": 32,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B6A5C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B6A7C",
+      "original_bytes": 96,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B6A7C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B6ADC",
+      "original_bytes": 84,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B6ADC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B72EC",
+      "original_bytes": 20,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B72EC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B7300",
+      "original_bytes": 40,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B7300",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B7328",
+      "original_bytes": 40,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B7328",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B7350",
+      "original_bytes": 40,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B7350",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B8778",
+      "original_bytes": 24,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B8778",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B8790",
+      "original_bytes": 24,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B8790",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B8A9C",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B8A9C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B8B30",
+      "original_bytes": 28,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B8B30",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B8C64",
+      "original_bytes": 28,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B8C64",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B976C",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B976C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B977C",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B977C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B99C8",
+      "original_bytes": 52,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B99C8",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B99FC",
+      "original_bytes": 52,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801B99FC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801BA5E0",
+      "original_bytes": 72,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801BA5E0",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801BB8E8",
+      "original_bytes": 40,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801BB8E8",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801BCF90",
+      "original_bytes": 20,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801BCF90",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801BD24C",
+      "original_bytes": 44,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801BD24C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801BEFE0",
+      "original_bytes": 20,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801BEFE0",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801C235C",
+      "original_bytes": 52,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801C235C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801C275C",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801C275C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801C3284",
+      "original_bytes": 48,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801C3284",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801C3A88",
+      "original_bytes": 52,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801C3A88",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801C3ABC",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801C3ABC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801C3ACC",
+      "original_bytes": 96,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801C3ACC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801C3B54",
+      "original_bytes": 20,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801C3B54",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801C3B68",
+      "original_bytes": 72,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801C3B68",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801C3BB8",
+      "original_bytes": 40,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801C3BB8",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801C3EEC",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801C3EEC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801C4FAC",
+      "original_bytes": 60,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801C4FAC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801C5378",
+      "original_bytes": 96,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801C5378",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801C63A4",
+      "original_bytes": 32,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801C63A4",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801C8BC4",
+      "original_bytes": 60,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801C8BC4",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801CACD4",
+      "original_bytes": 92,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801CACD4",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801CB534",
+      "original_bytes": 28,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801CB534",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801CB550",
+      "original_bytes": 36,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801CB550",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801CB7C4",
+      "original_bytes": 24,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801CB7C4",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801CBA5C",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801CBA5C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801CBB60",
+      "original_bytes": 20,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801CBB60",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801CC83C",
+      "original_bytes": 72,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801CC83C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801CD000",
+      "original_bytes": 40,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801CD000",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801CD280",
+      "original_bytes": 36,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801CD280",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801CDB38",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801CDB38",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801CE658",
+      "original_bytes": 72,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801CE658",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801CE720",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801CE720",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801CFEE8",
+      "original_bytes": 60,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801CFEE8",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801CFF24",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801CFF24",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801CFF34",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801CFF34",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801D8C44",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801D8C44",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801D8C60",
+      "original_bytes": 36,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801D8C60",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801D8C84",
+      "original_bytes": 36,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801D8C84",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801D8DE4",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801D8DE4",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801D8F30",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801D8F30",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801D90A4",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801D90A4",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801D9224",
+      "original_bytes": 20,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801D9224",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801D928C",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801D928C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801D929C",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801D929C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801DA394",
+      "original_bytes": 72,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801DA394",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801DA3DC",
+      "original_bytes": 52,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801DA3DC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801DA410",
+      "original_bytes": 36,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801DA410",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801DB0EC",
+      "original_bytes": 40,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801DB0EC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801DB114",
+      "original_bytes": 40,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801DB114",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801DB5B8",
+      "original_bytes": 44,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801DB5B8",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801DB750",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801DB750",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801DB8A0",
+      "original_bytes": 20,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801DB8A0",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801DCD90",
+      "original_bytes": 20,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801DCD90",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801DCDA4",
+      "original_bytes": 20,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801DCDA4",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801DCE50",
+      "original_bytes": 60,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801DCE50",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801DEC18",
+      "original_bytes": 36,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801DEC18",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801DF2C0",
+      "original_bytes": 60,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801DF2C0",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801DF2FC",
+      "original_bytes": 60,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801DF2FC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801E0C2C",
+      "original_bytes": 48,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801E0C2C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801E1CE8",
+      "original_bytes": 16,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801E1CE8",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801E4E08",
+      "original_bytes": 36,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801E4E08",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801E5530",
+      "original_bytes": 92,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801E5530",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801E5878",
+      "original_bytes": 72,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801E5878",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801E58C0",
+      "original_bytes": 80,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801E58C0",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801E5910",
+      "original_bytes": 28,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801E5910",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801E6228",
+      "original_bytes": 28,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801E6228",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801E6244",
+      "original_bytes": 28,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801E6244",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801E6260",
+      "original_bytes": 40,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801E6260",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801E6288",
+      "original_bytes": 40,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801E6288",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801E6688",
+      "original_bytes": 68,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801E6688",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801E66CC",
+      "original_bytes": 68,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801E66CC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801E6710",
+      "original_bytes": 92,
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "symbol": "tak_resource_leaf_801E6710",
       "status": "complete-semantic-model"
     }
   ]

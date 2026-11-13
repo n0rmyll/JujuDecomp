@@ -1,0 +1,34 @@
+{
+  "function": "fn_801C4680",
+  "source": "analysis/split/asm/auto_03_801C2D70_text.s",
+  "start": "0x801C4680",
+  "instruction_count": 57,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801C46CC",
+      "target": "fn_80205DF0"
+    },
+    {
+      "site": "0x801C46F4",
+      "target": "fn_801B86F0"
+    },
+    {
+      "site": "0x801C4718",
+      "target": "fn_801C4FE8"
+    },
+    {
+      "site": "0x801C4720",
+      "target": "fn_801C5378"
+    }
+  ],
+  "strings": [
+    {
+      "site": "0x801C46E4",
+      "address": "0x80331F60",
+      "text": "1000",
+      "basis": "direct operand; may be a load rather than an address argument"
+    }
+  ]
+}

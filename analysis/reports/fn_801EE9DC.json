@@ -1,0 +1,23 @@
+{
+  "function": "fn_801EE9DC",
+  "source": "analysis/split/asm/auto_03_801EC688_text.s",
+  "start": "0x801EE9DC",
+  "instruction_count": 102,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801EE9F4",
+      "target": "fn_801EEBBC"
+    },
+    {
+      "site": "0x801EEA00",
+      "target": "fn_801EEC78"
+    },
+    {
+      "site": "0x801EEA64",
+      "target": "fn_801EEC78"
+    }
+  ],
+  "strings": []
+}

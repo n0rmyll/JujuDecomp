@@ -1,0 +1,10 @@
+{
+  "function": "fn_8025DE3C",
+  "source": "analysis/split/asm/auto_03_80242810_text.s",
+  "start": "0x8025DE3C",
+  "instruction_count": 183,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [],
+  "strings": []
+}

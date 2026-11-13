@@ -6,24 +6,51 @@ button,input{padding:8px;margin:6px}#status{min-height:24px}li{padding:5px}li[hi
 </style>
 <h1>Tak model exports</h1>
 <p>Drag to rotate; scroll to zoom. A sample mesh is loaded by default. Choose any exported GLB to preview it locally.
-GLBs can also be imported into Blender. Preview uses simple shading; baked vertex lighting, animation, and layered materials are omitted.</p>
+GLBs can also be imported into Blender. Preview uses simple shading; baked vertex lighting and layered materials are omitted.</p>
 <input type="file" id="file" accept=".glb"><label><input type="checkbox" id="wire">Wireframe</label>
+<div id="motion" hidden><select id="clip" aria-label="Animation clip"></select><button id="play">Play</button>
+<input id="time" type="range" min="0" max="1" step="0.001" value="0" aria-label="Animation time"></div>
 <div id="status"></div><canvas id="view"></canvas>
 <h2>Exported meshes</h2><input id="search" placeholder="Filter by archive or model name" aria-label="Filter meshes">
 <ul>__EXPORT_LINKS__</ul>
 <script>
 const canvas=document.querySelector('canvas'),ctx=canvas.getContext('2d'),status=document.querySelector('#status');
 let parts=[],center=[0,0,0],radius=1,yaw=.55,pitch=.25,zoom=1,loadedName='';
+let skeleton=null,clips=[],playing=false,lastFrame=0;
+const identity=()=>[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];
+function mul(a,b){const out=[];for(let c=0;c<4;c++)for(let r=0;r<4;r++){let n=0;for(let k=0;k<4;k++)n+=a[k*4+r]*b[c*4+k];out.push(n);}return out;}
+function trs(t,q,s){let [x,y,z,w]=q;const n=Math.hypot(x,y,z,w)||1;x/=n;y/=n;z/=n;w/=n;
+ const m=[1-2*(y*y+z*z),2*(x*y+z*w),2*(x*z-y*w),0,2*(x*y-z*w),1-2*(x*x+z*z),2*(y*z+x*w),0,
+ 2*(x*z+y*w),2*(y*z-x*w),1-2*(x*x+y*y),0,...t,1];for(let c=0;c<3;c++)for(let r=0;r<3;r++)m[c*4+r]*=s[c];return m;}
+function skinMatrices(){if(!skeleton)return null;
+ const nodes=skeleton.nodes.map(n=>({t:[...(n.translation||[0,0,0])],q:[...(n.rotation||[0,0,0,1])],s:[...(n.scale||[1,1,1])],matrix:n.matrix}));
+ const clip=clips[Number(document.querySelector('#clip').value)];const time=Number(document.querySelector('#time').value);
+ for(const ch of clip?.channels||[]){const times=ch.times,values=ch.values,n=ch.path==='rotation'?4:3;
+  let i=0;while(i<times.length-2&&times[i+1]<time)i++;let j=Math.min(i+1,times.length-1);
+  const f=times[j]===times[i]?0:Math.max(0,Math.min(1,(time-times[i])/(times[j]-times[i])));
+  const value=[];for(let k=0;k<n;k++)value.push(values[i*n+k]*(1-f)+values[j*n+k]*f);
+  nodes[ch.node][ch.path==='translation'?'t':ch.path==='rotation'?'q':'s']=value;nodes[ch.node].matrix=null;}
+ const globals=[];function global(i){if(globals[i])return globals[i];const n=nodes[i],m=n.matrix||trs(n.t,n.q,n.s);
+  return globals[i]=skeleton.parents[i]===undefined?m:mul(global(skeleton.parents[i]),m);}
+ return skeleton.joints.map((node,i)=>mul(global(node),skeleton.inverse.slice(i*16,i*16+16)));}
 async function load(buffer){
  const dv=new DataView(buffer);if(dv.getUint32(0,true)!==0x46546c67)throw Error('Expected GLB');
  const size=dv.getUint32(12,true),g=JSON.parse(new TextDecoder().decode(new Uint8Array(buffer,20,size))),base=28+size;
- function accessor(index){const a=g.accessors[index],v=g.bufferViews[a.bufferView],n={SCALAR:1,VEC2:2,VEC3:3}[a.type];
-  const C=a.componentType===5126?Float32Array:Uint32Array;return new C(buffer,base+(v.byteOffset||0)+(a.byteOffset||0),a.count*n);}
+ function accessor(index){const a=g.accessors[index],v=g.bufferViews[a.bufferView],n={SCALAR:1,VEC2:2,VEC3:3,VEC4:4,MAT4:16}[a.type];
+  const C={5126:Float32Array,5125:Uint32Array,5123:Uint16Array}[a.componentType];return new C(buffer,base+(v.byteOffset||0)+(a.byteOffset||0),a.count*n);}
  const images=await Promise.all((g.images||[]).map(async i=>{const v=g.bufferViews[i.bufferView];
   return createImageBitmap(new Blob([new Uint8Array(buffer,base+v.byteOffset,v.byteLength)],{type:i.mimeType}));}));
  parts=g.meshes[0].primitives.map(p=>{const mat=g.materials[p.material],t=mat.pbrMetallicRoughness.baseColorTexture;
   return {pos:accessor(p.attributes.POSITION),uv:p.attributes.TEXCOORD_0===undefined?null:accessor(p.attributes.TEXCOORD_0),
-   idx:accessor(p.indices),image:t?images[g.textures[t.index].source]:null};});
+   idx:accessor(p.indices),image:t?images[g.textures[t.index].source]:null,
+   joints:p.attributes.JOINTS_0===undefined?null:accessor(p.attributes.JOINTS_0),
+   weights:p.attributes.WEIGHTS_0===undefined?null:accessor(p.attributes.WEIGHTS_0)};});
+ skeleton=null;if(g.skins?.length){const s=g.skins[0],parents={};g.nodes.forEach((n,i)=>(n.children||[]).forEach(c=>parents[c]=i));
+  skeleton={nodes:g.nodes,parents,joints:s.joints,inverse:accessor(s.inverseBindMatrices)};}
+ clips=(g.animations||[]).map(a=>({name:a.name,channels:a.channels.map(c=>{const s=a.samplers[c.sampler];
+  return {node:c.target.node,path:c.target.path,times:accessor(s.input),values:accessor(s.output)};})}));
+ const selector=document.querySelector('#clip');selector.replaceChildren();clips.forEach((a,i)=>{const option=document.createElement('option');option.value=i;option.textContent=a.name;selector.append(option);});
+ document.querySelector('#motion').hidden=!clips.length;playing=false;document.querySelector('#play').textContent='Play';setClip(false);
  const pos=parts[0].pos,min=[Infinity,Infinity,Infinity],max=[-Infinity,-Infinity,-Infinity];
  for(let i=0;i<pos.length;i++) {const k=i%3;min[k]=Math.min(min[k],pos[i]);max[k]=Math.max(max[k],pos[i]);}
  center=min.map((v,k)=>(v+max[k])/2);radius=Math.hypot(...min.map((v,k)=>(max[k]-v)/2))||1;zoom=1;
@@ -33,7 +60,13 @@ async function load(buffer){
 function render(){
  canvas.width=Math.round(canvas.clientWidth*devicePixelRatio);canvas.height=Math.round(canvas.clientHeight*devicePixelRatio);
  const w=canvas.width,h=canvas.height;ctx.fillStyle='#252a33';ctx.fillRect(0,0,w,h);const faces=[];
- for(const part of parts){const projected=[],p=part.pos;
+ const matrices=skinMatrices(),cache=new Map();
+ for(const part of parts){const projected=[];let p=part.pos;
+  if(matrices&&part.joints){const key=p.byteOffset;if(cache.has(key))p=cache.get(key);else{
+   const result=new Float32Array(p.length);for(let i=0;i<p.length/3;i++)for(let j=0;j<4;j++){
+    const weight=part.weights[i*4+j];if(!weight)continue;const m=matrices[part.joints[i*4+j]];
+    for(let k=0;k<3;k++)result[i*3+k]+=weight*(m[k]*p[i*3]+m[4+k]*p[i*3+1]+m[8+k]*p[i*3+2]+m[12+k]);}
+   cache.set(key,result);p=result;}}
   for(let i=0;i<p.length;i+=3){let x=(p[i]-center[0])/radius,y=(p[i+1]-center[1])/radius,z=(p[i+2]-center[2])/radius;
    const xx=x*Math.cos(yaw)+z*Math.sin(yaw),zz=-x*Math.sin(yaw)+z*Math.cos(yaw);
    const yy=y*Math.cos(pitch)-zz*Math.sin(pitch),z2=y*Math.sin(pitch)+zz*Math.cos(pitch);
@@ -64,6 +97,13 @@ canvas.onpointerup=()=>last=null;canvas.onpointercancel=()=>last=null;
 canvas.onpointermove=e=>{if(!last)return;yaw+=(e.clientX-last[0])*.01;pitch+=(e.clientY-last[1])*.01;last=[e.clientX,e.clientY];render();};
 canvas.onwheel=e=>{e.preventDefault();zoom=Math.max(.2,Math.min(5,zoom*Math.exp(-e.deltaY*.001)));render();};
 document.querySelector('#wire').onchange=render;window.onresize=render;
+function setClip(draw=true){const clip=clips[Number(document.querySelector('#clip').value)];
+ document.querySelector('#time').max=clip?Math.max(...clip.channels.map(c=>c.times[c.times.length-1])):1;
+ document.querySelector('#time').value=0;if(draw)render();}
+document.querySelector('#clip').onchange=()=>setClip();document.querySelector('#time').oninput=render;
+document.querySelector('#play').onclick=()=>{playing=!playing;document.querySelector('#play').textContent=playing?'Pause':'Play';lastFrame=0;};
+function animate(now){if(playing&&(!lastFrame||now-lastFrame>=33)){const slider=document.querySelector('#time'),max=Number(slider.max);
+ slider.value=(Number(slider.value)+(lastFrame?(now-lastFrame)/1000:0))%(max||1);lastFrame=now;render();}requestAnimationFrame(animate);}requestAnimationFrame(animate);
 document.querySelector('#file').onchange=async e=>{try{await load(await e.target.files[0].arrayBuffer());}catch(error){status.textContent=error.message;}};
 const rows=[...document.querySelectorAll('li')];document.querySelector('#search').oninput=e=>{const q=e.target.value.toLowerCase();for(const r of rows)r.hidden=!r.textContent.toLowerCase().includes(q);};
 const binary=Uint8Array.from(atob('__DEFAULT_GLB__'),c=>c.charCodeAt(0));

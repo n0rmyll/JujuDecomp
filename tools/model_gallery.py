@@ -8,11 +8,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def write_gallery(root):
-    report = json.loads((root/'manifest.json').read_text())
-    entries = report['entries']
+def write_gallery(root, entries=None):
+    if entries is None:
+        entries = json.loads((root/'manifest.json').read_text())['entries']
     default = next((e for e in entries if e['archive'] == 'Preload.dbu' and e['path_hint'] == 'weapons\\coconut.dbl'),
-                   entries[0] if entries else None)
+                   next((e for e in entries if 'dave' in e.get('path_hint','').lower() and 'dance' not in e.get('path_hint','').lower()),
+                        entries[0] if entries else None))
     encoded = base64.b64encode((root/default['glb']).read_bytes()).decode() if default else ''
     links = ''.join(f'<li><a href="{html.escape(e["glb"], quote=True)}">{html.escape(e["archive"]+" / "+e["name"])}</a>'
                     f' · {e["triangles"]:,} triangles</li>' for e in entries)

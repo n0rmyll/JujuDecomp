@@ -1,0 +1,71 @@
+{
+  "function": "fn_801C33C4",
+  "source": "analysis/split/asm/auto_03_801C2D70_text.s",
+  "start": "0x801C33C4",
+  "instruction_count": 247,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801C33D4",
+      "target": "_savegpr_21"
+    },
+    {
+      "site": "0x801C33E8",
+      "target": "OSDisableInterrupts"
+    },
+    {
+      "site": "0x801C33F0",
+      "target": "OSDisableScheduler"
+    },
+    {
+      "site": "0x801C33F8",
+      "target": "OSRestoreInterrupts"
+    },
+    {
+      "site": "0x801C3408",
+      "target": "fn_80206174"
+    },
+    {
+      "site": "0x801C3420",
+      "target": "fn_80205DF0"
+    },
+    {
+      "site": "0x801C3430",
+      "target": "fn_80206174"
+    },
+    {
+      "site": "0x801C3434",
+      "target": "OSDisableInterrupts"
+    },
+    {
+      "site": "0x801C343C",
+      "target": "OSEnableScheduler"
+    },
+    {
+      "site": "0x801C3444",
+      "target": "OSRestoreInterrupts"
+    },
+    {
+      "site": "0x801C345C",
+      "target": "memcpy"
+    },
+    {
+      "site": "0x801C35E8",
+      "target": "fn_801C37A0"
+    },
+    {
+      "site": "0x801C35F4",
+      "target": "fn_801C3ACC"
+    },
+    {
+      "site": "0x801C3738",
+      "target": "fn_801C3A88"
+    },
+    {
+      "site": "0x801C378C",
+      "target": "_restgpr_21"
+    }
+  ],
+  "strings": []
+}

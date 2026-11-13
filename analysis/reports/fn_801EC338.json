@@ -1,0 +1,23 @@
+{
+  "function": "fn_801EC338",
+  "source": "analysis/split/asm/auto_03_801E4890_text.s",
+  "start": "0x801EC338",
+  "instruction_count": 115,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801EC398",
+      "target": "fn_8025DE3C"
+    },
+    {
+      "site": "0x801EC3A4",
+      "target": "fn_801EC180"
+    },
+    {
+      "site": "0x801EC4B0",
+      "target": "fn_800100B0"
+    }
+  ],
+  "strings": []
+}

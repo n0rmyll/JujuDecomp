@@ -1,0 +1,10 @@
+{
+  "function": "fn_801EC180",
+  "source": "analysis/split/asm/auto_03_801E4890_text.s",
+  "start": "0x801EC180",
+  "instruction_count": 110,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [],
+  "strings": []
+}

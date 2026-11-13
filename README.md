@@ -1,6 +1,6 @@
 # JujuDecomp
 
-An early reverse-engineering workspace for **Tak and the Power of Juju (USA)** on GameCube, disc ID **GJUE78**, revision 0. Includes analysis tools, research notes, 100 complete routine models, two partial routine models, and a portable world-record reader in C.
+An early reverse-engineering workspace for **Tak and the Power of Juju (USA)** on GameCube, disc ID **GJUE78**, revision 0. Includes analysis tools, research notes, 200 complete routine models, two partial routine models, and a portable world-record reader in C.
 
 **This is not a completed decompilation or a native source port.** There is no build system that recreates the original game executable yet. The recovered C files are research models; separate target-layout candidates now establish 22 exact function-code matches, but none are integrated into a rebuilt executable. Tak boot, gameplay, audio, performance, and saves have not yet been verified in this workspace.
 
@@ -14,8 +14,8 @@ Snapshot: **November 13, 2026**, GJUE78 revision 0. These measure separate stage
 | --- | ---: | ---: | --- |
 | Game functions compiled and verified as matching | 22 / 9,667 indexed function regions | **0.228%** | The stop-request setter plus 21 target-layout candidates match with CodeWarrior GC 1.3.2 after resolving relocations at original addresses. Eight further candidates differ. No linked executable rebuild. |
 | Original code bytes verified as matching | 1,512 / 2,747,776 DOL text-section bytes | **0.055%** | Complete instruction bytes of 22 functions, including resolved call/global operands. No masking or assembly substitution. |
-| Game functions modeled in semantic C | 100 / 9,667 indexed function regions | **1.034%** | 100 complete routines represented in ten C files; two additional C files contain partial DBU/world-volume models and an offline record reader, excluded from this count. Callbacks and host layouts may replace original mechanisms. |
-| Original code bytes covered by those models | 4,932 / 2,747,776 DOL text-section bytes | **0.179%** | Size of the 100 fully modeled original routines; excludes partial DBU/world-volume models, the offline reader, and generated C/object size. This is semantic coverage; verified matching bytes are measured separately. |
+| Game functions modeled in semantic C | 200 / 9,667 indexed function regions | **2.069%** | 200 complete routines represented in eleven C files; two additional C files contain partial DBU/world-volume models and an offline record reader, excluded from this count. Callbacks and host layouts may replace original mechanisms. |
+| Original code bytes covered by those models | 8,820 / 2,747,776 DOL text-section bytes | **0.321%** | Size of the 200 fully modeled original routines; excludes partial DBU/world-volume models, the offline reader, and generated C/object size. This is semantic coverage; verified matching bytes are measured separately. |
 | Extracted resource files inventoried | 1,163 / 1,163 locally extracted files | **100%** | File paths, sizes, and hashes recorded for the local `files/data_gcn` extraction; not proof of complete disc coverage. |
 | Resource files with texture exports | 39 / 1,163 extracted files | **3.35%** | Base texture levels exported from 21 DBU and 18 DBL files; this is partial resource decoding, not complete conversion of those files. |
 | Texture records exported as PNG | 5,512 / 5,527 encountered records | **99.73%** | Includes repeated textures across archives; 15 records have null pixel offsets. Mipmaps and animated frames are not supported. |
@@ -38,7 +38,7 @@ The asset inventory totals **1,447,253,921 bytes** (about **1.35 GiB**):
 
 File shares are by count, not bytes, and are rounded. Bundles may contain many internal resources, whose total is unknown; the texture-record percentage covers only records encountered by the current decoder. No overall model/texture/animation completion percentage is available yet.
 
-Matching results are recorded in [binary matching findings](analysis/BINARY_MATCHING.md) and [the 29-function snapshot](analysis/matching-summary.json). The function denominator comes from `analysis/index-summary.json` and is provisional: automatic regions include SDK/runtime code and may not map one-to-one to original source functions. The 100 fully modeled routines are listed with source definitions and original sizes in [the semantic function inventory](analysis/semantic-functions.json). Validate this inventory with `python3 tools/check_semantic_progress.py`; see [the latest 70-function batch](analysis/LEAF_HELPERS.md) for differential checks against original PowerPC instructions. The partial models cover only `0x801B8F24..0x801B8F5C` within `0x801B8E60` and the scalar flag-bit operation within `0x8027F680`; both are excluded from the routine and byte totals, along with the offline world-record reader. Recalculate their original sizes using the ignored `analysis/functions.csv` after running `tools/index_dol.py`; text-section sizes come from the index summary. Asset counts come from the ignored `assets/manifest.json`, regenerated with `python3 tools/extract_assets.py --inventory-only`. Texture export counts come from the ignored `assets/textures/manifest.json`, regenerated with `python3 tools/decode_textures.py`; see [texture format findings](analysis/TEXTURE_EXTRACTION.md) for limits. World-volume counts come from `analysis/hub-world-volumes.json` and `analysis/burial-world-volumes.json`; see [world-volume findings](analysis/WORLD_VOLUMES.md) for decoder commands and limits. These numbers are a manual snapshot and should be refreshed when recovery advances.
+Matching results are recorded in [binary matching findings](analysis/BINARY_MATCHING.md) and [the 29-function snapshot](analysis/matching-summary.json). The function denominator comes from `analysis/index-summary.json` and is provisional: automatic regions include SDK/runtime code and may not map one-to-one to original source functions. The 200 fully modeled routines are listed with source definitions and original sizes in [the semantic function inventory](analysis/semantic-functions.json). Validate this inventory with `python3 tools/check_semantic_progress.py`; see [the latest 100-function batch](analysis/RESOURCE_LEAF_HELPERS.md) for differential checks against original PowerPC instructions. The partial models cover only `0x801B8F24..0x801B8F5C` within `0x801B8E60` and the scalar flag-bit operation within `0x8027F680`; both are excluded from the routine and byte totals, along with the offline world-record reader. Recalculate their original sizes using the ignored `analysis/functions.csv` after running `tools/index_dol.py`; text-section sizes come from the index summary. Asset counts come from the ignored `assets/manifest.json`, regenerated with `python3 tools/extract_assets.py --inventory-only`. Texture export counts come from the ignored `assets/textures/manifest.json`, regenerated with `python3 tools/decode_textures.py`; see [texture format findings](analysis/TEXTURE_EXTRACTION.md) for limits. World-volume counts come from `analysis/hub-world-volumes.json` and `analysis/burial-world-volumes.json`; see [world-volume findings](analysis/WORLD_VOLUMES.md) for decoder commands and limits. These numbers are a manual snapshot and should be refreshed when recovery advances.
 
 ## Get the source
 
@@ -68,7 +68,7 @@ python3 tools/verify_application_map.py
 
 The expected executable SHA-256 is `49faf28a7d2e25422c145754ef41b0c8a8dfcd83e688db1c39ecf21f6e34b706`. The dispatch verifier rejects a different executable revision. Indexing regenerates the ignored function, call, and string CSVs from your local executable and disassembly. Extracted code and data remain local.
 
-The latest 70-function batch and its checks are documented in [leaf helper findings](analysis/LEAF_HELPERS.md); the previous 15-function batch is in [runtime helper findings](analysis/RUNTIME_HELPERS.md).
+The latest 100-function batch and its checks are documented in [resource leaf helper findings](analysis/RESOURCE_LEAF_HELPERS.md). Earlier batches are documented in [leaf helper findings](analysis/LEAF_HELPERS.md) and [runtime helper findings](analysis/RUNTIME_HELPERS.md).
 
 Read [decompilation notes](analysis/DECOMP_NOTES.md) and [application dispatch findings](analysis/APPLICATION_DISPATCH.md) for current evidence and limitations. `src/recovered/` contains semantic reconstructions; original compiler identification, broader binary matching, asset decoding, and platform replacement work remain before a game source build is possible.
 
@@ -146,9 +146,36 @@ Open `assets/models/index.html` for the searchable list and local preview, or
 import GLBs into Blender. Use the viewer's file picker to preview other exports;
 the coconut is embedded as its default example. The viewer has no external dependencies.
 
-The manifest records source offsets and 350 unresolved records. Skeletons,
-animation, level object placement, baked vertex colors, and layered materials
-are not reconstructed. See [model extraction findings](analysis/MODEL_EXTRACTION.md).
+The static-pass manifest records source offsets and 350 unresolved records.
+The separate rig/animation pass below handles supported skeletal meshes.
+Level object placement, baked vertex colors, and layered materials remain
+unreconstructed. See [model extraction findings](analysis/MODEL_EXTRACTION.md).
+
+## Export skeletons and animations
+
+After the texture and static-model passes, run:
+
+```sh
+python3 tools/decode_rigs.py
+python3 tools/decode_animations.py
+python3 tools/rig_galleries.py
+python3 -m unittest discover -s tests -p test_decode_rigs.py
+python3 tools/check_rig_exports.py
+```
+
+Open `assets/animations/index.html` to preview Tak's motions, choose a clip,
+play/pause, or scrub the timeline. Use the file picker for other animated
+exports, or import the self-contained GLBs into Blender. Bind-pose rigs have
+a separate gallery at `assets/rigs/index.html`.
+
+The first pass exported 274 skinned meshes and decoded 949 clips from 41
+unique motion banks. Matching rigs received 772 clips across 28 animated
+GLBs, including Tak's 137-bone rig and 186 motions. The animation-bank
+parser reported no errors; 80 skeletal model records remain unresolved.
+Some reduced rigs omit unmatched animation tracks, listed in the manifest.
+Motion is baked at 30 Hz from the game's 300 Hz timeline; gameplay blending,
+mirroring, IK, and procedural effects are not reconstructed. See
+[skeletal extraction findings](analysis/SKELETAL_EXTRACTION.md).
 
 ## Check the first recovered function
 

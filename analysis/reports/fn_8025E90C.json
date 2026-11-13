@@ -1,0 +1,10 @@
+{
+  "function": "fn_8025E90C",
+  "source": "analysis/split/asm/auto_03_8025E8F0_text.s",
+  "start": "0x8025E90C",
+  "instruction_count": 94,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [],
+  "strings": []
+}

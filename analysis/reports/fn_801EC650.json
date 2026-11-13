@@ -1,0 +1,10 @@
+{
+  "function": "fn_801EC650",
+  "source": "analysis/split/asm/auto_fn_801EC650_text.s",
+  "start": "0x801EC650",
+  "instruction_count": 14,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [],
+  "strings": []
+}

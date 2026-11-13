@@ -96,14 +96,18 @@ def execute(words, args, memory, budget=20000, visited=None):
                              value ^ immediate if op == 26 else value | immediate)
             if op == 28:
                 compare(signed(registers[ra]), 0)
-        elif op in (32, 34, 40, 42, 36, 38, 44):
+        elif op in (32, 33, 34, 40, 42, 36, 38, 44):
             address = (base+imm) & MASK
-            size = {32: 4, 34: 1, 40: 2, 42: 2, 36: 4, 38: 1, 44: 2}[op]
+            size = {32: 4, 33: 4, 34: 1, 40: 2, 42: 2, 36: 4, 38: 1, 44: 2}[op]
             if op in (36, 38, 44):
                 memory.write(address, registers[rt] & ((1 << (size*8))-1), size)
             else:
                 value = memory.read(address, size)
                 registers[rt] = (signed(value, 16) & MASK) if op == 42 else value
+                if op == 33:
+                    if not ra or ra == rt:
+                        raise ValueError('Invalid load-with-update operands')
+                    registers[ra] = address
         elif op in (10, 11):
             a = registers[ra] if op == 10 else signed(registers[ra])
             b = (w & 0xffff) if op == 10 else imm

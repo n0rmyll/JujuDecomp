@@ -60,6 +60,20 @@ class PowerPCOracleTests(unittest.TestCase):
         memory.values[0x803312fc, 1] = 255
         self.assertEqual(execute({0: 0x886d907c, 4: 0x4e800020}, (0, 0, 0, 0), memory), 255)
 
+    def test_load_with_update_changes_base(self):
+        # lwzu r5,4(r3); lwz r3,4(r3); blr
+        memory = Memory()
+        memory.values[0x1004, 4] = 111
+        memory.values[0x1008, 4] = 222
+        words = {0: 0x84a30004, 4: 0x80630004, 8: 0x4e800020}
+        self.assertEqual(execute(words, (0x1000, 0, 0, 0), memory), 222)
+        self.assertEqual(memory.events, [('read', 0x1004, 4), ('read', 0x1008, 4)])
+
+    def test_load_with_update_invalid_operands_fail(self):
+        # lwzu r3,4(r3) is invalid: source and destination cannot coincide.
+        with self.assertRaisesRegex(ValueError, 'Invalid load-with-update'):
+            execute({0: 0x84630004}, (0x1000, 0, 0, 0), Memory())
+
     def test_unsupported_instruction_fails(self):
         with self.assertRaisesRegex(ValueError, 'Unsupported'):
             execute({0: 0}, (0, 0, 0, 0), Memory())

@@ -1,0 +1,27 @@
+{
+  "function": "fn_801EC504",
+  "source": "analysis/split/asm/auto_03_801E4890_text.s",
+  "start": "0x801EC504",
+  "instruction_count": 39,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801EC530",
+      "target": "fn_8025F3A0"
+    },
+    {
+      "site": "0x801EC544",
+      "target": "fn_80077DBC"
+    },
+    {
+      "site": "0x801EC56C",
+      "target": "fn_800100B0"
+    },
+    {
+      "site": "0x801EC580",
+      "target": "fn_800100B0"
+    }
+  ],
+  "strings": []
+}

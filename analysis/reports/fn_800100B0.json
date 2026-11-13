@@ -1,0 +1,10 @@
+{
+  "function": "fn_800100B0",
+  "source": "analysis/split/asm/auto_03_800056C0_text.s",
+  "start": "0x800100B0",
+  "instruction_count": 112,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [],
+  "strings": []
+}

@@ -86,6 +86,15 @@ class ModelTests(unittest.TestCase):
         self.assertTrue(all(n == 2 for n in edges.values()))
         self.assertEqual(len(mesh['vertices'])-len(edges)+len(indices)//3, 2)
 
+    def test_mixed_textured_and_untextured_vertices(self):
+        mesh=decode_mesh(model_fixture())
+        mesh['vertices'][1]['uv']=(1.,0.)
+        with tempfile.TemporaryDirectory() as temp:
+            path=Path(temp)/'test.glb';write_glb(mesh,path)
+            data=path.read_bytes();n=struct.unpack_from('<I',data,12)[0]
+            g=json.loads(data[20:20+n])
+            self.assertIn('TEXCOORD_0',g['meshes'][0]['primitives'][0]['attributes'])
+
 
 if __name__ == '__main__':
     unittest.main()
