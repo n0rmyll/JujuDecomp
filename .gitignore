@@ -22,11 +22,6 @@
 **/dist/
 **/node_modules/
 **/target/
-*.wasm
-/browser/cores/dolphin/*.js
-/browser/cores/dolphin/*.data
-/browser/cores/dolphin/*.bin
-/browser/cores/dolphin/*.build.json
 
 # Local metadata
 .DS_Store

@@ -122,6 +122,6 @@ instructions. A matching rebuild requires identifying the original compiler,
 assembling/linking the split with suitable tools, and comparing the complete
 output against the original before replacing functions incrementally.
 
-The user reports that the RVZ reaches the title screen and works in the
-browser emulator. This provides a future behavioral reference; it does not
-validate any recovered source yet.
+The user reports that the RVZ reaches the title screen and works in an
+emulator. Use your own emulator for future behavioral comparisons; this does
+not validate any recovered source yet.

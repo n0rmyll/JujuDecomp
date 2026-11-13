@@ -1,10 +1,10 @@
 # JujuDecomp
 
-An early reverse-engineering workspace for **Tak and the Power of Juju (USA)** on GameCube, disc ID **GJUE78**, revision 0. Includes analysis tools, research notes, nine complete routine models, two partial routine models, and a portable world-record reader in C, and a browser emulator frontend based on [wasm-dolphin](https://github.com/dougchansan/wasm-dolphin) at commit `7e38409ace3dda709c178312ff63fd92a3653cc7`.
+An early reverse-engineering workspace for **Tak and the Power of Juju (USA)** on GameCube, disc ID **GJUE78**, revision 0. Includes analysis tools, research notes, fifteen complete routine models, two partial routine models, and a portable world-record reader in C.
 
-**This is not a completed decompilation or a native source port.** There is no build system that recreates the original game executable yet. The browser route runs your own disc image through Dolphin; the recovered C files are research models, not matching replacements. Tak boot, gameplay, audio, performance, and saves have not yet been verified in this workspace.
+**This is not a completed decompilation or a native source port.** There is no build system that recreates the original game executable yet. The recovered C files are research models, not matching replacements. Tak boot, gameplay, audio, performance, and saves have not yet been verified in this workspace.
 
-No game image, extracted executable, game assets, generated disassembly, or compiled emulator build is included. Supply your own legally obtained copy of the game. Keep game files local; the ignore rules exclude disc images, extracted binaries, saves, and build outputs.
+No game image, extracted executable, game assets, or generated disassembly is included. Supply your own legally obtained copy of the game. Keep game files local; the ignore rules exclude disc images, extracted binaries, saves, and build outputs.
 
 ## Progress statistics
 
@@ -13,8 +13,8 @@ Snapshot: **November 12, 2026**, GJUE78 revision 0. These measure separate stage
 | Area | Current / measured total | Progress | Meaning |
 | --- | ---: | ---: | --- |
 | Game functions rebuilt and verified as matching | 0 / 9,667 indexed function regions | **0%** | No original-target matching compilation has been verified. Host syntax/behavior checks do not count as matching. |
-| Game functions modeled in semantic C | 9 / 9,667 indexed function regions | **0.093%** | Eight complete routines represented in six C files; two additional C files contain partial DBU/world-volume models and an offline record reader, excluded from this count. Callbacks and host layouts may replace original mechanisms. |
-| Original code bytes covered by those models | 728 / 2,747,776 DOL text-section bytes | **0.026%** | Size of the nine fully modeled original routines; excludes partial DBU/world-volume models, the offline reader, generated C/object size, and verified matching bytes. |
+| Game functions modeled in semantic C | 15 / 9,667 indexed function regions | **0.155%** | Fifteen complete routines represented in eight C files; two additional C files contain partial DBU/world-volume models and an offline record reader, excluded from this count. Callbacks and host layouts may replace original mechanisms. |
+| Original code bytes covered by those models | 1,324 / 2,747,776 DOL text-section bytes | **0.048%** | Size of the fifteen fully modeled original routines; excludes partial DBU/world-volume models, the offline reader, generated C/object size, and verified matching bytes. |
 | Extracted resource files inventoried | 1,163 / 1,163 locally extracted files | **100%** | File paths, sizes, and hashes recorded for the local `files/data_gcn` extraction; not proof of complete disc coverage. |
 | Resource files with texture exports | 39 / 1,163 extracted files | **3.35%** | Base texture levels exported from 21 DBU and 18 DBL files; this is partial resource decoding, not complete conversion of those files. |
 | Texture records exported as PNG | 5,512 / 5,527 encountered records | **99.73%** | Includes repeated textures across archives; 15 records have null pixel offsets. Mipmaps and animated frames are not supported. |
@@ -35,9 +35,9 @@ The asset inventory totals **1,447,253,921 bytes** (about **1.35 GiB**):
 | `.dbl` | 18 | 1.55% |
 | `.fnt` | 1 | 0.09% |
 
-File shares are by count, not bytes, and are rounded. Bundles may contain many internal resources, whose total is unknown; the texture-record percentage covers only records encountered by the current decoder. No overall model/texture/animation completion percentage is available yet. Browser emulator operation is separate from compiling recovered game source, so it contributes no game decompilation percentage.
+File shares are by count, not bytes, and are rounded. Bundles may contain many internal resources, whose total is unknown; the texture-record percentage covers only records encountered by the current decoder. No overall model/texture/animation completion percentage is available yet.
 
-The function denominator comes from `analysis/index-summary.json` and is provisional: automatic regions include SDK/runtime code and may not map one-to-one to original source functions. The nine fully modeled routines are `0x8020F9C8`, `0x80213584`, `0x801042FC`, `0x800CEB2C`, `0x80213140`, `0x802131A0`, `0x801B91FC`, `0x801B92FC`, and `0x801B8FD0`. The partial models cover only `0x801B8F24..0x801B8F5C` within `0x801B8E60` and the scalar flag-bit operation within `0x8027F680`; both are excluded from the routine and byte totals, along with the offline world-record reader. Recalculate their original sizes using the ignored `analysis/functions.csv` after running `tools/index_dol.py`; text-section sizes come from the index summary. Asset counts come from the ignored `assets/manifest.json`, regenerated with `python3 tools/extract_assets.py --inventory-only`. Texture export counts come from the ignored `assets/textures/manifest.json`, regenerated with `python3 tools/decode_textures.py`; see [texture format findings](analysis/TEXTURE_EXTRACTION.md) for limits. World-volume counts come from `analysis/hub-world-volumes.json` and `analysis/burial-world-volumes.json`; see [world-volume findings](analysis/WORLD_VOLUMES.md) for decoder commands and limits. These numbers are a manual snapshot and should be refreshed when recovery advances.
+The function denominator comes from `analysis/index-summary.json` and is provisional: automatic regions include SDK/runtime code and may not map one-to-one to original source functions. The fifteen fully modeled routines are `0x8020F9C8`, `0x80213584`, `0x801042FC`, `0x800CEB2C`, `0x80213140`, `0x802131A0`, `0x801B91FC`, `0x801B92FC`, `0x801B8FD0`, `0x801C5944`, `0x801C59A4`, `0x801C5A04`, `0x801C5BAC`, `0x801C5C34`, and `0x801B90D0`. The partial models cover only `0x801B8F24..0x801B8F5C` within `0x801B8E60` and the scalar flag-bit operation within `0x8027F680`; both are excluded from the routine and byte totals, along with the offline world-record reader. Recalculate their original sizes using the ignored `analysis/functions.csv` after running `tools/index_dol.py`; text-section sizes come from the index summary. Asset counts come from the ignored `assets/manifest.json`, regenerated with `python3 tools/extract_assets.py --inventory-only`. Texture export counts come from the ignored `assets/textures/manifest.json`, regenerated with `python3 tools/decode_textures.py`; see [texture format findings](analysis/TEXTURE_EXTRACTION.md) for limits. World-volume counts come from `analysis/hub-world-volumes.json` and `analysis/burial-world-volumes.json`; see [world-volume findings](analysis/WORLD_VOLUMES.md) for decoder commands and limits. These numbers are a manual snapshot and should be refreshed when recovery advances.
 
 ## Get the source
 
@@ -46,40 +46,9 @@ git clone https://github.com/n0rmyll/JujuDecomp.git
 cd JujuDecomp
 ```
 
-The browser source is included directly; no submodule initialization is required. Its original license and documentation are preserved under `browser/`.
+## Testing with your own emulator
 
-## Build the browser emulator
-
-A source-only clone needs a compiled Dolphin WebAssembly core before it can run a game. The animated demo alone does not show that the game is running.
-
-The inherited reproducible build currently pins **Windows x64** tools, including their executable hashes. Its recorded versions are Node.js 24.12.0, Emscripten SDK 5.0.7, CMake 4.3.2, Ninja 1.13.0.git.kitware.jobserver-pipe-1, and Rust nightly 1.97.0-nightly with `rust-src` and the `wasm32-unknown-emscripten` target. Exact revisions and hashes are in [the toolchain lock](browser/provenance/wasm-toolchain.lock.json). See [the reproducible build guide](browser/docs/repro-build.md) and [Rust/Naga setup](browser/docs/webgpu-naga-bridge.md) before installing the toolchain.
-
-In PowerShell with those tools installed, from the repository root:
-
-```powershell
-cd browser
-npm test
-npm run check
-npm run verify:toolchain
-npm run fetch:dolphin
-npm run patch:upstream
-npm run configure:upstream
-npm run build:upstream:full-core
-npm run verify:provenance
-npm start
-```
-
-Configuration builds the Rust/Naga bridge and the full-core target writes `browser/cores/dolphin/dolphin-core-upstream.js`, `.wasm`, and a build record. Downloads and outputs remain ignored. The JavaScript tooling uses Node built-ins; `package.json` has no package dependencies to install.
-
-The exact build is **not currently validated on macOS or Linux**: the toolchain verifier rejects a different platform or executable hash. Serving an already-built core works separately from compiling it. Porting the locked toolchain is still required to support a fresh native build on those systems; changing version strings alone is insufficient. These build instructions document the inherited pipeline, which has not been rerun in this workspace.
-
-## Run with your own game
-
-Once you have built the core, run `cd browser && npm start` from the root and open the localhost URL printed by the server (normally `http://127.0.0.1:8080/`) in desktop Chrome. On macOS, `./play.command` also starts the server and opens the page if a core is available.
-
-Use **Open a GameCube disc image**, or drag your own `.rvz`, `.iso`, or `.gcm` onto the page. The image is read locally in your browser. Start with the Software renderer; Hardware WebGPU is experimental and has no validated Tak profile.
-
-Keyboard: WASD moves; X = A, Z = B, V = X, B = Y, Enter = Start, Q/E = L/R, C = Z. Arrow keys control the D-pad; IJKL control the C-stick. Standard gamepads are supported. Click Muted to enable audio.
+Use your own GameCube emulator and legally obtained game image to test the original game's behavior. This repository does not include an emulator or a runnable game build; the recovered C files are research models and cannot yet be tested as a rebuilt game.
 
 ## Reproduce the executable analysis
 
@@ -161,4 +130,4 @@ a complete executable rebuild. Larger objects should use objdiff.
 
 ## Attribution
 
-Browser runtime source and patches retain [the upstream GPL license](browser/LICENSE). Dolphin is copyright the Dolphin Emulator Project and distributed under GPLv2 or later. Preserve applicable notices and provide corresponding source when distributing compiled runtime builds; the inherited `npm run dist:source` tooling is documented in `browser/`. Commercial game code and assets are not supplied or licensed by this repository.
+Commercial game code and assets are not supplied or licensed by this repository.
