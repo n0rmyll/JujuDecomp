@@ -1,4 +1,4 @@
-# First binary match: GJUE78 revision 0
+# Binary matching: GJUE78 revision 0
 
 On November 12, 2026, `src/recovered/application_flag.c` compiled to the exact
 12 bytes at `0x8020F9C8` in the original executable:
@@ -43,16 +43,83 @@ they are not independently authenticated publisher checksums. The runner hash
 agrees with the GitHub release asset metadata. An initial WebAssembly compiler
 experiment was not used for the successful match.
 
+## Remaining 29 routines: complete survey
+
+`python3 tools/check_matching.py` compiles a separate target-layout candidate
+for every remaining modeled routine. Source: `src/matching/routines.cpp`, with
+`-c -lang c++ -proc gekko -O4,p -nodefaults -DTAK_FN=<address>`. All 29 compile
+and all references resolve. **21 match exactly, covering 1,500 bytes.** With
+the original setter, the current total is **22 routines / 1,512 bytes**.
+
+The host callback models cannot be treated as target ABI source. The new
+candidates use direct memory layouts and calls, and C++ virtual methods where
+the assembly uses virtual dispatch. For example, `0x800E53CC` takes its value
+in r4, consistent with an unused r3 object argument; its host model alone did
+not preserve that argument position. Descriptive types remain provisional.
+
+### Exact results
+
+`0x80213584`, `0x801042FC`, `0x800CEB2C`, `0x80213140`, `0x802131A0`,
+`0x801B8FD0`, `0x801C5944`, `0x801C59A4`, `0x801C5A04`, `0x801B90F4`,
+`0x801B9190`, `0x801C5A64`, `0x8021311C`, `0x80213480`, `0x80213710`,
+`0x80213744`, `0x800E53C4`, `0x800E53CC`, `0x8020F964`, `0x80213708`,
+and `0x80280928`.
+
+### Remaining differences
+
+| Routine | Original / candidate bytes | Observed difference |
+| --- | ---: | --- |
+| `0x801B91FC` | 72 / 72 | Indexed field addressing and register allocation |
+| `0x801B92FC` | 112 / 112 | Base/index registers and pointer-add ordering |
+| `0x801C5BAC` | 136 / 136 | Saved-register assignment and call argument scheduling |
+| `0x801C5C34` | 136 / 136 | Same issue as `0x801C5BAC` |
+| `0x801B90D0` | 36 / 36 | Cursor/remaining load, arithmetic, and store scheduling |
+| `0x801B9244` | 184 / 184 | Byte-swap temporaries and register/addressing choices |
+| `0x80211ED4` | 128 / 124 | Device-loop pointer/register setup |
+| `0x80211F54` | 132 / 132 | Device-loop pointer/register allocation |
+
+These are failed byte comparisons, regardless of equivalent behavior or
+equal code size. Trials with `-O4,s` and `-O3,p` did not match any additional
+routines (14 and four matches respectively). This is not an exhaustive
+compiler-version or flag search.
+
+### Comparison method and evidence
+
+`tools/ppc_matching.py` extracts the named ELF function using its symbol size,
+excluding neighboring functions and section padding. It applies explicit
+PPC `ADDR32`, `ADDR16_LO/HI/HA`, `REL24`, and `EMB_SDA21` relocations, then
+compares every instruction byte with the SHA-256-verified original DOL.
+No operand bytes are masked. Unknown relocations, missing symbol placements,
+and out-of-range branches fail the check. Small-data bases r13=`0x80338280`
+and r2=`0x8033B140` are checked against original startup instructions.
+Original symbol addresses come from the indexed function table and DOL info;
+address-named globals/callees retain their explicit target addresses.
+
+The machine-readable snapshot is `analysis/matching-summary.json`.
+Live evidence, including hashes, commands, relocation lists, original and
+relocated candidate bytes, logs, and word differences, is generated under
+ignored `build/matching/`. `--require-all` fails if any function differs;
+the default reports differences without treating them as tool errors.
+
+Eight synthetic ELF/relocation tests pass with:
+
+```sh
+python3 -m unittest discover -s tests -p test_ppc_matching.py
+```
+
+They cover function boundaries, signed branches, high-adjusted address carry,
+small-data register selection, addends, and rejection of unresolved,
+unsupported, out-of-range, or malformed inputs. The original setter's host
+behavior and exact compiler comparison also still pass.
+
 ## Scope and next steps
 
-This establishes **one matching function / 12 matching code bytes**. Three simple
-instructions are not enough to distinguish compiler versions or optimization
-settings. CodeWarrior 1.3.2 is a working candidate, not an identified original
-toolchain. There is no matching linked executable or runnable rebuilt game.
+CodeWarrior 1.3.2 is now supported by multiple nontrivial matches, but an exact
+original compiler version and full-project flag configuration have not been
+uniquely identified. These comparisons place individual functions at original
+addresses; they do not verify exception tables, data sections, object-file
+layout, or a complete linked executable. There is no runnable rebuilt game.
 
-Next, select several relocation-free leaf routines with arithmetic, branches,
-and field accesses to discriminate compiler versions and flags. Keep matching
-sources faithful to original object layouts rather than the host callback
-models. Add symbol-aware, relocation-aware object comparison for functions
-that call other routines or access globals. Finally establish an assembly-only
-linked baseline and verify its DOL before integrating C replacements.
+Next, refine the eight remaining candidates' layouts, expression forms, and
+compiler settings. Establish an assembly-only linked baseline and verify its
+DOL before integrating C/C++ replacements.
