@@ -1,0 +1,15 @@
+{
+  "function": "fn_801C4E28",
+  "source": "analysis/split/asm/auto_03_801C2D70_text.s",
+  "start": "0x801C4E28",
+  "instruction_count": 97,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801C4E3C",
+      "target": "fn_8018C4F8"
+    }
+  ],
+  "strings": []
+}

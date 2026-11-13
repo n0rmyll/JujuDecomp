@@ -1,0 +1,203 @@
+{
+  "function": "fn_80188CEC",
+  "source": "analysis/split/asm/auto_03_80188500_text.s",
+  "start": "0x80188CEC",
+  "instruction_count": 454,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x80188D0C",
+      "target": "_savegpr_19"
+    },
+    {
+      "site": "0x80188D50",
+      "target": "fn_80189558"
+    },
+    {
+      "site": "0x80188D5C",
+      "target": "fn_80208DF0"
+    },
+    {
+      "site": "0x80188D7C",
+      "target": "fn_801862E8"
+    },
+    {
+      "site": "0x80188D8C",
+      "target": "fn_80186444"
+    },
+    {
+      "site": "0x80188DE4",
+      "target": "fn_80180814"
+    },
+    {
+      "site": "0x80188E00",
+      "target": "fn_80189778"
+    },
+    {
+      "site": "0x80188E18",
+      "target": "fn_80189778"
+    },
+    {
+      "site": "0x80188E34",
+      "target": "fn_80189778"
+    },
+    {
+      "site": "0x80188E50",
+      "target": "fn_800100B0"
+    },
+    {
+      "site": "0x80188E68",
+      "target": "fn_8017DAD8"
+    },
+    {
+      "site": "0x80188E74",
+      "target": "fn_80112C80"
+    },
+    {
+      "site": "0x80188F28",
+      "target": "fn_80189404"
+    },
+    {
+      "site": "0x80188FB4",
+      "target": "fn_8017DAD8"
+    },
+    {
+      "site": "0x80188FD8",
+      "target": "DCFlushRangeNoSync"
+    },
+    {
+      "site": "0x80188FE8",
+      "target": "DCFlushRange"
+    },
+    {
+      "site": "0x80188FF8",
+      "target": "fn_801303EC"
+    },
+    {
+      "site": "0x80189008",
+      "target": "fn_801303EC"
+    },
+    {
+      "site": "0x80189020",
+      "target": "DCFlushRange"
+    },
+    {
+      "site": "0x80189030",
+      "target": "fn_801303EC"
+    },
+    {
+      "site": "0x8018903C",
+      "target": "fn_8017DAB8"
+    },
+    {
+      "site": "0x80189044",
+      "target": "fn_8017D010"
+    },
+    {
+      "site": "0x801890A8",
+      "target": "fn_80189404"
+    },
+    {
+      "site": "0x80189134",
+      "target": "fn_80189778"
+    },
+    {
+      "site": "0x80189148",
+      "target": "fn_8017DAD8"
+    },
+    {
+      "site": "0x80189154",
+      "target": "DCFlushRange"
+    },
+    {
+      "site": "0x80189164",
+      "target": "fn_801303EC"
+    },
+    {
+      "site": "0x80189174",
+      "target": "fn_801303EC"
+    },
+    {
+      "site": "0x80189184",
+      "target": "fn_801303EC"
+    },
+    {
+      "site": "0x80189194",
+      "target": "fn_801303EC"
+    },
+    {
+      "site": "0x801891A4",
+      "target": "fn_801303EC"
+    },
+    {
+      "site": "0x801891B4",
+      "target": "fn_801303EC"
+    },
+    {
+      "site": "0x801891C4",
+      "target": "fn_801303EC"
+    },
+    {
+      "site": "0x801891D4",
+      "target": "fn_801303EC"
+    },
+    {
+      "site": "0x801891E4",
+      "target": "fn_801303EC"
+    },
+    {
+      "site": "0x801891F4",
+      "target": "fn_801303EC"
+    },
+    {
+      "site": "0x80189204",
+      "target": "fn_801303EC"
+    },
+    {
+      "site": "0x8018922C",
+      "target": "fn_801303EC"
+    },
+    {
+      "site": "0x80189230",
+      "target": "fn_8013082C"
+    },
+    {
+      "site": "0x80189268",
+      "target": "fn_8018608C"
+    },
+    {
+      "site": "0x80189274",
+      "target": "fn_8018608C"
+    },
+    {
+      "site": "0x80189298",
+      "target": "fn_80183F90"
+    },
+    {
+      "site": "0x801892AC",
+      "target": "fn_801841E0"
+    },
+    {
+      "site": "0x801892C0",
+      "target": "fn_80184584"
+    },
+    {
+      "site": "0x80189300",
+      "target": "fn_80133AE0"
+    },
+    {
+      "site": "0x80189310",
+      "target": "fn_80133AE0"
+    },
+    {
+      "site": "0x801893D8",
+      "target": "fn_80208F0C"
+    },
+    {
+      "site": "0x801893F0",
+      "target": "_restgpr_19"
+    }
+  ],
+  "strings": []
+}

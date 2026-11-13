@@ -1,0 +1,10 @@
+{
+  "function": "fn_801303EC",
+  "source": "analysis/split/asm/auto_03_8010A8B4_text.s",
+  "start": "0x801303EC",
+  "instruction_count": 35,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [],
+  "strings": []
+}

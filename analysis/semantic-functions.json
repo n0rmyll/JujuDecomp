@@ -1,0 +1,709 @@
+{
+  "revision": "GJUE78 rev 0",
+  "dol_sha256": "49faf28a7d2e25422c145754ef41b0c8a8dfcd83e688db1c39ecf21f6e34b706",
+  "scope": "Complete routine semantics; callback callees and original ABI are separate; not a binary matching manifest",
+  "complete_functions": 100,
+  "original_bytes": 4932,
+  "routines": [
+    {
+      "address": "0x8020F9C8",
+      "original_bytes": 12,
+      "source": "src/recovered/application_flag.c",
+      "symbol": "tak_application_request_stop",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80213584",
+      "original_bytes": 124,
+      "source": "src/recovered/application_iteration.c",
+      "symbol": "tak_application_iteration",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801042FC",
+      "original_bytes": 28,
+      "source": "src/recovered/level_name.c",
+      "symbol": "tak_level_name_address",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x800CEB2C",
+      "original_bytes": 100,
+      "source": "src/recovered/startup_state_finish.c",
+      "symbol": "tak_startup_state_finish",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80213140",
+      "original_bytes": 96,
+      "source": "src/recovered/state_lifecycle.c",
+      "symbol": "tak_state_finish",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x802131A0",
+      "original_bytes": 116,
+      "source": "src/recovered/state_lifecycle.c",
+      "symbol": "tak_state_activate",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B91FC",
+      "original_bytes": 72,
+      "source": "src/recovered/resource_array.c",
+      "symbol": "tak_resource_array_relocate",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B92FC",
+      "original_bytes": 112,
+      "source": "src/recovered/resource_array.c",
+      "symbol": "tak_resource_array_item",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B8FD0",
+      "original_bytes": 68,
+      "source": "src/recovered/dbu_payload_dispatch.c",
+      "symbol": "tak_dbu_payload_dispatch",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801C5944",
+      "original_bytes": 96,
+      "source": "src/recovered/resource_loaders.c",
+      "symbol": "tak_load_801C5944",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801C59A4",
+      "original_bytes": 96,
+      "source": "src/recovered/resource_loaders.c",
+      "symbol": "tak_load_801C59A4",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801C5A04",
+      "original_bytes": 96,
+      "source": "src/recovered/resource_loaders.c",
+      "symbol": "tak_load_801C5A04",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801C5BAC",
+      "original_bytes": 136,
+      "source": "src/recovered/resource_loaders.c",
+      "symbol": "tak_load_801C5BAC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801C5C34",
+      "original_bytes": 136,
+      "source": "src/recovered/resource_loaders.c",
+      "symbol": "tak_load_801C5C34",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B90D0",
+      "original_bytes": 36,
+      "source": "src/recovered/resource_loaders.c",
+      "symbol": "tak_dbu_advance_801B90D0",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B90F4",
+      "original_bytes": 156,
+      "source": "src/recovered/runtime_helpers.c",
+      "symbol": "tak_fn_801B90F4",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B9190",
+      "original_bytes": 108,
+      "source": "src/recovered/runtime_helpers.c",
+      "symbol": "tak_fn_801B9190",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801B9244",
+      "original_bytes": 184,
+      "source": "src/recovered/runtime_helpers.c",
+      "symbol": "tak_fn_801B9244",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801C5A64",
+      "original_bytes": 32,
+      "source": "src/recovered/runtime_helpers.c",
+      "symbol": "tak_fn_801C5A64",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8021311C",
+      "original_bytes": 36,
+      "source": "src/recovered/runtime_helpers.c",
+      "symbol": "tak_fn_8021311C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80213480",
+      "original_bytes": 72,
+      "source": "src/recovered/runtime_helpers.c",
+      "symbol": "tak_fn_80213480",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80213710",
+      "original_bytes": 52,
+      "source": "src/recovered/runtime_helpers.c",
+      "symbol": "tak_fn_80213710",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80213744",
+      "original_bytes": 56,
+      "source": "src/recovered/runtime_helpers.c",
+      "symbol": "tak_fn_80213744",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x800E53C4",
+      "original_bytes": 8,
+      "source": "src/recovered/runtime_helpers.c",
+      "symbol": "tak_fn_800E53C4",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x800E53CC",
+      "original_bytes": 8,
+      "source": "src/recovered/runtime_helpers.c",
+      "symbol": "tak_fn_800E53CC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80211ED4",
+      "original_bytes": 128,
+      "source": "src/recovered/runtime_helpers.c",
+      "symbol": "tak_fn_80211ED4",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80211F54",
+      "original_bytes": 132,
+      "source": "src/recovered/runtime_helpers.c",
+      "symbol": "tak_fn_80211F54",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8020F964",
+      "original_bytes": 100,
+      "source": "src/recovered/runtime_helpers.c",
+      "symbol": "tak_fn_8020F964",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80213708",
+      "original_bytes": 8,
+      "source": "src/recovered/runtime_helpers.c",
+      "symbol": "tak_fn_80213708",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80280928",
+      "original_bytes": 44,
+      "source": "src/recovered/runtime_helpers.c",
+      "symbol": "tak_fn_80280928",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8015C924",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8015C924",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80160D8C",
+      "original_bytes": 52,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80160D8C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80160DC0",
+      "original_bytes": 36,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80160DC0",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80162950",
+      "original_bytes": 28,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80162950",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80162B00",
+      "original_bytes": 24,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80162B00",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80162B9C",
+      "original_bytes": 24,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80162B9C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80162C38",
+      "original_bytes": 24,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80162C38",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8016332C",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8016332C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801633B0",
+      "original_bytes": 100,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_801633B0",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80167CCC",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80167CCC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8016BBF8",
+      "original_bytes": 44,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8016BBF8",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8017860C",
+      "original_bytes": 64,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8017860C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80178A94",
+      "original_bytes": 100,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80178A94",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80179B98",
+      "original_bytes": 44,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80179B98",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80179BC4",
+      "original_bytes": 24,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80179BC4",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8017A52C",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8017A52C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8017B30C",
+      "original_bytes": 76,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8017B30C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8017B358",
+      "original_bytes": 48,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8017B358",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8017BDE0",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8017BDE0",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8017DAC0",
+      "original_bytes": 24,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8017DAC0",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8017E6F0",
+      "original_bytes": 100,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8017E6F0",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801809FC",
+      "original_bytes": 44,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_801809FC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80184564",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80184564",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80184574",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80184574",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018580C",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018580C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80185C6C",
+      "original_bytes": 64,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80185C6C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801862C0",
+      "original_bytes": 40,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_801862C0",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801862E8",
+      "original_bytes": 24,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_801862E8",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018640C",
+      "original_bytes": 28,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018640C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80186428",
+      "original_bytes": 28,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80186428",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80186444",
+      "original_bytes": 24,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80186444",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80186664",
+      "original_bytes": 36,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80186664",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80186688",
+      "original_bytes": 32,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80186688",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801866AC",
+      "original_bytes": 32,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_801866AC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801866CC",
+      "original_bytes": 24,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_801866CC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80186B20",
+      "original_bytes": 48,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80186B20",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80186CC8",
+      "original_bytes": 28,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80186CC8",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80186D28",
+      "original_bytes": 36,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80186D28",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80186D4C",
+      "original_bytes": 68,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80186D4C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80188564",
+      "original_bytes": 24,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80188564",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801885CC",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_801885CC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801885DC",
+      "original_bytes": 44,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_801885DC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80188608",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80188608",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80188628",
+      "original_bytes": 44,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80188628",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80188654",
+      "original_bytes": 48,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80188654",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80188834",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80188834",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018B424",
+      "original_bytes": 44,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018B424",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018B450",
+      "original_bytes": 32,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018B450",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018B558",
+      "original_bytes": 20,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018B558",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018C40C",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018C40C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018C41C",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018C41C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018C4F8",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018C4F8",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018C510",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018C510",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018C8A4",
+      "original_bytes": 28,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018C8A4",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018CC3C",
+      "original_bytes": 92,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018CC3C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018CC98",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018CC98",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018CE48",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018CE48",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018CE58",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018CE58",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018CE78",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018CE78",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018CE88",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018CE88",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018CE98",
+      "original_bytes": 20,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018CE98",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018CEAC",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018CEAC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018CEBC",
+      "original_bytes": 24,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018CEBC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018D6BC",
+      "original_bytes": 84,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018D6BC",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018DE8C",
+      "original_bytes": 16,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018DE8C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8018F74C",
+      "original_bytes": 64,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8018F74C",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80195AF4",
+      "original_bytes": 40,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_80195AF4",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x8019D194",
+      "original_bytes": 28,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_8019D194",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801A0C10",
+      "original_bytes": 28,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_801A0C10",
+      "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x801AE384",
+      "original_bytes": 100,
+      "source": "src/recovered/leaf_helpers.c",
+      "symbol": "tak_leaf_801AE384",
+      "status": "complete-semantic-model"
+    }
+  ]
+}

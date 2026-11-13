@@ -1,0 +1,23 @@
+{
+  "function": "fn_8018C8C0",
+  "source": "analysis/split/asm/auto_03_8018B120_text.s",
+  "start": "0x8018C8C0",
+  "instruction_count": 96,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x8018C8DC",
+      "target": "fn_8018CC3C"
+    },
+    {
+      "site": "0x8018C8FC",
+      "target": "fn_8018CA40"
+    },
+    {
+      "site": "0x8018C904",
+      "target": "fn_80186710"
+    }
+  ],
+  "strings": []
+}

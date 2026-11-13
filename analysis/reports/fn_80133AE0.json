@@ -1,0 +1,19 @@
+{
+  "function": "fn_80133AE0",
+  "source": "analysis/split/asm/auto_03_8010A8B4_text.s",
+  "start": "0x80133AE0",
+  "instruction_count": 28,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x80133B0C",
+      "target": "fn_80131020"
+    },
+    {
+      "site": "0x80133B20",
+      "target": "fn_801311B0"
+    }
+  ],
+  "strings": []
+}

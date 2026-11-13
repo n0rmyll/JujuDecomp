@@ -1,0 +1,71 @@
+<!doctype html><meta charset="utf-8"><title>Tak model exports</title>
+<style>
+body{font:15px system-ui;background:#17191e;color:#eee;margin:24px}a{color:#9cf}
+canvas{display:block;width:100%;height:480px;background:#252a33;touch-action:none}
+button,input{padding:8px;margin:6px}#status{min-height:24px}li{padding:5px}li[hidden]{display:none}
+</style>
+<h1>Tak model exports</h1>
+<p>Drag to rotate; scroll to zoom. A sample mesh is loaded by default. Choose any exported GLB to preview it locally.
+GLBs can also be imported into Blender. Preview uses simple shading; baked vertex lighting, animation, and layered materials are omitted.</p>
+<input type="file" id="file" accept=".glb"><label><input type="checkbox" id="wire">Wireframe</label>
+<div id="status"></div><canvas id="view"></canvas>
+<h2>Exported meshes</h2><input id="search" placeholder="Filter by archive or model name" aria-label="Filter meshes">
+<ul>__EXPORT_LINKS__</ul>
+<script>
+const canvas=document.querySelector('canvas'),ctx=canvas.getContext('2d'),status=document.querySelector('#status');
+let parts=[],center=[0,0,0],radius=1,yaw=.55,pitch=.25,zoom=1,loadedName='';
+async function load(buffer){
+ const dv=new DataView(buffer);if(dv.getUint32(0,true)!==0x46546c67)throw Error('Expected GLB');
+ const size=dv.getUint32(12,true),g=JSON.parse(new TextDecoder().decode(new Uint8Array(buffer,20,size))),base=28+size;
+ function accessor(index){const a=g.accessors[index],v=g.bufferViews[a.bufferView],n={SCALAR:1,VEC2:2,VEC3:3}[a.type];
+  const C=a.componentType===5126?Float32Array:Uint32Array;return new C(buffer,base+(v.byteOffset||0)+(a.byteOffset||0),a.count*n);}
+ const images=await Promise.all((g.images||[]).map(async i=>{const v=g.bufferViews[i.bufferView];
+  return createImageBitmap(new Blob([new Uint8Array(buffer,base+v.byteOffset,v.byteLength)],{type:i.mimeType}));}));
+ parts=g.meshes[0].primitives.map(p=>{const mat=g.materials[p.material],t=mat.pbrMetallicRoughness.baseColorTexture;
+  return {pos:accessor(p.attributes.POSITION),uv:p.attributes.TEXCOORD_0===undefined?null:accessor(p.attributes.TEXCOORD_0),
+   idx:accessor(p.indices),image:t?images[g.textures[t.index].source]:null};});
+ const pos=parts[0].pos,min=[Infinity,Infinity,Infinity],max=[-Infinity,-Infinity,-Infinity];
+ for(let i=0;i<pos.length;i++) {const k=i%3;min[k]=Math.min(min[k],pos[i]);max[k]=Math.max(max[k],pos[i]);}
+ center=min.map((v,k)=>(v+max[k])/2);radius=Math.hypot(...min.map((v,k)=>(max[k]-v)/2))||1;zoom=1;
+ loadedName=g.nodes[0].name||'Model';status.textContent=loadedName+' · '+(pos.length/3).toLocaleString()+' vertices · '+
+ parts.reduce((n,p)=>n+p.idx.length/3,0).toLocaleString()+' triangles';render();
+}
+function render(){
+ canvas.width=Math.round(canvas.clientWidth*devicePixelRatio);canvas.height=Math.round(canvas.clientHeight*devicePixelRatio);
+ const w=canvas.width,h=canvas.height;ctx.fillStyle='#252a33';ctx.fillRect(0,0,w,h);const faces=[];
+ for(const part of parts){const projected=[],p=part.pos;
+  for(let i=0;i<p.length;i+=3){let x=(p[i]-center[0])/radius,y=(p[i+1]-center[1])/radius,z=(p[i+2]-center[2])/radius;
+   const xx=x*Math.cos(yaw)+z*Math.sin(yaw),zz=-x*Math.sin(yaw)+z*Math.cos(yaw);
+   const yy=y*Math.cos(pitch)-zz*Math.sin(pitch),z2=y*Math.sin(pitch)+zz*Math.cos(pitch);
+   const scale=Math.min(w,h)*.95*zoom/(3-z2);projected.push([w/2+xx*scale,h/2-yy*scale,z2]);}
+  for(let i=0;i<part.idx.length;i+=3){const ids=[part.idx[i],part.idx[i+1],part.idx[i+2]],points=ids.map(j=>projected[j]);
+   faces.push({part,ids,points,depth:points.reduce((v,p)=>v+p[2],0)});}}
+ faces.sort((a,b)=>a.depth-b.depth);
+ for(const {part,ids,points} of faces){const [a,b,c]=points;ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.lineTo(c[0],c[1]);ctx.closePath();
+  if(document.querySelector('#wire').checked){ctx.strokeStyle='#a9d5ef';ctx.lineWidth=devicePixelRatio*.6;ctx.stroke();continue;}
+  if(part.image&&part.uv){
+   const uv=ids.map(i=>[part.uv[i*2]*part.image.width,part.uv[i*2+1]*part.image.height]);
+   const [u,v,t]=uv,det=(v[0]-u[0])*(t[1]-u[1])-(t[0]-u[0])*(v[1]-u[1]);
+   if(Math.abs(det)>1e-8){const A=((b[0]-a[0])*(t[1]-u[1])-(c[0]-a[0])*(v[1]-u[1]))/det;
+    const B=((b[1]-a[1])*(t[1]-u[1])-(c[1]-a[1])*(v[1]-u[1]))/det;
+    const C=((c[0]-a[0])*(v[0]-u[0])-(b[0]-a[0])*(t[0]-u[0]))/det;
+    const D=((c[1]-a[1])*(v[0]-u[0])-(b[1]-a[1])*(t[0]-u[0]))/det;
+    ctx.save();ctx.clip();ctx.transform(A,B,C,D,a[0]-A*u[0]-C*u[1],a[1]-B*u[0]-D*u[1]);
+    // Repeat source texture when UVs go outside its first tile.
+    const pattern=ctx.createPattern(part.image,'repeat');ctx.fillStyle=pattern;
+    const minX=Math.floor(Math.min(...uv.map(p=>p[0])))-1,maxX=Math.ceil(Math.max(...uv.map(p=>p[0])))+1;
+    const minY=Math.floor(Math.min(...uv.map(p=>p[1])))-1,maxY=Math.ceil(Math.max(...uv.map(p=>p[1])))+1;
+    ctx.fillRect(minX,minY,maxX-minX,maxY-minY);ctx.restore();continue;}}
+  const gray=140+Math.round(40*Math.sin(a[0]+b[1]));ctx.fillStyle=`rgb(${gray},${gray},${gray})`;ctx.fill();
+ }
+}
+let last=null;canvas.onpointerdown=e=>{last=[e.clientX,e.clientY];canvas.setPointerCapture(e.pointerId);};
+canvas.onpointerup=()=>last=null;canvas.onpointercancel=()=>last=null;
+canvas.onpointermove=e=>{if(!last)return;yaw+=(e.clientX-last[0])*.01;pitch+=(e.clientY-last[1])*.01;last=[e.clientX,e.clientY];render();};
+canvas.onwheel=e=>{e.preventDefault();zoom=Math.max(.2,Math.min(5,zoom*Math.exp(-e.deltaY*.001)));render();};
+document.querySelector('#wire').onchange=render;window.onresize=render;
+document.querySelector('#file').onchange=async e=>{try{await load(await e.target.files[0].arrayBuffer());}catch(error){status.textContent=error.message;}};
+const rows=[...document.querySelectorAll('li')];document.querySelector('#search').oninput=e=>{const q=e.target.value.toLowerCase();for(const r of rows)r.hidden=!r.textContent.toLowerCase().includes(q);};
+const binary=Uint8Array.from(atob('__DEFAULT_GLB__'),c=>c.charCodeAt(0));
+if(binary.length)load(binary.buffer).catch(e=>status.textContent=e.message);else status.textContent='No supported meshes exported.';
+</script>

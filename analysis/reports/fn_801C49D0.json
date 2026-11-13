@@ -1,0 +1,31 @@
+{
+  "function": "fn_801C49D0",
+  "source": "analysis/split/asm/auto_03_801C2D70_text.s",
+  "start": "0x801C49D0",
+  "instruction_count": 78,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801C49E0",
+      "target": "_savegpr_27"
+    },
+    {
+      "site": "0x801C4A64",
+      "target": "fn_801B92FC"
+    },
+    {
+      "site": "0x801C4A78",
+      "target": "fn_801B92FC"
+    },
+    {
+      "site": "0x801C4AE8",
+      "target": "fn_8018C4F8"
+    },
+    {
+      "site": "0x801C4AF4",
+      "target": "_restgpr_27"
+    }
+  ],
+  "strings": []
+}
