@@ -1,0 +1,39 @@
+{
+  "function": "fn_801F3070",
+  "source": "analysis/split/asm/auto_03_801F1020_text.s",
+  "start": "0x801F3070",
+  "instruction_count": 14,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801F307C",
+      "target": "fn_802087C0"
+    },
+    {
+      "site": "0x801F3080",
+      "target": "fn_801C6F70"
+    },
+    {
+      "site": "0x801F3084",
+      "target": "fn_801CA1E0"
+    },
+    {
+      "site": "0x801F3088",
+      "target": "fn_801E09FC"
+    },
+    {
+      "site": "0x801F308C",
+      "target": "fn_801CF1B8"
+    },
+    {
+      "site": "0x801F3090",
+      "target": "fn_801C8650"
+    },
+    {
+      "site": "0x801F3094",
+      "target": "fn_8018BD00"
+    }
+  ],
+  "strings": []
+}

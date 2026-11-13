@@ -67,6 +67,33 @@ The expected executable SHA-256 is `49faf28a7d2e25422c145754ef41b0c8a8dfcd83e688
 
 Read [decompilation notes](analysis/DECOMP_NOTES.md) and [application dispatch findings](analysis/APPLICATION_DISPATCH.md) for current evidence and limitations. `src/recovered/` contains semantic reconstructions; original-target compiler identification, binary matching, asset decoding, and platform replacement work remain before a game source build is possible.
 
+## Check the first recovered function
+
+From the repository root, run:
+
+```sh
+python3 tools/check_application_flag.py
+```
+
+This compiles and runs a host behavior test for `application_flag.c`, checking
+all 256 prior flag values, neighboring bytes, and repeated calls. It also checks
+the local original DOL's SHA-256 and the 12 original instructions' bytes.
+Requires Python 3, Clang, and the extracted `analysis/main.dol`. Outputs go under
+ignored `build/application-flag/`. A missing or wrong DOL fails the check.
+
+For a Clang installation with a PowerPC backend, additionally run:
+
+```sh
+python3 tools/check_application_flag.py --ppc-cc /path/to/llvm/bin/clang
+```
+
+That compiles a freestanding PowerPC ELF object and compares its `.text` with
+the original function's 12 bytes, failing on differences or text relocations.
+Apple's installed Clang lacks this backend. This optional comparison has not
+yet been run successfully here. It is specific to this single-function object;
+it does not establish the original CodeWarrior toolchain, ABI compatibility, or
+a complete executable rebuild. Larger objects should use objdiff.
+
 ## Attribution
 
 Browser runtime source and patches retain [the upstream GPL license](browser/LICENSE). Dolphin is copyright the Dolphin Emulator Project and distributed under GPLv2 or later. Preserve applicable notices and provide corresponding source when distributing compiled runtime builds; the inherited `npm run dist:source` tooling is documented in `browser/`. Commercial game code and assets are not supplied or licensed by this repository.

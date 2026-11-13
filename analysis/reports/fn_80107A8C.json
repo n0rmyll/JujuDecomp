@@ -1,0 +1,10 @@
+{
+  "function": "fn_80107A8C",
+  "source": "analysis/split/asm/auto_03_800FFC58_text.s",
+  "start": "0x80107A8C",
+  "instruction_count": 2,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [],
+  "strings": []
+}

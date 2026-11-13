@@ -1,0 +1,684 @@
+{
+  "function": "fn_80100E54",
+  "source": "analysis/split/asm/auto_03_800FFC58_text.s",
+  "start": "0x80100E54",
+  "instruction_count": 748,
+  "byte_checks": "PASS",
+  "supplied_bases": {
+    "r30": 2150442368
+  },
+  "calls": [
+    {
+      "site": "0x80100E6C",
+      "target": "_savegpr_26"
+    },
+    {
+      "site": "0x80100EF8",
+      "target": "fn_80208D04"
+    },
+    {
+      "site": "0x80100F08",
+      "target": "fn_80208D04"
+    },
+    {
+      "site": "0x80100F18",
+      "target": "fn_80208D04"
+    },
+    {
+      "site": "0x80100F28",
+      "target": "fn_80208D04"
+    },
+    {
+      "site": "0x80100F38",
+      "target": "fn_80208D04"
+    },
+    {
+      "site": "0x80100F40",
+      "target": "fn_801B8A9C"
+    },
+    {
+      "site": "0x80100F4C",
+      "target": "fn_8020476C"
+    },
+    {
+      "site": "0x80100F54",
+      "target": "fn_801CB7AC"
+    },
+    {
+      "site": "0x80100F5C",
+      "target": "fn_801EBB18"
+    },
+    {
+      "site": "0x80100F64",
+      "target": "fn_8010A44C"
+    },
+    {
+      "site": "0x80100F6C",
+      "target": "fn_801CDB48"
+    },
+    {
+      "site": "0x80100F84",
+      "target": "fn_801CDB48"
+    },
+    {
+      "site": "0x80100F9C",
+      "target": "fn_80260A54"
+    },
+    {
+      "site": "0x80100FC4",
+      "target": "fn_800E78E8"
+    },
+    {
+      "site": "0x80100FDC",
+      "target": "fn_8018CED4"
+    },
+    {
+      "site": "0x80100FE4",
+      "target": "fn_80107E80"
+    },
+    {
+      "site": "0x80100FE8",
+      "target": "fn_80208758"
+    },
+    {
+      "site": "0x80100FEC",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x80100FF8",
+      "target": "fn_801084F8"
+    },
+    {
+      "site": "0x80100FFC",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x8010100C",
+      "target": "fn_801042FC"
+    },
+    {
+      "site": "0x80101018",
+      "target": "fn_800E7810"
+    },
+    {
+      "site": "0x80101020",
+      "target": "fn_801042FC"
+    },
+    {
+      "site": "0x80101024",
+      "target": "fn_80163648"
+    },
+    {
+      "site": "0x80101030",
+      "target": "fn_8026D400"
+    },
+    {
+      "site": "0x80101034",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x8010104C",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x80101054",
+      "target": "fn_802062A8"
+    },
+    {
+      "site": "0x80101060",
+      "target": "fn_8022B438"
+    },
+    {
+      "site": "0x80101070",
+      "target": "fn_8022B918"
+    },
+    {
+      "site": "0x80101074",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x8010107C",
+      "target": "fn_802062A8"
+    },
+    {
+      "site": "0x80101088",
+      "target": "fn_8007D788"
+    },
+    {
+      "site": "0x80101098",
+      "target": "fn_802062A8"
+    },
+    {
+      "site": "0x801010A4",
+      "target": "fn_8007E6EC"
+    },
+    {
+      "site": "0x801010B4",
+      "target": "fn_802062A8"
+    },
+    {
+      "site": "0x801010C0",
+      "target": "fn_801FE118"
+    },
+    {
+      "site": "0x801010D4",
+      "target": "fn_801FC584"
+    },
+    {
+      "site": "0x801010E4",
+      "target": "fn_801FC7F8"
+    },
+    {
+      "site": "0x801010E8",
+      "target": "fn_800E029C"
+    },
+    {
+      "site": "0x801010EC",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x801010F8",
+      "target": "fn_801AC9BC"
+    },
+    {
+      "site": "0x80101118",
+      "target": "fn_80188654"
+    },
+    {
+      "site": "0x8010111C",
+      "target": "fn_800E55C0"
+    },
+    {
+      "site": "0x80101134",
+      "target": "fn_801FB9E8"
+    },
+    {
+      "site": "0x80101154",
+      "target": "fn_801FBA18"
+    },
+    {
+      "site": "0x8010116C",
+      "target": "fn_801CD000"
+    },
+    {
+      "site": "0x8010118C",
+      "target": "fn_801CD12C"
+    },
+    {
+      "site": "0x801011A0",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x801011BC",
+      "target": "fn_80105DA0"
+    },
+    {
+      "site": "0x801011D0",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x801011E0",
+      "target": "fn_80102EB8"
+    },
+    {
+      "site": "0x801011F4",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x801011FC",
+      "target": "fn_80104318"
+    },
+    {
+      "site": "0x80101210",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x80101218",
+      "target": "fn_80105310"
+    },
+    {
+      "site": "0x8010122C",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x80101234",
+      "target": "fn_80105384"
+    },
+    {
+      "site": "0x80101248",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x80101250",
+      "target": "fn_80107990"
+    },
+    {
+      "site": "0x80101264",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x8010126C",
+      "target": "fn_80107F90"
+    },
+    {
+      "site": "0x80101270",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x8010127C",
+      "target": "fn_801FF0FC"
+    },
+    {
+      "site": "0x8010128C",
+      "target": "fn_801FED48"
+    },
+    {
+      "site": "0x801012A0",
+      "target": "fn_801FED48"
+    },
+    {
+      "site": "0x801012A8",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x801012B4",
+      "target": "fn_80234BC8"
+    },
+    {
+      "site": "0x801012C0",
+      "target": "fn_801A07E0"
+    },
+    {
+      "site": "0x801012C8",
+      "target": "fn_80208DF0"
+    },
+    {
+      "site": "0x801012D4",
+      "target": "fn_801033D4"
+    },
+    {
+      "site": "0x801012E0",
+      "target": "fn_80196248"
+    },
+    {
+      "site": "0x801012E4",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x801012F0",
+      "target": "fn_8018EDFC"
+    },
+    {
+      "site": "0x801012F4",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x801012FC",
+      "target": "fn_80208F0C"
+    },
+    {
+      "site": "0x8010135C",
+      "target": "fn_80101C00"
+    },
+    {
+      "site": "0x80101364",
+      "target": "fn_80108BA8"
+    },
+    {
+      "site": "0x80101380",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x801013A0",
+      "target": "fn_80105E6C"
+    },
+    {
+      "site": "0x801013D4",
+      "target": "fn_80105E6C"
+    },
+    {
+      "site": "0x801013F8",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x80101400",
+      "target": "fn_80208DF0"
+    },
+    {
+      "site": "0x80101410",
+      "target": "fn_801042FC"
+    },
+    {
+      "site": "0x8010141C",
+      "target": "fn_8007D810"
+    },
+    {
+      "site": "0x80101424",
+      "target": "fn_80208F0C"
+    },
+    {
+      "site": "0x80101428",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x80101434",
+      "target": "fn_80103370"
+    },
+    {
+      "site": "0x8010143C",
+      "target": "fn_801042FC"
+    },
+    {
+      "site": "0x80101448",
+      "target": "fn_80295904"
+    },
+    {
+      "site": "0x80101450",
+      "target": "fn_802062A8"
+    },
+    {
+      "site": "0x80101460",
+      "target": "fn_800B3E9C"
+    },
+    {
+      "site": "0x801014A8",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x801014D8",
+      "target": "fn_802062A8"
+    },
+    {
+      "site": "0x801014E4",
+      "target": "fn_8006F5AC"
+    },
+    {
+      "site": "0x80101514",
+      "target": "fn_801962E4"
+    },
+    {
+      "site": "0x8010152C",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x80101534",
+      "target": "fn_80104594"
+    },
+    {
+      "site": "0x80101548",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x8010154C",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x8010155C",
+      "target": "fn_80282928"
+    },
+    {
+      "site": "0x8010156C",
+      "target": "fn_80282994"
+    },
+    {
+      "site": "0x80101584",
+      "target": "fn_802829E4"
+    },
+    {
+      "site": "0x80101590",
+      "target": "fn_8010818C"
+    },
+    {
+      "site": "0x801015F8",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x80101600",
+      "target": "fn_801D8DE4"
+    },
+    {
+      "site": "0x8010160C",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x80101618",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x80101628",
+      "target": "fn_800FA534"
+    },
+    {
+      "site": "0x8010162C",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x80101640",
+      "target": "fn_801042FC"
+    },
+    {
+      "site": "0x80101644",
+      "target": "fn_801636B8"
+    },
+    {
+      "site": "0x8010164C",
+      "target": "fn_801B8A9C"
+    },
+    {
+      "site": "0x80101658",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x80101660",
+      "target": "fn_8007E598"
+    },
+    {
+      "site": "0x80101668",
+      "target": "fn_80107E20"
+    },
+    {
+      "site": "0x80101680",
+      "target": "fn_80101D2C"
+    },
+    {
+      "site": "0x8010168C",
+      "target": "fn_800E81E0"
+    },
+    {
+      "site": "0x801016A0",
+      "target": "fn_801D8C60"
+    },
+    {
+      "site": "0x801016B4",
+      "target": "fn_801D8C60"
+    },
+    {
+      "site": "0x801016C8",
+      "target": "fn_801DA354"
+    },
+    {
+      "site": "0x801016E0",
+      "target": "fn_801DBE98"
+    },
+    {
+      "site": "0x801016F0",
+      "target": "fn_801DBE98"
+    },
+    {
+      "site": "0x801016F8",
+      "target": "fn_801D9F5C"
+    },
+    {
+      "site": "0x80101718",
+      "target": "fn_801B0D00"
+    },
+    {
+      "site": "0x8010171C",
+      "target": "fn_801CC4A4"
+    },
+    {
+      "site": "0x8010173C",
+      "target": "fn_801DCDB8"
+    },
+    {
+      "site": "0x80101744",
+      "target": "fn_8010A16C"
+    },
+    {
+      "site": "0x8010174C",
+      "target": "fn_8018D6BC"
+    },
+    {
+      "site": "0x80101764",
+      "target": "fn_800E66E8"
+    },
+    {
+      "site": "0x8010176C",
+      "target": "fn_801D914C"
+    },
+    {
+      "site": "0x8010178C",
+      "target": "fn_800E6550"
+    },
+    {
+      "site": "0x801017F0",
+      "target": "fn_8026D450"
+    },
+    {
+      "site": "0x801017FC",
+      "target": "fn_8026D40C"
+    },
+    {
+      "site": "0x80101960",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x801019A4",
+      "target": "fn_800E6550"
+    },
+    {
+      "site": "0x801019B4",
+      "target": "fn_80295790"
+    },
+    {
+      "site": "0x801019F0",
+      "target": "_restgpr_26"
+    }
+  ],
+  "strings": [
+    {
+      "site": "0x80100E80",
+      "address": "0x802D2580",
+      "text": "collectedBlowgun",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x80100ED0",
+      "address": "0x802D2668",
+      "text": "Game logic",
+      "basis": "analyst-supplied register base"
+    },
+    {
+      "site": "0x80100EFC",
+      "address": "0x802D2674",
+      "text": "Engine advance",
+      "basis": "analyst-supplied register base"
+    },
+    {
+      "site": "0x80100F0C",
+      "address": "0x802D2684",
+      "text": "Render manager",
+      "basis": "analyst-supplied register base"
+    },
+    {
+      "site": "0x80100F1C",
+      "address": "0x802D2694",
+      "text": "Env. actor init",
+      "basis": "analyst-supplied register base"
+    },
+    {
+      "site": "0x80100F2C",
+      "address": "0x802D26A4",
+      "text": "Water init",
+      "basis": "analyst-supplied register base"
+    },
+    {
+      "site": "0x80100F68",
+      "address": "0x802D26B0",
+      "text": "particles\\jujuParticles.dbl",
+      "basis": "analyst-supplied register base"
+    },
+    {
+      "site": "0x80100F80",
+      "address": "0x802D26CC",
+      "text": "particles\\jujuWaterParticles.dbl",
+      "basis": "analyst-supplied register base"
+    },
+    {
+      "site": "0x80100F98",
+      "address": "0x802D26F0",
+      "text": "fonts\\karavan",
+      "basis": "analyst-supplied register base"
+    },
+    {
+      "site": "0x80100FD8",
+      "address": "0x802D2700",
+      "text": "ryanwood.tga",
+      "basis": "analyst-supplied register base"
+    },
+    {
+      "site": "0x80101278",
+      "address": "0x802D2710",
+      "text": "tables\\SurfSurf.tbd",
+      "basis": "analyst-supplied register base"
+    },
+    {
+      "site": "0x80101294",
+      "address": "0x8033175C",
+      "text": "Lava",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x80101314",
+      "address": "0x802D2724",
+      "text": "shell\\frontend.dbl",
+      "basis": "analyst-supplied register base"
+    },
+    {
+      "site": "0x8010132C",
+      "address": "0x802D2738",
+      "text": "shell\\gadgets.dbl",
+      "basis": "analyst-supplied register base"
+    },
+    {
+      "site": "0x80101344",
+      "address": "0x802D2738",
+      "text": "shell\\gadgets.dbl",
+      "basis": "analyst-supplied register base"
+    },
+    {
+      "site": "0x8010175C",
+      "address": "0x802D274C",
+      "text": "last_fade",
+      "basis": "analyst-supplied register base"
+    },
+    {
+      "site": "0x80101774",
+      "address": "0x80331764",
+      "text": "visited",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x8010195C",
+      "address": "0x80331770",
+      "text": "yorbel",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x80101984",
+      "address": "0x802D2758",
+      "text": "worldYorbel",
+      "basis": "analyst-supplied register base"
+    }
+  ]
+}

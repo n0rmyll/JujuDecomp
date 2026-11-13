@@ -1,0 +1,26 @@
+{
+  "function": "fn_800CE6BC",
+  "source": "analysis/split/asm/auto_03_800C023C_text.s",
+  "start": "0x800CE6BC",
+  "instruction_count": 115,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x800CE7C0",
+      "target": "fn_8026D40C"
+    },
+    {
+      "site": "0x800CE7D8",
+      "target": "fn_8026D450"
+    }
+  ],
+  "strings": [
+    {
+      "site": "0x800CE84C",
+      "address": "0x802C48B8",
+      "text": "\u00a9 2003 Avalanche Software LC.  Developed by Avalanche Software.  Avalanche Software and its logo are trademarks of Avalanche Software LC.  Nickelodeon and all related titles and logos are trademarks of Viacom International Inc.  Exclusively published and licensed by THQ Inc.  THQ and the THQ logo are registered trademarks of THQ Inc.  All rights reserved.  All other trademarks, logos and copyrights are the property of their respective owners.\n\n\n\n\nLICENSED BY NINTENDO",
+      "basis": "direct operand; may be a load rather than an address argument"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "function": "fn_801079B4",
+  "source": "analysis/split/asm/auto_03_800FFC58_text.s",
+  "start": "0x801079B4",
+  "instruction_count": 29,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x80107A10",
+      "target": "fn_80107A28"
+    }
+  ],
+  "strings": []
+}

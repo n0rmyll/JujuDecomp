@@ -38,5 +38,44 @@
       "0x18": "0x80211FE4"
     }
   },
-  "verification": "PASS: DOL identity, tables, singleton pointers, constructor stores, stop setter"
+  "state_0ea4": {
+    "address": "0x802C73C0",
+    "slots": {
+      "0x00": "0x00000000",
+      "0x04": "0x00000000",
+      "0x08": "0x800CE3B8",
+      "0x0C": "0x800CE484",
+      "0x10": "0x800CE88C",
+      "0x14": "0x800CEB2C"
+    }
+  },
+  "state_452c0": {
+    "address": "0x802C73A8",
+    "slots": {
+      "0x00": "0x00000000",
+      "0x04": "0x00000000",
+      "0x08": "0x800CEC98",
+      "0x0C": "0x800CED44",
+      "0x10": "0x800CEDD8",
+      "0x14": "0x800CEEC0"
+    }
+  },
+  "state_32a0_primary": {
+    "address": "0x802D4274",
+    "slots": {
+      "0x00": "0x00000000",
+      "0x04": "0x00000000",
+      "0x08": "0x80100644",
+      "0x0C": "0x80100E54",
+      "0x10": "0x80101E6C",
+      "0x14": "0x801028F4"
+    }
+  },
+  "graphics_path": [
+    "fn_80101E6C",
+    "fn_801D8CA8",
+    "fn_801877A4",
+    "fn_80130478"
+  ],
+  "verification": "PASS: DOL identity, tables, singleton pointers, constructor stores, stop setter, graphics store and indexed call path"
 }

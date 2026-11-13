@@ -84,6 +84,10 @@ reaches the application's stop flag.
 
 ## What is still unresolved
 
+Update: three concrete states and a direct path to graphics FIFO writes
+have now been recovered. See `CONCRETE_STATES.md` for the next investigation
+and the remaining limits. The paragraph below records the previous boundary.
+
 The top-level loop and two singleton tables are recovered. Update and
 rendering are not yet separately identified: the next dispatch boundary is
 the active state object's +0x10 method. Recover the concrete state vtables

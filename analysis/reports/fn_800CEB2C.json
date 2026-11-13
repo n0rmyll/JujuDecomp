@@ -1,0 +1,15 @@
+{
+  "function": "fn_800CEB2C",
+  "source": "analysis/split/asm/auto_03_800C023C_text.s",
+  "start": "0x800CEB2C",
+  "instruction_count": 25,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x800CEB38",
+      "target": "fn_80260A80"
+    }
+  ],
+  "strings": []
+}
