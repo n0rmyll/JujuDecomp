@@ -18,7 +18,11 @@ against the expected GJUE78 main.dol bytes:
 - `0x801C4FE8` traverses child/sibling indices at +0x80/+0x84, with 0xF0
   bytes per serialized bone. Child recursion receives the current bone as
   parent; sibling recursion retains the previous parent. Names are at
-  +0xB0 and the matrix-array ID is the byte at +0xC9.
+  +0xB0 and non-root matrix-array IDs are the bytes at +0xC9. The root is
+  an exception: `0x801C4680` reads its byte into the skeleton bone count
+  at `0x801C46AC`, then overwrites it with zero at `0x801C46B4`. The
+  exporter uses runtime ID 0 for the root and retains the original byte
+  as `serialized_source_id`; it does not create a count-valued ID alias.
 - The first two 4x4 matrices are the bind transform and stored inverse
   transform. Their products are checked before export. Some stored inverses
   differ slightly from the stored bind matrices: export computes exact
@@ -81,13 +85,17 @@ resource stems and bone names; it does not silently retarget missing bones.
 
 ## Actual outputs
 
-- 274 skinned mesh GLBs, retaining repeated meshes across archives.
-- 80 skeletal model records rejected with explicit reasons: missing palette
-  bone IDs or inconsistent stored bind/inverse matrices.
+- 341 skinned mesh GLBs, retaining repeated meshes across archives.
+- 13 skeletal model records rejected for inconsistent stored bind/inverse
+  matrices. The corrected runtime root-ID mapping recovered all 67 former
+  missing-palette-ID failures (32 distinct source path markers), including
+  Plant Man, blimps, suspension bridges, foliage, and props. Record-level
+  details are in [root-ID recovery](rig-root-recovery.json).
 - 41 unique motion banks (deduplicated by source SHA-256), 949 parsed clips,
   zero bank-decoding errors.
-- 28 animated GLBs with 772 attached clips. Thirteen banks lack a matching
+- 30 animated GLBs with 808 attached clips. Eleven banks lack a matching
   exported rig and remain structured JSON motion exports.
+  Newly matched banks include Plant Man (35 clips) and Tak's splash (one).
 - Tak: 137 serialized bones, 186 parsed clips and 185 bound clips, including
   `DVWALK`, `DVRUN`, `DVJOG`, and jump/weapon motions. `B_BLINK` has only
   unmatched eyelid tracks and is retained in JSON without a GLB animation.
@@ -148,9 +156,11 @@ share the same vertex buffer.
 Helper tests additionally cover serialized percentages, rotation about an
 object-space pivot under a translated parent, independent XYZ weighting,
 two-reference blending, X-only mode, shortest-arc interpolation, and invalid
-dependencies. The texture/model/rig test selection contains 21 passing tests.
+dependencies. The texture/model/rig test selection contains 22 passing tests,
+including root-count-to-ID conversion, actual exported root influences,
+rejection of the count as a palette ID, and Tak's runtime ID range 0–136.
 
-`tools/check_rig_exports.py` reopens 302 skinned GLBs and checks hierarchy,
+`tools/check_rig_exports.py` reopens 371 skinned GLBs and checks hierarchy,
 bind reconstruction, joint bounds, normalized weights, accessor bounds,
 finite values, animation timelines, and unit quaternion outputs. The offline
 viewer supports clip selection, play/pause, scrubbing, and skin deformation.
@@ -161,3 +171,8 @@ Browser UI execution was unavailable; viewer JavaScript syntax is checked.
 No comparison against original-hardware playback is claimed. The rigs,
 raw keys, source offsets, and failure manifests are retained for continued
 verification and refinement.
+
+The Dolphin comparison attempt reached the main menu but was stopped at
+the user's request before gameplay capture. The current animation exports
+are provisionally accepted for continued extraction, not frame-matched
+against Dolphin. This does not change the recorded neck-gap limitation.

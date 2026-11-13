@@ -25,9 +25,9 @@ Snapshot: **November 13, 2026**, GJUE78 revision 0. These measure separate stage
 | Standalone DSP audio files exported as WAV | 1,005 / 1,005 extracted DSP files | **100%** | 72.26 minutes of mono PCM audio; zero decoding errors. Loop metadata retained; listening/hardware comparison remains unverified. |
 | ADP music streams exported as WAV | 19 / 19 extracted ADP files | **100%** | 35.80 minutes of stereo PCM at nominal 48 kHz; zero decoding errors. Game-controlled looping remains unresolved. |
 | Static model records exported as GLB | 9,058 / 9,408 encountered model records | **96.28%** | 1,713,896 triangles; 8,464 meshes include embedded textures. Static pass leaves 326 matrix-dependent and 24 subtype-17 records unresolved; repeated resources retained. |
-| Skeletal model records exported as skinned GLB | 274 / 354 attempted skeletal records | **77.40%** | Separate rig pass; 80 records rejected for missing palette bone IDs or inconsistent bind matrices. These records overlap the model scan and are not additive completion totals. |
+| Skeletal model records exported as skinned GLB | 341 / 354 attempted skeletal records | **96.33%** | Separate rig pass; corrected runtime root ID recovered 67 records. Thirteen records retain inconsistent bind matrices. These records overlap the model scan and are not additive completion totals. |
 | Unique motion banks decoded | 41 / 41 encountered unique banks | **100%** | 949 parsed clips, zero bank-decoding errors; banks deduplicated by source SHA-256. |
-| Motion banks attached to exported rigs | 28 / 41 decoded banks | **68.29%** | 28 animated GLBs with 772 attached clips; 13 banks remain JSON-only. Partial track bindings and 30 Hz baking are not verified gameplay playback. |
+| Motion banks attached to exported rigs | 30 / 41 decoded banks | **73.17%** | 30 animated GLBs with 808 attached clips; 11 banks remain JSON-only. Partial track bindings and 30 Hz baking are not verified gameplay playback. |
 
 The asset inventory totals **1,447,253,921 bytes** (about **1.35 GiB**):
 
@@ -174,11 +174,13 @@ play/pause, or scrub the timeline. Use the file picker for other animated
 exports, or import the self-contained GLBs into Blender. Bind-pose rigs have
 a separate gallery at `assets/rigs/index.html`.
 
-The first pass exported 274 skinned meshes and decoded 949 clips from 41
-unique motion banks. Matching rigs received 772 clips across 28 animated
+The rig pass now exports 341 skinned meshes and decodes 949 clips from 41
+unique motion banks. Matching rigs receive 808 clips across 30 animated
 GLBs, including Tak's 137-bone rig and 185 bound motions from its 186-clip bank.
 The blink clip has no matching bone tracks and remains in the JSON export. The animation-bank
-parser reported no errors; 80 skeletal model records remain unresolved.
+parser reported no errors; 13 skeletal model records remain unresolved.
+Correcting the serialized root count to runtime matrix ID 0 recovered 67
+models and enabled Plant Man's 35 clips plus Tak's splash animation.
 Some reduced rigs omit unmatched animation tracks, listed in the manifest.
 Serialized helper-bone rotations are also baked, including Tak's 21 hand,
 arm, spine, and leg helpers. The remaining neck deformation gap still needs

@@ -58,8 +58,11 @@ def decode_skeleton(data, record_offset=0):
         error=max(abs(v-IDENTITY[i]) for i,v in enumerate(multiply(bind,inverse)))
         if error>0.05:
             raise ValueError(f'Bind/inverse mismatch ({error:.6g})')
-        source_id=data[offset+201]
+        serialized_id=data[offset+201]
+        # fn_801C4680 consumes the root byte as a count, then replaces it with 0.
+        source_id=0 if index==0 else serialized_id
         bones[index]=dict(index=index,source_id=source_id,name=raw.decode('ascii'),parent=parent,
+                          serialized_source_id=serialized_id,
                           bind=bind,inverse_bind=invert(bind),stored_inverse_bind=inverse,source_offset=offset,
                           inverse_error=error,pivot=list(unpack(data,'3f',offset+0x94)),
                           helper=dict(mode=data[offset+0xca],x=data[offset+0xcb],

@@ -1,0 +1,730 @@
+{
+  "cause": "fn_801C4680 consumes serialized root +0xC9 as the bone count and overwrites it with runtime matrix ID 0.",
+  "previous_exports": 274,
+  "exports": 341,
+  "recovered": [
+    {
+      "archive": "Burial.dbu",
+      "chunk": 23,
+      "index": 0,
+      "name": "bm_bushAShape",
+      "path_hint": "replace\\bm_busha.dbl",
+      "glb": "Burial.dbu/0023_0000_bm_bushAShape.glb",
+      "root_vertices": 117
+    },
+    {
+      "archive": "Burial.dbu",
+      "chunk": 27,
+      "index": 0,
+      "name": "bm_bushBShape",
+      "path_hint": "replace\\bm_bushb.dbl",
+      "glb": "Burial.dbu/0027_0000_bm_bushBShape.glb",
+      "root_vertices": 88
+    },
+    {
+      "archive": "Burial.dbu",
+      "chunk": 31,
+      "index": 0,
+      "name": "hang_cratewebShape",
+      "path_hint": "replace\\bm_hangcrateweb.dbl",
+      "glb": "Burial.dbu/0031_0000_hang_cratewebShape.glb",
+      "root_vertices": 4
+    },
+    {
+      "archive": "Burial.dbu",
+      "chunk": 67,
+      "index": 0,
+      "name": "BoneLampMeshShape",
+      "path_hint": "replace\\lantern.dbl",
+      "glb": "Burial.dbu/0067_0000_BoneLampMeshShape.glb",
+      "root_vertices": 504
+    },
+    {
+      "archive": "C2Island.dbu",
+      "chunk": 25,
+      "index": 0,
+      "name": "ABTBushLMeshShape",
+      "path_hint": "replace\\abt_bush_l.dbl",
+      "glb": "C2Island.dbu/0025_0000_ABTBushLMeshShape.glb",
+      "root_vertices": 88
+    },
+    {
+      "archive": "C2Island.dbu",
+      "chunk": 29,
+      "index": 0,
+      "name": "ABTBushSMeshShape",
+      "path_hint": "replace\\abt_bush_s.dbl",
+      "glb": "C2Island.dbu/0029_0000_ABTBushSMeshShape.glb",
+      "root_vertices": 88
+    },
+    {
+      "archive": "C2Island.dbu",
+      "chunk": 45,
+      "index": 0,
+      "name": "hang_crateShape",
+      "path_hint": "replace\\ci_hang_crate.dbl",
+      "glb": "C2Island.dbu/0045_0000_hang_crateShape.glb",
+      "root_vertices": 6
+    },
+    {
+      "archive": "C2Island.dbu",
+      "chunk": 65,
+      "index": 0,
+      "name": "Grem_helmet_meshShape",
+      "path_hint": "replace\\grem_helmet.dbl",
+      "glb": "C2Island.dbu/0065_0000_Grem_helmet_meshShape.glb",
+      "root_vertices": 19
+    },
+    {
+      "archive": "C2Island.dbu",
+      "chunk": 129,
+      "index": 0,
+      "name": "slashTakMeshShape",
+      "path_hint": "replace\\splashtak.dbl",
+      "glb": "C2Island.dbu/0129_0000_slashTakMeshShape.glb",
+      "root_vertices": 1
+    },
+    {
+      "archive": "CIsland.dbu",
+      "chunk": 21,
+      "index": 0,
+      "name": "ABTBushLMeshShape",
+      "path_hint": "replace\\abt_bush_l.dbl",
+      "glb": "CIsland.dbu/0021_0000_ABTBushLMeshShape.glb",
+      "root_vertices": 88
+    },
+    {
+      "archive": "CIsland.dbu",
+      "chunk": 25,
+      "index": 0,
+      "name": "ABTBushSMeshShape",
+      "path_hint": "replace\\abt_bush_s.dbl",
+      "glb": "CIsland.dbu/0025_0000_ABTBushSMeshShape.glb",
+      "root_vertices": 88
+    },
+    {
+      "archive": "CIsland.dbu",
+      "chunk": 37,
+      "index": 0,
+      "name": "Chicken_blimpShape",
+      "path_hint": "replace\\chblmp.dbl",
+      "glb": "CIsland.dbu/0037_0000_Chicken_blimpShape.glb",
+      "root_vertices": 3853
+    },
+    {
+      "archive": "CIsland.dbu",
+      "chunk": 53,
+      "index": 0,
+      "name": "S_BridgeMShape",
+      "path_hint": "replace\\ci_bridge.dbl",
+      "glb": "CIsland.dbu/0053_0000_S_BridgeMShape.glb",
+      "root_vertices": 730
+    },
+    {
+      "archive": "CIsland.dbu",
+      "chunk": 137,
+      "index": 0,
+      "name": "slashTakMeshShape",
+      "path_hint": "replace\\splashtak.dbl",
+      "glb": "CIsland.dbu/0137_0000_slashTakMeshShape.glb",
+      "root_vertices": 1
+    },
+    {
+      "archive": "CanUnd.dbu",
+      "chunk": 33,
+      "index": 0,
+      "name": "Grem_helmet_meshShape",
+      "path_hint": "replace\\grem_helmet.dbl",
+      "glb": "CanUnd.dbu/0033_0000_Grem_helmet_meshShape.glb",
+      "root_vertices": 19
+    },
+    {
+      "archive": "Canyon.dbu",
+      "chunk": 33,
+      "index": 0,
+      "name": "PlantCMeshShape",
+      "path_hint": "replace\\c_plantc.dbl",
+      "glb": "Canyon.dbu/0033_0000_PlantCMeshShape.glb",
+      "root_vertices": 2
+    },
+    {
+      "archive": "Canyon.dbu",
+      "chunk": 57,
+      "index": 0,
+      "name": "CactusSmall2Shape",
+      "path_hint": "replace\\expcactustmd.dbl",
+      "glb": "Canyon.dbu/0057_0000_CactusSmall2Shape.glb",
+      "root_vertices": 209
+    },
+    {
+      "archive": "Canyon.dbu",
+      "chunk": 61,
+      "index": 0,
+      "name": "CactusAShape2",
+      "path_hint": "replace\\expcactustrg.dbl",
+      "glb": "Canyon.dbu/0061_0000_CactusAShape2.glb",
+      "root_vertices": 116
+    },
+    {
+      "archive": "Canyon.dbu",
+      "chunk": 85,
+      "index": 0,
+      "name": "plantmanShape",
+      "path_hint": "replace\\plantman.dbl",
+      "glb": "Canyon.dbu/0085_0000_plantmanShape.glb",
+      "root_vertices": 855
+    },
+    {
+      "archive": "Canyon.dbu",
+      "chunk": 125,
+      "index": 0,
+      "name": "slashTakMeshShape",
+      "path_hint": "replace\\splashtak.dbl",
+      "glb": "Canyon.dbu/0125_0000_slashTakMeshShape.glb",
+      "root_vertices": 1
+    },
+    {
+      "archive": "Hub.dbu",
+      "chunk": 15,
+      "index": 0,
+      "name": "ABTBushLMeshShape",
+      "path_hint": "replace\\abt_bush_l.dbl",
+      "glb": "Hub.dbu/0015_0000_ABTBushLMeshShape.glb",
+      "root_vertices": 88
+    },
+    {
+      "archive": "Hub.dbu",
+      "chunk": 19,
+      "index": 0,
+      "name": "ABTBushSMeshShape",
+      "path_hint": "replace\\abt_bush_s.dbl",
+      "glb": "Hub.dbu/0019_0000_ABTBushSMeshShape.glb",
+      "root_vertices": 88
+    },
+    {
+      "archive": "Hub.dbu",
+      "chunk": 23,
+      "index": 0,
+      "name": "ABT_Fern_l",
+      "path_hint": "replace\\abt_fern_l.dbl",
+      "glb": "Hub.dbu/0023_0000_ABT_Fern_l.glb",
+      "root_vertices": 51
+    },
+    {
+      "archive": "Hub.dbu",
+      "chunk": 27,
+      "index": 0,
+      "name": "ABT_Fern_s",
+      "path_hint": "replace\\abt_fern_s.dbl",
+      "glb": "Hub.dbu/0027_0000_ABT_Fern_s.glb",
+      "root_vertices": 51
+    },
+    {
+      "archive": "Hub.dbu",
+      "chunk": 35,
+      "index": 0,
+      "name": "ABTFlowerSMeshShape",
+      "path_hint": "replace\\abt_flower_s.dbl",
+      "glb": "Hub.dbu/0035_0000_ABTFlowerSMeshShape.glb",
+      "root_vertices": 3
+    },
+    {
+      "archive": "Hub.dbu",
+      "chunk": 39,
+      "index": 0,
+      "name": "ABT_Palm_lShape",
+      "path_hint": "replace\\abt_palm_l.dbl",
+      "glb": "Hub.dbu/0039_0000_ABT_Palm_lShape.glb",
+      "root_vertices": 151
+    },
+    {
+      "archive": "Hub.dbu",
+      "chunk": 43,
+      "index": 0,
+      "name": "ABT_Palm_sShape",
+      "path_hint": "replace\\abt_palm_s.dbl",
+      "glb": "Hub.dbu/0043_0000_ABT_Palm_sShape.glb",
+      "root_vertices": 151
+    },
+    {
+      "archive": "Hub.dbu",
+      "chunk": 47,
+      "index": 0,
+      "name": "ABT_Shrub_lShape",
+      "path_hint": "replace\\abt_shrub_l.dbl",
+      "glb": "Hub.dbu/0047_0000_ABT_Shrub_lShape.glb",
+      "root_vertices": 38
+    },
+    {
+      "archive": "Hub.dbu",
+      "chunk": 51,
+      "index": 0,
+      "name": "ABT_Shrub_mShape",
+      "path_hint": "replace\\abt_shrub_m.dbl",
+      "glb": "Hub.dbu/0051_0000_ABT_Shrub_mShape.glb",
+      "root_vertices": 38
+    },
+    {
+      "archive": "Hub.dbu",
+      "chunk": 55,
+      "index": 0,
+      "name": "ABT_Shrub_sShape",
+      "path_hint": "replace\\abt_shrub_s.dbl",
+      "glb": "Hub.dbu/0055_0000_ABT_Shrub_sShape.glb",
+      "root_vertices": 38
+    },
+    {
+      "archive": "Hub.dbu",
+      "chunk": 59,
+      "index": 0,
+      "name": "ABTTreeLMeshShape",
+      "path_hint": "replace\\abt_tree_l.dbl",
+      "glb": "Hub.dbu/0059_0000_ABTTreeLMeshShape.glb",
+      "root_vertices": 228
+    },
+    {
+      "archive": "Hub.dbu",
+      "chunk": 63,
+      "index": 0,
+      "name": "Chicken_blimpShape",
+      "path_hint": "replace\\chblmp.dbl",
+      "glb": "Hub.dbu/0063_0000_Chicken_blimpShape.glb",
+      "root_vertices": 3853
+    },
+    {
+      "archive": "Hub.dbu",
+      "chunk": 83,
+      "index": 0,
+      "name": "BlimpShape",
+      "path_hint": "replace\\gnblmp.dbl",
+      "glb": "Hub.dbu/0083_0000_BlimpShape.glb",
+      "root_vertices": 3376
+    },
+    {
+      "archive": "Hub.dbu",
+      "chunk": 87,
+      "index": 0,
+      "name": "cageShape",
+      "path_hint": "replace\\hw_cage.dbl",
+      "glb": "Hub.dbu/0087_0000_cageShape.glb",
+      "root_vertices": 4
+    },
+    {
+      "archive": "Hub.dbu",
+      "chunk": 123,
+      "index": 0,
+      "name": "slashTakMeshShape",
+      "path_hint": "replace\\splashtak.dbl",
+      "glb": "Hub.dbu/0123_0000_slashTakMeshShape.glb",
+      "root_vertices": 1
+    },
+    {
+      "archive": "Hub.dbu",
+      "chunk": 127,
+      "index": 0,
+      "name": "S_BridgeSShape",
+      "path_hint": "replace\\suspensionbridge10.dbl",
+      "glb": "Hub.dbu/0127_0000_S_BridgeSShape.glb",
+      "root_vertices": 1000
+    },
+    {
+      "archive": "Intro.dbu",
+      "chunk": 35,
+      "index": 0,
+      "name": "S_BridgeSShape",
+      "path_hint": "replace\\suspensionbridge10.dbl",
+      "glb": "Intro.dbu/0035_0000_S_BridgeSShape.glb",
+      "root_vertices": 1000
+    },
+    {
+      "archive": "Lok_Training.dbu",
+      "chunk": 19,
+      "index": 0,
+      "name": "ABTBushLMeshShape",
+      "path_hint": "replace\\abt_bush_l.dbl",
+      "glb": "Lok_Training.dbu/0019_0000_ABTBushLMeshShape.glb",
+      "root_vertices": 88
+    },
+    {
+      "archive": "Lok_Training.dbu",
+      "chunk": 23,
+      "index": 0,
+      "name": "ABTBushSMeshShape",
+      "path_hint": "replace\\abt_bush_s.dbl",
+      "glb": "Lok_Training.dbu/0023_0000_ABTBushSMeshShape.glb",
+      "root_vertices": 88
+    },
+    {
+      "archive": "Lok_Training.dbu",
+      "chunk": 27,
+      "index": 0,
+      "name": "ABT_Fern_l",
+      "path_hint": "replace\\abt_fern_l.dbl",
+      "glb": "Lok_Training.dbu/0027_0000_ABT_Fern_l.glb",
+      "root_vertices": 51
+    },
+    {
+      "archive": "Lok_Training.dbu",
+      "chunk": 31,
+      "index": 0,
+      "name": "ABT_Fern_s",
+      "path_hint": "replace\\abt_fern_s.dbl",
+      "glb": "Lok_Training.dbu/0031_0000_ABT_Fern_s.glb",
+      "root_vertices": 51
+    },
+    {
+      "archive": "Lok_Training.dbu",
+      "chunk": 39,
+      "index": 0,
+      "name": "ABTFlowerSMeshShape",
+      "path_hint": "replace\\abt_flower_s.dbl",
+      "glb": "Lok_Training.dbu/0039_0000_ABTFlowerSMeshShape.glb",
+      "root_vertices": 3
+    },
+    {
+      "archive": "Lok_Training.dbu",
+      "chunk": 43,
+      "index": 0,
+      "name": "ABT_Palm_lShape",
+      "path_hint": "replace\\abt_palm_l.dbl",
+      "glb": "Lok_Training.dbu/0043_0000_ABT_Palm_lShape.glb",
+      "root_vertices": 151
+    },
+    {
+      "archive": "Lok_Training.dbu",
+      "chunk": 47,
+      "index": 0,
+      "name": "ABT_Palm_sShape",
+      "path_hint": "replace\\abt_palm_s.dbl",
+      "glb": "Lok_Training.dbu/0047_0000_ABT_Palm_sShape.glb",
+      "root_vertices": 151
+    },
+    {
+      "archive": "Lok_Training.dbu",
+      "chunk": 51,
+      "index": 0,
+      "name": "ABT_Shrub_lShape",
+      "path_hint": "replace\\abt_shrub_l.dbl",
+      "glb": "Lok_Training.dbu/0051_0000_ABT_Shrub_lShape.glb",
+      "root_vertices": 38
+    },
+    {
+      "archive": "Lok_Training.dbu",
+      "chunk": 55,
+      "index": 0,
+      "name": "ABT_Shrub_mShape",
+      "path_hint": "replace\\abt_shrub_m.dbl",
+      "glb": "Lok_Training.dbu/0055_0000_ABT_Shrub_mShape.glb",
+      "root_vertices": 38
+    },
+    {
+      "archive": "Lok_Training.dbu",
+      "chunk": 59,
+      "index": 0,
+      "name": "ABT_Shrub_sShape",
+      "path_hint": "replace\\abt_shrub_s.dbl",
+      "glb": "Lok_Training.dbu/0059_0000_ABT_Shrub_sShape.glb",
+      "root_vertices": 38
+    },
+    {
+      "archive": "Lok_Training.dbu",
+      "chunk": 63,
+      "index": 0,
+      "name": "ABTTreeLMeshShape",
+      "path_hint": "replace\\abt_tree_l.dbl",
+      "glb": "Lok_Training.dbu/0063_0000_ABTTreeLMeshShape.glb",
+      "root_vertices": 228
+    },
+    {
+      "archive": "Lok_Training.dbu",
+      "chunk": 83,
+      "index": 0,
+      "name": "cageShape",
+      "path_hint": "replace\\hw_cage.dbl",
+      "glb": "Lok_Training.dbu/0083_0000_cageShape.glb",
+      "root_vertices": 4
+    },
+    {
+      "archive": "Lok_Training.dbu",
+      "chunk": 135,
+      "index": 0,
+      "name": "slashTakMeshShape",
+      "path_hint": "replace\\splashtak.dbl",
+      "glb": "Lok_Training.dbu/0135_0000_slashTakMeshShape.glb",
+      "root_vertices": 1
+    },
+    {
+      "archive": "MTop2.dbu",
+      "chunk": 40,
+      "index": 0,
+      "name": "DancePlatformShape",
+      "path_hint": "replace\\danceplatform.dbl",
+      "glb": "MTop2.dbu/0040_0000_DancePlatformShape.glb",
+      "root_vertices": 108
+    },
+    {
+      "archive": "MTop2.dbu",
+      "chunk": 52,
+      "index": 0,
+      "name": "Grem_helmet_meshShape",
+      "path_hint": "replace\\grem_helmet.dbl",
+      "glb": "MTop2.dbu/0052_0000_Grem_helmet_meshShape.glb",
+      "root_vertices": 19
+    },
+    {
+      "archive": "MtnTop.dbu",
+      "chunk": 51,
+      "index": 0,
+      "name": "BlimpShape",
+      "path_hint": "replace\\gnblmp.dbl",
+      "glb": "MtnTop.dbu/0051_0000_BlimpShape.glb",
+      "root_vertices": 3376
+    },
+    {
+      "archive": "MtnTop.dbu",
+      "chunk": 59,
+      "index": 0,
+      "name": "Grem_helmet_meshShape",
+      "path_hint": "replace\\grem_helmet.dbl",
+      "glb": "MtnTop.dbu/0059_0000_Grem_helmet_meshShape.glb",
+      "root_vertices": 19
+    },
+    {
+      "archive": "MtnTop.dbu",
+      "chunk": 179,
+      "index": 0,
+      "name": "slashTakMeshShape",
+      "path_hint": "replace\\splashtak.dbl",
+      "glb": "MtnTop.dbu/0179_0000_slashTakMeshShape.glb",
+      "root_vertices": 1
+    },
+    {
+      "archive": "STemple.dbu",
+      "chunk": 35,
+      "index": 0,
+      "name": "Grem_helmet_meshShape",
+      "path_hint": "replace\\grem_helmet.dbl",
+      "glb": "STemple.dbu/0035_0000_Grem_helmet_meshShape.glb",
+      "root_vertices": 19
+    },
+    {
+      "archive": "Spirit.dbu",
+      "chunk": 53,
+      "index": 0,
+      "name": "Grem_helmet_meshShape",
+      "path_hint": "replace\\grem_helmet.dbl",
+      "glb": "Spirit.dbu/0053_0000_Grem_helmet_meshShape.glb",
+      "root_vertices": 19
+    },
+    {
+      "archive": "Spirit.dbu",
+      "chunk": 133,
+      "index": 0,
+      "name": "ThornbushShape",
+      "path_hint": "replace\\thornbush.dbl",
+      "glb": "Spirit.dbu/0133_0000_ThornbushShape.glb",
+      "root_vertices": 144
+    },
+    {
+      "archive": "T2Village.dbu",
+      "chunk": 105,
+      "index": 0,
+      "name": "S_BridgeSShape",
+      "path_hint": "replace\\suspensionbridge10.dbl",
+      "glb": "T2Village.dbu/0105_0000_S_BridgeSShape.glb",
+      "root_vertices": 1000
+    },
+    {
+      "archive": "T2Village.dbu",
+      "chunk": 109,
+      "index": 0,
+      "name": "S_BridgeMShape",
+      "path_hint": "replace\\suspensionbridge15.dbl",
+      "glb": "T2Village.dbu/0109_0000_S_BridgeMShape.glb",
+      "root_vertices": 1158
+    },
+    {
+      "archive": "T2Village.dbu",
+      "chunk": 117,
+      "index": 0,
+      "name": "BlimpShape",
+      "path_hint": "replace\\treeblimp.dbl",
+      "glb": "T2Village.dbu/0117_0000_BlimpShape.glb",
+      "root_vertices": 3280
+    },
+    {
+      "archive": "TVillage.dbu",
+      "chunk": 107,
+      "index": 0,
+      "name": "S_BridgeMShape",
+      "path_hint": "replace\\suspensionbridge15.dbl",
+      "glb": "TVillage.dbu/0107_0000_S_BridgeMShape.glb",
+      "root_vertices": 1158
+    },
+    {
+      "archive": "TlalocBoss.dbu",
+      "chunk": 15,
+      "index": 0,
+      "name": "Tlaloc_Fern",
+      "path_hint": "replace\\abt_tlafern.dbl",
+      "glb": "TlalocBoss.dbu/0015_0000_Tlaloc_Fern.glb",
+      "root_vertices": 30
+    },
+    {
+      "archive": "Tombs.dbu",
+      "chunk": 23,
+      "index": 0,
+      "name": "bm_bushAShape",
+      "path_hint": "replace\\bm_busha.dbl",
+      "glb": "Tombs.dbu/0023_0000_bm_bushAShape.glb",
+      "root_vertices": 117
+    },
+    {
+      "archive": "Tombs.dbu",
+      "chunk": 27,
+      "index": 0,
+      "name": "bm_bushBShape",
+      "path_hint": "replace\\bm_bushb.dbl",
+      "glb": "Tombs.dbu/0027_0000_bm_bushBShape.glb",
+      "root_vertices": 88
+    },
+    {
+      "archive": "Tombs.dbu",
+      "chunk": 67,
+      "index": 0,
+      "name": "Grem_helmet_meshShape",
+      "path_hint": "replace\\grem_helmet.dbl",
+      "glb": "Tombs.dbu/0067_0000_Grem_helmet_meshShape.glb",
+      "root_vertices": 19
+    },
+    {
+      "archive": "Tombs.dbu",
+      "chunk": 103,
+      "index": 0,
+      "name": "BoneLampMeshShape",
+      "path_hint": "replace\\lantern.dbl",
+      "glb": "Tombs.dbu/0103_0000_BoneLampMeshShape.glb",
+      "root_vertices": 504
+    }
+  ],
+  "unresolved": [
+    {
+      "archive": "C2Island.dbu",
+      "archive_sha256": "29a50c2ad2554df0ac12171346144195d48f64cbd54a21738a57476ccf868b3f",
+      "chunk": 125,
+      "index": 0,
+      "source_offset": 2283752,
+      "path_hint": "replace\\splashsmall.dbl",
+      "error": "Bind/inverse mismatch (2.30977)"
+    },
+    {
+      "archive": "C2Island.dbu",
+      "archive_sha256": "29a50c2ad2554df0ac12171346144195d48f64cbd54a21738a57476ccf868b3f",
+      "chunk": 137,
+      "index": 0,
+      "source_offset": 2362344,
+      "path_hint": "replace\\twoheadedjuju.dbl",
+      "error": "Bind/inverse mismatch (0.0517855)"
+    },
+    {
+      "archive": "CIsland.dbu",
+      "archive_sha256": "480d9a18a14d64101690181a948b84f561ef44ad6e1759315d20af1cf6214cbf",
+      "chunk": 133,
+      "index": 0,
+      "source_offset": 2864424,
+      "path_hint": "replace\\splashsmall.dbl",
+      "error": "Bind/inverse mismatch (2.30977)"
+    },
+    {
+      "archive": "CIsland.dbu",
+      "archive_sha256": "480d9a18a14d64101690181a948b84f561ef44ad6e1759315d20af1cf6214cbf",
+      "chunk": 149,
+      "index": 0,
+      "source_offset": 2968328,
+      "path_hint": "replace\\twoheadedjuju.dbl",
+      "error": "Bind/inverse mismatch (0.0517855)"
+    },
+    {
+      "archive": "Canyon.dbu",
+      "archive_sha256": "899a4a5217947df08ea48b6e6543cc730c7e3fa4e3919a17514fb69628412dd9",
+      "chunk": 25,
+      "index": 0,
+      "source_offset": 473288,
+      "path_hint": "replace\\c_planta.dbl",
+      "error": "Bind/inverse mismatch (1)"
+    },
+    {
+      "archive": "Canyon.dbu",
+      "archive_sha256": "899a4a5217947df08ea48b6e6543cc730c7e3fa4e3919a17514fb69628412dd9",
+      "chunk": 29,
+      "index": 0,
+      "source_offset": 515240,
+      "path_hint": "replace\\c_plantb.dbl",
+      "error": "Bind/inverse mismatch (1.0054)"
+    },
+    {
+      "archive": "Canyon.dbu",
+      "archive_sha256": "899a4a5217947df08ea48b6e6543cc730c7e3fa4e3919a17514fb69628412dd9",
+      "chunk": 121,
+      "index": 0,
+      "source_offset": 2389544,
+      "path_hint": "replace\\splashsmall.dbl",
+      "error": "Bind/inverse mismatch (2.30977)"
+    },
+    {
+      "archive": "Canyon.dbu",
+      "archive_sha256": "899a4a5217947df08ea48b6e6543cc730c7e3fa4e3919a17514fb69628412dd9",
+      "chunk": 133,
+      "index": 0,
+      "source_offset": 2477896,
+      "path_hint": "replace\\twoheadedjuju.dbl",
+      "error": "Bind/inverse mismatch (0.0517855)"
+    },
+    {
+      "archive": "Hub.dbu",
+      "archive_sha256": "edd718a44cdb470cb7530fe73713a4caf22224ce4426fe89527df14577fb8eb8",
+      "chunk": 119,
+      "index": 0,
+      "source_offset": 1991752,
+      "path_hint": "replace\\splashsmall.dbl",
+      "error": "Bind/inverse mismatch (2.30977)"
+    },
+    {
+      "archive": "Lok_Training.dbu",
+      "archive_sha256": "e75e705ec0190a700ce5982f545bff1a019c5c7f7a9e3e159a1729a92e80960b",
+      "chunk": 131,
+      "index": 0,
+      "source_offset": 2183560,
+      "path_hint": "replace\\splashsmall.dbl",
+      "error": "Bind/inverse mismatch (2.30977)"
+    },
+    {
+      "archive": "MtnTop.dbu",
+      "archive_sha256": "c17da0d83a608268f2c8e6ded147fbd0d63d507e174fd5e5ff582ce231c342e6",
+      "chunk": 175,
+      "index": 0,
+      "source_offset": 3902792,
+      "path_hint": "replace\\splashsmall.dbl",
+      "error": "Bind/inverse mismatch (2.30977)"
+    },
+    {
+      "archive": "Spirit.dbu",
+      "archive_sha256": "5a18ec346774869af0e289abe1d02a0f3d3acc9966431319c006616a8d9998e9",
+      "chunk": 25,
+      "index": 0,
+      "source_offset": 391240,
+      "path_hint": "replace\\beam.dbl",
+      "error": "Bind/inverse mismatch (0.666667)"
+    },
+    {
+      "archive": "Tombs.dbu",
+      "archive_sha256": "268827de5768b020b7f1cb28ffe91f0dc8e5372106e3b1627af29269c1afc8e1",
+      "chunk": 39,
+      "index": 0,
+      "source_offset": 680456,
+      "path_hint": "replace\\dart_hole.dbl",
+      "error": "Bind/inverse mismatch (0.952273)"
+    }
+  ],
+  "verification": "Dolphin comparison was stopped at user request; animation playback remains provisionally accepted, not frame-matched."
+}

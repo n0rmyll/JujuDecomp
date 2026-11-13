@@ -81,6 +81,24 @@ class RigTests(unittest.TestCase):
         matrix=compose([3,4,5],[0,0,0,1],[2,3,4])
         for a,b in zip(multiply(matrix,invert(matrix)),IDENTITY):self.assertAlmostEqual(a,b)
 
+    def test_root_count_becomes_palette_zero(self):
+        data=skeleton_fixture()
+        data[160+201]=2
+        bones=decode_skeleton(data)['bones']
+        self.assertEqual([b['source_id'] for b in bones],[0,1])
+        self.assertEqual(bones[0]['serialized_source_id'],2)
+        # The root count is not a legal alias for a vertex matrix ID.
+        mesh=dict(name='root_vertex',vertices=[dict(position=(0,0,0),normal=None,uv=None,joint=j) for j in (0,1,0)],
+                  primitives=[dict(material_index=0,indices=[0,1,2])])
+        with tempfile.TemporaryDirectory() as temp:
+            path=Path(temp)/'root.glb';write_glb(mesh,path)
+            attach_skin(path,mesh,dict(bones=bones))
+            g,blob=read_glb(path);a=g['accessors'][g['meshes'][0]['primitives'][0]['attributes']['JOINTS_0']]
+            offset=g['bufferViews'][a['bufferView']]['byteOffset']
+            self.assertEqual(struct.unpack_from('<12H',blob,offset),(0,0,0,0,1,0,0,0,0,0,0,0))
+            mesh['vertices'][0]['joint']=2
+            with self.assertRaisesRegex(ValueError,'absent'):attach_skin(path,mesh,dict(bones=bones))
+
     def test_skeleton_corruption(self):
         for offset,raw in ((160+128,struct.pack('>I',9999)),(160+240+132,struct.pack('>I',1)),(160,b'\0'*64)):
             data=skeleton_fixture();data[offset:offset+len(raw)]=raw
@@ -134,6 +152,9 @@ class RigTests(unittest.TestCase):
         if row is None:self.skipTest('Local Tak rig unavailable')
         bones=json.loads((root/row['skeleton']).read_text())['bones']
         self.assertEqual(len(bones),137)
+        self.assertEqual(bones[0]['source_id'],0)
+        self.assertEqual(bones[0]['serialized_source_id'],137)
+        self.assertEqual(sorted(b['source_id'] for b in bones),list(range(137)))
         for bone in bones:
             for a,b in zip(multiply(bone['bind'],bone['inverse_bind']),IDENTITY):self.assertAlmostEqual(a,b,places=5)
 
