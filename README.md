@@ -104,6 +104,19 @@ exported). Repeated textures across levels are retained. Mipmaps, animated
 texture frames, models, and audio conversion are not yet supported. See
 [texture format findings](analysis/TEXTURE_EXTRACTION.md) for evidence and limits.
 
+To convert standalone Nintendo DSP audio to playable WAV files:
+
+```sh
+python3 tools/decode_audio.py
+python3 -m unittest discover -s tests -p test_decode_audio.py
+```
+
+Open `assets/audio/index.html` to search and play the exported clips. The
+decoder preserves the original sample rate and writes mono 16-bit PCM WAVs;
+`assets/audio/manifest.json` records source/PCM hashes, durations, peak levels,
+and loop metadata. It uses only Python's standard library. DBA sound banks
+and ADP music require separate decoders. See [audio findings](analysis/AUDIO_EXTRACTION.md).
+
 ## Check the first recovered function
 
 From the repository root, run:
