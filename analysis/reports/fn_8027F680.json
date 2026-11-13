@@ -1,0 +1,15 @@
+{
+  "function": "fn_8027F680",
+  "source": "analysis/split/asm/auto_03_8027B5AC_text.s",
+  "start": "0x8027F680",
+  "instruction_count": 29,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x8027F6A0",
+      "target": "fn_80295974"
+    }
+  ],
+  "strings": []
+}

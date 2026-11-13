@@ -1,0 +1,19 @@
+{
+  "function": "fn_8027F88C",
+  "source": "analysis/split/asm/auto_03_8027B5AC_text.s",
+  "start": "0x8027F88C",
+  "instruction_count": 138,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x8027F8D0",
+      "target": "fn_80289D00"
+    },
+    {
+      "site": "0x8027F8F0",
+      "target": "fn_8027F7C4"
+    }
+  ],
+  "strings": []
+}

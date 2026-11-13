@@ -4,6 +4,27 @@
  */
 #include <stdint.h>
 
+/* fn_801B91FC (0x801B91FC..0x801B9244): in-place relocation.
+ * Unlike the accessor, this routine has no null-base guard. Bit 2 is
+ * recorded but never tested: calling twice adds base twice. The count is
+ * reloaded on each iteration, as in the original target-memory loop.
+ */
+void tak_resource_array_relocate(uint32_t base,
+                                uint16_t (*read_u16)(uint32_t),
+                                uint32_t (*read_u32)(uint32_t),
+                                void (*write_u16)(uint32_t, uint16_t),
+                                void (*write_u32)(uint32_t, uint32_t))
+{
+    uint16_t flags = read_u16(base + UINT32_C(2));
+    if (!(flags & 1u))
+        return;
+    write_u16(base + UINT32_C(2), (uint16_t)(flags | 4u));
+    for (uint32_t i = 0; (uint16_t)i < read_u16(base); ++i) {
+        uint32_t address = base + UINT32_C(4) + (uint16_t)i * UINT32_C(4);
+        write_u32(address, read_u32(address) + base);
+    }
+}
+
 uint32_t tak_resource_array_item(uint32_t base, uint32_t index,
                                  uint16_t (*read_u16)(uint32_t),
                                  uint32_t (*read_u32)(uint32_t))

@@ -1,0 +1,15 @@
+{
+  "function": "fn_801C5A04",
+  "source": "analysis/split/asm/auto_03_801C2D70_text.s",
+  "start": "0x801C5A04",
+  "instruction_count": 24,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801C5A30",
+      "target": "fn_801B91FC"
+    }
+  ],
+  "strings": []
+}

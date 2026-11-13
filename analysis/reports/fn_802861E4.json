@@ -1,0 +1,166 @@
+{
+  "function": "fn_802861E4",
+  "source": "analysis/split/asm/auto_03_8027B5AC_text.s",
+  "start": "0x802861E4",
+  "instruction_count": 168,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x8028620C",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x80286228",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x80286244",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x80286260",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x8028627C",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x80286298",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x802862B4",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x802862D0",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x802862EC",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x80286308",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x80286324",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x80286340",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x8028635C",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x80286378",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x80286394",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x802863B0",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x802863CC",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x802863E8",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x80286404",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x80286420",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x8028643C",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x80286458",
+      "target": "fn_80212004"
+    }
+  ],
+  "strings": [
+    {
+      "site": "0x802861F8",
+      "address": "0x802F39A0",
+      "text": "PADDEDCELL",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x80286224",
+      "address": "0x80332448",
+      "text": "ROOM",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x802862CC",
+      "address": "0x80332450",
+      "text": "CAVE",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x802862E8",
+      "address": "0x80332458",
+      "text": "ARENA",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x80286304",
+      "address": "0x80332460",
+      "text": "HANGAR",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x8028633C",
+      "address": "0x80332468",
+      "text": "HALLWAY",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x80286374",
+      "address": "0x80332470",
+      "text": "ALLEY",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x80286390",
+      "address": "0x80332478",
+      "text": "FOREST",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x802863AC",
+      "address": "0x80332480",
+      "text": "CITY",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x802863E4",
+      "address": "0x80332488",
+      "text": "QUARRY",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x80286400",
+      "address": "0x80332490",
+      "text": "PLAIN",
+      "basis": "direct operand; may be a load rather than an address argument"
+    }
+  ]
+}

@@ -1,5 +1,8 @@
 # Resource dispatcher and first payload-directory decoder
 
+Update: `WORLD_VOLUMES.md` traces the 0x0601 consumers and documents a
+record exporter validated against Hub and Burial archives.
+
 ## Type routing
 
 `analysis/resource-types.json` maps **42 observed chunk types** across the
@@ -29,6 +32,16 @@ remain undecoded.
 Common helper **0x801B91FC** reads a u16 count at payload +0 and u16 flags
 at +2. If bit 0 is set, it sets bit 2 and adds the payload base to each
 u32 entry starting at +4. This is an in-place relative-pointer relocation.
+`src/recovered/resource_array.c` now models this helper as well as the
+accessor. The original does not test bit 2 before relocating: repeated calls
+add the base again. It also has no null-pointer guard and reloads the count
+on each loop test. Address arithmetic wraps at 32 bits.
+
+Verification checks all 18 original instructions against the local DOL,
+then checks the host C relocation and accessor against 479 real record
+starts in Preload and Hub. Another 64 cases cover flag combinations,
+empty arrays, overflowing additions, and repeated relocation. These are
+semantic checks; no original-target compilation or binary match is claimed.
 
 Accessor **0x801B92FC**:
 
