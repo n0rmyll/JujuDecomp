@@ -1,0 +1,51 @@
+{
+  "function": "fn_801B8C80",
+  "source": "analysis/split/asm/auto_03_801B5A1C_text.s",
+  "start": "0x801B8C80",
+  "instruction_count": 120,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801B8C90",
+      "target": "_savegpr_26"
+    },
+    {
+      "site": "0x801B8CAC",
+      "target": "memcpy"
+    },
+    {
+      "site": "0x801B8CB4",
+      "target": "fn_80296AE0"
+    },
+    {
+      "site": "0x801B8CD0",
+      "target": "memcpy"
+    },
+    {
+      "site": "0x801B8CE8",
+      "target": "fn_801B9014"
+    },
+    {
+      "site": "0x801B8CFC",
+      "target": "fn_801B9014"
+    },
+    {
+      "site": "0x801B8D04",
+      "target": "fn_801B90D0"
+    },
+    {
+      "site": "0x801B8D1C",
+      "target": "fn_80295790"
+    },
+    {
+      "site": "0x801B8D30",
+      "target": "fn_80295790"
+    },
+    {
+      "site": "0x801B8E4C",
+      "target": "_restgpr_26"
+    }
+  ],
+  "strings": []
+}

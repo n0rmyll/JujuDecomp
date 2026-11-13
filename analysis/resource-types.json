@@ -1,0 +1,462 @@
+{
+  "source": "Verified fn_801B777C disassembly; partial decision-tree evaluation, not a PPC emulator",
+  "types": [
+    {
+      "type": "0x0020",
+      "handler_entry": "0x801B7A50",
+      "initial_direct_calls": [
+        "fn_801C4324"
+      ],
+      "occurrences": {
+        "preload": 9,
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0021",
+      "handler_entry": "0x801B7A50",
+      "initial_direct_calls": [
+        "fn_801C4324"
+      ],
+      "occurrences": {
+        "preload": 2,
+        "hub": 2
+      }
+    },
+    {
+      "type": "0x0022",
+      "handler_entry": "0x801B7A68",
+      "initial_direct_calls": [
+        "fn_801C4468"
+      ],
+      "occurrences": {
+        "preload": 11,
+        "hub": 8
+      }
+    },
+    {
+      "type": "0x0023",
+      "handler_entry": "0x801B7A68",
+      "initial_direct_calls": [
+        "fn_801C4468"
+      ],
+      "occurrences": {
+        "preload": 2,
+        "hub": 25
+      }
+    },
+    {
+      "type": "0x0025",
+      "handler_entry": "0x801B7C30",
+      "initial_direct_calls": [
+        "fn_801B5A1C"
+      ],
+      "occurrences": {
+        "preload": 2,
+        "hub": 26
+      }
+    },
+    {
+      "type": "0x0026",
+      "handler_entry": "0x801B7C30",
+      "initial_direct_calls": [
+        "fn_801B5A1C"
+      ],
+      "occurrences": {
+        "preload": 5,
+        "hub": 5
+      }
+    },
+    {
+      "type": "0x0060",
+      "handler_entry": "0x801B7A98",
+      "initial_direct_calls": [
+        "fn_801BA628"
+      ],
+      "occurrences": {
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0064",
+      "handler_entry": "0x801B7B88",
+      "initial_direct_calls": [
+        "fn_801C6020"
+      ],
+      "occurrences": {
+        "preload": 2,
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0065",
+      "handler_entry": "0x801B7B70",
+      "initial_direct_calls": [
+        "fn_801C5BAC"
+      ],
+      "occurrences": {
+        "preload": 2,
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0066",
+      "handler_entry": "0x801B7B58",
+      "initial_direct_calls": [
+        "fn_801C5A84"
+      ],
+      "occurrences": {
+        "preload": 2,
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0067",
+      "handler_entry": "0x801B7C48",
+      "initial_direct_calls": [
+        "fn_8018C7FC"
+      ],
+      "occurrences": {
+        "preload": 24,
+        "hub": 36
+      }
+    },
+    {
+      "type": "0x0068",
+      "handler_entry": "0x801B7D08",
+      "initial_direct_calls": [
+        "fn_801C6B2C"
+      ],
+      "occurrences": {
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0069",
+      "handler_entry": "0x801B7D20",
+      "initial_direct_calls": [
+        "fn_801C6BC8"
+      ],
+      "occurrences": {
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x006A",
+      "handler_entry": "0x801B7BA0",
+      "initial_direct_calls": [
+        "fn_801C5C34"
+      ],
+      "occurrences": {
+        "preload": 1
+      }
+    },
+    {
+      "type": "0x006C",
+      "handler_entry": "0x801B7BB8",
+      "initial_direct_calls": [
+        "fn_801C5CBC"
+      ],
+      "occurrences": {
+        "preload": 1
+      }
+    },
+    {
+      "type": "0x0082",
+      "handler_entry": "0x801B7BD0",
+      "initial_direct_calls": [
+        "fn_8018BF18"
+      ],
+      "occurrences": {
+        "preload": 28,
+        "hub": 38
+      }
+    },
+    {
+      "type": "0x0083",
+      "handler_entry": "0x801B7CC0",
+      "initial_direct_calls": [
+        "fn_801B9190"
+      ],
+      "occurrences": {
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0084",
+      "handler_entry": "0x801B7CC0",
+      "initial_direct_calls": [
+        "fn_801B9190"
+      ],
+      "occurrences": {
+        "preload": 2,
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0085",
+      "handler_entry": "0x801B7CC0",
+      "initial_direct_calls": [
+        "fn_801B9190"
+      ],
+      "occurrences": {
+        "preload": 2,
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0086",
+      "handler_entry": "0x801B7BD0",
+      "initial_direct_calls": [
+        "fn_8018BF18"
+      ],
+      "occurrences": {
+        "preload": 2,
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0087",
+      "handler_entry": "0x801B7BE8",
+      "initial_direct_calls": [
+        "fn_8018C42C"
+      ],
+      "occurrences": {
+        "preload": 1,
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0088",
+      "handler_entry": "0x801B7CC0",
+      "initial_direct_calls": [
+        "fn_801B9190"
+      ],
+      "occurrences": {
+        "preload": 2,
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x008A",
+      "handler_entry": "0x801B7CC0",
+      "initial_direct_calls": [
+        "fn_801B9190"
+      ],
+      "occurrences": {
+        "preload": 1
+      }
+    },
+    {
+      "type": "0x008B",
+      "handler_entry": "0x801B7CC0",
+      "initial_direct_calls": [
+        "fn_801B9190"
+      ],
+      "occurrences": {
+        "preload": 1
+      }
+    },
+    {
+      "type": "0x0090",
+      "handler_entry": "0x801B7CD8",
+      "initial_direct_calls": [
+        "fn_801C6338"
+      ],
+      "occurrences": {
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0100",
+      "handler_entry": "0x801B7C00",
+      "initial_direct_calls": [
+        "fn_801C33C4"
+      ],
+      "occurrences": {
+        "preload": 3,
+        "hub": 7
+      }
+    },
+    {
+      "type": "0x0101",
+      "handler_entry": "0x801B7C18",
+      "initial_direct_calls": [
+        "fn_801C45F8"
+      ],
+      "occurrences": {
+        "preload": 1
+      }
+    },
+    {
+      "type": "0x0200",
+      "handler_entry": "0x801B7D38",
+      "initial_direct_calls": [
+        "fn_801C6C80"
+      ],
+      "occurrences": {
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0201",
+      "handler_entry": "0x801B7AE0",
+      "initial_direct_calls": [
+        "fn_801C58D8"
+      ],
+      "occurrences": {
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0203",
+      "handler_entry": "0x801B7AC8",
+      "initial_direct_calls": [
+        "fn_801C586C"
+      ],
+      "occurrences": {
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0209",
+      "handler_entry": "0x801B7D60",
+      "initial_direct_calls": [
+        "fn_801BA748"
+      ],
+      "occurrences": {
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0280",
+      "handler_entry": "0x801B7D84",
+      "initial_direct_calls": [],
+      "occurrences": {
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0281",
+      "handler_entry": "0x801B7D84",
+      "initial_direct_calls": [],
+      "occurrences": {
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0283",
+      "handler_entry": "0x801B7D84",
+      "initial_direct_calls": [],
+      "occurrences": {
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0400",
+      "handler_entry": "0x801B7FD8",
+      "initial_direct_calls": [
+        "fn_8025B790"
+      ],
+      "occurrences": {
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0402",
+      "handler_entry": "0x801B7DC4",
+      "initial_direct_calls": [
+        "OSDisableInterrupts",
+        "OSDisableScheduler",
+        "OSRestoreInterrupts",
+        "fn_80206174",
+        "fn_80205DF0",
+        "fn_80206174",
+        "OSDisableInterrupts",
+        "OSEnableScheduler",
+        "OSRestoreInterrupts"
+      ],
+      "occurrences": {
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0404",
+      "handler_entry": "0x801B7DC4",
+      "initial_direct_calls": [
+        "OSDisableInterrupts",
+        "OSDisableScheduler",
+        "OSRestoreInterrupts",
+        "fn_80206174",
+        "fn_80205DF0",
+        "fn_80206174",
+        "OSDisableInterrupts",
+        "OSEnableScheduler",
+        "OSRestoreInterrupts"
+      ],
+      "occurrences": {
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0500",
+      "handler_entry": "0x801B7DC4",
+      "initial_direct_calls": [
+        "OSDisableInterrupts",
+        "OSDisableScheduler",
+        "OSRestoreInterrupts",
+        "fn_80206174",
+        "fn_80205DF0",
+        "fn_80206174",
+        "OSDisableInterrupts",
+        "OSEnableScheduler",
+        "OSRestoreInterrupts"
+      ],
+      "occurrences": {
+        "hub": 11
+      }
+    },
+    {
+      "type": "0x0600",
+      "handler_entry": "0x801B7AF8",
+      "initial_direct_calls": [
+        "fn_801C5944"
+      ],
+      "occurrences": {
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0601",
+      "handler_entry": "0x801B7B10",
+      "initial_direct_calls": [
+        "fn_801C59A4"
+      ],
+      "occurrences": {
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0610",
+      "handler_entry": "0x801B7B28",
+      "initial_direct_calls": [
+        "fn_801C5A04"
+      ],
+      "occurrences": {
+        "hub": 1
+      }
+    },
+    {
+      "type": "0x0998",
+      "handler_entry": "0x801B7FFC",
+      "initial_direct_calls": [
+        "fn_801B81DC",
+        "fn_801B65AC"
+      ],
+      "occurrences": {
+        "preload": 41,
+        "hub": 91
+      }
+    }
+  ]
+}

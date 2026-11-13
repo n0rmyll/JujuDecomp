@@ -1,0 +1,31 @@
+{
+  "function": "fn_801C5BAC",
+  "source": "analysis/split/asm/auto_03_801C2D70_text.s",
+  "start": "0x801C5BAC",
+  "instruction_count": 34,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801C5BBC",
+      "target": "_savegpr_27"
+    },
+    {
+      "site": "0x801C5BD0",
+      "target": "fn_801B91FC"
+    },
+    {
+      "site": "0x801C5BE4",
+      "target": "fn_801B92FC"
+    },
+    {
+      "site": "0x801C5BE8",
+      "target": "fn_801C5D28"
+    },
+    {
+      "site": "0x801C5C20",
+      "target": "_restgpr_27"
+    }
+  ],
+  "strings": []
+}

@@ -1,0 +1,50 @@
+{
+  "function": "fn_8018C6D8",
+  "source": "analysis/split/asm/auto_03_8018B120_text.s",
+  "start": "0x8018C6D8",
+  "instruction_count": 73,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x8018C710",
+      "target": "fn_8018243C"
+    },
+    {
+      "site": "0x8018C724",
+      "target": "fn_80182F8C"
+    },
+    {
+      "site": "0x8018C748",
+      "target": "fn_8029239C"
+    },
+    {
+      "site": "0x8018C754",
+      "target": "fn_802030EC"
+    },
+    {
+      "site": "0x8018C778",
+      "target": "fn_80182BD8"
+    },
+    {
+      "site": "0x8018C790",
+      "target": "fn_80182BD8"
+    },
+    {
+      "site": "0x8018C7A8",
+      "target": "fn_80182BD8"
+    },
+    {
+      "site": "0x8018C7C8",
+      "target": "fn_80182F8C"
+    }
+  ],
+  "strings": [
+    {
+      "site": "0x8018C738",
+      "address": "0x802EB6F8",
+      "text": "*** Error loading texture \"%s\": gfxTexCache failed. Using bind %d\n",
+      "basis": "direct operand; may be a load rather than an address argument"
+    }
+  ]
+}

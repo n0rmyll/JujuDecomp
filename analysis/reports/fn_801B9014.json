@@ -1,0 +1,23 @@
+{
+  "function": "fn_801B9014",
+  "source": "analysis/split/asm/auto_03_801B5A1C_text.s",
+  "start": "0x801B9014",
+  "instruction_count": 47,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801B9050",
+      "target": "memcpy"
+    },
+    {
+      "site": "0x801B9060",
+      "target": "fn_8010C2AC"
+    },
+    {
+      "site": "0x801B9090",
+      "target": "fn_80205F64"
+    }
+  ],
+  "strings": []
+}

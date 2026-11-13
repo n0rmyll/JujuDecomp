@@ -1,0 +1,15 @@
+{
+  "function": "fn_8018BD78",
+  "source": "analysis/split/asm/auto_03_8018B120_text.s",
+  "start": "0x8018BD78",
+  "instruction_count": 104,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x8018BF04",
+      "target": "fn_8018BD78"
+    }
+  ],
+  "strings": []
+}

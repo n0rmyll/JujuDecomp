@@ -1,0 +1,87 @@
+{
+  "function": "fn_80182F8C",
+  "source": "analysis/split/asm/auto_03_80168D70_text.s",
+  "start": "0x80182F8C",
+  "instruction_count": 449,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x80182F9C",
+      "target": "_savegpr_25"
+    },
+    {
+      "site": "0x80182FC8",
+      "target": "fn_8018CE88"
+    },
+    {
+      "site": "0x80182FD4",
+      "target": "fn_8018CE48"
+    },
+    {
+      "site": "0x80182FE4",
+      "target": "fn_8018CE58"
+    },
+    {
+      "site": "0x80182FF8",
+      "target": "fn_8018CE48"
+    },
+    {
+      "site": "0x80183160",
+      "target": "fn_8018CE88"
+    },
+    {
+      "site": "0x8018316C",
+      "target": "fn_8018CE48"
+    },
+    {
+      "site": "0x8018317C",
+      "target": "fn_8018CE58"
+    },
+    {
+      "site": "0x80183190",
+      "target": "fn_8018CE48"
+    },
+    {
+      "site": "0x801834A0",
+      "target": "fn_80132210"
+    },
+    {
+      "site": "0x801834BC",
+      "target": "fn_80205DF0"
+    },
+    {
+      "site": "0x80183550",
+      "target": "fn_80205DF0"
+    },
+    {
+      "site": "0x801835F4",
+      "target": "fn_80183F90"
+    },
+    {
+      "site": "0x80183638",
+      "target": "fn_801841E0"
+    },
+    {
+      "site": "0x80183648",
+      "target": "fn_8018CE78"
+    },
+    {
+      "site": "0x80183654",
+      "target": "fn_8018CE68"
+    },
+    {
+      "site": "0x80183660",
+      "target": "fn_80295670"
+    },
+    {
+      "site": "0x80183670",
+      "target": "fn_8018CEBC"
+    },
+    {
+      "site": "0x8018367C",
+      "target": "_restgpr_25"
+    }
+  ],
+  "strings": []
+}

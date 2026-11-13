@@ -1,6 +1,6 @@
 # JujuDecomp
 
-An early reverse-engineering workspace for **Tak and the Power of Juju (USA)** on GameCube, disc ID **GJUE78**, revision 0. Includes analysis tools, research notes, two small semantic C reconstructions, and a browser emulator frontend based on [wasm-dolphin](https://github.com/dougchansan/wasm-dolphin) at commit `7e38409ace3dda709c178312ff63fd92a3653cc7`.
+An early reverse-engineering workspace for **Tak and the Power of Juju (USA)** on GameCube, disc ID **GJUE78**, revision 0. Includes analysis tools, research notes, seven complete routine models and one partial routine model in semantic C, and a browser emulator frontend based on [wasm-dolphin](https://github.com/dougchansan/wasm-dolphin) at commit `7e38409ace3dda709c178312ff63fd92a3653cc7`.
 
 **This is not a completed decompilation or a native source port.** There is no build system that recreates the original game executable yet. The browser route runs your own disc image through Dolphin; the recovered C files are research models, not matching replacements. Tak boot, gameplay, audio, performance, and saves have not yet been verified in this workspace.
 
@@ -13,11 +13,13 @@ Snapshot: **November 12, 2026**, GJUE78 revision 0. These measure separate stage
 | Area | Current / measured total | Progress | Meaning |
 | --- | ---: | ---: | --- |
 | Game functions rebuilt and verified as matching | 0 / 9,667 indexed function regions | **0%** | No original-target matching compilation has been verified. Host syntax/behavior checks do not count as matching. |
-| Game functions modeled in semantic C | 6 / 9,667 indexed function regions | **0.062%** | Six original routines represented in five C files; callbacks and host layouts may replace original mechanisms. |
-| Original code bytes covered by those models | 476 / 2,747,776 DOL text-section bytes | **0.017%** | Size of the original routines, not generated C/object size or verified matching bytes. |
+| Game functions modeled in semantic C | 7 / 9,667 indexed function regions | **0.072%** | Seven complete routines represented in six C files; a seventh C file models only a DBU header-selection branch and is excluded from this count. Callbacks and host layouts may replace original mechanisms. |
+| Original code bytes covered by those models | 588 / 2,747,776 DOL text-section bytes | **0.021%** | Size of the seven fully modeled original routines; excludes the partial DBU routine, generated C/object size, and verified matching bytes. |
 | Extracted resource files inventoried | 1,163 / 1,163 locally extracted files | **100%** | File paths, sizes, and hashes recorded for the local `files/data_gcn` extraction; not proof of complete disc coverage. |
-| Resource files decoded or converted | 0 / 1,163 extracted files | **0%** | Raw copying and metadata inspection do not produce usable models, textures, animations, or decoded audio. |
-| DBU bundles with text manifests inspected | 2 / 21 extracted DBU bundles | **9.52%** | Preload and Hub: 41 and 91 listed source entries. Binary payload layouts remain unresolved. |
+| Resource files with texture exports | 39 / 1,163 extracted files | **3.35%** | Base texture levels exported from 21 DBU and 18 DBL files; this is partial resource decoding, not complete conversion of those files. |
+| Texture records exported as PNG | 5,512 / 5,527 encountered records | **99.73%** | Includes repeated textures across archives; 15 records have null pixel offsets. Mipmaps and animated frames are not supported. |
+| DBU/DBL files scanned for binary chunk boundaries | 39 / 39 extracted DBU/DBL files | **100%** | Chunk parser reached exact EOF in all 21 DBU and 18 DBL files; payload types remain only partly decoded. |
+| DBU bundles with text manifests inspected | 2 / 21 extracted DBU bundles | **9.52%** | Preload and Hub: 41 and 91 listed source entries. Binary chunk boundaries and some payload layouts are now documented; most resource semantics remain unresolved. |
 
 The asset inventory totals **1,447,253,921 bytes** (about **1.35 GiB**):
 
@@ -32,9 +34,9 @@ The asset inventory totals **1,447,253,921 bytes** (about **1.35 GiB**):
 | `.dbl` | 18 | 1.55% |
 | `.fnt` | 1 | 0.09% |
 
-File shares are by count, not bytes, and are rounded. Bundles may contain many internal resources, whose total is unknown; no model/texture/animation completion percentage is available yet. Browser emulator operation is separate from compiling recovered game source, so it contributes no game decompilation percentage.
+File shares are by count, not bytes, and are rounded. Bundles may contain many internal resources, whose total is unknown; the texture-record percentage covers only records encountered by the current decoder. No overall model/texture/animation completion percentage is available yet. Browser emulator operation is separate from compiling recovered game source, so it contributes no game decompilation percentage.
 
-The function denominator comes from `analysis/index-summary.json` and is provisional: automatic regions include SDK/runtime code and may not map one-to-one to original source functions. The six modeled routines are `0x8020F9C8`, `0x80213584`, `0x801042FC`, `0x800CEB2C`, `0x80213140`, and `0x802131A0`. Recalculate their original sizes using the ignored `analysis/functions.csv` after running `tools/index_dol.py`; text-section sizes come from the index summary. Asset counts come from the ignored `assets/manifest.json`, regenerated with `python3 tools/extract_assets.py --inventory-only`. These numbers are a manual snapshot and should be refreshed when recovery advances.
+The function denominator comes from `analysis/index-summary.json` and is provisional: automatic regions include SDK/runtime code and may not map one-to-one to original source functions. The seven fully modeled routines are `0x8020F9C8`, `0x80213584`, `0x801042FC`, `0x800CEB2C`, `0x80213140`, `0x802131A0`, and `0x801B92FC`. The partial model covers only `0x801B8F24..0x801B8F5C` within `0x801B8E60` and is excluded from the routine and byte totals. Recalculate their original sizes using the ignored `analysis/functions.csv` after running `tools/index_dol.py`; text-section sizes come from the index summary. Asset counts come from the ignored `assets/manifest.json`, regenerated with `python3 tools/extract_assets.py --inventory-only`. Texture export counts come from the ignored `assets/textures/manifest.json`, regenerated with `python3 tools/decode_textures.py`; see [texture format findings](analysis/TEXTURE_EXTRACTION.md) for limits. These numbers are a manual snapshot and should be refreshed when recovery advances.
 
 ## Get the source
 
@@ -113,8 +115,21 @@ of each file. Rebuild the inventory without extracting again with
 The local revision 0 extraction contains 1,163 files (1,447,253,921 bytes):
 21 `.dbu` bundles, 18 `.dbl` files, 27 `.cut` files, 39 `.dba` files,
 1,005 `.dsp` files, 19 `.adp` files, 33 `.bik` movies, and one `.fnt` file.
-These are original resource files; models, textures, and audio have not been
-decoded or converted. DBU/DBL format recovery is the next step.
+These are original resource files. To export the base texture levels as PNGs:
+
+```sh
+python3 tools/decode_textures.py
+python3 -m unittest discover -s tests -p test_decode_textures.py
+```
+
+The decoder needs only Python's standard library. Open `assets/textures/index.html`
+for a searchable local gallery. `assets/textures/manifest.json` records names,
+archive hashes, source offsets, formats, and unresolved records. The first full
+pass exported 5,512 PNGs from 39 DBU/DBL files; 15 records had null pixel offsets
+and were reported as errors (the command exits nonzero when records cannot be
+exported). Repeated textures across levels are retained. Mipmaps, animated
+texture frames, models, and audio conversion are not yet supported. See
+[texture format findings](analysis/TEXTURE_EXTRACTION.md) for evidence and limits.
 
 ## Check the first recovered function
 

@@ -1,0 +1,27 @@
+{
+  "function": "fn_801B8E60",
+  "source": "analysis/split/asm/auto_03_801B5A1C_text.s",
+  "start": "0x801B8E60",
+  "instruction_count": 92,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801B8F6C",
+      "target": "memcpy"
+    },
+    {
+      "site": "0x801B8F84",
+      "target": "fn_801B9014"
+    },
+    {
+      "site": "0x801B8F98",
+      "target": "fn_801B9014"
+    },
+    {
+      "site": "0x801B8FA4",
+      "target": "fn_801B90D0"
+    }
+  ],
+  "strings": []
+}

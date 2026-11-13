@@ -1,5 +1,9 @@
 # Level descriptors and DBU loading
 
+Update: `DBU_BINARY_LAYOUT.md` records recovered binary chunk boundaries
+and exact-EOF validation across Preload and Hub. The tools described here
+remain useful for separate text metadata and level descriptors.
+
 ## Level-name accessor recovered
 
 **0x801042FC** loads state +0x1B4, loads that object's word +4 as the
