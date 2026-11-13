@@ -1,0 +1,2013 @@
+{
+  "revision": "GJUE78 rev 0",
+  "functions": 200,
+  "original_bytes": 4132,
+  "instructions_verified": 1033,
+  "instructions_exercised": 1033,
+  "differential_cases": 25600,
+  "source_sha256": "78b780b8b0a7868ef8128be63bc992435ebc1185cf21300445ee3016eae127ab",
+  "spec_sha256": "f7ffa26dd6bc4aa2844115f8c7ee2284368657e7f5fe39d3505cd567b8218efb",
+  "binary_matching": false,
+  "routines": [
+    {
+      "address": "0x80005B10",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "1 target read, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80008D6C",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80008DE4",
+      "original_bytes": 52,
+      "instructions_verified": 13,
+      "instructions_exercised": 13,
+      "differential_cases": 128,
+      "behavior": "6 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800090DC",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800174CC",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "3 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80017A44",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8001C8D0",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8001EC44",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8001EF60",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8001F158",
+      "original_bytes": 28,
+      "instructions_verified": 7,
+      "instructions_exercised": 7,
+      "differential_cases": 128,
+      "behavior": "4 target reads, 2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8001F518",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8001F5C4",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8001FF28",
+      "original_bytes": 44,
+      "instructions_verified": 11,
+      "instructions_exercised": 11,
+      "differential_cases": 128,
+      "behavior": "5 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80024330",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80024638",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8002AA04",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8002C668",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8002DA08",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8002DE80",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "1 target read, 2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8002E958",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8003041C",
+      "original_bytes": 52,
+      "instructions_verified": 13,
+      "instructions_exercised": 13,
+      "differential_cases": 128,
+      "behavior": "8 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800310A8",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "3 target reads, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80031174",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800339FC",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80033A10",
+      "original_bytes": 24,
+      "instructions_verified": 6,
+      "instructions_exercised": 6,
+      "differential_cases": 128,
+      "behavior": "2 target reads, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80035DF4",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80035E08",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80035E1C",
+      "original_bytes": 28,
+      "instructions_verified": 7,
+      "instructions_exercised": 7,
+      "differential_cases": 128,
+      "behavior": "3 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80036500",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80036ADC",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80038F3C",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80038F48",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8003A5DC",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8003D640",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "1 target read, 2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8003D718",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "1 target read, 2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8003EA60",
+      "original_bytes": 60,
+      "instructions_verified": 15,
+      "instructions_exercised": 15,
+      "differential_cases": 128,
+      "behavior": "7 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80040A50",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80040B9C",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "1 target read, 2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80040C08",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "1 target read, 2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8004156C",
+      "original_bytes": 36,
+      "instructions_verified": 9,
+      "instructions_exercised": 9,
+      "differential_cases": 128,
+      "behavior": "4 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800440E0",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "1 target read, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80044528",
+      "original_bytes": 24,
+      "instructions_verified": 6,
+      "instructions_exercised": 6,
+      "differential_cases": 128,
+      "behavior": "2 target reads, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800452DC",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800454B0",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80045980",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8004778C",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80047A98",
+      "original_bytes": 56,
+      "instructions_verified": 14,
+      "instructions_exercised": 14,
+      "differential_cases": 128,
+      "behavior": "6 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8004C538",
+      "original_bytes": 48,
+      "instructions_verified": 12,
+      "instructions_exercised": 12,
+      "differential_cases": 128,
+      "behavior": "10 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8004F108",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "2 target reads, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8004F144",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8004FAD0",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8005344C",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "1 target read, 2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8005357C",
+      "original_bytes": 28,
+      "instructions_verified": 7,
+      "instructions_exercised": 7,
+      "differential_cases": 128,
+      "behavior": "5 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80058C34",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80058D50",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80058D5C",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8005A2F4",
+      "original_bytes": 28,
+      "instructions_verified": 7,
+      "instructions_exercised": 7,
+      "differential_cases": 128,
+      "behavior": "2 target reads, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8005A598",
+      "original_bytes": 60,
+      "instructions_verified": 15,
+      "instructions_exercised": 15,
+      "differential_cases": 128,
+      "behavior": "9 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8005C1FC",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80061E40",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80067C60",
+      "original_bytes": 28,
+      "instructions_verified": 7,
+      "instructions_exercised": 7,
+      "differential_cases": 128,
+      "behavior": "3 target reads, 3 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80067C7C",
+      "original_bytes": 28,
+      "instructions_verified": 7,
+      "instructions_exercised": 7,
+      "differential_cases": 128,
+      "behavior": "3 target reads, 3 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80071A9C",
+      "original_bytes": 32,
+      "instructions_verified": 8,
+      "instructions_exercised": 8,
+      "differential_cases": 128,
+      "behavior": "3 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80071FC4",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "2 target reads, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80073DF8",
+      "original_bytes": 24,
+      "instructions_verified": 6,
+      "instructions_exercised": 6,
+      "differential_cases": 128,
+      "behavior": "4 target reads, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8007BE04",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8007BE2C",
+      "original_bytes": 32,
+      "instructions_verified": 8,
+      "instructions_exercised": 8,
+      "differential_cases": 128,
+      "behavior": "3 target reads, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8007BE4C",
+      "original_bytes": 32,
+      "instructions_verified": 8,
+      "instructions_exercised": 8,
+      "differential_cases": 128,
+      "behavior": "3 target reads, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8007C89C",
+      "original_bytes": 28,
+      "instructions_verified": 7,
+      "instructions_exercised": 7,
+      "differential_cases": 128,
+      "behavior": "2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8007D788",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800835A0",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800835AC",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80096894",
+      "original_bytes": 24,
+      "instructions_verified": 6,
+      "instructions_exercised": 6,
+      "differential_cases": 128,
+      "behavior": "3 target reads, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800C8744",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800CDBD4",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800CF7EC",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800D41A0",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800D4CD8",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800D4CE8",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target read, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800D56B4",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "2 target reads, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800D56C4",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "3 target reads, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800D80DC",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800DAC50",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800DF750",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800DF75C",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target read, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800E5540",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target read, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800E6E28",
+      "original_bytes": 32,
+      "instructions_verified": 8,
+      "instructions_exercised": 8,
+      "differential_cases": 128,
+      "behavior": "1 target read, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800E726C",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800F6344",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800F64B0",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800F64C4",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x800F9FFC",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8010A1B8",
+      "original_bytes": 28,
+      "instructions_verified": 7,
+      "instructions_exercised": 7,
+      "differential_cases": 128,
+      "behavior": "1 target read, 3 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8010A6DC",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8010A6F0",
+      "original_bytes": 28,
+      "instructions_verified": 7,
+      "instructions_exercised": 7,
+      "differential_cases": 128,
+      "behavior": "3 target reads, 3 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8010A70C",
+      "original_bytes": 28,
+      "instructions_verified": 7,
+      "instructions_exercised": 7,
+      "differential_cases": 128,
+      "behavior": "3 target reads, 3 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8010A75C",
+      "original_bytes": 28,
+      "instructions_verified": 7,
+      "instructions_exercised": 7,
+      "differential_cases": 128,
+      "behavior": "3 target reads, 3 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8010A778",
+      "original_bytes": 28,
+      "instructions_verified": 7,
+      "instructions_exercised": 7,
+      "differential_cases": 128,
+      "behavior": "3 target reads, 3 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801636B8",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8017BDF0",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80185960",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8018D690",
+      "original_bytes": 44,
+      "instructions_verified": 11,
+      "instructions_exercised": 11,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801956F4",
+      "original_bytes": 64,
+      "instructions_verified": 16,
+      "instructions_exercised": 16,
+      "differential_cases": 128,
+      "behavior": "1 target read, 13 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80199830",
+      "original_bytes": 24,
+      "instructions_verified": 6,
+      "instructions_exercised": 6,
+      "differential_cases": 128,
+      "behavior": "4 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801A7F74",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801B5980",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801C3BE0",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801C3BEC",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target read, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801CB7AC",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801CB7B8",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801CCFF4",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801D8C54",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801DB0E0",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target read, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801EAD84",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target read, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801EAEF8",
+      "original_bytes": 76,
+      "instructions_verified": 19,
+      "instructions_exercised": 19,
+      "differential_cases": 128,
+      "behavior": "7 target reads, 2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801EE758",
+      "original_bytes": 36,
+      "instructions_verified": 9,
+      "instructions_exercised": 9,
+      "differential_cases": 128,
+      "behavior": "scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801EED30",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801EFF9C",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801EFFE4",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801F30A8",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801F30B4",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801F30C4",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801F30D4",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801F30E4",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801F30F4",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801F3104",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801F3114",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801F3124",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801F3134",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801F3144",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801F3154",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801F3164",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801F3174",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801F3184",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801F3194",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801F87D0",
+      "original_bytes": 48,
+      "instructions_verified": 12,
+      "instructions_exercised": 12,
+      "differential_cases": 128,
+      "behavior": "2 target reads, 4 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801FB9E8",
+      "original_bytes": 48,
+      "instructions_verified": 12,
+      "instructions_exercised": 12,
+      "differential_cases": 128,
+      "behavior": "8 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801FE118",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801FE258",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target read, 2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801FE96C",
+      "original_bytes": 40,
+      "instructions_verified": 10,
+      "instructions_exercised": 10,
+      "differential_cases": 128,
+      "behavior": "4 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801FF4D4",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "1 target read, 3 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801FF640",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x801FF930",
+      "original_bytes": 28,
+      "instructions_verified": 7,
+      "instructions_exercised": 7,
+      "differential_cases": 128,
+      "behavior": "1 target read, 3 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80203198",
+      "original_bytes": 24,
+      "instructions_verified": 6,
+      "instructions_exercised": 6,
+      "differential_cases": 128,
+      "behavior": "4 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x802045FC",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80204608",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80204618",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80204900",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80205A88",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80205DC4",
+      "original_bytes": 24,
+      "instructions_verified": 6,
+      "instructions_exercised": 6,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80205DDC",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x802067C0",
+      "original_bytes": 44,
+      "instructions_verified": 11,
+      "instructions_exercised": 11,
+      "differential_cases": 128,
+      "behavior": "2 target reads, 6 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80206C60",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80206F18",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target read, 2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x802075D8",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "3 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80209038",
+      "original_bytes": 28,
+      "instructions_verified": 7,
+      "instructions_exercised": 7,
+      "differential_cases": 128,
+      "behavior": "2 target reads, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8020BD38",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target read, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80210158",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80211554",
+      "original_bytes": 32,
+      "instructions_verified": 8,
+      "instructions_exercised": 8,
+      "differential_cases": 128,
+      "behavior": "3 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80211CEC",
+      "original_bytes": 52,
+      "instructions_verified": 13,
+      "instructions_exercised": 13,
+      "differential_cases": 128,
+      "behavior": "7 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80213850",
+      "original_bytes": 36,
+      "instructions_verified": 9,
+      "instructions_exercised": 9,
+      "differential_cases": 128,
+      "behavior": "3 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8021387C",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80214A48",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "4 target reads, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80217834",
+      "original_bytes": 28,
+      "instructions_verified": 7,
+      "instructions_exercised": 7,
+      "differential_cases": 128,
+      "behavior": "3 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80218110",
+      "original_bytes": 36,
+      "instructions_verified": 9,
+      "instructions_exercised": 9,
+      "differential_cases": 128,
+      "behavior": "5 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80220FDC",
+      "original_bytes": 28,
+      "instructions_verified": 7,
+      "instructions_exercised": 7,
+      "differential_cases": 128,
+      "behavior": "2 target reads, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80221008",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target read, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80229D3C",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "2 target reads, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80229D4C",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target read, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8022EEE0",
+      "original_bytes": 52,
+      "instructions_verified": 13,
+      "instructions_exercised": 13,
+      "differential_cases": 128,
+      "behavior": "6 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8023503C",
+      "original_bytes": 28,
+      "instructions_verified": 7,
+      "instructions_exercised": 7,
+      "differential_cases": 128,
+      "behavior": "2 target reads, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80239760",
+      "original_bytes": 36,
+      "instructions_verified": 9,
+      "instructions_exercised": 9,
+      "differential_cases": 128,
+      "behavior": "4 target reads, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80239784",
+      "original_bytes": 36,
+      "instructions_verified": 9,
+      "instructions_exercised": 9,
+      "differential_cases": 128,
+      "behavior": "4 target reads, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x802397A8",
+      "original_bytes": 32,
+      "instructions_verified": 8,
+      "instructions_exercised": 8,
+      "differential_cases": 128,
+      "behavior": "4 target reads, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8023B124",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8023B1F4",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x802424A4",
+      "original_bytes": 24,
+      "instructions_verified": 6,
+      "instructions_exercised": 6,
+      "differential_cases": 128,
+      "behavior": "3 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80242558",
+      "original_bytes": 24,
+      "instructions_verified": 6,
+      "instructions_exercised": 6,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80252ED8",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "3 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80257F90",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8025AFD0",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8026060C",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target read, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80260650",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target read, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8026139C",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x802613A8",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x802613B4",
+      "original_bytes": 20,
+      "instructions_verified": 5,
+      "instructions_exercised": 5,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80261884",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80262EE0",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target read, 1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80265914",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80265920",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8026592C",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80265938",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80265944",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80265950",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x8026595C",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80265968",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "2 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x802660DC",
+      "original_bytes": 36,
+      "instructions_verified": 9,
+      "instructions_exercised": 9,
+      "differential_cases": 128,
+      "behavior": "5 target stores",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80268790",
+      "original_bytes": 16,
+      "instructions_verified": 4,
+      "instructions_exercised": 4,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x802687A0",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target read, scalar result",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    },
+    {
+      "address": "0x80268E24",
+      "original_bytes": 12,
+      "instructions_verified": 3,
+      "instructions_exercised": 3,
+      "differential_cases": 128,
+      "behavior": "1 target store",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "return_check": "Final r3 harness bits; original return type unresolved"
+    }
+  ]
+}

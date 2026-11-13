@@ -25,9 +25,8 @@ def main():
         if size != entry['original_bytes'] or entry['status'] != 'complete-semantic-model':
             raise ValueError(f'Invalid size/status for {address}')
         source = (ROOT/entry['source']).read_text()
-        if entry['source'].endswith('leaf_helpers.c'):
-            found = re.search(r'^FN\('+address+r'\)', source, re.M)
-        else:
+        found = re.search(r'^FN\('+address+r'\)', source, re.M)
+        if not found:
             found = re.search(r'\b'+re.escape(entry['symbol'])+r'\s*\([^;]*?\)\s*\{', source, re.S)
         if not found:
             raise ValueError(f'Missing source definition for {address}')

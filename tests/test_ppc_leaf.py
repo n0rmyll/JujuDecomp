@@ -74,6 +74,40 @@ class PowerPCOracleTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Invalid load-with-update'):
             execute({0: 0x84630004}, (0x1000, 0, 0, 0), Memory())
 
+    def test_negate_and_count_leading_zeros(self):
+        # neg r3,r3; blr, then cntlzw r3,r3; blr.
+        for value, expected in ((0, 0), (1, 0xffffffff), (0x80000000, 0x80000000)):
+            self.assertEqual(execute({0: 0x7c6300d0, 4: 0x4e800020},
+                                     (value, 0, 0, 0), Memory()), expected)
+        for value, expected in ((0, 32), (1, 31), (0x80000000, 0), (0xffffffff, 0), (0x100, 23)):
+            self.assertEqual(execute({0: 0x7c630034, 4: 0x4e800020},
+                                     (value, 0, 0, 0), Memory()), expected)
+
+    def test_immediate_subtraction_modulo(self):
+        # subfic r3,r3,1; blr. This routine subset does not consume XER carry.
+        for value, expected in ((0, 1), (1, 0), (2, 0xffffffff), (0xffffffff, 2)):
+            self.assertEqual(execute({0: 0x20630001, 4: 0x4e800020},
+                                     (value, 0, 0, 0), Memory()), expected)
+
+    def test_signed_shift(self):
+        # srawi r3,r3,31; blr
+        for value, expected in ((0, 0), (0x7fffffff, 0), (0x80000000, 0xffffffff), (0xffffffff, 0xffffffff)):
+            self.assertEqual(execute({0: 0x7c63fe70, 4: 0x4e800020},
+                                     (value, 0, 0, 0), Memory()), expected)
+
+    def test_nor(self):
+        # nor r3,r3,r4; blr
+        self.assertEqual(execute({0: 0x7c6320f8, 4: 0x4e800020},
+                                 (0xff000000, 0x000000ff, 0, 0), Memory()), 0x00ffff00)
+
+    def test_indexed_byte_read(self):
+        # lbzx r3,r4,r5; blr, including address addition wrap.
+        memory = Memory()
+        memory.values[1, 1] = 0xab
+        self.assertEqual(execute({0: 0x7c6428ae, 4: 0x4e800020},
+                                 (0, 0xffffffff, 2, 0), memory), 0xab)
+        self.assertEqual(memory.events, [('read', 1, 1)])
+
     def test_unsupported_instruction_fails(self):
         with self.assertRaisesRegex(ValueError, 'Unsupported'):
             execute({0: 0}, (0, 0, 0, 0), Memory())

@@ -1,0 +1,5114 @@
+{
+  "revision": "GJUE78 rev 0",
+  "kind": "Complete straight-line semantic expressions and ordered accesses",
+  "function_count": 200,
+  "routines": [
+    {
+      "address": "0x80005B10",
+      "original_bytes": 20,
+      "behavior": "1 target read, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x78)));",
+        "(void)value_0;"
+      ],
+      "result": "(((UINT32_C(0x0) - value_0) | value_0) >> 31)",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x78))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x80008D6C",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x8)), (uint8_t)UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x80008DE4",
+      "original_bytes": 52,
+      "behavior": "6 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0x20)), (a + UINT32_C(0xa4)));",
+        "m->w32((a + UINT32_C(0x10)), (a + UINT32_C(0xb8)));",
+        "m->w32((a + UINT32_C(0x14)), (a + UINT32_C(0xcc)));",
+        "m->w32((a + UINT32_C(0xa0)), (a + UINT32_C(0xe0)));",
+        "m->w32((a + UINT32_C(0x30)), (a + UINT32_C(0xf4)));",
+        "m->w32((a + UINT32_C(0x34)), (a + UINT32_C(0x108)));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x20))",
+          "value": "(a + UINT32_C(0xa4))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x10))",
+          "value": "(a + UINT32_C(0xb8))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x14))",
+          "value": "(a + UINT32_C(0xcc))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xa0))",
+          "value": "(a + UINT32_C(0xe0))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x30))",
+          "value": "(a + UINT32_C(0xf4))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x34))",
+          "value": "(a + UINT32_C(0x108))"
+        }
+      ]
+    },
+    {
+      "address": "0x800090DC",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x11c)), (uint8_t)UINT32_C(0x1));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x11c))",
+          "value": "UINT32_C(0x1)"
+        }
+      ]
+    },
+    {
+      "address": "0x800174CC",
+      "original_bytes": 20,
+      "behavior": "3 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0x170)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x174)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x178)), UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x170))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x174))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x178))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x80017A44",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32((a + UINT32_C(0x20)), UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x20))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x8001C8D0",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0xc0)), (uint8_t)UINT32_C(0x1));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0xc0))",
+          "value": "UINT32_C(0x1)"
+        }
+      ]
+    },
+    {
+      "address": "0x8001EC44",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x14c)), (uint8_t)UINT32_C(0x1));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x14c))",
+          "value": "UINT32_C(0x1)"
+        }
+      ]
+    },
+    {
+      "address": "0x8001EF60",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32((a + UINT32_C(0x98)), (a + UINT32_C(0xbc)));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x98))",
+          "value": "(a + UINT32_C(0xbc))"
+        }
+      ]
+    },
+    {
+      "address": "0x8001F158",
+      "original_bytes": 28,
+      "behavior": "4 target reads, 2 target stores",
+      "statements": [
+        "uint32_t value_0 = m->r8((a + UINT32_C(0x10a)));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32((a + UINT32_C(0x4)));",
+        "(void)value_1;",
+        "m->w8((value_1 + UINT32_C(0x4088)), (uint8_t)value_0);",
+        "uint32_t value_2 = m->r8((a + UINT32_C(0x109)));",
+        "(void)value_2;",
+        "uint32_t value_3 = m->r32((a + UINT32_C(0x4)));",
+        "(void)value_3;",
+        "m->w8((value_3 + UINT32_C(0x4087)), (uint8_t)value_2);"
+      ],
+      "result": "value_3",
+      "reads": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x10a))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x109))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(value_1 + UINT32_C(0x4088))",
+          "value": "value_0"
+        },
+        {
+          "bits": 8,
+          "address": "(value_3 + UINT32_C(0x4087))",
+          "value": "value_2"
+        }
+      ]
+    },
+    {
+      "address": "0x8001F518",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x10c)), (uint8_t)UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x10c))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x8001F5C4",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x10c)), (uint8_t)UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x10c))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x8001FF28",
+      "original_bytes": 44,
+      "behavior": "5 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0x18)), (a + UINT32_C(0xbc)));",
+        "m->w32((a + UINT32_C(0x20)), (a + UINT32_C(0x15c)));",
+        "m->w32((a + UINT32_C(0x98)), (a + UINT32_C(0xa0)));",
+        "m->w32((a + UINT32_C(0x48)), (a + UINT32_C(0x1ac)));",
+        "m->w32((a + UINT32_C(0x38)), (a + UINT32_C(0x1c0)));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x18))",
+          "value": "(a + UINT32_C(0xbc))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x20))",
+          "value": "(a + UINT32_C(0x15c))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x98))",
+          "value": "(a + UINT32_C(0xa0))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x48))",
+          "value": "(a + UINT32_C(0x1ac))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x38))",
+          "value": "(a + UINT32_C(0x1c0))"
+        }
+      ]
+    },
+    {
+      "address": "0x80024330",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32((a + UINT32_C(0x350)), (a + UINT32_C(0x354)));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x350))",
+          "value": "(a + UINT32_C(0x354))"
+        }
+      ]
+    },
+    {
+      "address": "0x80024638",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32((a + UINT32_C(0x350)), (a + UINT32_C(0xb64)));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x350))",
+          "value": "(a + UINT32_C(0xb64))"
+        }
+      ]
+    },
+    {
+      "address": "0x8002AA04",
+      "original_bytes": 20,
+      "behavior": "2 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0x1048)), UINT32_C(0x0));",
+        "m->w8((a + UINT32_C(0x1044)), (uint8_t)UINT32_C(0x1));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x1048))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x1044))",
+          "value": "UINT32_C(0x1)"
+        }
+      ]
+    },
+    {
+      "address": "0x8002C668",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x1268)), (uint8_t)UINT32_C(0x1));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x1268))",
+          "value": "UINT32_C(0x1)"
+        }
+      ]
+    },
+    {
+      "address": "0x8002DA08",
+      "original_bytes": 16,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x4)), (uint8_t)UINT32_C(0x0));",
+        "uint32_t value_0 = m->r32((a + UINT32_C(0xc)));",
+        "(void)value_0;"
+      ],
+      "result": "value_0",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x8002DE80",
+      "original_bytes": 20,
+      "behavior": "1 target read, 2 target stores",
+      "statements": [
+        "m->w8((a + UINT32_C(0x4)), (uint8_t)UINT32_C(0x1));",
+        "uint32_t value_0 = m->r8(b);",
+        "(void)value_0;",
+        "m->w8((a + UINT32_C(0x18)), (uint8_t)value_0);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 8,
+          "address": "b"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "UINT32_C(0x1)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x18))",
+          "value": "value_0"
+        }
+      ]
+    },
+    {
+      "address": "0x8002E958",
+      "original_bytes": 20,
+      "behavior": "2 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0x18)), (a + UINT32_C(0xd0)));",
+        "m->w32((a + UINT32_C(0x98)), (a + UINT32_C(0xbc)));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x18))",
+          "value": "(a + UINT32_C(0xd0))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x98))",
+          "value": "(a + UINT32_C(0xbc))"
+        }
+      ]
+    },
+    {
+      "address": "0x8003041C",
+      "original_bytes": 52,
+      "behavior": "8 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0xe8)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x10)), (a + UINT32_C(0xbc)));",
+        "m->w32((a + UINT32_C(0x8)), (a + UINT32_C(0xd0)));",
+        "m->w32((a + UINT32_C(0x20)), (a + UINT32_C(0xd0)));",
+        "m->w32((a + UINT32_C(0x18)), (a + UINT32_C(0xd0)));",
+        "m->w32((a + UINT32_C(0x58)), (a + UINT32_C(0xd0)));",
+        "m->w32((a + UINT32_C(0x28)), (a + UINT32_C(0xd0)));",
+        "m->w32((a + UINT32_C(0x98)), (a + UINT32_C(0xa0)));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xe8))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x10))",
+          "value": "(a + UINT32_C(0xbc))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "(a + UINT32_C(0xd0))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x20))",
+          "value": "(a + UINT32_C(0xd0))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x18))",
+          "value": "(a + UINT32_C(0xd0))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x58))",
+          "value": "(a + UINT32_C(0xd0))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x28))",
+          "value": "(a + UINT32_C(0xd0))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x98))",
+          "value": "(a + UINT32_C(0xa0))"
+        }
+      ]
+    },
+    {
+      "address": "0x800310A8",
+      "original_bytes": 16,
+      "behavior": "3 target reads, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x4)));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32((value_0 + UINT32_C(0x40dc)));",
+        "(void)value_1;",
+        "uint32_t value_2 = m->r32((value_1 + UINT32_C(0x94)));",
+        "(void)value_2;"
+      ],
+      "result": "value_2",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))"
+        },
+        {
+          "bits": 32,
+          "address": "(value_0 + UINT32_C(0x40dc))"
+        },
+        {
+          "bits": 32,
+          "address": "(value_1 + UINT32_C(0x94))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x80031174",
+      "original_bytes": 16,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0xe8)));",
+        "(void)value_0;",
+        "m->w32((a + UINT32_C(0xe8)), (value_0 | UINT32_C(0x1)));"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xe8))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xe8))",
+          "value": "(value_0 | UINT32_C(0x1))"
+        }
+      ]
+    },
+    {
+      "address": "0x800339FC",
+      "original_bytes": 20,
+      "behavior": "2 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0xc)), (a + UINT32_C(0xbc)));",
+        "m->w32((a + UINT32_C(0x98)), (a + UINT32_C(0xd0)));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc))",
+          "value": "(a + UINT32_C(0xbc))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x98))",
+          "value": "(a + UINT32_C(0xd0))"
+        }
+      ]
+    },
+    {
+      "address": "0x80033A10",
+      "original_bytes": 24,
+      "behavior": "2 target reads, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x4)));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32((value_0 + UINT32_C(0x3c40)));",
+        "(void)value_1;"
+      ],
+      "result": "(((UINT32_C(0x0) - value_1) | value_1) >> 31)",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))"
+        },
+        {
+          "bits": 32,
+          "address": "(value_0 + UINT32_C(0x3c40))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x80035DF4",
+      "original_bytes": 20,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r8((a + UINT32_C(0xe8)));",
+        "(void)value_0;",
+        "m->w8((a + UINT32_C(0xe8)), (uint8_t)(value_0 & UINT32_C(0xffffff7f)));"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0xe8))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0xe8))",
+          "value": "(value_0 & UINT32_C(0xffffff7f))"
+        }
+      ]
+    },
+    {
+      "address": "0x80035E08",
+      "original_bytes": 20,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r8((a + UINT32_C(0xe8)));",
+        "(void)value_0;",
+        "m->w8((a + UINT32_C(0xe8)), (uint8_t)((value_0 & UINT32_C(0xffffff7f)) | UINT32_C(0x80)));"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0xe8))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0xe8))",
+          "value": "((value_0 & UINT32_C(0xffffff7f)) | UINT32_C(0x80))"
+        }
+      ]
+    },
+    {
+      "address": "0x80035E1C",
+      "original_bytes": 28,
+      "behavior": "3 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0x18)), (a + UINT32_C(0xbc)));",
+        "m->w32((a + UINT32_C(0x1c)), (a + UINT32_C(0xd0)));",
+        "m->w32((a + UINT32_C(0x98)), (a + UINT32_C(0xa0)));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x18))",
+          "value": "(a + UINT32_C(0xbc))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x1c))",
+          "value": "(a + UINT32_C(0xd0))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x98))",
+          "value": "(a + UINT32_C(0xa0))"
+        }
+      ]
+    },
+    {
+      "address": "0x80036500",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x8)), (uint8_t)UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x80036ADC",
+      "original_bytes": 16,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0xc)));",
+        "(void)value_0;",
+        "m->w32((a + UINT32_C(0xc)), (value_0 | UINT32_C(0x2)));"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc))",
+          "value": "(value_0 | UINT32_C(0x2))"
+        }
+      ]
+    },
+    {
+      "address": "0x80038F3C",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x180)), (uint8_t)UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x180))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x80038F48",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x180)), (uint8_t)UINT32_C(0x1));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x180))",
+          "value": "UINT32_C(0x1)"
+        }
+      ]
+    },
+    {
+      "address": "0x8003A5DC",
+      "original_bytes": 16,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x9c)));",
+        "(void)value_0;",
+        "m->w8((value_0 + UINT32_C(0x5ab)), (uint8_t)UINT32_C(0x1));"
+      ],
+      "result": "value_0",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x9c))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(value_0 + UINT32_C(0x5ab))",
+          "value": "UINT32_C(0x1)"
+        }
+      ]
+    },
+    {
+      "address": "0x8003D640",
+      "original_bytes": 20,
+      "behavior": "1 target read, 2 target stores",
+      "statements": [
+        "m->w8((a + UINT32_C(0x4)), (uint8_t)UINT32_C(0x1));",
+        "uint32_t value_0 = m->r32(b);",
+        "(void)value_0;",
+        "m->w32((a + UINT32_C(0x18)), value_0);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "b"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "UINT32_C(0x1)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x18))",
+          "value": "value_0"
+        }
+      ]
+    },
+    {
+      "address": "0x8003D718",
+      "original_bytes": 20,
+      "behavior": "1 target read, 2 target stores",
+      "statements": [
+        "m->w8((a + UINT32_C(0x4)), (uint8_t)UINT32_C(0x1));",
+        "uint32_t value_0 = m->r8(b);",
+        "(void)value_0;",
+        "m->w8((a + UINT32_C(0x18)), (uint8_t)value_0);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 8,
+          "address": "b"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "UINT32_C(0x1)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x18))",
+          "value": "value_0"
+        }
+      ]
+    },
+    {
+      "address": "0x8003EA60",
+      "original_bytes": 60,
+      "behavior": "7 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0x18)), (a + UINT32_C(0xa0)));",
+        "m->w32((a + UINT32_C(0x20)), (a + UINT32_C(0xb4)));",
+        "m->w32((a + UINT32_C(0x8)), (a + UINT32_C(0xc8)));",
+        "m->w32((a + UINT32_C(0x10)), (a + UINT32_C(0xdc)));",
+        "m->w32((a + UINT32_C(0x28)), (a + UINT32_C(0xf0)));",
+        "m->w32((a + UINT32_C(0x2c)), (a + UINT32_C(0x104)));",
+        "m->w32((a + UINT32_C(0x98)), (a + UINT32_C(0x118)));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x18))",
+          "value": "(a + UINT32_C(0xa0))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x20))",
+          "value": "(a + UINT32_C(0xb4))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "(a + UINT32_C(0xc8))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x10))",
+          "value": "(a + UINT32_C(0xdc))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x28))",
+          "value": "(a + UINT32_C(0xf0))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x2c))",
+          "value": "(a + UINT32_C(0x104))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x98))",
+          "value": "(a + UINT32_C(0x118))"
+        }
+      ]
+    },
+    {
+      "address": "0x80040A50",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x394)), (uint8_t)UINT32_C(0x1));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x394))",
+          "value": "UINT32_C(0x1)"
+        }
+      ]
+    },
+    {
+      "address": "0x80040B9C",
+      "original_bytes": 20,
+      "behavior": "1 target read, 2 target stores",
+      "statements": [
+        "m->w8((a + UINT32_C(0x4)), (uint8_t)UINT32_C(0x1));",
+        "uint32_t value_0 = m->r32(b);",
+        "(void)value_0;",
+        "m->w32((a + UINT32_C(0x18)), value_0);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "b"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "UINT32_C(0x1)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x18))",
+          "value": "value_0"
+        }
+      ]
+    },
+    {
+      "address": "0x80040C08",
+      "original_bytes": 20,
+      "behavior": "1 target read, 2 target stores",
+      "statements": [
+        "m->w8((a + UINT32_C(0x4)), (uint8_t)UINT32_C(0x1));",
+        "uint32_t value_0 = m->r32(b);",
+        "(void)value_0;",
+        "m->w32((a + UINT32_C(0x18)), value_0);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "b"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "UINT32_C(0x1)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x18))",
+          "value": "value_0"
+        }
+      ]
+    },
+    {
+      "address": "0x8004156C",
+      "original_bytes": 36,
+      "behavior": "4 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0x170)), (a + UINT32_C(0x8)));",
+        "m->w32((a + UINT32_C(0x16c)), (a + UINT32_C(0x1c)));",
+        "m->w32((a + UINT32_C(0x174)), (a + UINT32_C(0x30)));",
+        "m->w32((a + UINT32_C(0x1f4)), (a + UINT32_C(0x44)));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x170))",
+          "value": "(a + UINT32_C(0x8))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x16c))",
+          "value": "(a + UINT32_C(0x1c))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x174))",
+          "value": "(a + UINT32_C(0x30))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x1f4))",
+          "value": "(a + UINT32_C(0x44))"
+        }
+      ]
+    },
+    {
+      "address": "0x800440E0",
+      "original_bytes": 20,
+      "behavior": "1 target read, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0xc)));",
+        "(void)value_0;"
+      ],
+      "result": "(((UINT32_C(0x0) - value_0) | value_0) >> 31)",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x80044528",
+      "original_bytes": 24,
+      "behavior": "2 target reads, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0xc)));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32((a + UINT32_C(0x4)));",
+        "(void)value_1;",
+        "m->w32((value_1 + UINT32_C(0x2c)), value_0);"
+      ],
+      "result": "(a + UINT32_C(0x58))",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(value_1 + UINT32_C(0x2c))",
+          "value": "value_0"
+        }
+      ]
+    },
+    {
+      "address": "0x800452DC",
+      "original_bytes": 20,
+      "behavior": "2 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0x1c)), (a + UINT32_C(0xa0)));",
+        "m->w32((a + UINT32_C(0x9c)), (a + UINT32_C(0xb4)));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x1c))",
+          "value": "(a + UINT32_C(0xa0))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x9c))",
+          "value": "(a + UINT32_C(0xb4))"
+        }
+      ]
+    },
+    {
+      "address": "0x800454B0",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0xc8)), (uint8_t)UINT32_C(0x1));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0xc8))",
+          "value": "UINT32_C(0x1)"
+        }
+      ]
+    },
+    {
+      "address": "0x80045980",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0xe4)), (uint8_t)UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0xe4))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x8004778C",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x2ec)), (uint8_t)UINT32_C(0x1));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x2ec))",
+          "value": "UINT32_C(0x1)"
+        }
+      ]
+    },
+    {
+      "address": "0x80047A98",
+      "original_bytes": 56,
+      "behavior": "6 target stores",
+      "statements": [
+        "m->w32(a, UINT32_C(0x802add18));",
+        "m->w32((a + UINT32_C(0x4)), b);",
+        "m->w32(a, UINT32_C(0x802b29e0));",
+        "m->w32((a + UINT32_C(0xc)), UINT32_C(0x802ade60));",
+        "m->w32((a + UINT32_C(0x10)), b);",
+        "m->w8((a + UINT32_C(0x8)), (uint8_t)UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x802add18)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "b"
+        },
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x802b29e0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc))",
+          "value": "UINT32_C(0x802ade60)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x10))",
+          "value": "b"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x8004C538",
+      "original_bytes": 48,
+      "behavior": "10 target stores",
+      "statements": [
+        "m->w8((a + UINT32_C(0x4074)), (uint8_t)UINT32_C(0x0));",
+        "m->w8((a + UINT32_C(0x4075)), (uint8_t)UINT32_C(0x0));",
+        "m->w8((a + UINT32_C(0x4076)), (uint8_t)UINT32_C(0x0));",
+        "m->w8((a + UINT32_C(0x4077)), (uint8_t)UINT32_C(0x0));",
+        "m->w8((a + UINT32_C(0x4078)), (uint8_t)UINT32_C(0x0));",
+        "m->w8((a + UINT32_C(0x4079)), (uint8_t)UINT32_C(0x0));",
+        "m->w8((a + UINT32_C(0x407a)), (uint8_t)UINT32_C(0x0));",
+        "m->w8((a + UINT32_C(0x407b)), (uint8_t)UINT32_C(0x0));",
+        "m->w8((a + UINT32_C(0x407c)), (uint8_t)UINT32_C(0x0));",
+        "m->w8((a + UINT32_C(0x407d)), (uint8_t)UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x4074))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x4075))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x4076))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x4077))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x4078))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x4079))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x407a))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x407b))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x407c))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x407d))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x8004F108",
+      "original_bytes": 12,
+      "behavior": "2 target reads, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x2dc)));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32(value_0);",
+        "(void)value_1;"
+      ],
+      "result": "value_1",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x2dc))"
+        },
+        {
+          "bits": 32,
+          "address": "value_0"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x8004F144",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x3c28)), (uint8_t)UINT32_C(0x1));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x3c28))",
+          "value": "UINT32_C(0x1)"
+        }
+      ]
+    },
+    {
+      "address": "0x8004FAD0",
+      "original_bytes": 16,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x20c)));",
+        "(void)value_0;",
+        "m->w32((a + UINT32_C(0x20c)), (value_0 & UINT32_C(0xfffffffe)));"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x20c))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x20c))",
+          "value": "(value_0 & UINT32_C(0xfffffffe))"
+        }
+      ]
+    },
+    {
+      "address": "0x8005344C",
+      "original_bytes": 20,
+      "behavior": "1 target read, 2 target stores",
+      "statements": [
+        "m->w8((a + UINT32_C(0x4)), (uint8_t)UINT32_C(0x1));",
+        "uint32_t value_0 = m->r32(b);",
+        "(void)value_0;",
+        "m->w32((a + UINT32_C(0x18)), value_0);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "b"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "UINT32_C(0x1)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x18))",
+          "value": "value_0"
+        }
+      ]
+    },
+    {
+      "address": "0x8005357C",
+      "original_bytes": 28,
+      "behavior": "5 target stores",
+      "statements": [
+        "m->w32(a, UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x4)), UINT32_C(0x0));",
+        "m->w8((a + UINT32_C(0x8)), (uint8_t)UINT32_C(0x0));",
+        "m->w8((a + UINT32_C(0x9)), (uint8_t)UINT32_C(0x0));",
+        "m->w8((a + UINT32_C(0xa)), (uint8_t)UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x9))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0xa))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x80058C34",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x262)), (uint8_t)UINT32_C(0x1));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x262))",
+          "value": "UINT32_C(0x1)"
+        }
+      ]
+    },
+    {
+      "address": "0x80058D50",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x262)), (uint8_t)UINT32_C(0x1));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x262))",
+          "value": "UINT32_C(0x1)"
+        }
+      ]
+    },
+    {
+      "address": "0x80058D5C",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x262)), (uint8_t)UINT32_C(0x1));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x262))",
+          "value": "UINT32_C(0x1)"
+        }
+      ]
+    },
+    {
+      "address": "0x8005A2F4",
+      "original_bytes": 28,
+      "behavior": "2 target reads, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0xc)));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32((a + UINT32_C(0x4)));",
+        "(void)value_1;"
+      ],
+      "result": "(value_1 + ((c + (b * value_0)) * UINT32_C(0x28)))",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x8005A598",
+      "original_bytes": 60,
+      "behavior": "9 target stores",
+      "statements": [
+        "m->w32(a, UINT32_C(0x802b3e50));",
+        "m->w32(a, UINT32_C(0x802b3e70));",
+        "m->w32((a + UINT32_C(0x4)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x8)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0xc)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x10)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x14)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x18)), UINT32_C(0x0));",
+        "m->w8((a + UINT32_C(0x1c)), (uint8_t)UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x802b3e50)"
+        },
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x802b3e70)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x10))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x14))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x18))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x1c))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x8005C1FC",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x5d)), (uint8_t)UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x5d))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x80061E40",
+      "original_bytes": 16,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x14)));",
+        "(void)value_0;",
+        "m->w32((a + UINT32_C(0x14)), (value_0 | b));"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x14))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x14))",
+          "value": "(value_0 | b)"
+        }
+      ]
+    },
+    {
+      "address": "0x80067C60",
+      "original_bytes": 28,
+      "behavior": "3 target reads, 3 target stores",
+      "statements": [
+        "uint32_t value_0 = m->r32((b + UINT32_C(0x28)));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32((b + UINT32_C(0x2c)));",
+        "(void)value_1;",
+        "m->w32(a, value_0);",
+        "m->w32((a + UINT32_C(0x4)), value_1);",
+        "uint32_t value_2 = m->r32((b + UINT32_C(0x30)));",
+        "(void)value_2;",
+        "m->w32((a + UINT32_C(0x8)), value_2);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(b + UINT32_C(0x28))"
+        },
+        {
+          "bits": 32,
+          "address": "(b + UINT32_C(0x2c))"
+        },
+        {
+          "bits": 32,
+          "address": "(b + UINT32_C(0x30))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "value_0"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "value_1"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "value_2"
+        }
+      ]
+    },
+    {
+      "address": "0x80067C7C",
+      "original_bytes": 28,
+      "behavior": "3 target reads, 3 target stores",
+      "statements": [
+        "uint32_t value_0 = m->r32((b + UINT32_C(0x1c)));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32((b + UINT32_C(0x20)));",
+        "(void)value_1;",
+        "m->w32(a, value_0);",
+        "m->w32((a + UINT32_C(0x4)), value_1);",
+        "uint32_t value_2 = m->r32((b + UINT32_C(0x24)));",
+        "(void)value_2;",
+        "m->w32((a + UINT32_C(0x8)), value_2);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(b + UINT32_C(0x1c))"
+        },
+        {
+          "bits": 32,
+          "address": "(b + UINT32_C(0x20))"
+        },
+        {
+          "bits": 32,
+          "address": "(b + UINT32_C(0x24))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "value_0"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "value_1"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "value_2"
+        }
+      ]
+    },
+    {
+      "address": "0x80071A9C",
+      "original_bytes": 32,
+      "behavior": "3 target stores",
+      "statements": [
+        "m->w32(a, UINT32_C(0x802b7c60));",
+        "m->w32((a + UINT32_C(0x4)), UINT32_C(0xffffffff));",
+        "m->w32((a + UINT32_C(0x8)), UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x802b7c60)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "UINT32_C(0xffffffff)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x80071FC4",
+      "original_bytes": 16,
+      "behavior": "2 target reads, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x30)));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r16((value_0 + UINT32_C(0x2)));",
+        "(void)value_1;"
+      ],
+      "result": "(value_1 & UINT32_C(0x1))",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x30))"
+        },
+        {
+          "bits": 16,
+          "address": "(value_0 + UINT32_C(0x2))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x80073DF8",
+      "original_bytes": 24,
+      "behavior": "4 target reads, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32(b);",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32(a);",
+        "(void)value_1;",
+        "uint32_t value_2 = m->r32((value_0 + UINT32_C(0x4)));",
+        "(void)value_2;",
+        "uint32_t value_3 = m->r32((value_1 + UINT32_C(0x4)));",
+        "(void)value_3;"
+      ],
+      "result": "(value_3 - value_2)",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "b"
+        },
+        {
+          "bits": 32,
+          "address": "a"
+        },
+        {
+          "bits": 32,
+          "address": "(value_0 + UINT32_C(0x4))"
+        },
+        {
+          "bits": 32,
+          "address": "(value_1 + UINT32_C(0x4))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x8007BE04",
+      "original_bytes": 16,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x2c)));",
+        "(void)value_0;",
+        "m->w32((a + UINT32_C(0x2c)), (value_0 & UINT32_C(0xffff7fff)));"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x2c))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x2c))",
+          "value": "(value_0 & UINT32_C(0xffff7fff))"
+        }
+      ]
+    },
+    {
+      "address": "0x8007BE2C",
+      "original_bytes": 32,
+      "behavior": "3 target reads, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x4)));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32((b + UINT32_C(0x4)));",
+        "(void)value_1;",
+        "uint32_t value_2 = m->r32(b);",
+        "(void)value_2;"
+      ],
+      "result": "(leading_zeros(((value_0 & value_1) - value_2)) >> 5)",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))"
+        },
+        {
+          "bits": 32,
+          "address": "(b + UINT32_C(0x4))"
+        },
+        {
+          "bits": 32,
+          "address": "b"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x8007BE4C",
+      "original_bytes": 32,
+      "behavior": "3 target reads, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32(a);",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32((b + UINT32_C(0x4)));",
+        "(void)value_1;",
+        "uint32_t value_2 = m->r32(b);",
+        "(void)value_2;"
+      ],
+      "result": "(leading_zeros(((value_0 & value_1) - value_2)) >> 5)",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "a"
+        },
+        {
+          "bits": 32,
+          "address": "(b + UINT32_C(0x4))"
+        },
+        {
+          "bits": 32,
+          "address": "b"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x8007C89C",
+      "original_bytes": 28,
+      "behavior": "2 target stores",
+      "statements": [
+        "m->w8((a + UINT32_C(0x1a0)), (uint8_t)b);",
+        "m->w32((a + UINT32_C(0x28)), (((UINT32_C(0x0) - (b & UINT32_C(0xff))) | (b & UINT32_C(0xff))) >> 31));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x1a0))",
+          "value": "b"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x28))",
+          "value": "(((UINT32_C(0x0) - (b & UINT32_C(0xff))) | (b & UINT32_C(0xff))) >> 31)"
+        }
+      ]
+    },
+    {
+      "address": "0x8007D788",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(a, UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x800835A0",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32((a + UINT32_C(0x624)), UINT32_C(0x2));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x624))",
+          "value": "UINT32_C(0x2)"
+        }
+      ]
+    },
+    {
+      "address": "0x800835AC",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32((a + UINT32_C(0x624)), UINT32_C(0x8));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x624))",
+          "value": "UINT32_C(0x8)"
+        }
+      ]
+    },
+    {
+      "address": "0x80096894",
+      "original_bytes": 24,
+      "behavior": "3 target reads, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32(UINT32_C(0x8033267c));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32((value_0 + UINT32_C(0x51dc)));",
+        "(void)value_1;",
+        "uint32_t value_2 = m->r32((value_1 + UINT32_C(0x2c)));",
+        "(void)value_2;",
+        "m->w32((value_1 + UINT32_C(0x2c)), (value_2 | UINT32_C(0x20000)));"
+      ],
+      "result": "value_1",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x8033267c)"
+        },
+        {
+          "bits": 32,
+          "address": "(value_0 + UINT32_C(0x51dc))"
+        },
+        {
+          "bits": 32,
+          "address": "(value_1 + UINT32_C(0x2c))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(value_1 + UINT32_C(0x2c))",
+          "value": "(value_2 | UINT32_C(0x20000))"
+        }
+      ]
+    },
+    {
+      "address": "0x800C8744",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x24c)), (uint8_t)UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x24c))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x800CDBD4",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x24c)), (uint8_t)UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x24c))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x800CF7EC",
+      "original_bytes": 12,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x8)));",
+        "(void)value_0;",
+        "m->w32((a + UINT32_C(0x198)), value_0);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x198))",
+          "value": "value_0"
+        }
+      ]
+    },
+    {
+      "address": "0x800D41A0",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(b, UINT32_C(0x0));"
+      ],
+      "result": "UINT32_C(0x0)",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "b",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x800D4CD8",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(((a + UINT32_C(0x40000)) + UINT32_C(0x4f20)), UINT32_C(0x0));"
+      ],
+      "result": "(a + UINT32_C(0x40000))",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "((a + UINT32_C(0x40000)) + UINT32_C(0x4f20))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x800D4CE8",
+      "original_bytes": 12,
+      "behavior": "1 target read, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32(((a + UINT32_C(0x40000)) + UINT32_C(0x4f20)));",
+        "(void)value_0;"
+      ],
+      "result": "value_0",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "((a + UINT32_C(0x40000)) + UINT32_C(0x4f20))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x800D56B4",
+      "original_bytes": 16,
+      "behavior": "2 target reads, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32(UINT32_C(0x8033267c));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32((value_0 + UINT32_C(0x51e0)));",
+        "(void)value_1;",
+        "m->w32((value_1 + UINT32_C(0x44)), b);"
+      ],
+      "result": "value_1",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x8033267c)"
+        },
+        {
+          "bits": 32,
+          "address": "(value_0 + UINT32_C(0x51e0))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(value_1 + UINT32_C(0x44))",
+          "value": "b"
+        }
+      ]
+    },
+    {
+      "address": "0x800D56C4",
+      "original_bytes": 16,
+      "behavior": "3 target reads, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32(UINT32_C(0x8033267c));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32((value_0 + UINT32_C(0x51e0)));",
+        "(void)value_1;",
+        "uint32_t value_2 = m->r32((value_1 + UINT32_C(0x44)));",
+        "(void)value_2;"
+      ],
+      "result": "value_2",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x8033267c)"
+        },
+        {
+          "bits": 32,
+          "address": "(value_0 + UINT32_C(0x51e0))"
+        },
+        {
+          "bits": 32,
+          "address": "(value_1 + UINT32_C(0x44))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x800D80DC",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(c, UINT32_C(0x0));"
+      ],
+      "result": "UINT32_C(0x0)",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "c",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x800DAC50",
+      "original_bytes": 20,
+      "behavior": "2 target stores",
+      "statements": [
+        "m->w32(c, UINT32_C(0x0));",
+        "m->w32(d, UINT32_C(0x0));"
+      ],
+      "result": "UINT32_C(0x0)",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "c",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "d",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x800DF750",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(((a + UINT32_C(0x10000)) + UINT32_C(0xffffa780)), b);"
+      ],
+      "result": "(a + UINT32_C(0x10000))",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "((a + UINT32_C(0x10000)) + UINT32_C(0xffffa780))",
+          "value": "b"
+        }
+      ]
+    },
+    {
+      "address": "0x800DF75C",
+      "original_bytes": 12,
+      "behavior": "1 target read, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32(((a + UINT32_C(0x10000)) + UINT32_C(0xffffa780)));",
+        "(void)value_0;"
+      ],
+      "result": "value_0",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "((a + UINT32_C(0x10000)) + UINT32_C(0xffffa780))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x800E5540",
+      "original_bytes": 16,
+      "behavior": "1 target read, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32(UINT32_C(0x80331508));",
+        "(void)value_0;"
+      ],
+      "result": "(value_0 + (a * UINT32_C(0xe8)))",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x80331508)"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x800E6E28",
+      "original_bytes": 32,
+      "behavior": "1 target read, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x8)));",
+        "(void)value_0;"
+      ],
+      "result": "(((value_0 << 6) + UINT32_C(0x4)) + (((((value_0 << 6) + UINT32_C(0x4)) ^ UINT32_C(0xf)) + UINT32_C(0x1)) & UINT32_C(0xf)))",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x800E726C",
+      "original_bytes": 20,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x802fc698), UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x802fc698)",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x800F6344",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(((a + UINT32_C(0x10000)) + UINT32_C(0xffff974c)), UINT32_C(0x0));"
+      ],
+      "result": "(a + UINT32_C(0x10000))",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "((a + UINT32_C(0x10000)) + UINT32_C(0xffff974c))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x800F64B0",
+      "original_bytes": 20,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32(((a + UINT32_C(0x10000)) + UINT32_C(0xffff959c)));",
+        "(void)value_0;",
+        "m->w32(((a + UINT32_C(0x10000)) + UINT32_C(0xffff959c)), (value_0 - UINT32_C(0x1)));"
+      ],
+      "result": "value_0",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "((a + UINT32_C(0x10000)) + UINT32_C(0xffff959c))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "((a + UINT32_C(0x10000)) + UINT32_C(0xffff959c))",
+          "value": "(value_0 - UINT32_C(0x1))"
+        }
+      ]
+    },
+    {
+      "address": "0x800F64C4",
+      "original_bytes": 20,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32(((a + UINT32_C(0x10000)) + UINT32_C(0xffff959c)));",
+        "(void)value_0;",
+        "m->w32(((a + UINT32_C(0x10000)) + UINT32_C(0xffff959c)), (value_0 + UINT32_C(0x1)));"
+      ],
+      "result": "value_0",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "((a + UINT32_C(0x10000)) + UINT32_C(0xffff959c))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "((a + UINT32_C(0x10000)) + UINT32_C(0xffff959c))",
+          "value": "(value_0 + UINT32_C(0x1))"
+        }
+      ]
+    },
+    {
+      "address": "0x800F9FFC",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x4a)), (uint8_t)UINT32_C(0x1));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x4a))",
+          "value": "UINT32_C(0x1)"
+        }
+      ]
+    },
+    {
+      "address": "0x8010A1B8",
+      "original_bytes": 28,
+      "behavior": "1 target read, 3 target stores",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x1b4)));",
+        "(void)value_0;",
+        "m->w32((value_0 + UINT32_C(0x20)), UINT32_C(0x5));",
+        "m->w8((a + UINT32_C(0x3260)), (uint8_t)UINT32_C(0x1));",
+        "m->w8((a + UINT32_C(0x28)), (uint8_t)UINT32_C(0x1));"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x1b4))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(value_0 + UINT32_C(0x20))",
+          "value": "UINT32_C(0x5)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x3260))",
+          "value": "UINT32_C(0x1)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x28))",
+          "value": "UINT32_C(0x1)"
+        }
+      ]
+    },
+    {
+      "address": "0x8010A6DC",
+      "original_bytes": 20,
+      "behavior": "scalar result",
+      "statements": [],
+      "result": "(a + ((b * UINT32_C(0x38)) + UINT32_C(0x23e8)))",
+      "reads": [],
+      "writes": []
+    },
+    {
+      "address": "0x8010A6F0",
+      "original_bytes": 28,
+      "behavior": "3 target reads, 3 target stores",
+      "statements": [
+        "uint32_t value_0 = m->r32(c);",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32((c + UINT32_C(0x4)));",
+        "(void)value_1;",
+        "m->w32(a, value_0);",
+        "uint32_t value_2 = m->r32((c + UINT32_C(0x8)));",
+        "(void)value_2;",
+        "m->w32((a + UINT32_C(0x4)), value_1);",
+        "m->w32((a + UINT32_C(0x8)), value_2);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "c"
+        },
+        {
+          "bits": 32,
+          "address": "(c + UINT32_C(0x4))"
+        },
+        {
+          "bits": 32,
+          "address": "(c + UINT32_C(0x8))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "value_0"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "value_1"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "value_2"
+        }
+      ]
+    },
+    {
+      "address": "0x8010A70C",
+      "original_bytes": 28,
+      "behavior": "3 target reads, 3 target stores",
+      "statements": [
+        "uint32_t value_0 = m->r32(c);",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32((c + UINT32_C(0x4)));",
+        "(void)value_1;",
+        "m->w32(a, value_0);",
+        "uint32_t value_2 = m->r32((c + UINT32_C(0x8)));",
+        "(void)value_2;",
+        "m->w32((a + UINT32_C(0x4)), value_1);",
+        "m->w32((a + UINT32_C(0x8)), value_2);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "c"
+        },
+        {
+          "bits": 32,
+          "address": "(c + UINT32_C(0x4))"
+        },
+        {
+          "bits": 32,
+          "address": "(c + UINT32_C(0x8))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "value_0"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "value_1"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "value_2"
+        }
+      ]
+    },
+    {
+      "address": "0x8010A75C",
+      "original_bytes": 28,
+      "behavior": "3 target reads, 3 target stores",
+      "statements": [
+        "uint32_t value_0 = m->r32(c);",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32((c + UINT32_C(0x4)));",
+        "(void)value_1;",
+        "m->w32(a, value_0);",
+        "uint32_t value_2 = m->r32((c + UINT32_C(0x8)));",
+        "(void)value_2;",
+        "m->w32((a + UINT32_C(0x4)), value_1);",
+        "m->w32((a + UINT32_C(0x8)), value_2);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "c"
+        },
+        {
+          "bits": 32,
+          "address": "(c + UINT32_C(0x4))"
+        },
+        {
+          "bits": 32,
+          "address": "(c + UINT32_C(0x8))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "value_0"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "value_1"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "value_2"
+        }
+      ]
+    },
+    {
+      "address": "0x8010A778",
+      "original_bytes": 28,
+      "behavior": "3 target reads, 3 target stores",
+      "statements": [
+        "uint32_t value_0 = m->r32(c);",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32((c + UINT32_C(0x4)));",
+        "(void)value_1;",
+        "m->w32(a, value_0);",
+        "uint32_t value_2 = m->r32((c + UINT32_C(0x8)));",
+        "(void)value_2;",
+        "m->w32((a + UINT32_C(0x4)), value_1);",
+        "m->w32((a + UINT32_C(0x8)), value_2);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "c"
+        },
+        {
+          "bits": 32,
+          "address": "(c + UINT32_C(0x4))"
+        },
+        {
+          "bits": 32,
+          "address": "(c + UINT32_C(0x8))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "value_0"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "value_1"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "value_2"
+        }
+      ]
+    },
+    {
+      "address": "0x801636B8",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x80332c78), UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x80332c78)",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x8017BDF0",
+      "original_bytes": 12,
+      "behavior": "2 target stores",
+      "statements": [
+        "m->w32(a, b);",
+        "m->w32((a + UINT32_C(0x4)), c);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "b"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "c"
+        }
+      ]
+    },
+    {
+      "address": "0x80185960",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(a, UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x8018D690",
+      "original_bytes": 44,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32(((UINT32_C(0x8031b090) + (a << 2)) + UINT32_C(0x98)));",
+        "(void)value_0;",
+        "m->w8((value_0 + (((b & UINT32_C(0x7fff)) * UINT32_C(0x18)) + UINT32_C(0x14))), (uint8_t)UINT32_C(0x1));"
+      ],
+      "result": "value_0",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "((UINT32_C(0x8031b090) + (a << 2)) + UINT32_C(0x98))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(value_0 + (((b & UINT32_C(0x7fff)) * UINT32_C(0x18)) + UINT32_C(0x14)))",
+          "value": "UINT32_C(0x1)"
+        }
+      ]
+    },
+    {
+      "address": "0x801956F4",
+      "original_bytes": 64,
+      "behavior": "1 target read, 13 target stores",
+      "statements": [
+        "uint32_t value_0 = m->r32(UINT32_C(0x80335c40));",
+        "(void)value_0;",
+        "m->w32((a + UINT32_C(0x8)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x4)), UINT32_C(0x0));",
+        "m->w8((a + UINT32_C(0xc)), (uint8_t)UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x10)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x18)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x14)), UINT32_C(0x0));",
+        "m->w8((a + UINT32_C(0x1c)), (uint8_t)UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x20)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x28)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x24)), UINT32_C(0x0));",
+        "m->w8((a + UINT32_C(0x2c)), (uint8_t)UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x30)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x34)), value_0);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x80335c40)"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0xc))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x10))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x18))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x14))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x1c))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x20))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x28))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x24))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x2c))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x30))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x34))",
+          "value": "value_0"
+        }
+      ]
+    },
+    {
+      "address": "0x80199830",
+      "original_bytes": 24,
+      "behavior": "4 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0x1c)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x10)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x30)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x24)), UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x1c))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x10))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x30))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x24))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x801A7F74",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(a, UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x801B5980",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32((a + UINT32_C(0x804)), UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x804))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x801C3BE0",
+      "original_bytes": 12,
+      "behavior": "2 target stores",
+      "statements": [
+        "m->w32(UINT32_C(0x80332e2c), b);",
+        "m->w32(UINT32_C(0x80332e30), c);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x80332e2c)",
+          "value": "b"
+        },
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x80332e30)",
+          "value": "c"
+        }
+      ]
+    },
+    {
+      "address": "0x801C3BEC",
+      "original_bytes": 12,
+      "behavior": "1 target read, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x14)));",
+        "(void)value_0;"
+      ],
+      "result": "(value_0 & UINT32_C(0x3))",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x14))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x801CB7AC",
+      "original_bytes": 12,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32(a);",
+        "(void)value_0;",
+        "m->w32((a + UINT32_C(0x4)), value_0);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "a"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "value_0"
+        }
+      ]
+    },
+    {
+      "address": "0x801CB7B8",
+      "original_bytes": 12,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x4)));",
+        "(void)value_0;",
+        "m->w32(a, value_0);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "value_0"
+        }
+      ]
+    },
+    {
+      "address": "0x801CCFF4",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x14)), (uint8_t)UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x14))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x801D8C54",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x80323728), a);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x80323728)",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "address": "0x801DB0E0",
+      "original_bytes": 12,
+      "behavior": "1 target read, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x14)));",
+        "(void)value_0;"
+      ],
+      "result": "(((value_0 << 4) | (value_0 >> 28)) & UINT32_C(0x1))",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x14))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x801EAD84",
+      "original_bytes": 16,
+      "behavior": "1 target read, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x28)));",
+        "(void)value_0;"
+      ],
+      "result": "(value_0 + (b << 2))",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x28))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x801EAEF8",
+      "original_bytes": 76,
+      "behavior": "7 target reads, 2 target stores",
+      "statements": [
+        "uint32_t value_0 = m->r32(((a + (b << 2)) + UINT32_C(0xf0)));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r8((value_0 + UINT32_C(0x8)));",
+        "(void)value_1;",
+        "uint32_t value_2 = m->r32((value_0 + UINT32_C(0x34)));",
+        "(void)value_2;",
+        "uint32_t value_3 = m->r8((value_2 + sign_byte(value_1)));",
+        "(void)value_3;",
+        "m->w8(c, (uint8_t)(leading_zeros((UINT32_C(0x4) - value_3)) >> 5));",
+        "uint32_t value_4 = m->r8((value_0 + UINT32_C(0x8)));",
+        "(void)value_4;",
+        "uint32_t value_5 = m->r32((value_0 + UINT32_C(0x30)));",
+        "(void)value_5;",
+        "m->w8((value_0 + UINT32_C(0x8)), (uint8_t)(value_4 - UINT32_C(0x1)));",
+        "uint32_t value_6 = m->r32((value_5 + (sign_byte(value_4) << 2)));",
+        "(void)value_6;"
+      ],
+      "result": "value_6",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "((a + (b << 2)) + UINT32_C(0xf0))"
+        },
+        {
+          "bits": 8,
+          "address": "(value_0 + UINT32_C(0x8))"
+        },
+        {
+          "bits": 32,
+          "address": "(value_0 + UINT32_C(0x34))"
+        },
+        {
+          "bits": 8,
+          "address": "(value_2 + sign_byte(value_1))"
+        },
+        {
+          "bits": 8,
+          "address": "(value_0 + UINT32_C(0x8))"
+        },
+        {
+          "bits": 32,
+          "address": "(value_0 + UINT32_C(0x30))"
+        },
+        {
+          "bits": 32,
+          "address": "(value_5 + (sign_byte(value_4) << 2))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "c",
+          "value": "(leading_zeros((UINT32_C(0x4) - value_3)) >> 5)"
+        },
+        {
+          "bits": 8,
+          "address": "(value_0 + UINT32_C(0x8))",
+          "value": "(value_4 - UINT32_C(0x1))"
+        }
+      ]
+    },
+    {
+      "address": "0x801EE758",
+      "original_bytes": 36,
+      "behavior": "scalar result",
+      "statements": [],
+      "result": "(((a & UINT32_C(0x1c03)) | ((a & UINT32_C(0xcc)) << 2)) | ((a & UINT32_C(0x330)) >> 2))",
+      "reads": [],
+      "writes": []
+    },
+    {
+      "address": "0x801EED30",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w16(a, (uint16_t)UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 16,
+          "address": "a",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x801EFF9C",
+      "original_bytes": 20,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32(((a + (b << 2)) + UINT32_C(0x16c)));",
+        "(void)value_0;",
+        "m->w32((a + UINT32_C(0x168)), value_0);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "((a + (b << 2)) + UINT32_C(0x16c))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x168))",
+          "value": "value_0"
+        }
+      ]
+    },
+    {
+      "address": "0x801EFFE4",
+      "original_bytes": 20,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(((a + (b << 2)) + UINT32_C(0x16c)), UINT32_C(0x0));"
+      ],
+      "result": "(a + (b << 2))",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "((a + (b << 2)) + UINT32_C(0x16c))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x801F30A8",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x802ecc60), a);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x802ecc60)",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "address": "0x801F30B4",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x802ecc64), a);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x802ecc64)",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "address": "0x801F30C4",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x802ecc74), a);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x802ecc74)",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "address": "0x801F30D4",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x802ecc78), a);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x802ecc78)",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "address": "0x801F30E4",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x802ecc7c), a);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x802ecc7c)",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "address": "0x801F30F4",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x802ecc88), a);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x802ecc88)",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "address": "0x801F3104",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x802ecc8c), a);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x802ecc8c)",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "address": "0x801F3114",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x802ecc90), a);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x802ecc90)",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "address": "0x801F3124",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x802ecc94), a);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x802ecc94)",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "address": "0x801F3134",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x802ecca8), a);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x802ecca8)",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "address": "0x801F3144",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x802eccac), a);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x802eccac)",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "address": "0x801F3154",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x802eccb0), a);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x802eccb0)",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "address": "0x801F3164",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x802ecc98), a);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x802ecc98)",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "address": "0x801F3174",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x802ecc9c), a);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x802ecc9c)",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "address": "0x801F3184",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x802ecca0), a);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x802ecca0)",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "address": "0x801F3194",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x802ecca4), a);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x802ecca4)",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "address": "0x801F87D0",
+      "original_bytes": 48,
+      "behavior": "2 target reads, 4 target stores",
+      "statements": [
+        "uint32_t value_0 = m->r32(UINT32_C(0x80331fc0));",
+        "(void)value_0;",
+        "m->w32(a, value_0);",
+        "uint32_t value_1 = m->r32(UINT32_C(0x80331fc4));",
+        "(void)value_1;",
+        "m->w32(b, value_1);",
+        "m->w32(c, UINT32_C(0x802ecf88));",
+        "m->w32(d, UINT32_C(0x802edf88));"
+      ],
+      "result": "UINT32_C(0x0)",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x80331fc0)"
+        },
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x80331fc4)"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "value_0"
+        },
+        {
+          "bits": 32,
+          "address": "b",
+          "value": "value_1"
+        },
+        {
+          "bits": 32,
+          "address": "c",
+          "value": "UINT32_C(0x802ecf88)"
+        },
+        {
+          "bits": 32,
+          "address": "d",
+          "value": "UINT32_C(0x802edf88)"
+        }
+      ]
+    },
+    {
+      "address": "0x801FB9E8",
+      "original_bytes": 48,
+      "behavior": "8 target stores",
+      "statements": [
+        "m->w32(a, UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x8)), b);",
+        "m->w32((a + UINT32_C(0x18)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x1c)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0xc)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x10)), UINT32_C(0x20));",
+        "m->w32((a + UINT32_C(0x14)), UINT32_C(0xffffffff));",
+        "m->w32((a + UINT32_C(0xa0)), c);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "b"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x18))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x1c))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x10))",
+          "value": "UINT32_C(0x20)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x14))",
+          "value": "UINT32_C(0xffffffff)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xa0))",
+          "value": "c"
+        }
+      ]
+    },
+    {
+      "address": "0x801FE118",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(a, UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x801FE258",
+      "original_bytes": 16,
+      "behavior": "1 target read, 2 target stores",
+      "statements": [
+        "uint32_t value_0 = m->r32(a);",
+        "(void)value_0;",
+        "m->w32((b + UINT32_C(0x20)), value_0);",
+        "m->w32(a, b);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "a"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(b + UINT32_C(0x20))",
+          "value": "value_0"
+        },
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "b"
+        }
+      ]
+    },
+    {
+      "address": "0x801FE96C",
+      "original_bytes": 40,
+      "behavior": "4 target stores",
+      "statements": [
+        "m->w32(a, UINT32_C(0x802ee364));",
+        "m->w32((a + UINT32_C(0x4)), UINT32_C(0x0));",
+        "m->w32(a, UINT32_C(0x802ee350));",
+        "m->w32((a + UINT32_C(0x8)), UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x802ee364)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x802ee350)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x801FF4D4",
+      "original_bytes": 20,
+      "behavior": "1 target read, 3 target stores",
+      "statements": [
+        "m->w32((b + UINT32_C(0x4)), a);",
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x8)));",
+        "(void)value_0;",
+        "m->w32((b + UINT32_C(0x8)), value_0);",
+        "m->w32((a + UINT32_C(0x8)), b);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(b + UINT32_C(0x4))",
+          "value": "a"
+        },
+        {
+          "bits": 32,
+          "address": "(b + UINT32_C(0x8))",
+          "value": "value_0"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "b"
+        }
+      ]
+    },
+    {
+      "address": "0x801FF640",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(a, UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x801FF930",
+      "original_bytes": 28,
+      "behavior": "1 target read, 3 target stores",
+      "statements": [
+        "m->w32(a, b);",
+        "uint32_t value_0 = m->r32(a);",
+        "(void)value_0;",
+        "m->w32((a + UINT32_C(0x4)), (value_0 + UINT32_C(0x1c)));",
+        "m->w8((a + UINT32_C(0x34)), (uint8_t)UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "a"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "b"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "(value_0 + UINT32_C(0x1c))"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x34))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x80203198",
+      "original_bytes": 24,
+      "behavior": "4 target stores",
+      "statements": [
+        "m->w32(a, UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x4)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x8)), b);",
+        "m->w32((a + UINT32_C(0xc)), c);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "b"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc))",
+          "value": "c"
+        }
+      ]
+    },
+    {
+      "address": "0x802045FC",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x802eea10), a);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x802eea10)",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "address": "0x80204608",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x802eea14), a);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x802eea14)",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "address": "0x80204618",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x802eea28), a);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x802eea28)",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "address": "0x80204900",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(a, UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x80205A88",
+      "original_bytes": 16,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "m->w32(UINT32_C(0x80332f18), UINT32_C(0x0));",
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x8)));",
+        "(void)value_0;"
+      ],
+      "result": "value_0",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x80332f18)",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x80205DC4",
+      "original_bytes": 24,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32((UINT32_C(0x802eecd8) + (a << 2)));",
+        "(void)value_0;",
+        "m->w32(UINT32_C(0x80332f2c), value_0);"
+      ],
+      "result": "UINT32_C(0x802eecd8)",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(UINT32_C(0x802eecd8) + (a << 2))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x80332f2c)",
+          "value": "value_0"
+        }
+      ]
+    },
+    {
+      "address": "0x80205DDC",
+      "original_bytes": 20,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32((UINT32_C(0x80332078) + (a << 2)));",
+        "(void)value_0;",
+        "m->w32(UINT32_C(0x80332f30), value_0);"
+      ],
+      "result": "UINT32_C(0x80332078)",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(UINT32_C(0x80332078) + (a << 2))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x80332f30)",
+          "value": "value_0"
+        }
+      ]
+    },
+    {
+      "address": "0x802067C0",
+      "original_bytes": 44,
+      "behavior": "2 target reads, 6 target stores",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x4)));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32(value_0);",
+        "(void)value_1;",
+        "m->w32((a + UINT32_C(0x4)), value_1);",
+        "m->w32(value_0, UINT32_C(0x0));",
+        "m->w32((value_0 + UINT32_C(0x4)), b);",
+        "m->w32((value_0 + UINT32_C(0xc)), c);",
+        "m->w16((value_0 + UINT32_C(0x8)), (uint16_t)d);",
+        "m->w16((value_0 + UINT32_C(0xa)), (uint16_t)UINT32_C(0x0));"
+      ],
+      "result": "value_0",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))"
+        },
+        {
+          "bits": 32,
+          "address": "value_0"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "value_1"
+        },
+        {
+          "bits": 32,
+          "address": "value_0",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(value_0 + UINT32_C(0x4))",
+          "value": "b"
+        },
+        {
+          "bits": 32,
+          "address": "(value_0 + UINT32_C(0xc))",
+          "value": "c"
+        },
+        {
+          "bits": 16,
+          "address": "(value_0 + UINT32_C(0x8))",
+          "value": "d"
+        },
+        {
+          "bits": 16,
+          "address": "(value_0 + UINT32_C(0xa))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x80206C60",
+      "original_bytes": 20,
+      "behavior": "scalar result",
+      "statements": [],
+      "result": "((b + ((a + UINT32_C(0x7)) & UINT32_C(0xfffffff8))) - UINT32_C(0x8))",
+      "reads": [],
+      "writes": []
+    },
+    {
+      "address": "0x80206F18",
+      "original_bytes": 16,
+      "behavior": "1 target read, 2 target stores",
+      "statements": [
+        "uint32_t value_0 = m->r32(a);",
+        "(void)value_0;",
+        "m->w32(b, value_0);",
+        "m->w32(a, b);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "a"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "b",
+          "value": "value_0"
+        },
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "b"
+        }
+      ]
+    },
+    {
+      "address": "0x802075D8",
+      "original_bytes": 20,
+      "behavior": "3 target stores",
+      "statements": [
+        "m->w32(a, UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x4)), b);",
+        "m->w32((a + UINT32_C(0x8)), UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "b"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x80209038",
+      "original_bytes": 28,
+      "behavior": "2 target reads, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r8(UINT32_C(0x80332f78));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32(UINT32_C(0x80332f74));",
+        "(void)value_1;"
+      ],
+      "result": "(value_1 & shift_signed(((UINT32_C(0x0) - value_0) | value_0), 31))",
+      "reads": [
+        {
+          "bits": 8,
+          "address": "UINT32_C(0x80332f78)"
+        },
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x80332f74)"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x8020BD38",
+      "original_bytes": 12,
+      "behavior": "1 target read, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x10)));",
+        "(void)value_0;"
+      ],
+      "result": "(((value_0 << 31) | (value_0 >> 1)) & UINT32_C(0x1))",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x10))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x80210158",
+      "original_bytes": 12,
+      "behavior": "scalar result",
+      "statements": [],
+      "result": "((b + UINT32_C(0x1fff)) >> 13)",
+      "reads": [],
+      "writes": []
+    },
+    {
+      "address": "0x80211554",
+      "original_bytes": 32,
+      "behavior": "3 target stores",
+      "statements": [
+        "m->w32(a, UINT32_C(0x802ef248));",
+        "m->w32((a + UINT32_C(0x4)), b);",
+        "m->w32(a, UINT32_C(0x802ef238));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x802ef248)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "b"
+        },
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x802ef238)"
+        }
+      ]
+    },
+    {
+      "address": "0x80211CEC",
+      "original_bytes": 52,
+      "behavior": "7 target stores",
+      "statements": [
+        "m->w32(a, UINT32_C(0x802ef2bc));",
+        "m->w32(a, UINT32_C(0x802ef2a0));",
+        "m->w32((a + UINT32_C(0x4)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x8)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0xc)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x10)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x14)), UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x802ef2bc)"
+        },
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x802ef2a0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x10))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x14))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x80213850",
+      "original_bytes": 36,
+      "behavior": "3 target stores",
+      "statements": [
+        "m->w32(a, UINT32_C(0x802ef360));",
+        "m->w8((a + UINT32_C(0x4)), (uint8_t)UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x8)), UINT32_C(0xbadbad));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x802ef360)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "UINT32_C(0xbadbad)"
+        }
+      ]
+    },
+    {
+      "address": "0x8021387C",
+      "original_bytes": 20,
+      "behavior": "2 target stores",
+      "statements": [
+        "m->w32(b, UINT32_C(0x0));",
+        "m->w32(c, UINT32_C(0x0));"
+      ],
+      "result": "UINT32_C(0x0)",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "b",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "c",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x80214A48",
+      "original_bytes": 20,
+      "behavior": "4 target reads, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x10)));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32((value_0 + UINT32_C(0x34)));",
+        "(void)value_1;",
+        "uint32_t value_2 = m->r32((value_1 + UINT32_C(0xd8)));",
+        "(void)value_2;",
+        "uint32_t value_3 = m->r8((value_2 + UINT32_C(0xc8)));",
+        "(void)value_3;"
+      ],
+      "result": "value_3",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x10))"
+        },
+        {
+          "bits": 32,
+          "address": "(value_0 + UINT32_C(0x34))"
+        },
+        {
+          "bits": 32,
+          "address": "(value_1 + UINT32_C(0xd8))"
+        },
+        {
+          "bits": 8,
+          "address": "(value_2 + UINT32_C(0xc8))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x80217834",
+      "original_bytes": 28,
+      "behavior": "3 target stores",
+      "statements": [
+        "m->w32(a, UINT32_C(0x802ef748));",
+        "m->w32((a + UINT32_C(0x8)), b);",
+        "m->w32((a + UINT32_C(0x4)), UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x802ef748)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "b"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x80218110",
+      "original_bytes": 36,
+      "behavior": "5 target stores",
+      "statements": [
+        "m->w32(a, UINT32_C(0x802ef7d8));",
+        "m->w32((a + UINT32_C(0x4)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x8)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0xc)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x10)), UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x802ef7d8)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x10))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x80220FDC",
+      "original_bytes": 28,
+      "behavior": "2 target reads, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32(a);",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32(b);",
+        "(void)value_1;"
+      ],
+      "result": "(((UINT32_C(0x0) - (value_0 & value_1)) | (value_0 & value_1)) >> 31)",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "a"
+        },
+        {
+          "bits": 32,
+          "address": "b"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x80221008",
+      "original_bytes": 16,
+      "behavior": "1 target read, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32(a);",
+        "(void)value_0;"
+      ],
+      "result": "(((leading_zeros(value_0) << 27) | (leading_zeros(value_0) >> 5)) & UINT32_C(0xff))",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "a"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x80229D3C",
+      "original_bytes": 16,
+      "behavior": "2 target reads, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x198)));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32((value_0 + (b << 2)));",
+        "(void)value_1;"
+      ],
+      "result": "value_1",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x198))"
+        },
+        {
+          "bits": 32,
+          "address": "(value_0 + (b << 2))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x80229D4C",
+      "original_bytes": 16,
+      "behavior": "1 target read, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x19c)));",
+        "(void)value_0;"
+      ],
+      "result": "(value_0 + (b * UINT32_C(0xc)))",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x19c))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x8022EEE0",
+      "original_bytes": 52,
+      "behavior": "6 target stores",
+      "statements": [
+        "m->w32(a, UINT32_C(0x802ee364));",
+        "m->w32((a + UINT32_C(0x4)), UINT32_C(0x0));",
+        "m->w32(a, UINT32_C(0x802efdcc));",
+        "m->w32((a + UINT32_C(0xc)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x8)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x10)), UINT32_C(0x7));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x802ee364)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x802efdcc)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x10))",
+          "value": "UINT32_C(0x7)"
+        }
+      ]
+    },
+    {
+      "address": "0x8023503C",
+      "original_bytes": 28,
+      "behavior": "2 target reads, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0xc)));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32((a + UINT32_C(0x4)));",
+        "(void)value_1;"
+      ],
+      "result": "(value_1 + ((c + (b * value_0)) * UINT32_C(0xc)))",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc))"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x80239760",
+      "original_bytes": 36,
+      "behavior": "4 target reads, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0xc8)));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32(UINT32_C(0x8033689c));",
+        "(void)value_1;",
+        "uint32_t value_2 = m->r32((value_0 + UINT32_C(0x15c)));",
+        "(void)value_2;",
+        "uint32_t value_3 = m->r32(UINT32_C(0x80336898));",
+        "(void)value_3;",
+        "m->w32((value_0 + UINT32_C(0x15c)), ((value_2 & ~(value_1 | value_1)) | value_3));"
+      ],
+      "result": "~(value_1 | value_1)",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc8))"
+        },
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x8033689c)"
+        },
+        {
+          "bits": 32,
+          "address": "(value_0 + UINT32_C(0x15c))"
+        },
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x80336898)"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(value_0 + UINT32_C(0x15c))",
+          "value": "((value_2 & ~(value_1 | value_1)) | value_3)"
+        }
+      ]
+    },
+    {
+      "address": "0x80239784",
+      "original_bytes": 36,
+      "behavior": "4 target reads, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0xc8)));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32(UINT32_C(0x80336898));",
+        "(void)value_1;",
+        "uint32_t value_2 = m->r32((value_0 + UINT32_C(0x15c)));",
+        "(void)value_2;",
+        "uint32_t value_3 = m->r32(UINT32_C(0x8033689c));",
+        "(void)value_3;",
+        "m->w32((value_0 + UINT32_C(0x15c)), ((value_2 & ~(value_1 | value_1)) | value_3));"
+      ],
+      "result": "~(value_1 | value_1)",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc8))"
+        },
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x80336898)"
+        },
+        {
+          "bits": 32,
+          "address": "(value_0 + UINT32_C(0x15c))"
+        },
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x8033689c)"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(value_0 + UINT32_C(0x15c))",
+          "value": "((value_2 & ~(value_1 | value_1)) | value_3)"
+        }
+      ]
+    },
+    {
+      "address": "0x802397A8",
+      "original_bytes": 32,
+      "behavior": "4 target reads, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0xc8)));",
+        "(void)value_0;",
+        "uint32_t value_1 = m->r32(UINT32_C(0x80336898));",
+        "(void)value_1;",
+        "uint32_t value_2 = m->r32((value_0 + UINT32_C(0x15c)));",
+        "(void)value_2;",
+        "uint32_t value_3 = m->r32(UINT32_C(0x8033689c));",
+        "(void)value_3;",
+        "m->w32((value_0 + UINT32_C(0x15c)), ((value_2 & ~value_1) & ~value_3));"
+      ],
+      "result": "value_1",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc8))"
+        },
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x80336898)"
+        },
+        {
+          "bits": 32,
+          "address": "(value_0 + UINT32_C(0x15c))"
+        },
+        {
+          "bits": 32,
+          "address": "UINT32_C(0x8033689c)"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(value_0 + UINT32_C(0x15c))",
+          "value": "((value_2 & ~value_1) & ~value_3)"
+        }
+      ]
+    },
+    {
+      "address": "0x8023B124",
+      "original_bytes": 16,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0xc8)));",
+        "(void)value_0;",
+        "m->w8((value_0 + UINT32_C(0x24c)), (uint8_t)UINT32_C(0x1));"
+      ],
+      "result": "value_0",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc8))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(value_0 + UINT32_C(0x24c))",
+          "value": "UINT32_C(0x1)"
+        }
+      ]
+    },
+    {
+      "address": "0x8023B1F4",
+      "original_bytes": 16,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0xc8)));",
+        "(void)value_0;",
+        "m->w8((value_0 + UINT32_C(0x24d)), (uint8_t)UINT32_C(0x0));"
+      ],
+      "result": "value_0",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc8))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(value_0 + UINT32_C(0x24d))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x802424A4",
+      "original_bytes": 24,
+      "behavior": "3 target stores",
+      "statements": [
+        "m->w32(a, b);",
+        "m->w8((a + UINT32_C(0x9)), (uint8_t)UINT32_C(0x1));",
+        "m->w8((a + UINT32_C(0x8)), (uint8_t)UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "b"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x9))",
+          "value": "UINT32_C(0x1)"
+        },
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x80242558",
+      "original_bytes": 24,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32(a);",
+        "(void)value_0;",
+        "m->w8((b + UINT32_C(0x252)), (uint8_t)(((UINT32_C(0x0) - value_0) | value_0) >> 31));"
+      ],
+      "result": "value_0",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "a"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(b + UINT32_C(0x252))",
+          "value": "(((UINT32_C(0x0) - value_0) | value_0) >> 31)"
+        }
+      ]
+    },
+    {
+      "address": "0x80252ED8",
+      "original_bytes": 20,
+      "behavior": "3 target stores",
+      "statements": [
+        "m->w8((a + UINT32_C(0x252)), (uint8_t)UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x1e4)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x1e8)), UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x252))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x1e4))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x1e8))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x80257F90",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32((a + UINT32_C(0x344)), UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x344))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x8025AFD0",
+      "original_bytes": 16,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x13c)));",
+        "(void)value_0;",
+        "m->w32((a + UINT32_C(0x13c)), (value_0 & UINT32_C(0xffffff)));"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x13c))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x13c))",
+          "value": "(value_0 & UINT32_C(0xffffff))"
+        }
+      ]
+    },
+    {
+      "address": "0x8026060C",
+      "original_bytes": 12,
+      "behavior": "1 target read, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r8((a + UINT32_C(0x14)));",
+        "(void)value_0;"
+      ],
+      "result": "(value_0 & UINT32_C(0x1))",
+      "reads": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x14))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x80260650",
+      "original_bytes": 12,
+      "behavior": "1 target read, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r8((a + UINT32_C(0x14)));",
+        "(void)value_0;"
+      ],
+      "result": "(((value_0 << 31) | (value_0 >> 1)) & UINT32_C(0x1))",
+      "reads": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x14))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x8026139C",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x194)), (uint8_t)UINT32_C(0x1));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x194))",
+          "value": "UINT32_C(0x1)"
+        }
+      ]
+    },
+    {
+      "address": "0x802613A8",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w8((a + UINT32_C(0x194)), (uint8_t)UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x194))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x802613B4",
+      "original_bytes": 20,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r8((a + UINT32_C(0x194)));",
+        "(void)value_0;",
+        "m->w8((a + UINT32_C(0x194)), (uint8_t)(leading_zeros(value_0) >> 5));"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x194))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 8,
+          "address": "(a + UINT32_C(0x194))",
+          "value": "(leading_zeros(value_0) >> 5)"
+        }
+      ]
+    },
+    {
+      "address": "0x80261884",
+      "original_bytes": 12,
+      "behavior": "2 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0x7e8)), b);",
+        "m->w32((a + UINT32_C(0x7e4)), c);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x7e8))",
+          "value": "b"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x7e4))",
+          "value": "c"
+        }
+      ]
+    },
+    {
+      "address": "0x80262EE0",
+      "original_bytes": 12,
+      "behavior": "1 target read, 1 target store",
+      "statements": [
+        "uint32_t value_0 = m->r32((a + UINT32_C(0x88)));",
+        "(void)value_0;",
+        "m->w32((a + UINT32_C(0x84)), value_0);"
+      ],
+      "result": "a",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x88))"
+        }
+      ],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x84))",
+          "value": "value_0"
+        }
+      ]
+    },
+    {
+      "address": "0x80265914",
+      "original_bytes": 12,
+      "behavior": "2 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0x464)), c);",
+        "m->w32((a + UINT32_C(0x468)), b);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x464))",
+          "value": "c"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x468))",
+          "value": "b"
+        }
+      ]
+    },
+    {
+      "address": "0x80265920",
+      "original_bytes": 12,
+      "behavior": "2 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0x46c)), c);",
+        "m->w32((a + UINT32_C(0x470)), b);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x46c))",
+          "value": "c"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x470))",
+          "value": "b"
+        }
+      ]
+    },
+    {
+      "address": "0x8026592C",
+      "original_bytes": 12,
+      "behavior": "2 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0x474)), c);",
+        "m->w32((a + UINT32_C(0x478)), b);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x474))",
+          "value": "c"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x478))",
+          "value": "b"
+        }
+      ]
+    },
+    {
+      "address": "0x80265938",
+      "original_bytes": 12,
+      "behavior": "2 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0x47c)), c);",
+        "m->w32((a + UINT32_C(0x480)), b);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x47c))",
+          "value": "c"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x480))",
+          "value": "b"
+        }
+      ]
+    },
+    {
+      "address": "0x80265944",
+      "original_bytes": 12,
+      "behavior": "2 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0x484)), c);",
+        "m->w32((a + UINT32_C(0x488)), b);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x484))",
+          "value": "c"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x488))",
+          "value": "b"
+        }
+      ]
+    },
+    {
+      "address": "0x80265950",
+      "original_bytes": 12,
+      "behavior": "2 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0x48c)), c);",
+        "m->w32((a + UINT32_C(0x490)), b);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x48c))",
+          "value": "c"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x490))",
+          "value": "b"
+        }
+      ]
+    },
+    {
+      "address": "0x8026595C",
+      "original_bytes": 12,
+      "behavior": "2 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0x494)), c);",
+        "m->w32((a + UINT32_C(0x498)), b);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x494))",
+          "value": "c"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x498))",
+          "value": "b"
+        }
+      ]
+    },
+    {
+      "address": "0x80265968",
+      "original_bytes": 12,
+      "behavior": "2 target stores",
+      "statements": [
+        "m->w32((a + UINT32_C(0x49c)), c);",
+        "m->w32((a + UINT32_C(0x4a0)), b);"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x49c))",
+          "value": "c"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4a0))",
+          "value": "b"
+        }
+      ]
+    },
+    {
+      "address": "0x802660DC",
+      "original_bytes": 36,
+      "behavior": "5 target stores",
+      "statements": [
+        "m->w32(a, UINT32_C(0x802f1f68));",
+        "m->w32((a + UINT32_C(0x4)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x8)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0xc)), UINT32_C(0x0));",
+        "m->w32((a + UINT32_C(0x10)), UINT32_C(0x0));"
+      ],
+      "result": "a",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "a",
+          "value": "UINT32_C(0x802f1f68)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x4))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x8))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0xc))",
+          "value": "UINT32_C(0x0)"
+        },
+        {
+          "bits": 32,
+          "address": "(a + UINT32_C(0x10))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x80268790",
+      "original_bytes": 16,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(((a + UINT32_C(0x10000)) + UINT32_C(0xffffa77c)), UINT32_C(0x0));"
+      ],
+      "result": "(a + UINT32_C(0x10000))",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "((a + UINT32_C(0x10000)) + UINT32_C(0xffffa77c))",
+          "value": "UINT32_C(0x0)"
+        }
+      ]
+    },
+    {
+      "address": "0x802687A0",
+      "original_bytes": 12,
+      "behavior": "1 target read, scalar result",
+      "statements": [
+        "uint32_t value_0 = m->r32(((a + UINT32_C(0x10000)) + UINT32_C(0xffffa77c)));",
+        "(void)value_0;"
+      ],
+      "result": "value_0",
+      "reads": [
+        {
+          "bits": 32,
+          "address": "((a + UINT32_C(0x10000)) + UINT32_C(0xffffa77c))"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "address": "0x80268E24",
+      "original_bytes": 12,
+      "behavior": "1 target store",
+      "statements": [
+        "m->w32(((a + UINT32_C(0x10000)) + UINT32_C(0xffffa73c)), b);"
+      ],
+      "result": "(a + UINT32_C(0x10000))",
+      "reads": [],
+      "writes": [
+        {
+          "bits": 32,
+          "address": "((a + UINT32_C(0x10000)) + UINT32_C(0xffffa73c))",
+          "value": "b"
+        }
+      ]
+    }
+  ]
+}

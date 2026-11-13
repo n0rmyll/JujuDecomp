@@ -114,6 +114,9 @@ def execute(words, args, memory, budget=20000, visited=None):
             compare(a, b, (w >> 23) & 7)
         elif op == 7:
             registers[rt] = (registers[ra]*imm) & MASK
+        elif op == 8:
+            # subfic: carry is not consumed by any supported routine.
+            registers[rt] = (imm-registers[ra]) & MASK
         elif op in (20, 21):
             mask = bitmask((w >> 6) & 31, (w >> 1) & 31)
             value = rotate(registers[rt], rb) & mask
@@ -147,9 +150,9 @@ def execute(words, args, memory, budget=20000, visited=None):
                 compare(a, b, (w >> 23) & 7)
             elif xo == 467 and ((w >> 16) & 31) == 9 and ((w >> 11) & 31) == 0:
                 ctr = registers[rt]
-            elif xo in (23, 279, 151, 215):
+            elif xo in (23, 87, 279, 151, 215):
                 address = (base+registers[rb]) & MASK
-                size = 2 if xo == 279 else 1 if xo == 215 else 4
+                size = 2 if xo == 279 else 1 if xo in (87, 215) else 4
                 if xo in (151, 215):
                     memory.write(address, registers[rt] & ((1 << (size*8))-1), size)
                 else:
@@ -160,12 +163,19 @@ def execute(words, args, memory, budget=20000, visited=None):
                 record = bool(w & 1)
                 if record:
                     compare(signed(registers[rt]), 0)
-            elif xo in (444, 28, 60, 24, 954, 922):
+            elif xo == 104:
+                registers[rt] = (-registers[ra]) & MASK
+                if w & 1:
+                    compare(signed(registers[rt]), 0)
+            elif xo in (444, 28, 60, 24, 954, 922, 124, 26, 824):
                 a, b = registers[rt], registers[rb]
                 if xo == 444: value = a | b
                 elif xo == 28: value = a & b
                 elif xo == 60: value = a & ~b
                 elif xo == 24: value = 0 if b & 32 else a << (b & 31)
+                elif xo == 124: value = ~(a | b)
+                elif xo == 26: value = 32-a.bit_length()
+                elif xo == 824: value = signed(a) >> rb
                 else: value = signed(a, 8 if xo == 954 else 16)
                 registers[ra] = value & MASK
                 if w & 1:
