@@ -1,0 +1,9 @@
+Format: RVZ
+Compression: Zstandard
+Block size: 128 KiB
+Lossless: true
+Verification data: true
+
+Title: Tak and the Power of Juju
+Game ID: GJUE78
+Disc 1, Revision 0

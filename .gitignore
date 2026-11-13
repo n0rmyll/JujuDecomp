@@ -1,0 +1,38 @@
+# Local disc images and game-derived binaries/data
+*.[rR][vV][zZ]
+*.[iI][sS][oO]
+*.[gG][cC][mM]
+*.ciso
+*.wbfs
+*.dol
+*.elf
+*.gci
+*.raw
+*.sav
+*.state
+/analysis/split/
+/analysis/strings.csv
+/analysis/functions.csv
+/analysis/calls.csv
+
+# Downloaded tools and compiled/generated output
+/tools/dtk
+**/build/
+**/dist/
+**/node_modules/
+**/target/
+*.wasm
+/browser/cores/dolphin/*.js
+/browser/cores/dolphin/*.data
+/browser/cores/dolphin/*.bin
+/browser/cores/dolphin/*.build.json
+
+# Local metadata
+.DS_Store
+__pycache__/
+*.pyc
+.env
+.env.*
+
+# Script extracted verbatim from the disc
+/analysis/copydata.bat

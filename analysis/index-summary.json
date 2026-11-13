@@ -1,0 +1,81 @@
+{
+  "sha256": "49faf28a7d2e25422c145754ef41b0c8a8dfcd83e688db1c39ecf21f6e34b706",
+  "entry": "0x80003154",
+  "sections": [
+    {
+      "kind": "text",
+      "index": 0,
+      "offset": 256,
+      "address": 2147496192,
+      "size": 9472
+    },
+    {
+      "kind": "text",
+      "index": 1,
+      "offset": 9728,
+      "address": 2147505856,
+      "size": 2738304
+    },
+    {
+      "kind": "data",
+      "index": 0,
+      "offset": 2748032,
+      "address": 2147505664,
+      "size": 96
+    },
+    {
+      "kind": "data",
+      "index": 1,
+      "offset": 2748128,
+      "address": 2147505760,
+      "size": 96
+    },
+    {
+      "kind": "data",
+      "index": 2,
+      "offset": 2748224,
+      "address": 2150244160,
+      "size": 288
+    },
+    {
+      "kind": "data",
+      "index": 3,
+      "offset": 2748512,
+      "address": 2150244448,
+      "size": 32
+    },
+    {
+      "kind": "data",
+      "index": 4,
+      "offset": 2748544,
+      "address": 2150244480,
+      "size": 47904
+    },
+    {
+      "kind": "data",
+      "index": 5,
+      "offset": 2796448,
+      "address": 2150292384,
+      "size": 289632
+    },
+    {
+      "kind": "data",
+      "index": 6,
+      "offset": 3086080,
+      "address": 2150826624,
+      "size": 8864
+    },
+    {
+      "kind": "data",
+      "index": 7,
+      "offset": 3094944,
+      "address": 2150838592,
+      "size": 18304
+    }
+  ],
+  "function_regions": 9667,
+  "direct_calls": 33431,
+  "indirect_calls": 7105,
+  "strings": 5102,
+  "caveat": "Automatic function boundaries and names are provisional. Calls omit tail branches; strings require printable ASCII and a trailing NUL."
+}

@@ -1,0 +1,28 @@
+10.3 MiB | Burial.dbu       | File
+10.3 MiB | C2Island.dbu     | File
+10.4 MiB | CanUnd.dbu       | File
+11.5 MiB | Canyon.dbu       | File
+11.2 MiB | CIsland.dbu      | File
+9.03 MiB | CTemple.dbu      | File
+11.1 MiB | Hub.dbu          | File
+6.57 MiB | Intro.dbu        | File
+9.23 MiB | Lok_Training.dbu | File
+11.6 MiB | MtnTop.dbu       | File
+8.37 MiB | MTop2.dbu        | File
+4.08 MiB | Preload.dbu      | File
+10.6 MiB | Sand.dbu         | File
+11.0 MiB | Snow.dbu         | File
+10.2 MiB | Spirit.dbu       | File
+9.49 MiB | STemple.dbu      | File
+2.39 MiB | STempleBoss.dbu  | File
+10.8 MiB | T2Village.dbu    | File
+9.55 MiB | TlalocBoss.dbu   | File
+9.17 MiB | Tombs.dbu        | File
+10.7 MiB | TVillage.dbu     | File
+         | cutscene/        | Directory
+         | fluff/           | Directory
+         | fmv/             | Directory
+         | fonts/           | Directory
+         | stream/          | Directory
+         | sound/           | Directory
+         | shell/           | Directory
