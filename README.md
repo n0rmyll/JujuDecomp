@@ -6,6 +6,36 @@ An early reverse-engineering workspace for **Tak and the Power of Juju (USA)** o
 
 No game image, extracted executable, game assets, generated disassembly, or compiled emulator build is included. Supply your own legally obtained copy of the game. Keep game files local; the ignore rules exclude disc images, extracted binaries, saves, and build outputs.
 
+## Progress statistics
+
+Snapshot: **November 12, 2026**, GJUE78 revision 0. These measure separate stages; they are not an overall completion percentage.
+
+| Area | Current / measured total | Progress | Meaning |
+| --- | ---: | ---: | --- |
+| Game functions rebuilt and verified as matching | 0 / 9,667 indexed function regions | **0%** | No original-target matching compilation has been verified. Host syntax/behavior checks do not count as matching. |
+| Game functions modeled in semantic C | 6 / 9,667 indexed function regions | **0.062%** | Six original routines represented in five C files; callbacks and host layouts may replace original mechanisms. |
+| Original code bytes covered by those models | 476 / 2,747,776 DOL text-section bytes | **0.017%** | Size of the original routines, not generated C/object size or verified matching bytes. |
+| Extracted resource files inventoried | 1,163 / 1,163 locally extracted files | **100%** | File paths, sizes, and hashes recorded for the local `files/data_gcn` extraction; not proof of complete disc coverage. |
+| Resource files decoded or converted | 0 / 1,163 extracted files | **0%** | Raw copying and metadata inspection do not produce usable models, textures, animations, or decoded audio. |
+| DBU bundles with text manifests inspected | 2 / 21 extracted DBU bundles | **9.52%** | Preload and Hub: 41 and 91 listed source entries. Binary payload layouts remain unresolved. |
+
+The asset inventory totals **1,447,253,921 bytes** (about **1.35 GiB**):
+
+| Resource extension | Files | Share of extracted files |
+| --- | ---: | ---: |
+| `.dsp` | 1,005 | 86.41% |
+| `.dba` | 39 | 3.35% |
+| `.bik` | 33 | 2.84% |
+| `.cut` | 27 | 2.32% |
+| `.dbu` | 21 | 1.81% |
+| `.adp` | 19 | 1.63% |
+| `.dbl` | 18 | 1.55% |
+| `.fnt` | 1 | 0.09% |
+
+File shares are by count, not bytes, and are rounded. Bundles may contain many internal resources, whose total is unknown; no model/texture/animation completion percentage is available yet. Browser emulator operation is separate from compiling recovered game source, so it contributes no game decompilation percentage.
+
+The function denominator comes from `analysis/index-summary.json` and is provisional: automatic regions include SDK/runtime code and may not map one-to-one to original source functions. The six modeled routines are `0x8020F9C8`, `0x80213584`, `0x801042FC`, `0x800CEB2C`, `0x80213140`, and `0x802131A0`. Recalculate their original sizes using the ignored `analysis/functions.csv` after running `tools/index_dol.py`; text-section sizes come from the index summary. Asset counts come from the ignored `assets/manifest.json`, regenerated with `python3 tools/extract_assets.py --inventory-only`. These numbers are a manual snapshot and should be refreshed when recovery advances.
+
 ## Get the source
 
 ```sh
