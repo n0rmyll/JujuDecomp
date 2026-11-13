@@ -1,0 +1,15 @@
+{
+  "function": "fn_80211ED4",
+  "source": "analysis/split/asm/auto_03_8020C094_text.s",
+  "start": "0x80211ED4",
+  "instruction_count": 32,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x80211EFC",
+      "target": "memcpy"
+    }
+  ],
+  "strings": []
+}

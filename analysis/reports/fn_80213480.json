@@ -1,0 +1,19 @@
+{
+  "function": "fn_80213480",
+  "source": "analysis/split/asm/auto_03_8020C094_text.s",
+  "start": "0x80213480",
+  "instruction_count": 18,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x80213494",
+      "target": "fn_80213710"
+    },
+    {
+      "site": "0x802134AC",
+      "target": "fn_80213744"
+    }
+  ],
+  "strings": []
+}

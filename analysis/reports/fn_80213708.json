@@ -1,0 +1,10 @@
+{
+  "function": "fn_80213708",
+  "source": "analysis/split/asm/auto_03_8020C094_text.s",
+  "start": "0x80213708",
+  "instruction_count": 2,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [],
+  "strings": []
+}

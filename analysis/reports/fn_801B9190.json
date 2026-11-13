@@ -1,0 +1,15 @@
+{
+  "function": "fn_801B9190",
+  "source": "analysis/split/asm/auto_03_801B5A1C_text.s",
+  "start": "0x801B9190",
+  "instruction_count": 27,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801B91BC",
+      "target": "fn_801B91FC"
+    }
+  ],
+  "strings": []
+}

@@ -1,0 +1,15 @@
+{
+  "function": "fn_80213710",
+  "source": "analysis/split/asm/auto_03_8020C094_text.s",
+  "start": "0x80213710",
+  "instruction_count": 13,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x80213720",
+      "target": "fn_80211DD8"
+    }
+  ],
+  "strings": []
+}
