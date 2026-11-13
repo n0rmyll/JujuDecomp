@@ -7,8 +7,8 @@ body{margin:0;background:#171c23;color:#e5ebf1;font:15px system-ui}header{paddin
 </style>
 <header><h1>__LEVEL_NAME__ · assembled level</h1>
 <p>Drag to orbit, Shift-drag or right-drag to pan, and scroll to zoom. Search for a mesh name, then use Fit view to inspect the matching pieces.</p>
-<p>Authored static placements, shown as a cutaway for inspection. Gameplay visibility, LOD selection, actors, lighting, and effects are not reproduced. <a href="__LEVEL_FILE__" download>Download level GLB</a> · <a href="manifest.json">Placement manifest</a></p>
-<div class="controls"><button id="fit">Fit view</button><button id="top">Top view</button><button id="reset">Reset</button><input id="search" aria-label="Filter mesh names" placeholder="Filter mesh names"><label><input type="checkbox" id="textured" checked>Textures</label><label><input type="checkbox" id="canopy">Canopy and outer trees</label><label><input type="checkbox" id="sky">Sky</label><label><input type="checkbox" id="backdrop">Distant backdrop</label><label><input type="checkbox" id="helper">Helpers and box markers</label></div>
+<p>Authored placements and available actor models, shown as a static cutaway. Actor models use bind poses; behavior, gameplay visibility, lighting, and effects are not reproduced. <a href="__LEVEL_FILE__" download>Download level GLB</a> · <a href="manifest.json">Placement manifest</a></p>
+<div class="controls"><button id="fit">Fit view</button><button id="top">Top view</button><button id="reset">Reset</button><input id="search" aria-label="Filter mesh names" placeholder="Filter mesh names"><label><input type="checkbox" id="textured" checked>Textures</label><label><input type="checkbox" id="actors" checked>Actors</label><label><input type="checkbox" id="canopy">Canopy and outer trees</label><label><input type="checkbox" id="sky">Sky</label><label><input type="checkbox" id="backdrop">Distant backdrop</label><label><input type="checkbox" id="helper">Helpers and box markers</label></div>
 <div id="status" role="status">Loading level…</div></header>
 <canvas aria-label="Interactive assembled level" id="view"></canvas>
 <footer>Display filters use mesh names and untextured box geometry; they do not reproduce the game's visibility rules. The GLB retains every placement, including canopy and sky.</footer>
@@ -81,9 +81,9 @@ canvas.onpointermove=e=>{if(!drag||!ready)return;const dx=e.clientX-drag.x,dy=e.
 canvas.onwheel=e=>{e.preventDefault();distance=Math.max(radius*.015,Math.min(radius*30,distance*Math.exp(e.deltaY*.001)));render();};
 document.querySelector('#search').oninput=e=>{query=e.target.value.trim().toLowerCase();render();};
 document.querySelector('#textured').onchange=e=>{textureMode=e.target.checked;render();};
-for(const id of ['sky','backdrop','helper','canopy'])document.querySelector('#'+id).onchange=render;
+for(const id of ['sky','backdrop','helper','canopy','actors'])document.querySelector('#'+id).onchange=render;
 document.querySelector('#fit').onclick=()=>{const items=matched();if(items.length)fit(boundsOf(items));};
 document.querySelector('#top').onclick=()=>{pitch=1.55;render();};
-document.querySelector('#reset').onclick=()=>{query='';document.querySelector('#search').value='';for(const id of ['sky','backdrop','helper','canopy'])document.querySelector('#'+id).checked=false;yaw=-.65;pitch=.65;if(allBounds)fit(allBounds);};
+document.querySelector('#reset').onclick=()=>{query='';document.querySelector('#search').value='';for(const id of ['sky','backdrop','helper','canopy'])document.querySelector('#'+id).checked=false;document.querySelector('#actors').checked=true;yaw=-.65;pitch=.65;if(allBounds)fit(allBounds);};
 window.onresize=render;load().catch(e=>{status.textContent=e.message;window.levelViewerError=e.message;});
 </script></html>

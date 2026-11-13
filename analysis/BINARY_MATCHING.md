@@ -48,8 +48,8 @@ experiment was not used for the successful match.
 `python3 tools/check_matching.py` compiles a separate target-layout candidate
 for every remaining modeled routine. Source: `src/matching/routines.cpp`, with
 `-c -lang c++ -proc gekko -O4,p -nodefaults -DTAK_FN=<address>`. All 29 compile
-and all references resolve. **21 match exactly, covering 1,500 bytes.** With
-the original setter, the current total is **22 routines / 1,512 bytes**.
+and all references resolve. **22 match exactly, covering 1,536 bytes.** With
+the original setter, this initial group totals **23 routines / 1,548 bytes**.
 
 The host callback models cannot be treated as target ABI source. The new
 candidates use direct memory layouts and calls, and C++ virtual methods where
@@ -63,7 +63,7 @@ not preserve that argument position. Descriptive types remain provisional.
 `0x801B8FD0`, `0x801C5944`, `0x801C59A4`, `0x801C5A04`, `0x801B90F4`,
 `0x801B9190`, `0x801C5A64`, `0x8021311C`, `0x80213480`, `0x80213710`,
 `0x80213744`, `0x800E53C4`, `0x800E53CC`, `0x8020F964`, `0x80213708`,
-and `0x80280928`.
+`0x80280928`, and `0x801B90D0`.
 
 ### Remaining differences
 
@@ -73,12 +73,13 @@ and `0x80280928`.
 | `0x801B92FC` | 112 / 112 | Base/index registers and pointer-add ordering |
 | `0x801C5BAC` | 136 / 136 | Saved-register assignment and call argument scheduling |
 | `0x801C5C34` | 136 / 136 | Same issue as `0x801C5BAC` |
-| `0x801B90D0` | 36 / 36 | Cursor/remaining load, arithmetic, and store scheduling |
 | `0x801B9244` | 184 / 184 | Byte-swap temporaries and register/addressing choices |
 | `0x80211ED4` | 128 / 124 | Device-loop pointer/register setup |
 | `0x80211F54` | 132 / 132 | Device-loop pointer/register allocation |
 
-These are failed byte comparisons, regardless of equivalent behavior or
+The November 13 pass matched `0x801B90D0` by expressing the cursor and remaining-size updates directly on the context fields. This preserved the original load/arithmetic/store scheduling without assembly or volatile accesses.
+
+The seven routines above are failed byte comparisons, regardless of equivalent behavior or
 equal code size. Trials with `-O4,s` and `-O3,p` did not match any additional
 routines (14 and four matches respectively). This is not an exhaustive
 compiler-version or flag search.
@@ -120,6 +121,68 @@ uniquely identified. These comparisons place individual functions at original
 addresses; they do not verify exception tables, data sections, object-file
 layout, or a complete linked executable. There is no runnable rebuilt game.
 
-Next, refine the eight remaining candidates' layouts, expression forms, and
+Next, refine the seven remaining initial candidates' layouts, expression forms, and
 compiler settings. Establish an assembly-only linked baseline and verify its
 DOL before integrating C/C++ replacements.
+
+## Complete 1,000-function survey: November 13, 2026
+
+All 970 additional semantic models have now been compiled as direct-memory,
+target-argument candidates and compared against original function bytes.
+The combined inventory is **255 exact matches / 1,000 checked routines**,
+covering **6,088 original code bytes**. The other **745 differ**. Every routine
+has a completed byte comparison; there are no compiler or relocation errors.
+
+| Group | Checked | Exact matches | Matching bytes |
+| --- | ---: | ---: | ---: |
+| Original routines | 30 | 23 | 1,548 |
+| Leaf helpers | 70 | 18 | 556 |
+| Resource leaf helpers | 100 | 25 | 696 |
+| Scalar helpers | 200 | 139 | 2,560 |
+| Integer/control-flow helpers | 600 | 50 | 728 |
+| Total | 1,000 | 255 | 6,088 |
+
+Reproduce the entire survey and portable snapshot with:
+
+```sh
+python3 tools/check_all_matching.py --snapshot analysis/all-matching-summary.json
+```
+
+`tools/check_new_matching.py` reads the actual current semantic models. It
+expands their function macros, substitutes direct byte/halfword/word accesses
+for host callbacks, and supplies original integer inputs as PPC argument
+positions. Harness-only output buffers and verification fuel are removed.
+Routines classified as void use void candidates; unresolved return types
+retain the model's final-r3 behavior. Constant offset-list loops are expanded
+in their original store order, avoiding invented target-side constant tables.
+The integer source is checked against its current recovery specifications.
+Compilation uses GC 1.3.2 with `-lang c++ -proc gekko -O4,p -inline all -nodefaults`.
+These are candidate adaptations, not a claim of original types or ABI recovery
+for the 745 routines that still differ. Low-level control-flow models generally
+need further restructuring before a compiler can reproduce the original code.
+
+`build/new-matching/` retains each generated candidate, compiler log, ELF
+object, relocated function bytes, original bytes, and full word differences.
+`build/new-matching/report.json` records hashes and outcomes for all 970.
+The original 29-function group retains its separate report and snapshot.
+
+The all-inventory collector re-extracts and re-relocates every ELF function,
+re-reads original words in address order, recomputes equality, checks
+source/object/compiler hashes, rejects duplicate/missing entries, and requires
+coverage of the complete semantic manifest. This also rechecks the 12-byte
+setter. Use `--collect-only` to do that validation without recompiling.
+`analysis/all-matching-summary.json` contains all 1,000 individual outcomes,
+source hashes, group totals, and the verified DOL identity; it contains no
+original instruction bytes. This remains a function-code matching survey,
+not a linked executable rebuild or data/exception-table comparison.
+
+Six additional candidate-generation tests cover callback removal, function
+boundaries, fixed-list store order, rejected transformations, and encoding
+original instruction values rather than their address keys:
+
+```sh
+python3 -m unittest discover -s tests -p test_new_matching.py
+```
+
+The eight relocation tests and the original setter's exhaustive host behavior
+check also pass. Existing unrelated semantic and asset work is retained.

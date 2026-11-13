@@ -1,8 +1,8 @@
 # JujuDecomp
 
-An early reverse-engineering workspace for **Tak and the Power of Juju (USA)** on GameCube, disc ID **GJUE78**, revision 0. Includes analysis tools, research notes, 400 complete routine models, two partial routine models, and a portable world-record reader in C.
+An early reverse-engineering workspace for **Tak and the Power of Juju (USA)** on GameCube, disc ID **GJUE78**, revision 0. Includes analysis tools, research notes, 1,000 complete routine models (including generated low-level integer C), two partial routine models, and a portable world-record reader in C.
 
-**This is not a completed decompilation or a native source port.** There is no build system that recreates the original game executable yet. The recovered C files are research models; separate target-layout candidates now establish 22 exact function-code matches, but none are integrated into a rebuilt executable. Tak boot, gameplay, audio, performance, and saves have not yet been verified in this workspace.
+**This is not a completed decompilation or a native source port.** There is no build system that recreates the original game executable yet. The recovered C files are research models; separate target-layout candidates now establish 255 exact function-code matches, but none are integrated into a rebuilt executable. Tak boot, gameplay, audio, performance, and saves have not yet been verified in this workspace.
 
 No game image, extracted executable, game assets, or generated disassembly is included. Supply your own legally obtained copy of the game. Keep game files local; the ignore rules exclude disc images, extracted binaries, saves, and build outputs.
 
@@ -12,10 +12,10 @@ Snapshot: **November 13, 2026**, GJUE78 revision 0. These measure separate stage
 
 | Area | Current / measured total | Progress | Meaning |
 | --- | ---: | ---: | --- |
-| Game functions compiled and verified as matching | 22 / 9,667 indexed function regions | **0.228%** | The stop-request setter plus 21 target-layout candidates match with CodeWarrior GC 1.3.2 after resolving relocations at original addresses. Eight further candidates differ. No linked executable rebuild. |
-| Original code bytes verified as matching | 1,512 / 2,747,776 DOL text-section bytes | **0.055%** | Complete instruction bytes of 22 functions, including resolved call/global operands. No masking or assembly substitution. |
-| Game functions modeled in semantic C | 400 / 9,667 indexed function regions | **4.138%** | 400 complete routines represented in twelve C files; two additional C files contain partial DBU/world-volume models and an offline record reader, excluded from this count. Callbacks and host layouts may replace original mechanisms. |
-| Original code bytes covered by those models | 12,952 / 2,747,776 DOL text-section bytes | **0.471%** | Size of the 400 fully modeled original routines; excludes partial DBU/world-volume models, the offline reader, and generated C/object size. This is semantic coverage; verified matching bytes are measured separately. |
+| Game functions compiled and verified as matching | 255 / 9,667 indexed function regions | **2.638%** | All 1,000 modeled routines checked: 255 exact matches and 745 byte differences with CodeWarrior GC 1.3.2. Relocations resolved at original addresses; no linked executable rebuild. |
+| Original code bytes verified as matching | 6,088 / 2,747,776 DOL text-section bytes | **0.222%** | Complete instruction bytes of 255 functions, including resolved call/global operands. No masking or assembly substitution. |
+| Indexed functions modeled in C | 1,000 / 9,667 indexed function regions | **10.344%** | 1,000 complete routine models in thirteen C files, including game and SDK/runtime code; the latest 600 are generated low-level integer control-flow models. Two additional C files contain partial DBU/world-volume models and an offline record reader, excluded from this count. Callbacks and host layouts may replace original mechanisms. |
+| Original code bytes covered by those models | 69,852 / 2,747,776 DOL text-section bytes | **2.542%** | Size of the 1,000 fully modeled indexed routines; excludes partial DBU/world-volume models, the offline reader, and generated C/object size. This is semantic coverage; verified matching bytes are measured separately. |
 | Extracted resource files inventoried | 1,163 / 1,163 locally extracted files | **100%** | File paths, sizes, and hashes recorded for the local `files/data_gcn` extraction; not proof of complete disc coverage. |
 | Resource files with texture exports | 39 / 1,163 extracted files | **3.35%** | Base texture levels exported from 21 DBU and 18 DBL files; this is partial resource decoding, not complete conversion of those files. |
 | Texture records exported as PNG | 5,512 / 5,527 encountered records | **99.73%** | Includes repeated textures across archives; 15 records have null pixel offsets. Mipmaps and animated frames are not supported. |
@@ -45,7 +45,7 @@ The asset inventory totals **1,447,253,921 bytes** (about **1.35 GiB**):
 
 File shares are by count, not bytes, and are rounded. Bundles may contain many internal resources, whose total is unknown; the texture-record percentage covers only records encountered by the current decoder. Model and animation percentages cover only the encountered or attempted records listed above. No overall model/texture/animation completion percentage is available yet; DBA sound banks remain undecoded.
 
-Matching results are recorded in [binary matching findings](analysis/BINARY_MATCHING.md) and [the 29-function snapshot](analysis/matching-summary.json). The function denominator comes from `analysis/index-summary.json` and is provisional: automatic regions include SDK/runtime code and may not map one-to-one to original source functions. The 400 fully modeled routines are listed with source definitions and original sizes in [the semantic function inventory](analysis/semantic-functions.json). Validate this inventory with `python3 tools/check_semantic_progress.py`; see [the latest 200-function batch](analysis/SCALAR_HELPERS.md) for differential checks against original PowerPC instructions. The partial models cover only `0x801B8F24..0x801B8F5C` within `0x801B8E60` and the scalar flag-bit operation within `0x8027F680`; both are excluded from the routine and byte totals, along with the offline world-record reader. Recalculate their original sizes using the ignored `analysis/functions.csv` after running `tools/index_dol.py`; text-section sizes come from the index summary. Asset counts come from the ignored `assets/manifest.json`, regenerated with `python3 tools/extract_assets.py --inventory-only`. Texture export counts come from the ignored `assets/textures/manifest.json`, regenerated with `python3 tools/decode_textures.py`; see [texture format findings](analysis/TEXTURE_EXTRACTION.md) for limits. World-volume counts come from `analysis/hub-world-volumes.json` and `analysis/burial-world-volumes.json`; see [world-volume findings](analysis/WORLD_VOLUMES.md) for decoder commands and limits. Audio, music, model, rig, and animation counts come from the ignored manifests under `assets/audio/`, `assets/music/`, `assets/models/`, `assets/rigs/`, and `assets/animations/`. See [audio extraction](analysis/AUDIO_EXTRACTION.md), [music extraction](analysis/MUSIC_EXTRACTION.md), [static mesh extraction](analysis/MODEL_EXTRACTION.md), and [skeletal/animation extraction](analysis/SKELETAL_EXTRACTION.md) for validation and limits. These numbers are a manual snapshot and should be refreshed when recovery advances.
+Matching results are recorded in [binary matching findings](analysis/BINARY_MATCHING.md) and [the complete 1,000-function matching snapshot](analysis/all-matching-summary.json). The function denominator comes from `analysis/index-summary.json` and is provisional: automatic regions include SDK/runtime code and may not map one-to-one to original source functions. The 1,000 fully modeled indexed routines are listed with source definitions and original sizes in [the semantic function inventory](analysis/semantic-functions.json). Validate this inventory with `python3 tools/check_semantic_progress.py`; see [the latest 600-function batch](analysis/INTEGER_HELPERS.md) for its low-level recovery scope, SDK/runtime inclusion, differential checks, and explicit coverage limits. The partial models cover only `0x801B8F24..0x801B8F5C` within `0x801B8E60` and the scalar flag-bit operation within `0x8027F680`; both are excluded from the routine and byte totals, along with the offline world-record reader. Recalculate their original sizes using the ignored `analysis/functions.csv` after running `tools/index_dol.py`; text-section sizes come from the index summary. Asset counts come from the ignored `assets/manifest.json`, regenerated with `python3 tools/extract_assets.py --inventory-only`. Texture export counts come from the ignored `assets/textures/manifest.json`, regenerated with `python3 tools/decode_textures.py`; see [texture format findings](analysis/TEXTURE_EXTRACTION.md) for limits. World-volume counts come from `analysis/hub-world-volumes.json` and `analysis/burial-world-volumes.json`; see [world-volume findings](analysis/WORLD_VOLUMES.md) for decoder commands and limits. Audio, music, model, rig, and animation counts come from the ignored manifests under `assets/audio/`, `assets/music/`, `assets/models/`, `assets/rigs/`, and `assets/animations/`. See [audio extraction](analysis/AUDIO_EXTRACTION.md), [music extraction](analysis/MUSIC_EXTRACTION.md), [static mesh extraction](analysis/MODEL_EXTRACTION.md), and [skeletal/animation extraction](analysis/SKELETAL_EXTRACTION.md) for validation and limits. These numbers are a manual snapshot and should be refreshed when recovery advances.
 
 ## Get the source
 
@@ -75,7 +75,7 @@ python3 tools/verify_application_map.py
 
 The expected executable SHA-256 is `49faf28a7d2e25422c145754ef41b0c8a8dfcd83e688db1c39ecf21f6e34b706`. The dispatch verifier rejects a different executable revision. Indexing regenerates the ignored function, call, and string CSVs from your local executable and disassembly. Extracted code and data remain local.
 
-The latest 200-function batch and its checks are documented in [scalar helper findings](analysis/SCALAR_HELPERS.md). Earlier batches are documented in [resource leaf helper findings](analysis/RESOURCE_LEAF_HELPERS.md), [leaf helper findings](analysis/LEAF_HELPERS.md), and [runtime helper findings](analysis/RUNTIME_HELPERS.md).
+The latest 600-function batch and its checks are documented in [integer helper findings](analysis/INTEGER_HELPERS.md). Earlier batches are documented in [scalar helper findings](analysis/SCALAR_HELPERS.md), [resource leaf helper findings](analysis/RESOURCE_LEAF_HELPERS.md), [leaf helper findings](analysis/LEAF_HELPERS.md), and [runtime helper findings](analysis/RUNTIME_HELPERS.md).
 
 Read [decompilation notes](analysis/DECOMP_NOTES.md) and [application dispatch findings](analysis/APPLICATION_DISPATCH.md) for current evidence and limitations. `src/recovered/` contains semantic reconstructions; original compiler identification, broader binary matching, asset decoding, and platform replacement work remain before a game source build is possible.
 
@@ -192,24 +192,29 @@ mirroring, IK, and procedural effects are not reconstructed. See
 
 ## Assemble the Hub level
 
-After the texture and static-model exports, run:
+After the texture, static-model, and rig exports, run:
 
 ```sh
-python3 tools/decode_level.py
+python3 tools/decode_level.py --actors
 python3 tools/check_level_export.py
 python3 tools/render_level_preview.py
 ```
 
 Open `assets/levels/Hub/index.html` for the offline level viewer, or import
 `assets/levels/Hub/Hub.glb` into Blender. The scene contains 1,888 placements,
-1,017 shared meshes, 320,475 placed triangles, and 145 unique embedded textures.
+1,025 embedded meshes, 348,140 placed triangles, and 194 unique embedded textures.
+Twenty box placements now use eight extracted actor/prop models, including
+chickens, a monkey, a rhino, sheep, Yorbel, a tiki, ropes, and ziplines.
+Characters are static bind-pose previews. Omit `--actors` for the original
+1,017-mesh static world export.
 The viewer starts with a cutaway; enable canopy, sky, backdrop, and helper
 groups to inspect additional records. All placements remain in the GLB.
 
 Matrices and model references are checked against original archive bytes.
-This is an authored static scene; gameplay actors, visibility/LOD selection,
+This is an authored static scene; actor behavior, visibility/LOD selection,
 lighting, and effects are not reconstructed. See
-[level extraction findings](analysis/LEVEL_EXTRACTION.md).
+[level extraction findings](analysis/LEVEL_EXTRACTION.md) and
+[actor placement findings](analysis/ACTOR_PLACEMENT.md).
 
 ## Check the first recovered function
 
@@ -257,9 +262,9 @@ python3 -m unittest discover -s tests -p test_ppc_matching.py
 
 This compiles `src/matching/routines.cpp` separately for each target routine,
 using original field offsets, direct calls, globals, and C++ virtual dispatch
-in place of the host models' callbacks. With GC 1.3.2 and `-O4,p`, **21 of 29**
-match exactly; eight differ. The earlier stop setter brings the total to
-**22 of 30 modeled routines / 1,512 bytes**. The host models remain available
+in place of the host models' callbacks. With GC 1.3.2 and `-O4,p`, **22 of 29**
+match exactly; seven differ. The earlier stop setter brings the total to
+**23 of the original 30 modeled routines / 1,548 bytes**. The host models remain available
 for behavior research.
 
 `build/matching/report.json` records every result, compiler/source hashes,
@@ -270,6 +275,29 @@ compares every byte, including branch/global operands. Unsupported or
 unresolved relocations fail. Add `--require-all` to also exit nonzero for
 byte differences; the default completes the survey and reports mismatches.
 Use `--function 0x801B91FC --output build/matching-one` for an isolated check.
+
+## Check all modeled routines
+
+```sh
+python3 tools/check_all_matching.py --snapshot analysis/all-matching-summary.json
+python3 -m unittest discover -s tests -p test_new_matching.py
+```
+
+The complete survey covers all 1,000 entries in the semantic inventory:
+**255 match exactly (6,088 bytes), and 745 differ**. The 970 newer routines
+contribute 232 matches; the original 30 contribute 23. Generated candidates
+replace host memory callbacks with target-width accesses and remove harness
+output buffers; their current compiler results do not imply every source
+model is suitable as an original-ABI replacement.
+
+The new-family checker is `tools/check_new_matching.py`. Generated candidates,
+objects, logs, and differences stay in ignored `build/new-matching/`.
+`tools/check_all_matching.py --collect-only` independently rechecks existing
+objects against the original DOL, verifies source/object hashes, and requires
+exact coverage of the current semantic inventory. It writes
+`build/all-matching/report.json`. Add `--snapshot analysis/all-matching-summary.json`
+to refresh the portable per-function summary. Unmatched routines remain
+explicit byte differences; no unresolved comparisons are counted as matches.
 
 ## Attribution
 

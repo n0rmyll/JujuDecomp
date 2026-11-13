@@ -1,0 +1,19 @@
+{
+  "function": "fn_801FD5C4",
+  "source": "analysis/split/asm/auto_03_801FC144_text.s",
+  "start": "0x801FD5C4",
+  "instruction_count": 37,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801FD5F8",
+      "target": "fn_801B92FC"
+    },
+    {
+      "site": "0x801FD610",
+      "target": "fn_80212004"
+    }
+  ],
+  "strings": []
+}

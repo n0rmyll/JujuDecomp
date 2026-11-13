@@ -20,14 +20,18 @@ def main():
         raise ValueError('Duplicate original function address')
     original = load_functions(addresses)
     regions = []
+    definitions = {}
+    macros = {}
     for entry, address in zip(entries, addresses):
         size = len(original[address])*4
         if size != entry['original_bytes'] or entry['status'] != 'complete-semantic-model':
             raise ValueError(f'Invalid size/status for {address}')
-        source = (ROOT/entry['source']).read_text()
-        found = re.search(r'^FN\('+address+r'\)', source, re.M)
-        if not found:
-            found = re.search(r'\b'+re.escape(entry['symbol'])+r'\s*\([^;]*?\)\s*\{', source, re.S)
+        path = entry['source']
+        if path not in definitions:
+            source = (ROOT/path).read_text()
+            definitions[path] = set(re.findall(r'\b(tak_\w+)\s*\([^;]*?\)\s*\{', source, re.S))
+            macros[path] = set(re.findall(r'^FN\(([0-9A-F]{8})\)', source, re.M))
+        found = address in macros[path] or entry['symbol'] in definitions[path]
         if not found:
             raise ValueError(f'Missing source definition for {address}')
         regions.append((int(address, 16), int(address, 16)+size))

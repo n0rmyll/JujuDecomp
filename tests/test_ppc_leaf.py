@@ -108,6 +108,59 @@ class PowerPCOracleTests(unittest.TestCase):
                                  (0, 0xffffffff, 2, 0), memory), 0xab)
         self.assertEqual(memory.events, [('read', 1, 1)])
 
+    def test_recording_immediate_subtraction(self):
+        # addic. r3,r3,-1; bltlr; addi r3,r3,5; blr
+        words = {0: 0x3463ffff, 4: 0x4d800020, 8: 0x38630005, 12: 0x4e800020}
+        self.assertEqual(execute(words, (0, 0, 0, 0), Memory()), 0xffffffff)
+        self.assertEqual(execute(words, (2, 0, 0, 0), Memory()), 6)
+
+    def test_byte_load_with_update(self):
+        # lbzu r3,1(r4); add r3,r3,r4; blr
+        memory = Memory(); memory.values[0x1001, 1] = 0xab
+        self.assertEqual(execute({0: 0x8c640001, 4: 0x7c632214, 8: 0x4e800020},
+                                 (0, 0x1000, 0, 0), memory), 0x10ac)
+
+    def test_byte_store_with_update(self):
+        # stbu r3,-1(r4); mr r3,r4; blr
+        memory = Memory()
+        self.assertEqual(execute({0: 0x9c64ffff, 4: 0x7c832378, 8: 0x4e800020},
+                                 (0x123456ab, 0x1000, 0, 0), memory), 0xfff)
+        self.assertEqual(memory.events, [('write', 0xfff, 0xab, 1)])
+
+    def test_halfword_load_with_update(self):
+        # lhzu r3,2(r4); mr r3,r4; blr
+        memory = Memory(); memory.values[0x1002, 2] = 0xffff
+        self.assertEqual(execute({0: 0xa4640002, 4: 0x7c832378, 8: 0x4e800020},
+                                 (0, 0x1000, 0, 0), memory), 0x1002)
+        self.assertEqual(memory.events, [('read', 0x1002, 2)])
+
+    def test_indexed_halfword_store(self):
+        # sthx r3,r4,r5; blr
+        memory = Memory()
+        execute({0: 0x7c642b2e, 4: 0x4e800020}, (0x12345678, 0x1000, 6, 0), memory)
+        self.assertEqual(memory.events, [('write', 0x1006, 0x5678, 2)])
+
+    def test_variable_right_shift(self):
+        # srw r3,r3,r4; blr: low six shift bits matter.
+        for amount, expected in ((0, 0x80000000), (31, 1), (32, 0), (63, 0), (64, 0x80000000)):
+            self.assertEqual(execute({0: 0x7c632430, 4: 0x4e800020},
+                                     (0x80000000, amount, 0, 0), Memory()), expected)
+
+    def test_xor_and_eighth_argument(self):
+        self.assertEqual(execute({0: 0x7c632278, 4: 0x4e800020},
+                                 (0xff00, 0x0ff0, 0, 0), Memory()), 0xf0f0)
+        # mr r3,r10; blr
+        self.assertEqual(execute({0: 0x7d435378, 4: 0x4e800020},
+                                 (0, 0, 0, 0, 0, 0, 0, 123), Memory()), 123)
+
+    def test_return_register_snapshot(self):
+        # addi r4,r4,1; blr: r4 may hold the low part of a wide result.
+        registers = []
+        result = execute({0: 0x38840001, 4: 0x4e800020},
+                         (7, 0xffffffff, 2, 3, 4, 5, 6, 8), Memory(), final_registers=registers)
+        self.assertEqual(result, 7)
+        self.assertEqual(registers[3:11], [7, 0, 2, 3, 4, 5, 6, 8])
+
     def test_unsupported_instruction_fails(self):
         with self.assertRaisesRegex(ValueError, 'Unsupported'):
             execute({0: 0}, (0, 0, 0, 0), Memory())

@@ -36,18 +36,19 @@ def load_functions(addresses):
     sections = [tuple(struct.unpack_from('>I', data, base+i*4)[0] for base in (0, 0x48, 0x90))
                 for i in range(7)]
     rows = {r['name']: r for r in csv.DictReader((ROOT/'analysis/functions.csv').open())}
+    by_address = {r['address'][2:].upper(): r for r in rows.values()}
     bodies = {}
-    for path in {rows['fn_'+a]['assembly'] for a in addresses}:
+    for path in {by_address[a]['assembly'] for a in addresses}:
         for match in re.finditer(r'^\.fn (\w+),.*?^\.endfn \1\s*$',
                                  (ROOT/path).read_text(), re.M | re.S):
             bodies[match[1]] = match[0]
     result = {}
     for address in addresses:
-        row = rows['fn_'+address]
+        row = by_address[address]
         start, size = int(address, 16), int(row['size'])
         words = {}
         for match in re.finditer(r'/\* ([0-9A-F]{8}) [0-9A-F]+  ((?:[0-9A-F]{2} ){3}[0-9A-F]{2}) \*/',
-                                 bodies['fn_'+address]):
+                                 bodies[row['name']]):
             pc, raw = int(match[1], 16), bytes.fromhex(match[2])
             backed = False
             for offset, base, length in sections:
@@ -65,10 +66,12 @@ def load_functions(addresses):
     return result
 
 
-def execute(words, args, memory, budget=20000, visited=None):
+def execute(words, args, memory, budget=20000, visited=None, final_registers=None):
     registers = [0]*32
     registers[2], registers[13] = 0x8033b140, 0x80338280
-    registers[3:7] = args
+    if not 1 <= len(args) <= 8:
+        raise ValueError('Expected one to eight integer argument registers')
+    registers[3:3+len(args)] = args
     pc, ctr = min(words), 0
     cr = [False]*32
 
@@ -85,7 +88,11 @@ def execute(words, args, memory, budget=20000, visited=None):
         imm = signed(w, 16)
         following, record = (pc+4) & MASK, False
         base = registers[ra] if ra else 0
-        if op in (14, 15):
+        if op in (12, 13):
+            registers[rt] = (registers[ra]+imm) & MASK
+            if op == 13:
+                compare(signed(registers[rt]), 0)
+        elif op in (14, 15):
             registers[rt] = (base+(imm << (16 if op == 15 else 0))) & MASK
         elif op in (24, 25, 26, 28):
             immediate = w & 0xffff
@@ -96,15 +103,19 @@ def execute(words, args, memory, budget=20000, visited=None):
                              value ^ immediate if op == 26 else value | immediate)
             if op == 28:
                 compare(signed(registers[ra]), 0)
-        elif op in (32, 33, 34, 40, 42, 36, 38, 44):
+        elif op in (32, 33, 34, 35, 39, 40, 41, 42, 36, 38, 44):
             address = (base+imm) & MASK
-            size = {32: 4, 33: 4, 34: 1, 40: 2, 42: 2, 36: 4, 38: 1, 44: 2}[op]
-            if op in (36, 38, 44):
+            size = {32: 4, 33: 4, 34: 1, 35: 1, 39: 1, 40: 2, 41: 2, 42: 2, 36: 4, 38: 1, 44: 2}[op]
+            if op in (36, 38, 39, 44):
                 memory.write(address, registers[rt] & ((1 << (size*8))-1), size)
+                if op == 39:
+                    if not ra:
+                        raise ValueError('Invalid store-with-update operand')
+                    registers[ra] = address
             else:
                 value = memory.read(address, size)
                 registers[rt] = (signed(value, 16) & MASK) if op == 42 else value
-                if op == 33:
+                if op in (33, 35, 41):
                     if not ra or ra == rt:
                         raise ValueError('Invalid load-with-update operands')
                     registers[ra] = address
@@ -137,6 +148,8 @@ def execute(words, args, memory, budget=20000, visited=None):
                 bool(bo & 16) or cr[bi] == bool(bo & 8))
             if take:
                 if op == 19:
+                    if final_registers is not None:
+                        final_registers[:] = registers
                     return registers[3]
                 if w & 2:
                     raise ValueError('Absolute conditional branch unsupported')
@@ -150,10 +163,10 @@ def execute(words, args, memory, budget=20000, visited=None):
                 compare(a, b, (w >> 23) & 7)
             elif xo == 467 and ((w >> 16) & 31) == 9 and ((w >> 11) & 31) == 0:
                 ctr = registers[rt]
-            elif xo in (23, 87, 279, 151, 215):
+            elif xo in (23, 87, 279, 151, 215, 407):
                 address = (base+registers[rb]) & MASK
-                size = 2 if xo == 279 else 1 if xo in (87, 215) else 4
-                if xo in (151, 215):
+                size = 2 if xo in (279, 407) else 1 if xo in (87, 215) else 4
+                if xo in (151, 215, 407):
                     memory.write(address, registers[rt] & ((1 << (size*8))-1), size)
                 else:
                     registers[rt] = memory.read(address, size)
@@ -167,7 +180,7 @@ def execute(words, args, memory, budget=20000, visited=None):
                 registers[rt] = (-registers[ra]) & MASK
                 if w & 1:
                     compare(signed(registers[rt]), 0)
-            elif xo in (444, 28, 60, 24, 954, 922, 124, 26, 824):
+            elif xo in (444, 28, 60, 24, 954, 922, 124, 26, 824, 536, 316):
                 a, b = registers[rt], registers[rb]
                 if xo == 444: value = a | b
                 elif xo == 28: value = a & b
@@ -176,6 +189,8 @@ def execute(words, args, memory, budget=20000, visited=None):
                 elif xo == 124: value = ~(a | b)
                 elif xo == 26: value = 32-a.bit_length()
                 elif xo == 824: value = signed(a) >> rb
+                elif xo == 536: value = 0 if b & 32 else a >> (b & 31)
+                elif xo == 316: value = a ^ b
                 else: value = signed(a, 8 if xo == 954 else 16)
                 registers[ra] = value & MASK
                 if w & 1:

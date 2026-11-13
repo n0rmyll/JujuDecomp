@@ -1,0 +1,15 @@
+{
+  "function": "fn_802425CC",
+  "source": "analysis/split/asm/auto_03_802421DC_text.s",
+  "start": "0x802425CC",
+  "instruction_count": 32,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x80242610",
+      "target": "strlen"
+    }
+  ],
+  "strings": []
+}

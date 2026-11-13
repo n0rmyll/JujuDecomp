@@ -25,7 +25,7 @@ def embedded_png(raw):
     return width,height,pixels
 
 
-def render(path,size=1024,top=False,all_records=False):
+def render(path,size=1024,top=False,all_records=False,instance_indices=None):
     g,blob=read_glb(path);cache={}
     def accessor(i):
         if i not in cache:cache[i]=accessor_values(g,blob,i)
@@ -48,13 +48,25 @@ def render(path,size=1024,top=False,all_records=False):
     def camera(p):
         x,y,z=p;right=x*cy-z*sy;back=x*sy+z*cy
         return right,y*cp-back*sp,y*sp+back*cp
-    bounds=g['extras']['bounds' if all_records else 'preview_bounds'];corners=[camera([bounds['max' if mask&(1<<k) else 'min'][k] for k in range(3)]) for mask in range(8)]
+    selected=[n for n in g['nodes'] if 'mesh' in n and (instance_indices is None or n.get('extras',{}).get('instanceIndex') in instance_indices)]
+    bounds=g['extras']['bounds' if all_records else 'preview_bounds']
+    if instance_indices is not None:
+        if not selected:raise ValueError('No matching instances')
+        lo=[math.inf]*3;hi=[-math.inf]*3
+        for node in selected:
+            m=node['matrix']
+            for part in meshes[node['mesh']]:
+                for p in accessor(part['position']):
+                    for k in range(3):
+                        x=sum(m[c*4+k]*p[c] for c in range(3))+m[12+k];lo[k]=min(lo[k],x);hi[k]=max(hi[k],x)
+        bounds=dict(min=lo,max=hi)
+    corners=[camera([bounds['max' if mask&(1<<k) else 'min'][k] for k in range(3)]) for mask in range(8)]
     lo=[min(p[k] for p in corners) for k in range(3)];hi=[max(p[k] for p in corners) for k in range(3)]
-    width=size;height=round(size*.75);scale=min((width-40)/(hi[0]-lo[0]),(height-40)/(hi[1]-lo[1]));cx=(lo[0]+hi[0])/2;cy2=(lo[1]+hi[1])/2
+    width=size;height=round(size*.75);scale=min((width-40)/max(1e-6,hi[0]-lo[0]),(height-40)/max(1e-6,hi[1]-lo[1]));cx=(lo[0]+hi[0])/2;cy2=(lo[1]+hi[1])/2
     pixels=bytearray(bytes((36,46,57,255))*(width*height));depth=[-math.inf]*(width*height);triangle_count=0
-    for node in g['nodes']:
+    for node in selected:
         if 'mesh' not in node:continue
-        if not all_records and node.get('extras',{}).get('previewGroup','scenery')!='scenery':continue
+        if not all_records and node.get('extras',{}).get('previewGroup','scenery') not in ('scenery','actors'):continue
         if node.get('children') or 'matrix' not in node:raise ValueError('Expected flat matrix-authored nodes')
         m=node['matrix'];projected={}
         for part in meshes[node['mesh']]:
@@ -97,8 +109,9 @@ def main():
     parser.add_argument('glb',nargs='?',type=Path,default=ROOT/'assets/levels/Hub/Hub.glb')
     parser.add_argument('--output',type=Path,default=ROOT/'assets/levels/Hub/preview.png')
     parser.add_argument('--size',type=int,default=1024);parser.add_argument('--top',action='store_true')
-    parser.add_argument('--all',action='store_true',help='Include sky, backdrop and named helpers');args=parser.parse_args()
-    png,count=render(args.glb,args.size,args.top,args.all);args.output.write_bytes(png)
+    parser.add_argument('--all',action='store_true',help='Include sky, backdrop and named helpers')
+    parser.add_argument('--instance',type=int,action='append',help='Render and frame only these placement indices');args=parser.parse_args()
+    png,count=render(args.glb,args.size,args.top,args.all,args.instance);args.output.write_bytes(png)
     print(f'Rendered {count} placed triangles to {args.output}')
 
 

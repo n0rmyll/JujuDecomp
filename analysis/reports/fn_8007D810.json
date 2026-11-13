@@ -1,0 +1,170 @@
+{
+  "function": "fn_8007D810",
+  "source": "analysis/split/asm/auto_03_8006DAA8_text.s",
+  "start": "0x8007D810",
+  "instruction_count": 577,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x8007D820",
+      "target": "_savegpr_23"
+    },
+    {
+      "site": "0x8007D830",
+      "target": "fn_802062A8"
+    },
+    {
+      "site": "0x8007D840",
+      "target": "fn_80206370"
+    },
+    {
+      "site": "0x8007D884",
+      "target": "memset"
+    },
+    {
+      "site": "0x8007D898",
+      "target": "fn_802423F8"
+    },
+    {
+      "site": "0x8007D8D4",
+      "target": "fn_800E66E8"
+    },
+    {
+      "site": "0x8007D8F0",
+      "target": "fn_802424BC"
+    },
+    {
+      "site": "0x8007D8FC",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x8007D90C",
+      "target": "fn_8007EA48"
+    },
+    {
+      "site": "0x8007D920",
+      "target": "fn_802424F0"
+    },
+    {
+      "site": "0x8007D934",
+      "target": "fn_8007D3C0"
+    },
+    {
+      "site": "0x8007D948",
+      "target": "fn_802424F0"
+    },
+    {
+      "site": "0x8007D960",
+      "target": "fn_80242558"
+    },
+    {
+      "site": "0x8007D990",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x8007DA1C",
+      "target": "fn_80206370"
+    },
+    {
+      "site": "0x8007DA38",
+      "target": "memcpy"
+    },
+    {
+      "site": "0x8007DA48",
+      "target": "lbl_80206438"
+    },
+    {
+      "site": "0x8007DA7C",
+      "target": "memset"
+    },
+    {
+      "site": "0x8007DAA4",
+      "target": "memmove"
+    },
+    {
+      "site": "0x8007DAB4",
+      "target": "memcpy"
+    },
+    {
+      "site": "0x8007DAF0",
+      "target": "fn_802424F0"
+    },
+    {
+      "site": "0x8007DB10",
+      "target": "fn_80242418"
+    },
+    {
+      "site": "0x8007DB5C",
+      "target": "fn_8007E114"
+    },
+    {
+      "site": "0x8007DB88",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x8007DC14",
+      "target": "fn_80254784"
+    },
+    {
+      "site": "0x8007DC38",
+      "target": "fn_80254850"
+    },
+    {
+      "site": "0x8007DD04",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x8007DD98",
+      "target": "fn_8025482C"
+    },
+    {
+      "site": "0x8007DE50",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x8007DF90",
+      "target": "fn_8024241C"
+    },
+    {
+      "site": "0x8007DF9C",
+      "target": "fn_8007E668"
+    },
+    {
+      "site": "0x8007DFAC",
+      "target": "fn_8007E5FC"
+    },
+    {
+      "site": "0x8007DFC0",
+      "target": "fn_8007E668"
+    },
+    {
+      "site": "0x8007DFD0",
+      "target": "fn_8007E5FC"
+    },
+    {
+      "site": "0x8007DFEC",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x8007E0A8",
+      "target": "memmove"
+    },
+    {
+      "site": "0x8007E0DC",
+      "target": "memset"
+    },
+    {
+      "site": "0x8007E100",
+      "target": "_restgpr_23"
+    }
+  ],
+  "strings": [
+    {
+      "site": "0x8007D8B0",
+      "address": "0x80330BAC",
+      "text": "phase",
+      "basis": "direct operand; may be a load rather than an address argument"
+    }
+  ]
+}

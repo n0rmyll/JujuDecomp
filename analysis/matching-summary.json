@@ -1,12 +1,12 @@
 {
   "dol_sha256": "49faf28a7d2e25422c145754ef41b0c8a8dfcd83e688db1c39ecf21f6e34b706",
-  "source_sha256": "0bdd97d905b4d639939ef5acd15a2cd847d819d2775bf439fdb25b9178be281c",
+  "source_sha256": "23d92e6814c7fa1aa213a91385613ad41c506995b43e31dc5842312138729c5f",
   "compiler_sha256": "7cbae0a5bd81e07d7fa8975bbc4e969b5dea265cc29c5ee6bae0453a6e25f225",
   "runner_sha256": "2b3000ef6a7a490c24ccd71967735ae0005e218922e51806cca1b8d77fd3cf7c",
   "scope": "Individual functions relocated to original addresses; no executable rebuild",
   "checked": 29,
-  "matched": 21,
-  "matched_bytes": 1500,
+  "matched": 22,
+  "matched_bytes": 1536,
   "compiler": "CodeWarrior GC 1.3.2 (2.4.2 build 81)",
   "flags": "-c -lang c++ -proc gekko -O4,p -nodefaults -DTAK_FN=<address>",
   "results": [
@@ -117,10 +117,10 @@
     {
       "function": "fn_801B90D0",
       "original_size": 36,
-      "status": "different",
+      "status": "match",
       "candidate_size": 36,
-      "exact_match": false,
-      "first_difference": 9
+      "exact_match": true,
+      "first_difference": null
     },
     {
       "function": "fn_801B90F4",

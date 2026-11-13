@@ -1,0 +1,23 @@
+{
+  "function": "fn_8022872C",
+  "source": "analysis/split/asm/auto_03_80228224_text.s",
+  "start": "0x8022872C",
+  "instruction_count": 74,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x80228740",
+      "target": "fn_80214D94"
+    },
+    {
+      "site": "0x80228824",
+      "target": "fn_8005C6E0"
+    },
+    {
+      "site": "0x80228830",
+      "target": "fn_80228854"
+    }
+  ],
+  "strings": []
+}

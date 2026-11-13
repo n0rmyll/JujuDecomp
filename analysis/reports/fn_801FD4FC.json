@@ -1,0 +1,27 @@
+{
+  "function": "fn_801FD4FC",
+  "source": "analysis/split/asm/auto_03_801FC144_text.s",
+  "start": "0x801FD4FC",
+  "instruction_count": 50,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801FD534",
+      "target": "fn_801B8658"
+    },
+    {
+      "site": "0x801FD548",
+      "target": "fn_801FD5C4"
+    },
+    {
+      "site": "0x801FD570",
+      "target": "fn_801B8658"
+    },
+    {
+      "site": "0x801FD584",
+      "target": "fn_801FD5C4"
+    }
+  ],
+  "strings": []
+}

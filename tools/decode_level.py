@@ -73,9 +73,19 @@ class SceneBuilder:
         self.g['bufferViews'].append(dict(buffer=0,byteOffset=len(self.blob),byteLength=len(raw),**(extra or {})))
         self.blob.extend(raw);return index
 
-    def add_mesh(self,path):
+    def add_mesh(self,path,bind_pose=False):
         source,blob=read_glb(path)
-        if len(source['meshes'])!=1 or source.get('skins'):raise ValueError('Expected a single static source mesh')
+        if len(source['meshes'])!=1:raise ValueError('Expected a single source mesh')
+        if source.get('skins'):
+            if not bind_pose:raise ValueError('Expected a static source mesh')
+            # At the verified bind pose, globalJoint * inverseBind is identity.
+            # Positions/normals therefore remain unchanged when removing the skin.
+            from check_rig_exports import check
+            check(path)
+            if source.get('animations'):raise ValueError('Use bind-pose rigs, not animated exports')
+            node=source['nodes'][0]
+            if any(k in node for k in ('matrix','translation','rotation','scale')):
+                raise ValueError('Transformed skinned mesh nodes are unsupported')
         views={};accessors={};textures={};materials={}
         for i,image in enumerate(source.get('images',[])):
             v=source['bufferViews'][image['bufferView']];raw=bytes(blob[v.get('byteOffset',0):v.get('byteOffset',0)+v['byteLength']])
@@ -108,6 +118,7 @@ class SceneBuilder:
         mesh=copy.deepcopy(source['meshes'][0]);mesh['name']=source['nodes'][0].get('name',path.stem)
         positions=[];position_accessors=set();triangles=0
         for p in mesh['primitives']:
+            if bind_pose:p['attributes']={k:v for k,v in p['attributes'].items() if not k.startswith(('JOINTS_','WEIGHTS_'))}
             if p.get('mode',4)!=4:raise ValueError('Non-triangle source primitive')
             position=p['attributes']['POSITION']
             if position not in position_accessors:
@@ -128,9 +139,12 @@ class SceneBuilder:
         index=len(self.g['nodes']);self.g['scenes'][0]['nodes'].append(index)
         self.g['nodes'].append(dict(mesh=mesh,matrix=m,name=f"{row['index']:04d} / {row['model_name']}",
                                     extras=dict(instanceIndex=row['index'],sourceOffset=row['source_offset'],sourceFlags=row['flags'],modelIndex=row['model_index'],previewGroup=row['preview_group'])))
+        if row.get('actor'):
+            actor=row['actor'];self.g['nodes'][-1]['name']=f"{row['index']:04d} / {actor['actor_class']} / {actor['instance_name']}"
+            self.g['nodes'][-1]['extras']['actor']=actor
 
 
-def export_level(source,output):
+def export_level(source,output,actors=False):
     data=source.read_bytes();report=inspect(data);chunks=report['chunks']
     candidates=[c for c in chunks if c['type']=='0x0060']
     if len(candidates)!=1:raise ValueError('Expected exactly one instance array')
@@ -150,17 +164,31 @@ def export_level(source,output):
                                                   model_name=mesh['name'],model_glb=mesh['glb'],preview_group=preview_group(mesh['name']))
         row['box_proxy_candidate']=mesh['vertices']==8 and mesh['triangles']==12 and not mesh['textured_primitives']
         if row['box_proxy_candidate'] and row['preview_group']=='scenery':row['preview_group']='helper'
-        builder.add_instance(row,mapping[row['model_index']])
+    bindings={};actor_report=None;actor_meshes={}
+    if actors:
+        from decode_level_actors import resolve_level_actors
+        bindings,actor_report=resolve_level_actors(data,chunks,instances,rows,source.name)
+    for row in rows:
+        actor=bindings.get(row['index']);mesh_index=mapping[row['model_index']]
+        if actor:
+            key=(actor['asset_category'],actor['asset_glb'])
+            if key not in actor_meshes:
+                actor_meshes[key]=builder.add_mesh(ROOT/'assets'/key[0]/key[1],bind_pose=key[0]=='rigs')
+            mesh_index=actor_meshes[key];row['actor']=actor;row['preview_group']='actors'
+        builder.add_instance(row,mesh_index)
     bounds={kind:[(min if kind=='min' else max)(r['export_bounds'][kind][k] for r in rows) for k in range(3)] for kind in ('min','max')}
     scenery=[r for r in rows if r['preview_group']=='scenery'] or rows
     preview_bounds={kind:[(min if kind=='min' else max)(r['export_bounds'][kind][k] for r in scenery) for k in range(3)] for kind in ('min','max')}
     manifest=dict(archive=source.name,archive_sha256=report['sha256'],path_hint=hint,instance_chunk=instances['index'],
-                  model_chunk=models['index'],available_models=model_count,unique_meshes=len(needed),instance_count=len(rows),
-                  triangles=sum(builder.triangles[mapping[r['model_index']]] for r in rows),embedded_images=len(builder.g['images']),
-                  bounds=bounds,preview_bounds=preview_bounds,preview_group_counts={name:sum(r['preview_group']==name for r in rows) for name in ('scenery','sky','backdrop','helper','canopy')},
+                  model_chunk=models['index'],available_models=model_count,unique_meshes=len(builder.g['meshes']),instance_count=len(rows),
+                  triangles=sum(builder.triangles[n['mesh']] for n in builder.g['nodes']),embedded_images=len(builder.g['images']),
+                  bounds=bounds,preview_bounds=preview_bounds,preview_group_counts={name:sum(r['preview_group']==name for r in rows) for name in ('scenery','sky','backdrop','helper','canopy','actors')},
                   maximum_bounds_overflow=max(r['bounds_overflow'] for r in rows),instances=rows,
                   limitations='Authored static placements only. All source records retained; gameplay visibility, LOD selection, actors, skeletal motion, collision, particles, lighting and layered materials are not reconstructed.')
     manifest['maximum_nonproxy_bounds_overflow']=max([0.]+[r['bounds_overflow'] for r in rows if not r['box_proxy_candidate']])
+    if actors:
+        manifest['actors']=actor_report
+        manifest['limitations']='Authored static placements plus supported explicit actor replacements in bind/static pose. Unresolved markers retained. No gameplay visibility, LOD/state selection, actor behavior, skeletal motion, collision, particles, game lighting or layered materials.'
     builder.g['scenes'][0]['name']=source.stem+' / authored static scene';builder.g['extras']={k:v for k,v in manifest.items() if k!='instances'}
     output.mkdir(parents=True,exist_ok=True);target=output/(source.stem+'.glb');save_glb(target,builder.g,builder.blob)
     (output/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
@@ -174,7 +202,8 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source',type=Path,default=ROOT/'assets/disc/Hub.dbu')
     parser.add_argument('--output',type=Path,default=ROOT/'assets/levels/Hub')
-    args=parser.parse_args();m=export_level(args.source,args.output)
+    parser.add_argument('--actors',action='store_true',help='Resolve supported explicit actor model overrides into static previews')
+    args=parser.parse_args();m=export_level(args.source,args.output,args.actors)
     print(f"{m['archive']}: {m['instance_count']} instances, {m['unique_meshes']} meshes, {m['triangles']} placed triangles; max bounds overflow {m['maximum_bounds_overflow']:.6g}")
 
 

@@ -1,0 +1,7099 @@
+{
+  "revision": "GJUE78 rev 0",
+  "dol_sha256": "49faf28a7d2e25422c145754ef41b0c8a8dfcd83e688db1c39ecf21f6e34b706",
+  "compiler": "CodeWarrior GC 1.3.2 (2.4.2 build 81)",
+  "compiler_sha256": "7cbae0a5bd81e07d7fa8975bbc4e969b5dea265cc29c5ee6bae0453a6e25f225",
+  "scope": "Exact relocated individual function code; no linked executable or data verification",
+  "checked": 1000,
+  "matched": 255,
+  "different": 745,
+  "matched_bytes": 6088,
+  "families": {
+    "src/recovered/application_flag.c": {
+      "checked": 1,
+      "matched": 1,
+      "matched_bytes": 12
+    },
+    "src/recovered/application_iteration.c": {
+      "checked": 1,
+      "matched": 1,
+      "matched_bytes": 124
+    },
+    "src/recovered/dbu_payload_dispatch.c": {
+      "checked": 1,
+      "matched": 1,
+      "matched_bytes": 68
+    },
+    "src/recovered/integer_leaf_helpers.c": {
+      "checked": 600,
+      "matched": 50,
+      "matched_bytes": 728
+    },
+    "src/recovered/leaf_helpers.c": {
+      "checked": 70,
+      "matched": 18,
+      "matched_bytes": 556
+    },
+    "src/recovered/level_name.c": {
+      "checked": 1,
+      "matched": 1,
+      "matched_bytes": 28
+    },
+    "src/recovered/resource_array.c": {
+      "checked": 2,
+      "matched": 0,
+      "matched_bytes": 0
+    },
+    "src/recovered/resource_leaf_helpers.c": {
+      "checked": 100,
+      "matched": 25,
+      "matched_bytes": 696
+    },
+    "src/recovered/resource_loaders.c": {
+      "checked": 6,
+      "matched": 4,
+      "matched_bytes": 324
+    },
+    "src/recovered/runtime_helpers.c": {
+      "checked": 15,
+      "matched": 12,
+      "matched_bytes": 680
+    },
+    "src/recovered/scalar_leaf_helpers.c": {
+      "checked": 200,
+      "matched": 139,
+      "matched_bytes": 2560
+    },
+    "src/recovered/startup_state_finish.c": {
+      "checked": 1,
+      "matched": 1,
+      "matched_bytes": 100
+    },
+    "src/recovered/state_lifecycle.c": {
+      "checked": 2,
+      "matched": 2,
+      "matched_bytes": 212
+    }
+  },
+  "source_hashes": {
+    "analysis/semantic-functions.json": "2ea1bbc200f3a215f3a5e423368c54aa16791504ec5308be0ccfd251ae4f4b2e",
+    "src/matching/routines.cpp": "23d92e6814c7fa1aa213a91385613ad41c506995b43e31dc5842312138729c5f",
+    "src/recovered/application_flag.c": "02b9a32864d0acf8424727e8e662dedaedc87fa4208023e191ca35c44db0177f",
+    "src/recovered/application_iteration.c": "c563d968c399560d7d65af2fd3b3623247428c3c1d4ed25304e759bac34a46b6",
+    "src/recovered/dbu_payload_dispatch.c": "707e5f490798498e704a08c0d5c98ecfaff0710abb9cdacc94050119c34cd713",
+    "src/recovered/integer_leaf_helpers.c": "6b194d879e344a66253a2f05e73f102e79b5c9a6851ea619fe1cda8f09bcb252",
+    "src/recovered/leaf_helpers.c": "ddf782f2ed5fff216777cdff470971dcb54d88367ee892da1e6ba82a589ba673",
+    "src/recovered/level_name.c": "b57af009794eaf8ed4272b193ed88c2effbe71f2eff6901681d0a679027e9f0f",
+    "src/recovered/resource_array.c": "94c474483f47b79744d31656728130b83d989deda41b62590c8d455b76fe13eb",
+    "src/recovered/resource_leaf_helpers.c": "1773c13fac9d16f57230c379eab88c88b2d1440467ee67f5c95adde85197395d",
+    "src/recovered/resource_loaders.c": "6acb99731fe76121d4795f2e120d31b250bca559f5144ad7def13670ef6987af",
+    "src/recovered/runtime_helpers.c": "b8432b439f295aaf525b1a9b2864f3d897c0818c713e54ac9dbc74888299d73c",
+    "src/recovered/scalar_leaf_helpers.c": "78b780b8b0a7868ef8128be63bc992435ebc1185cf21300445ee3016eae127ab",
+    "src/recovered/startup_state_finish.c": "3cf5e9ad2554d31721b3df30654b033ae990d122b2bbda8e5d7500f0f2310d89",
+    "src/recovered/state_lifecycle.c": "4fde571e721febf7bdc1409888a658f0649b1a726fa584b778b7fc9373ddbb96",
+    "tools/check_new_matching.py": "3dae3ee43fb263066baf623d1ca2c64bdb2ebfc068e3751f696bce82877612bf",
+    "tools/ppc_matching.py": "fdbf374e00e97298d5595f9c075f21ffba3616c8612a75c620075682445697d6"
+  },
+  "results": [
+    {
+      "address": "0x80003140",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x80003540",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 80,
+      "candidate_bytes": 188,
+      "status": "different"
+    },
+    {
+      "address": "0x800035C0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 76,
+      "status": "different"
+    },
+    {
+      "address": "0x80005B10",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x80008D6C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80008DE4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 52,
+      "status": "match"
+    },
+    {
+      "address": "0x800090BC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x800090DC",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x800090E8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 96,
+      "status": "different"
+    },
+    {
+      "address": "0x8000CC20",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 88,
+      "status": "different"
+    },
+    {
+      "address": "0x800174CC",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x80017A44",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80017D64",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 96,
+      "status": "different"
+    },
+    {
+      "address": "0x8001C8D0",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8001EC44",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8001EF60",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8001F158",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x8001F518",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8001F5C4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8001FF28",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 44,
+      "status": "match"
+    },
+    {
+      "address": "0x80024330",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80024638",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x800294BC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 156,
+      "status": "different"
+    },
+    {
+      "address": "0x8002AA04",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x8002C668",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8002D6B4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 208,
+      "candidate_bytes": 492,
+      "status": "different"
+    },
+    {
+      "address": "0x8002DA08",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x8002DAD4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 68,
+      "status": "different"
+    },
+    {
+      "address": "0x8002DE80",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x8002E958",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x8002ECA4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 192,
+      "candidate_bytes": 600,
+      "status": "different"
+    },
+    {
+      "address": "0x8002ED64",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 192,
+      "candidate_bytes": 600,
+      "status": "different"
+    },
+    {
+      "address": "0x8002EE24",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 184,
+      "candidate_bytes": 592,
+      "status": "different"
+    },
+    {
+      "address": "0x8002EEDC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 184,
+      "candidate_bytes": 592,
+      "status": "different"
+    },
+    {
+      "address": "0x8002EF94",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 184,
+      "candidate_bytes": 592,
+      "status": "different"
+    },
+    {
+      "address": "0x8003041C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 52,
+      "status": "match"
+    },
+    {
+      "address": "0x800310A8",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x80031174",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x80031890",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 80,
+      "candidate_bytes": 108,
+      "status": "different"
+    },
+    {
+      "address": "0x800318E0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 96,
+      "status": "different"
+    },
+    {
+      "address": "0x800339FC",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x80033A10",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 24,
+      "status": "match"
+    },
+    {
+      "address": "0x80035DF4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x80035E08",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x80035E1C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "match"
+    },
+    {
+      "address": "0x80036500",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80036ADC",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x80038F3C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80038F48",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8003A5DC",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x8003D548",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 156,
+      "status": "different"
+    },
+    {
+      "address": "0x8003D640",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x8003D718",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x8003DDBC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 84,
+      "candidate_bytes": 84,
+      "status": "match"
+    },
+    {
+      "address": "0x8003E388",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 52,
+      "status": "different"
+    },
+    {
+      "address": "0x8003EA60",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 60,
+      "status": "match"
+    },
+    {
+      "address": "0x8003EA9C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 52,
+      "status": "different"
+    },
+    {
+      "address": "0x80040A50",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80040AFC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 156,
+      "status": "different"
+    },
+    {
+      "address": "0x80040B40",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 84,
+      "candidate_bytes": 196,
+      "status": "different"
+    },
+    {
+      "address": "0x80040B9C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x80040C08",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x80040E2C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 68,
+      "status": "different"
+    },
+    {
+      "address": "0x80040F18",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 68,
+      "status": "different"
+    },
+    {
+      "address": "0x8004156C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 36,
+      "status": "match"
+    },
+    {
+      "address": "0x80041590",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 148,
+      "status": "different"
+    },
+    {
+      "address": "0x80043C84",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 124,
+      "status": "different"
+    },
+    {
+      "address": "0x800440E0",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x80044528",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 24,
+      "status": "match"
+    },
+    {
+      "address": "0x800452DC",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x80045490",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x800454B0",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80045980",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8004778C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8004788C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 84,
+      "status": "different"
+    },
+    {
+      "address": "0x800478B8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 128,
+      "status": "different"
+    },
+    {
+      "address": "0x80047A98",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 48,
+      "status": "different"
+    },
+    {
+      "address": "0x8004B5CC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 56,
+      "status": "different"
+    },
+    {
+      "address": "0x8004B5E4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 48,
+      "status": "different"
+    },
+    {
+      "address": "0x8004B668",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 56,
+      "status": "different"
+    },
+    {
+      "address": "0x8004C538",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 48,
+      "status": "match"
+    },
+    {
+      "address": "0x8004E26C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 76,
+      "status": "different"
+    },
+    {
+      "address": "0x8004EB34",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 56,
+      "status": "different"
+    },
+    {
+      "address": "0x8004F108",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8004F144",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8004F814",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 92,
+      "candidate_bytes": 136,
+      "status": "different"
+    },
+    {
+      "address": "0x8004FAD0",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x8005344C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x8005357C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "match"
+    },
+    {
+      "address": "0x80053598",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 120,
+      "status": "different"
+    },
+    {
+      "address": "0x80053B30",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 108,
+      "candidate_bytes": 104,
+      "status": "different"
+    },
+    {
+      "address": "0x80053B9C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 132,
+      "candidate_bytes": 136,
+      "status": "different"
+    },
+    {
+      "address": "0x80054B94",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 128,
+      "candidate_bytes": 348,
+      "status": "different"
+    },
+    {
+      "address": "0x80054C14",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 128,
+      "candidate_bytes": 348,
+      "status": "different"
+    },
+    {
+      "address": "0x80057848",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 104,
+      "candidate_bytes": 216,
+      "status": "different"
+    },
+    {
+      "address": "0x80057940",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 196,
+      "status": "different"
+    },
+    {
+      "address": "0x80058C34",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80058D50",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80058D5C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8005A2F4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "match"
+    },
+    {
+      "address": "0x8005A598",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 56,
+      "status": "different"
+    },
+    {
+      "address": "0x8005C1FC",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80061E40",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x80061E50",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 76,
+      "status": "different"
+    },
+    {
+      "address": "0x80067C60",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x80067C7C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x8006A514",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 56,
+      "status": "different"
+    },
+    {
+      "address": "0x8006DA54",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 56,
+      "status": "different"
+    },
+    {
+      "address": "0x80071A9C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 32,
+      "status": "match"
+    },
+    {
+      "address": "0x80071FC4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x80073594",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 124,
+      "candidate_bytes": 272,
+      "status": "different"
+    },
+    {
+      "address": "0x80073610",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 132,
+      "candidate_bytes": 300,
+      "status": "different"
+    },
+    {
+      "address": "0x80073694",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 308,
+      "candidate_bytes": 676,
+      "status": "different"
+    },
+    {
+      "address": "0x800737C8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 112,
+      "status": "different"
+    },
+    {
+      "address": "0x80073C5C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 144,
+      "candidate_bytes": 292,
+      "status": "different"
+    },
+    {
+      "address": "0x80073DF8",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 24,
+      "status": "match"
+    },
+    {
+      "address": "0x8007981C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 88,
+      "candidate_bytes": 196,
+      "status": "different"
+    },
+    {
+      "address": "0x8007BE04",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x8007BE2C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 44,
+      "status": "different"
+    },
+    {
+      "address": "0x8007BE4C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 44,
+      "status": "different"
+    },
+    {
+      "address": "0x8007BE6C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8007C89C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "match"
+    },
+    {
+      "address": "0x8007D788",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8007E1D8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 108,
+      "candidate_bytes": 244,
+      "status": "different"
+    },
+    {
+      "address": "0x8007E244",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 108,
+      "candidate_bytes": 204,
+      "status": "different"
+    },
+    {
+      "address": "0x8007E5FC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 108,
+      "candidate_bytes": 260,
+      "status": "different"
+    },
+    {
+      "address": "0x8007E668",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 128,
+      "candidate_bytes": 308,
+      "status": "different"
+    },
+    {
+      "address": "0x80080CF0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 84,
+      "candidate_bytes": 212,
+      "status": "different"
+    },
+    {
+      "address": "0x800829A8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80083580",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 72,
+      "status": "different"
+    },
+    {
+      "address": "0x800835A0",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x800835AC",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80084EB8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x800946F0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 52,
+      "status": "different"
+    },
+    {
+      "address": "0x8009633C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 88,
+      "status": "different"
+    },
+    {
+      "address": "0x80096894",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x8009C86C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 64,
+      "status": "different"
+    },
+    {
+      "address": "0x800A20B4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 208,
+      "candidate_bytes": 396,
+      "status": "different"
+    },
+    {
+      "address": "0x800AB8D4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 152,
+      "status": "different"
+    },
+    {
+      "address": "0x800B088C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 136,
+      "candidate_bytes": 316,
+      "status": "different"
+    },
+    {
+      "address": "0x800B17AC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 104,
+      "status": "different"
+    },
+    {
+      "address": "0x800B398C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 104,
+      "candidate_bytes": 232,
+      "status": "different"
+    },
+    {
+      "address": "0x800B5ED4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 228,
+      "candidate_bytes": 400,
+      "status": "different"
+    },
+    {
+      "address": "0x800B6688",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 232,
+      "candidate_bytes": 440,
+      "status": "different"
+    },
+    {
+      "address": "0x800B6EB4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 76,
+      "candidate_bytes": 104,
+      "status": "different"
+    },
+    {
+      "address": "0x800B92F8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 80,
+      "status": "different"
+    },
+    {
+      "address": "0x800BB508",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 104,
+      "status": "different"
+    },
+    {
+      "address": "0x800BC61C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x800C022C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x800C3B64",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x800C4C08",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 84,
+      "status": "different"
+    },
+    {
+      "address": "0x800C4C34",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 72,
+      "status": "different"
+    },
+    {
+      "address": "0x800C66BC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 108,
+      "candidate_bytes": 240,
+      "status": "different"
+    },
+    {
+      "address": "0x800C67B0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 84,
+      "candidate_bytes": 212,
+      "status": "different"
+    },
+    {
+      "address": "0x800C6968",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x800C8738",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x800C8744",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x800C890C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x800C9CF8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x800CDBD4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x800CEB2C",
+      "source": "src/recovered/startup_state_finish.c",
+      "original_bytes": 100,
+      "candidate_bytes": 100,
+      "status": "match"
+    },
+    {
+      "address": "0x800CF7EC",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x800CF868",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 56,
+      "status": "different"
+    },
+    {
+      "address": "0x800D41A0",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x800D4CD8",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x800D4CE8",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x800D56B4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x800D56C4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x800D76E4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 112,
+      "status": "different"
+    },
+    {
+      "address": "0x800D80DC",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x800DAC50",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x800DF750",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x800DF75C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x800E0314",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 160,
+      "status": "different"
+    },
+    {
+      "address": "0x800E3F3C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 92,
+      "status": "different"
+    },
+    {
+      "address": "0x800E53C4",
+      "source": "src/recovered/runtime_helpers.c",
+      "original_bytes": 8,
+      "candidate_bytes": 8,
+      "status": "match"
+    },
+    {
+      "address": "0x800E53CC",
+      "source": "src/recovered/runtime_helpers.c",
+      "original_bytes": 8,
+      "candidate_bytes": 8,
+      "status": "match"
+    },
+    {
+      "address": "0x800E5540",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x800E5A28",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 296,
+      "candidate_bytes": 688,
+      "status": "different"
+    },
+    {
+      "address": "0x800E5B50",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 296,
+      "candidate_bytes": 688,
+      "status": "different"
+    },
+    {
+      "address": "0x800E5C78",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 200,
+      "candidate_bytes": 408,
+      "status": "different"
+    },
+    {
+      "address": "0x800E5E98",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 116,
+      "candidate_bytes": 108,
+      "status": "different"
+    },
+    {
+      "address": "0x800E6E28",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 32,
+      "status": "match"
+    },
+    {
+      "address": "0x800E726C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x800F6344",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x800F64B0",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x800F64C4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x800F64D8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 80,
+      "status": "different"
+    },
+    {
+      "address": "0x800F6500",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 80,
+      "status": "different"
+    },
+    {
+      "address": "0x800F9FFC",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x800FE5EC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 136,
+      "candidate_bytes": 356,
+      "status": "different"
+    },
+    {
+      "address": "0x800FE674",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 144,
+      "candidate_bytes": 388,
+      "status": "different"
+    },
+    {
+      "address": "0x800FE704",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 108,
+      "status": "different"
+    },
+    {
+      "address": "0x800FE738",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 116,
+      "status": "different"
+    },
+    {
+      "address": "0x800FF2C0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 464,
+      "candidate_bytes": 1064,
+      "status": "different"
+    },
+    {
+      "address": "0x800FF490",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x800FF49C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 104,
+      "candidate_bytes": 148,
+      "status": "different"
+    },
+    {
+      "address": "0x801042FC",
+      "source": "src/recovered/level_name.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "match"
+    },
+    {
+      "address": "0x8010A080",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 108,
+      "status": "different"
+    },
+    {
+      "address": "0x8010A1B8",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "match"
+    },
+    {
+      "address": "0x8010A6DC",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x8010A6F0",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x8010A70C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x8010A75C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x8010A778",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x8010A794",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 120,
+      "candidate_bytes": 384,
+      "status": "different"
+    },
+    {
+      "address": "0x8010AB00",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 96,
+      "status": "different"
+    },
+    {
+      "address": "0x8010AC50",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 96,
+      "status": "different"
+    },
+    {
+      "address": "0x8010B30C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x8010B328",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x8010B484",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x8010B510",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x8010BBF0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 172,
+      "candidate_bytes": 396,
+      "status": "different"
+    },
+    {
+      "address": "0x8010BC9C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 252,
+      "candidate_bytes": 516,
+      "status": "different"
+    },
+    {
+      "address": "0x8010BE14",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x8010BE24",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 112,
+      "candidate_bytes": 156,
+      "status": "different"
+    },
+    {
+      "address": "0x8010BE94",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 108,
+      "candidate_bytes": 184,
+      "status": "different"
+    },
+    {
+      "address": "0x8010BF20",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 56,
+      "status": "different"
+    },
+    {
+      "address": "0x8010C8F4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8010CA90",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 72,
+      "status": "different"
+    },
+    {
+      "address": "0x8010E550",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 88,
+      "candidate_bytes": 188,
+      "status": "different"
+    },
+    {
+      "address": "0x8010ECB8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 40,
+      "status": "different"
+    },
+    {
+      "address": "0x8010ECD4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 36,
+      "status": "different"
+    },
+    {
+      "address": "0x8010ED5C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 728,
+      "candidate_bytes": 1728,
+      "status": "different"
+    },
+    {
+      "address": "0x8010F4D8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x8010FC28",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x8010FF74",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 132,
+      "candidate_bytes": 288,
+      "status": "different"
+    },
+    {
+      "address": "0x801103CC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 68,
+      "status": "different"
+    },
+    {
+      "address": "0x80110E3C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x80111410",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x80111420",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8011142C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 144,
+      "status": "different"
+    },
+    {
+      "address": "0x801114E0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 104,
+      "candidate_bytes": 208,
+      "status": "different"
+    },
+    {
+      "address": "0x80111548",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 152,
+      "status": "different"
+    },
+    {
+      "address": "0x80112B94",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 48,
+      "status": "different"
+    },
+    {
+      "address": "0x80112C14",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 44,
+      "status": "different"
+    },
+    {
+      "address": "0x8011384C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 44,
+      "status": "different"
+    },
+    {
+      "address": "0x80113D4C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x80113D60",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x80113DBC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 92,
+      "status": "different"
+    },
+    {
+      "address": "0x801140E8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 116,
+      "candidate_bytes": 256,
+      "status": "different"
+    },
+    {
+      "address": "0x80114678",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 108,
+      "candidate_bytes": 332,
+      "status": "different"
+    },
+    {
+      "address": "0x801149DC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 180,
+      "candidate_bytes": 444,
+      "status": "different"
+    },
+    {
+      "address": "0x80116A54",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x8011701C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 56,
+      "status": "different"
+    },
+    {
+      "address": "0x80117214",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 284,
+      "candidate_bytes": 596,
+      "status": "different"
+    },
+    {
+      "address": "0x801195E0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 72,
+      "status": "different"
+    },
+    {
+      "address": "0x80119600",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 128,
+      "status": "different"
+    },
+    {
+      "address": "0x8011A210",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x8011A224",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x8011B500",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 172,
+      "status": "different"
+    },
+    {
+      "address": "0x8011C3C4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x8011DD64",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 96,
+      "candidate_bytes": 224,
+      "status": "different"
+    },
+    {
+      "address": "0x8011DDC4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 372,
+      "candidate_bytes": 744,
+      "status": "different"
+    },
+    {
+      "address": "0x8011DF38",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 372,
+      "candidate_bytes": 744,
+      "status": "different"
+    },
+    {
+      "address": "0x8011E0AC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 1016,
+      "candidate_bytes": 2792,
+      "status": "different"
+    },
+    {
+      "address": "0x8011E834",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x8011E84C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x8011E85C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x8011E94C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x8011EA3C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x8011EB24",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x8011EB34",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x8011EB50",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x8011EB60",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x8011EB7C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x8011F318",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x8011F338",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x80120F14",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x80120FA0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 180,
+      "candidate_bytes": 184,
+      "status": "different"
+    },
+    {
+      "address": "0x80121054",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x80121074",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x80121084",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x801210A0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 148,
+      "candidate_bytes": 216,
+      "status": "different"
+    },
+    {
+      "address": "0x801214B4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 88,
+      "status": "different"
+    },
+    {
+      "address": "0x801214E8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x80121508",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x80121524",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x80121544",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x80121564",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x80121584",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 88,
+      "status": "different"
+    },
+    {
+      "address": "0x801215B8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x801215D4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x801215F0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x80121848",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x8012185C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 64,
+      "status": "different"
+    },
+    {
+      "address": "0x80121F48",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 40,
+      "status": "different"
+    },
+    {
+      "address": "0x80122164",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x80122608",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80122A0C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 48,
+      "status": "different"
+    },
+    {
+      "address": "0x80122A38",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 148,
+      "candidate_bytes": 296,
+      "status": "different"
+    },
+    {
+      "address": "0x80122AD4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 1800,
+      "candidate_bytes": 3008,
+      "status": "different"
+    },
+    {
+      "address": "0x80123444",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80123450",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x80124580",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x8012458C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 188,
+      "candidate_bytes": 284,
+      "status": "different"
+    },
+    {
+      "address": "0x80125594",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x801255B4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 36,
+      "status": "different"
+    },
+    {
+      "address": "0x801255DC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 36,
+      "status": "different"
+    },
+    {
+      "address": "0x801266EC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x801266FC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x8012670C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x80126724",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x801270DC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 160,
+      "candidate_bytes": 316,
+      "status": "different"
+    },
+    {
+      "address": "0x8012717C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 148,
+      "candidate_bytes": 272,
+      "status": "different"
+    },
+    {
+      "address": "0x80128138",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 108,
+      "status": "different"
+    },
+    {
+      "address": "0x80128548",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 364,
+      "candidate_bytes": 924,
+      "status": "different"
+    },
+    {
+      "address": "0x8012C2E0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 104,
+      "candidate_bytes": 336,
+      "status": "different"
+    },
+    {
+      "address": "0x8012C3E0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 116,
+      "status": "different"
+    },
+    {
+      "address": "0x8012DA18",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 68,
+      "status": "different"
+    },
+    {
+      "address": "0x8012EF30",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8012F1C4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 80,
+      "candidate_bytes": 116,
+      "status": "different"
+    },
+    {
+      "address": "0x8012F214",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 152,
+      "candidate_bytes": 276,
+      "status": "different"
+    },
+    {
+      "address": "0x8012F420",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 40,
+      "status": "different"
+    },
+    {
+      "address": "0x8012F444",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 36,
+      "status": "different"
+    },
+    {
+      "address": "0x8012F464",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 92,
+      "status": "different"
+    },
+    {
+      "address": "0x8012F4A0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 64,
+      "status": "different"
+    },
+    {
+      "address": "0x8012F4DC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 64,
+      "status": "different"
+    },
+    {
+      "address": "0x8012F628",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 344,
+      "candidate_bytes": 824,
+      "status": "different"
+    },
+    {
+      "address": "0x8012FB24",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 292,
+      "candidate_bytes": 588,
+      "status": "different"
+    },
+    {
+      "address": "0x8012FC48",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x80130350",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 156,
+      "candidate_bytes": 248,
+      "status": "different"
+    },
+    {
+      "address": "0x801303EC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 140,
+      "candidate_bytes": 364,
+      "status": "different"
+    },
+    {
+      "address": "0x80130478",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x80130758",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 64,
+      "candidate_bytes": 72,
+      "status": "different"
+    },
+    {
+      "address": "0x80130C1C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x80130CA8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 40,
+      "status": "different"
+    },
+    {
+      "address": "0x80130CCC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x80130CE0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x80130CF4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x80130D98",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x80130DB4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x80130DC8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x80130DE4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 44,
+      "status": "different"
+    },
+    {
+      "address": "0x801311B0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 136,
+      "candidate_bytes": 264,
+      "status": "different"
+    },
+    {
+      "address": "0x80131238",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 72,
+      "status": "different"
+    },
+    {
+      "address": "0x80131280",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 80,
+      "status": "different"
+    },
+    {
+      "address": "0x801312C8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 92,
+      "candidate_bytes": 88,
+      "status": "different"
+    },
+    {
+      "address": "0x80131324",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 76,
+      "candidate_bytes": 156,
+      "status": "different"
+    },
+    {
+      "address": "0x80131370",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 68,
+      "status": "different"
+    },
+    {
+      "address": "0x801313AC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 40,
+      "status": "different"
+    },
+    {
+      "address": "0x801313D0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 144,
+      "candidate_bytes": 148,
+      "status": "different"
+    },
+    {
+      "address": "0x80131460",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 144,
+      "candidate_bytes": 148,
+      "status": "different"
+    },
+    {
+      "address": "0x801314F0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 80,
+      "status": "different"
+    },
+    {
+      "address": "0x80131680",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 44,
+      "status": "different"
+    },
+    {
+      "address": "0x801316A8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 104,
+      "candidate_bytes": 148,
+      "status": "different"
+    },
+    {
+      "address": "0x801317D8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 104,
+      "candidate_bytes": 108,
+      "status": "different"
+    },
+    {
+      "address": "0x80131A68",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x80131A84",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 348,
+      "candidate_bytes": 600,
+      "status": "different"
+    },
+    {
+      "address": "0x80131BE0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 380,
+      "candidate_bytes": 716,
+      "status": "different"
+    },
+    {
+      "address": "0x80131D5C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x80131E90",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80131F18",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 244,
+      "candidate_bytes": 396,
+      "status": "different"
+    },
+    {
+      "address": "0x8013200C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 244,
+      "candidate_bytes": 396,
+      "status": "different"
+    },
+    {
+      "address": "0x80132100",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 76,
+      "status": "different"
+    },
+    {
+      "address": "0x8013243C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 288,
+      "candidate_bytes": 516,
+      "status": "different"
+    },
+    {
+      "address": "0x8013255C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 72,
+      "status": "different"
+    },
+    {
+      "address": "0x801325EC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x80132600",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x80132614",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 140,
+      "candidate_bytes": 232,
+      "status": "different"
+    },
+    {
+      "address": "0x801326A0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 184,
+      "candidate_bytes": 236,
+      "status": "different"
+    },
+    {
+      "address": "0x80132BB0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 380,
+      "candidate_bytes": 516,
+      "status": "different"
+    },
+    {
+      "address": "0x80132D2C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 44,
+      "status": "different"
+    },
+    {
+      "address": "0x80132D9C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 204,
+      "candidate_bytes": 440,
+      "status": "different"
+    },
+    {
+      "address": "0x80132E68",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 40,
+      "status": "different"
+    },
+    {
+      "address": "0x80132E8C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 140,
+      "candidate_bytes": 168,
+      "status": "different"
+    },
+    {
+      "address": "0x80132F18",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 116,
+      "candidate_bytes": 116,
+      "status": "different"
+    },
+    {
+      "address": "0x80132F8C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 116,
+      "candidate_bytes": 108,
+      "status": "different"
+    },
+    {
+      "address": "0x80133000",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 108,
+      "candidate_bytes": 168,
+      "status": "different"
+    },
+    {
+      "address": "0x8013306C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 108,
+      "candidate_bytes": 168,
+      "status": "different"
+    },
+    {
+      "address": "0x801330D8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 84,
+      "candidate_bytes": 84,
+      "status": "different"
+    },
+    {
+      "address": "0x8013312C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 152,
+      "candidate_bytes": 148,
+      "status": "different"
+    },
+    {
+      "address": "0x801331C4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 84,
+      "candidate_bytes": 96,
+      "status": "different"
+    },
+    {
+      "address": "0x80133218",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 132,
+      "candidate_bytes": 252,
+      "status": "different"
+    },
+    {
+      "address": "0x80133474",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 52,
+      "status": "different"
+    },
+    {
+      "address": "0x801336C0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 256,
+      "candidate_bytes": 264,
+      "status": "different"
+    },
+    {
+      "address": "0x801337C0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 84,
+      "candidate_bytes": 164,
+      "status": "different"
+    },
+    {
+      "address": "0x80133814",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x80133840",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x8013386C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 76,
+      "status": "different"
+    },
+    {
+      "address": "0x801338A0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x801338D8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 232,
+      "candidate_bytes": 316,
+      "status": "different"
+    },
+    {
+      "address": "0x801339C0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x801339EC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 68,
+      "status": "different"
+    },
+    {
+      "address": "0x80133A28",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 64,
+      "status": "different"
+    },
+    {
+      "address": "0x80133F78",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 144,
+      "candidate_bytes": 148,
+      "status": "different"
+    },
+    {
+      "address": "0x80134048",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 44,
+      "status": "different"
+    },
+    {
+      "address": "0x80134070",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 132,
+      "candidate_bytes": 184,
+      "status": "different"
+    },
+    {
+      "address": "0x8013493C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x8013494C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 196,
+      "candidate_bytes": 292,
+      "status": "different"
+    },
+    {
+      "address": "0x80134A10",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 24,
+      "status": "match"
+    },
+    {
+      "address": "0x80134A54",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 248,
+      "candidate_bytes": 420,
+      "status": "different"
+    },
+    {
+      "address": "0x80137C84",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 44,
+      "status": "different"
+    },
+    {
+      "address": "0x80137CDC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 36,
+      "status": "different"
+    },
+    {
+      "address": "0x80137CF4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x801380CC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x801380DC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x801380EC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x801380F8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 84,
+      "status": "different"
+    },
+    {
+      "address": "0x80138450",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 44,
+      "status": "different"
+    },
+    {
+      "address": "0x80138AF0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 172,
+      "status": "different"
+    },
+    {
+      "address": "0x80138DD8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 44,
+      "status": "different"
+    },
+    {
+      "address": "0x8013943C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 108,
+      "candidate_bytes": 204,
+      "status": "different"
+    },
+    {
+      "address": "0x801394A8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 108,
+      "candidate_bytes": 200,
+      "status": "different"
+    },
+    {
+      "address": "0x80139644",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x80139A14",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x8013A06C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 64,
+      "candidate_bytes": 92,
+      "status": "different"
+    },
+    {
+      "address": "0x8013A120",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8013A1CC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 116,
+      "status": "different"
+    },
+    {
+      "address": "0x8013A6DC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x8013A6F0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x8013A6FC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x8013A708",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x8013A714",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 156,
+      "status": "different"
+    },
+    {
+      "address": "0x8013A8F4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 64,
+      "status": "different"
+    },
+    {
+      "address": "0x8013C664",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 76,
+      "status": "different"
+    },
+    {
+      "address": "0x8013C83C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 348,
+      "candidate_bytes": 1088,
+      "status": "different"
+    },
+    {
+      "address": "0x8013CD88",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 92,
+      "candidate_bytes": 184,
+      "status": "different"
+    },
+    {
+      "address": "0x8013DC24",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 80,
+      "candidate_bytes": 180,
+      "status": "different"
+    },
+    {
+      "address": "0x8013DE4C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8013DE58",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 68,
+      "status": "different"
+    },
+    {
+      "address": "0x8013DE78",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 68,
+      "status": "different"
+    },
+    {
+      "address": "0x8013DE98",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 68,
+      "status": "different"
+    },
+    {
+      "address": "0x8013E1A0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 56,
+      "status": "different"
+    },
+    {
+      "address": "0x8013EC08",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x8013EDFC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x80140F24",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 96,
+      "candidate_bytes": 168,
+      "status": "different"
+    },
+    {
+      "address": "0x8014100C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 100,
+      "candidate_bytes": 172,
+      "status": "different"
+    },
+    {
+      "address": "0x80141070",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 144,
+      "candidate_bytes": 144,
+      "status": "different"
+    },
+    {
+      "address": "0x80141100",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 124,
+      "candidate_bytes": 196,
+      "status": "different"
+    },
+    {
+      "address": "0x80141974",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 88,
+      "candidate_bytes": 160,
+      "status": "different"
+    },
+    {
+      "address": "0x80141CCC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 120,
+      "candidate_bytes": 192,
+      "status": "different"
+    },
+    {
+      "address": "0x80141DFC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 124,
+      "candidate_bytes": 196,
+      "status": "different"
+    },
+    {
+      "address": "0x80141F38",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 148,
+      "candidate_bytes": 220,
+      "status": "different"
+    },
+    {
+      "address": "0x801428D4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 112,
+      "candidate_bytes": 192,
+      "status": "different"
+    },
+    {
+      "address": "0x80142CC4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 104,
+      "candidate_bytes": 172,
+      "status": "different"
+    },
+    {
+      "address": "0x80142D2C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 152,
+      "candidate_bytes": 144,
+      "status": "different"
+    },
+    {
+      "address": "0x80142DC4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 100,
+      "candidate_bytes": 168,
+      "status": "different"
+    },
+    {
+      "address": "0x80142E28",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 144,
+      "candidate_bytes": 136,
+      "status": "different"
+    },
+    {
+      "address": "0x80142EB8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 128,
+      "candidate_bytes": 196,
+      "status": "different"
+    },
+    {
+      "address": "0x801438F4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 92,
+      "candidate_bytes": 160,
+      "status": "different"
+    },
+    {
+      "address": "0x80143950",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 128,
+      "candidate_bytes": 120,
+      "status": "different"
+    },
+    {
+      "address": "0x80145124",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 140,
+      "candidate_bytes": 224,
+      "status": "different"
+    },
+    {
+      "address": "0x801451B0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 252,
+      "candidate_bytes": 296,
+      "status": "different"
+    },
+    {
+      "address": "0x801452AC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 112,
+      "candidate_bytes": 196,
+      "status": "different"
+    },
+    {
+      "address": "0x8014531C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 196,
+      "candidate_bytes": 240,
+      "status": "different"
+    },
+    {
+      "address": "0x801453E0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 96,
+      "candidate_bytes": 180,
+      "status": "different"
+    },
+    {
+      "address": "0x80145440",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 164,
+      "candidate_bytes": 208,
+      "status": "different"
+    },
+    {
+      "address": "0x801454E4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 188,
+      "candidate_bytes": 276,
+      "status": "different"
+    },
+    {
+      "address": "0x801456E0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 160,
+      "candidate_bytes": 272,
+      "status": "different"
+    },
+    {
+      "address": "0x80145888",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 136,
+      "candidate_bytes": 248,
+      "status": "different"
+    },
+    {
+      "address": "0x801459F8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 84,
+      "candidate_bytes": 168,
+      "status": "different"
+    },
+    {
+      "address": "0x80145A4C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 140,
+      "candidate_bytes": 184,
+      "status": "different"
+    },
+    {
+      "address": "0x80145AD8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 124,
+      "candidate_bytes": 232,
+      "status": "different"
+    },
+    {
+      "address": "0x80146BD8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 96,
+      "candidate_bytes": 248,
+      "status": "different"
+    },
+    {
+      "address": "0x80146C38",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 104,
+      "candidate_bytes": 244,
+      "status": "different"
+    },
+    {
+      "address": "0x80147384",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 88,
+      "candidate_bytes": 156,
+      "status": "different"
+    },
+    {
+      "address": "0x801473DC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 212,
+      "candidate_bytes": 556,
+      "status": "different"
+    },
+    {
+      "address": "0x80148FFC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 124,
+      "status": "different"
+    },
+    {
+      "address": "0x8014AB20",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x8015C924",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x80160D8C",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 52,
+      "status": "different"
+    },
+    {
+      "address": "0x80160DC0",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x80161A64",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 124,
+      "candidate_bytes": 440,
+      "status": "different"
+    },
+    {
+      "address": "0x80162950",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x80162B00",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x80162B9C",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x80162C38",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x8016332C",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x801633B0",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 100,
+      "candidate_bytes": 112,
+      "status": "different"
+    },
+    {
+      "address": "0x801636B8",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x80167CCC",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x8016BBF8",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 44,
+      "status": "match"
+    },
+    {
+      "address": "0x80178510",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 252,
+      "candidate_bytes": 496,
+      "status": "different"
+    },
+    {
+      "address": "0x8017860C",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 64,
+      "candidate_bytes": 72,
+      "status": "different"
+    },
+    {
+      "address": "0x8017864C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 180,
+      "candidate_bytes": 400,
+      "status": "different"
+    },
+    {
+      "address": "0x80178A94",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 100,
+      "candidate_bytes": 96,
+      "status": "different"
+    },
+    {
+      "address": "0x80179B98",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 48,
+      "status": "different"
+    },
+    {
+      "address": "0x80179BC4",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 24,
+      "status": "match"
+    },
+    {
+      "address": "0x8017A52C",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x8017B30C",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 76,
+      "candidate_bytes": 72,
+      "status": "different"
+    },
+    {
+      "address": "0x8017B358",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 44,
+      "status": "different"
+    },
+    {
+      "address": "0x8017BDE0",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x8017BDF0",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8017BE98",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 108,
+      "candidate_bytes": 240,
+      "status": "different"
+    },
+    {
+      "address": "0x8017BF04",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 108,
+      "candidate_bytes": 240,
+      "status": "different"
+    },
+    {
+      "address": "0x8017DAC0",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x8017E62C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 196,
+      "candidate_bytes": 504,
+      "status": "different"
+    },
+    {
+      "address": "0x8017E6F0",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 100,
+      "candidate_bytes": 124,
+      "status": "different"
+    },
+    {
+      "address": "0x8017FAA0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 200,
+      "candidate_bytes": 200,
+      "status": "different"
+    },
+    {
+      "address": "0x801809FC",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 44,
+      "status": "match"
+    },
+    {
+      "address": "0x80184564",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x80184574",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x8018578C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 128,
+      "candidate_bytes": 248,
+      "status": "different"
+    },
+    {
+      "address": "0x8018580C",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x80185960",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80185C6C",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 64,
+      "candidate_bytes": 64,
+      "status": "match"
+    },
+    {
+      "address": "0x80185EC0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 396,
+      "candidate_bytes": 696,
+      "status": "different"
+    },
+    {
+      "address": "0x801862C0",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x801862E8",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x8018640C",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x80186428",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x80186444",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x80186664",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 36,
+      "status": "different"
+    },
+    {
+      "address": "0x80186688",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 32,
+      "status": "match"
+    },
+    {
+      "address": "0x801866AC",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x801866CC",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x80186B20",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 40,
+      "status": "different"
+    },
+    {
+      "address": "0x80186B50",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 176,
+      "candidate_bytes": 428,
+      "status": "different"
+    },
+    {
+      "address": "0x80186CC8",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x80186D28",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x80186D4C",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 88,
+      "status": "different"
+    },
+    {
+      "address": "0x80188564",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x801885CC",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801885DC",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 40,
+      "status": "different"
+    },
+    {
+      "address": "0x80188608",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x80188628",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 40,
+      "status": "different"
+    },
+    {
+      "address": "0x80188654",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x80188834",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x8018B424",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 44,
+      "status": "match"
+    },
+    {
+      "address": "0x8018B450",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x8018B558",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x8018B8D0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 104,
+      "status": "different"
+    },
+    {
+      "address": "0x8018C40C",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x8018C41C",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x8018C4F8",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x8018C510",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x8018C6C0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x8018C8A4",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x8018CC3C",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 92,
+      "candidate_bytes": 108,
+      "status": "different"
+    },
+    {
+      "address": "0x8018CC98",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x8018CE48",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x8018CE58",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x8018CE68",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x8018CE78",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x8018CE88",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x8018CE98",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x8018CEAC",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x8018CEBC",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x8018D138",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 240,
+      "candidate_bytes": 608,
+      "status": "different"
+    },
+    {
+      "address": "0x8018D560",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 100,
+      "candidate_bytes": 204,
+      "status": "different"
+    },
+    {
+      "address": "0x8018D5C4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 100,
+      "candidate_bytes": 204,
+      "status": "different"
+    },
+    {
+      "address": "0x8018D628",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 104,
+      "candidate_bytes": 188,
+      "status": "different"
+    },
+    {
+      "address": "0x8018D690",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 36,
+      "status": "different"
+    },
+    {
+      "address": "0x8018D6BC",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 84,
+      "candidate_bytes": 80,
+      "status": "different"
+    },
+    {
+      "address": "0x8018DE8C",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x8018F74C",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 64,
+      "candidate_bytes": 72,
+      "status": "different"
+    },
+    {
+      "address": "0x801956F4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 64,
+      "candidate_bytes": 68,
+      "status": "different"
+    },
+    {
+      "address": "0x80195AF4",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 40,
+      "status": "different"
+    },
+    {
+      "address": "0x80199830",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 24,
+      "status": "match"
+    },
+    {
+      "address": "0x8019D194",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "match"
+    },
+    {
+      "address": "0x8019DB58",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 168,
+      "status": "different"
+    },
+    {
+      "address": "0x801A0AF8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x801A0C10",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "match"
+    },
+    {
+      "address": "0x801A1798",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 40,
+      "status": "match"
+    },
+    {
+      "address": "0x801A1C30",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 32,
+      "status": "match"
+    },
+    {
+      "address": "0x801A1C50",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 32,
+      "status": "match"
+    },
+    {
+      "address": "0x801A1C70",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 24,
+      "status": "match"
+    },
+    {
+      "address": "0x801A2210",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x801A2220",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x801A4C50",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 76,
+      "candidate_bytes": 204,
+      "status": "different"
+    },
+    {
+      "address": "0x801A7F74",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x801AE290",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 24,
+      "status": "match"
+    },
+    {
+      "address": "0x801AE384",
+      "source": "src/recovered/leaf_helpers.c",
+      "original_bytes": 100,
+      "candidate_bytes": 100,
+      "status": "match"
+    },
+    {
+      "address": "0x801AE3E8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 120,
+      "candidate_bytes": 204,
+      "status": "different"
+    },
+    {
+      "address": "0x801B0170",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x801B3660",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 40,
+      "status": "match"
+    },
+    {
+      "address": "0x801B55FC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x801B5608",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x801B5614",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x801B5620",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x801B5980",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x801B6A14",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x801B6A28",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x801B6A3C",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x801B6A5C",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x801B6A7C",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 96,
+      "candidate_bytes": 92,
+      "status": "different"
+    },
+    {
+      "address": "0x801B6ADC",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 84,
+      "candidate_bytes": 80,
+      "status": "different"
+    },
+    {
+      "address": "0x801B70A0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 228,
+      "candidate_bytes": 768,
+      "status": "different"
+    },
+    {
+      "address": "0x801B72EC",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x801B7300",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 36,
+      "status": "different"
+    },
+    {
+      "address": "0x801B7328",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 36,
+      "status": "different"
+    },
+    {
+      "address": "0x801B7350",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 40,
+      "status": "different"
+    },
+    {
+      "address": "0x801B8778",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x801B8790",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x801B8A9C",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801B8B30",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x801B8C64",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x801B8FD0",
+      "source": "src/recovered/dbu_payload_dispatch.c",
+      "original_bytes": 68,
+      "candidate_bytes": 68,
+      "status": "match"
+    },
+    {
+      "address": "0x801B90D0",
+      "source": "src/recovered/resource_loaders.c",
+      "original_bytes": 36,
+      "candidate_bytes": 36,
+      "status": "match"
+    },
+    {
+      "address": "0x801B90F4",
+      "source": "src/recovered/runtime_helpers.c",
+      "original_bytes": 156,
+      "candidate_bytes": 156,
+      "status": "match"
+    },
+    {
+      "address": "0x801B9190",
+      "source": "src/recovered/runtime_helpers.c",
+      "original_bytes": 108,
+      "candidate_bytes": 108,
+      "status": "match"
+    },
+    {
+      "address": "0x801B91FC",
+      "source": "src/recovered/resource_array.c",
+      "original_bytes": 72,
+      "candidate_bytes": 72,
+      "status": "different"
+    },
+    {
+      "address": "0x801B9244",
+      "source": "src/recovered/runtime_helpers.c",
+      "original_bytes": 184,
+      "candidate_bytes": 184,
+      "status": "different"
+    },
+    {
+      "address": "0x801B92FC",
+      "source": "src/recovered/resource_array.c",
+      "original_bytes": 112,
+      "candidate_bytes": 112,
+      "status": "different"
+    },
+    {
+      "address": "0x801B976C",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x801B977C",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x801B99C8",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 52,
+      "status": "different"
+    },
+    {
+      "address": "0x801B99FC",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 48,
+      "status": "different"
+    },
+    {
+      "address": "0x801BA5E0",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 44,
+      "status": "different"
+    },
+    {
+      "address": "0x801BB8E8",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 40,
+      "status": "match"
+    },
+    {
+      "address": "0x801BCF90",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 24,
+      "status": "different"
+    },
+    {
+      "address": "0x801BD24C",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 44,
+      "status": "match"
+    },
+    {
+      "address": "0x801BEFE0",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x801C235C",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x801C275C",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x801C3284",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 48,
+      "status": "match"
+    },
+    {
+      "address": "0x801C3A88",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 68,
+      "status": "different"
+    },
+    {
+      "address": "0x801C3ABC",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x801C3ACC",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 96,
+      "candidate_bytes": 132,
+      "status": "different"
+    },
+    {
+      "address": "0x801C3B54",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x801C3B68",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 72,
+      "status": "different"
+    },
+    {
+      "address": "0x801C3BB8",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 40,
+      "status": "match"
+    },
+    {
+      "address": "0x801C3BE0",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x801C3BEC",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x801C3EEC",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x801C45F8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 136,
+      "candidate_bytes": 240,
+      "status": "different"
+    },
+    {
+      "address": "0x801C4FAC",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 72,
+      "status": "different"
+    },
+    {
+      "address": "0x801C5378",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 96,
+      "candidate_bytes": 232,
+      "status": "different"
+    },
+    {
+      "address": "0x801C5944",
+      "source": "src/recovered/resource_loaders.c",
+      "original_bytes": 96,
+      "candidate_bytes": 96,
+      "status": "match"
+    },
+    {
+      "address": "0x801C59A4",
+      "source": "src/recovered/resource_loaders.c",
+      "original_bytes": 96,
+      "candidate_bytes": 96,
+      "status": "match"
+    },
+    {
+      "address": "0x801C5A04",
+      "source": "src/recovered/resource_loaders.c",
+      "original_bytes": 96,
+      "candidate_bytes": 96,
+      "status": "match"
+    },
+    {
+      "address": "0x801C5A64",
+      "source": "src/recovered/runtime_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 32,
+      "status": "match"
+    },
+    {
+      "address": "0x801C5BAC",
+      "source": "src/recovered/resource_loaders.c",
+      "original_bytes": 136,
+      "candidate_bytes": 136,
+      "status": "different"
+    },
+    {
+      "address": "0x801C5C34",
+      "source": "src/recovered/resource_loaders.c",
+      "original_bytes": 136,
+      "candidate_bytes": 136,
+      "status": "different"
+    },
+    {
+      "address": "0x801C63A4",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 32,
+      "status": "match"
+    },
+    {
+      "address": "0x801C8BC4",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 56,
+      "status": "different"
+    },
+    {
+      "address": "0x801CACD4",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 92,
+      "candidate_bytes": 92,
+      "status": "different"
+    },
+    {
+      "address": "0x801CB534",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801CB550",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x801CB7AC",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x801CB7B8",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x801CB7C4",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 24,
+      "status": "match"
+    },
+    {
+      "address": "0x801CBA5C",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801CBB60",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x801CC4A4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x801CC83C",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 72,
+      "status": "different"
+    },
+    {
+      "address": "0x801CCFF4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x801CD000",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 40,
+      "status": "match"
+    },
+    {
+      "address": "0x801CD280",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 40,
+      "status": "different"
+    },
+    {
+      "address": "0x801CDB38",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801CE658",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 72,
+      "status": "different"
+    },
+    {
+      "address": "0x801CE720",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801CF4F8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 160,
+      "candidate_bytes": 248,
+      "status": "different"
+    },
+    {
+      "address": "0x801CFEE8",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 56,
+      "status": "different"
+    },
+    {
+      "address": "0x801CFF24",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801CFF34",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801D8C44",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801D8C54",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x801D8C60",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x801D8C84",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x801D8DE4",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801D8F30",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801D90A4",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801D9224",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x801D928C",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801D929C",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801D9DE8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 116,
+      "candidate_bytes": 104,
+      "status": "different"
+    },
+    {
+      "address": "0x801DA394",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 68,
+      "status": "different"
+    },
+    {
+      "address": "0x801DA3DC",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 52,
+      "status": "different"
+    },
+    {
+      "address": "0x801DA410",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x801DB0E0",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x801DB0EC",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x801DB114",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x801DB5B8",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 40,
+      "status": "different"
+    },
+    {
+      "address": "0x801DB750",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801DB8A0",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x801DCD90",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x801DCDA4",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 16,
+      "status": "different"
+    },
+    {
+      "address": "0x801DCE50",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 56,
+      "status": "different"
+    },
+    {
+      "address": "0x801DEC18",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x801DF2C0",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 56,
+      "status": "different"
+    },
+    {
+      "address": "0x801DF2FC",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 60,
+      "candidate_bytes": 56,
+      "status": "different"
+    },
+    {
+      "address": "0x801E0C2C",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 48,
+      "status": "match"
+    },
+    {
+      "address": "0x801E1CE8",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x801E4E08",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 36,
+      "status": "different"
+    },
+    {
+      "address": "0x801E5530",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 92,
+      "candidate_bytes": 84,
+      "status": "different"
+    },
+    {
+      "address": "0x801E5878",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x801E58C0",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 80,
+      "candidate_bytes": 76,
+      "status": "different"
+    },
+    {
+      "address": "0x801E5910",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x801E6228",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x801E6244",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x801E6260",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 52,
+      "status": "different"
+    },
+    {
+      "address": "0x801E6288",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 52,
+      "status": "different"
+    },
+    {
+      "address": "0x801E6688",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 68,
+      "status": "different"
+    },
+    {
+      "address": "0x801E66CC",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 68,
+      "status": "different"
+    },
+    {
+      "address": "0x801E6710",
+      "source": "src/recovered/resource_leaf_helpers.c",
+      "original_bytes": 92,
+      "candidate_bytes": 92,
+      "status": "different"
+    },
+    {
+      "address": "0x801E6950",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 124,
+      "status": "different"
+    },
+    {
+      "address": "0x801E6994",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 92,
+      "candidate_bytes": 148,
+      "status": "different"
+    },
+    {
+      "address": "0x801E69F0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 92,
+      "candidate_bytes": 148,
+      "status": "different"
+    },
+    {
+      "address": "0x801E6A4C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 120,
+      "candidate_bytes": 216,
+      "status": "different"
+    },
+    {
+      "address": "0x801E6AC4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 176,
+      "candidate_bytes": 308,
+      "status": "different"
+    },
+    {
+      "address": "0x801E6B7C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 132,
+      "candidate_bytes": 264,
+      "status": "different"
+    },
+    {
+      "address": "0x801E6C00",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 132,
+      "candidate_bytes": 264,
+      "status": "different"
+    },
+    {
+      "address": "0x801E6C84",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 132,
+      "candidate_bytes": 264,
+      "status": "different"
+    },
+    {
+      "address": "0x801E6D08",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 92,
+      "candidate_bytes": 160,
+      "status": "different"
+    },
+    {
+      "address": "0x801E6D64",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 140,
+      "candidate_bytes": 276,
+      "status": "different"
+    },
+    {
+      "address": "0x801E6DF0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 112,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7058",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 96,
+      "candidate_bytes": 164,
+      "status": "different"
+    },
+    {
+      "address": "0x801E70B8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 96,
+      "candidate_bytes": 164,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7118",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 80,
+      "candidate_bytes": 136,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7168",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 124,
+      "status": "different"
+    },
+    {
+      "address": "0x801E71AC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 124,
+      "status": "different"
+    },
+    {
+      "address": "0x801E71F0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 112,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7228",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 112,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7260",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 92,
+      "candidate_bytes": 148,
+      "status": "different"
+    },
+    {
+      "address": "0x801E72BC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 92,
+      "candidate_bytes": 148,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7318",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 92,
+      "candidate_bytes": 148,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7374",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 112,
+      "status": "different"
+    },
+    {
+      "address": "0x801E73AC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 124,
+      "status": "different"
+    },
+    {
+      "address": "0x801E73F0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 92,
+      "candidate_bytes": 148,
+      "status": "different"
+    },
+    {
+      "address": "0x801E744C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 124,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7490",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 124,
+      "status": "different"
+    },
+    {
+      "address": "0x801E74D4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 124,
+      "status": "different"
+    },
+    {
+      "address": "0x801E75DC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 124,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7620",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 92,
+      "candidate_bytes": 148,
+      "status": "different"
+    },
+    {
+      "address": "0x801E767C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 80,
+      "candidate_bytes": 136,
+      "status": "different"
+    },
+    {
+      "address": "0x801E76CC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 124,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7710",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 132,
+      "candidate_bytes": 264,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7794",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 132,
+      "candidate_bytes": 264,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7818",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 132,
+      "candidate_bytes": 264,
+      "status": "different"
+    },
+    {
+      "address": "0x801E789C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 132,
+      "candidate_bytes": 264,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7920",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 132,
+      "candidate_bytes": 264,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7A98",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 84,
+      "candidate_bytes": 152,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7AEC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 100,
+      "candidate_bytes": 168,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7B50",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 100,
+      "candidate_bytes": 168,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7BB4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 116,
+      "candidate_bytes": 228,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7E60",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 148,
+      "candidate_bytes": 296,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7EF4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 112,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7F2C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 124,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7F70",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 124,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7FB4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 124,
+      "status": "different"
+    },
+    {
+      "address": "0x801E7FF8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 128,
+      "status": "different"
+    },
+    {
+      "address": "0x801E80C0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 92,
+      "candidate_bytes": 160,
+      "status": "different"
+    },
+    {
+      "address": "0x801E9488",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 156,
+      "candidate_bytes": 300,
+      "status": "different"
+    },
+    {
+      "address": "0x801E9524",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 156,
+      "candidate_bytes": 300,
+      "status": "different"
+    },
+    {
+      "address": "0x801E95C0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 156,
+      "candidate_bytes": 304,
+      "status": "different"
+    },
+    {
+      "address": "0x801E965C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 156,
+      "candidate_bytes": 304,
+      "status": "different"
+    },
+    {
+      "address": "0x801E96F8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 156,
+      "candidate_bytes": 304,
+      "status": "different"
+    },
+    {
+      "address": "0x801E9794",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 156,
+      "candidate_bytes": 304,
+      "status": "different"
+    },
+    {
+      "address": "0x801E9830",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 188,
+      "candidate_bytes": 352,
+      "status": "different"
+    },
+    {
+      "address": "0x801E98EC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 188,
+      "candidate_bytes": 352,
+      "status": "different"
+    },
+    {
+      "address": "0x801E99A8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 188,
+      "candidate_bytes": 356,
+      "status": "different"
+    },
+    {
+      "address": "0x801E9A64",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 188,
+      "candidate_bytes": 356,
+      "status": "different"
+    },
+    {
+      "address": "0x801E9B20",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 188,
+      "candidate_bytes": 356,
+      "status": "different"
+    },
+    {
+      "address": "0x801E9BDC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 188,
+      "candidate_bytes": 356,
+      "status": "different"
+    },
+    {
+      "address": "0x801E9D1C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 132,
+      "candidate_bytes": 220,
+      "status": "different"
+    },
+    {
+      "address": "0x801E9DA0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 88,
+      "candidate_bytes": 156,
+      "status": "different"
+    },
+    {
+      "address": "0x801E9E74",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 104,
+      "candidate_bytes": 160,
+      "status": "different"
+    },
+    {
+      "address": "0x801EA2C8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 116,
+      "candidate_bytes": 172,
+      "status": "different"
+    },
+    {
+      "address": "0x801EA414",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 104,
+      "candidate_bytes": 172,
+      "status": "different"
+    },
+    {
+      "address": "0x801EA47C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 104,
+      "candidate_bytes": 172,
+      "status": "different"
+    },
+    {
+      "address": "0x801EA88C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 124,
+      "status": "different"
+    },
+    {
+      "address": "0x801EA8D0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 100,
+      "candidate_bytes": 176,
+      "status": "different"
+    },
+    {
+      "address": "0x801EAB7C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 108,
+      "candidate_bytes": 188,
+      "status": "different"
+    },
+    {
+      "address": "0x801EAC70",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 108,
+      "candidate_bytes": 188,
+      "status": "different"
+    },
+    {
+      "address": "0x801EAD84",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x801EAEF8",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 76,
+      "candidate_bytes": 120,
+      "status": "different"
+    },
+    {
+      "address": "0x801EBAF0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 80,
+      "status": "different"
+    },
+    {
+      "address": "0x801ED180",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 76,
+      "status": "different"
+    },
+    {
+      "address": "0x801EE704",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 84,
+      "candidate_bytes": 160,
+      "status": "different"
+    },
+    {
+      "address": "0x801EE758",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x801EEBBC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 184,
+      "status": "different"
+    },
+    {
+      "address": "0x801EEC78",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 220,
+      "status": "different"
+    },
+    {
+      "address": "0x801EED30",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x801EF774",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 176,
+      "candidate_bytes": 504,
+      "status": "different"
+    },
+    {
+      "address": "0x801EF94C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 76,
+      "status": "different"
+    },
+    {
+      "address": "0x801EFEF8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 164,
+      "candidate_bytes": 416,
+      "status": "different"
+    },
+    {
+      "address": "0x801EFF9C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x801EFFB0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 108,
+      "status": "different"
+    },
+    {
+      "address": "0x801EFFE4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x801F30A8",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x801F30B4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801F30C4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801F30D4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801F30E4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801F30F4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801F3104",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801F3114",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801F3124",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801F3134",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801F3144",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801F3154",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801F3164",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801F3174",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801F3184",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801F3194",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x801F87D0",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 48,
+      "status": "different"
+    },
+    {
+      "address": "0x801F89F4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 564,
+      "candidate_bytes": 588,
+      "status": "different"
+    },
+    {
+      "address": "0x801F93F4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 288,
+      "candidate_bytes": 656,
+      "status": "different"
+    },
+    {
+      "address": "0x801FAE38",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 76,
+      "status": "different"
+    },
+    {
+      "address": "0x801FAE5C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 140,
+      "candidate_bytes": 256,
+      "status": "different"
+    },
+    {
+      "address": "0x801FAEE8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 116,
+      "candidate_bytes": 208,
+      "status": "different"
+    },
+    {
+      "address": "0x801FAF5C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 392,
+      "candidate_bytes": 640,
+      "status": "different"
+    },
+    {
+      "address": "0x801FB9E8",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 48,
+      "status": "match"
+    },
+    {
+      "address": "0x801FBB3C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 108,
+      "candidate_bytes": 232,
+      "status": "different"
+    },
+    {
+      "address": "0x801FBBA8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 68,
+      "status": "different"
+    },
+    {
+      "address": "0x801FBBD0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 76,
+      "candidate_bytes": 160,
+      "status": "different"
+    },
+    {
+      "address": "0x801FD8D4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 112,
+      "status": "different"
+    },
+    {
+      "address": "0x801FDC68",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 140,
+      "status": "different"
+    },
+    {
+      "address": "0x801FE118",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x801FE258",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x801FE96C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 36,
+      "status": "different"
+    },
+    {
+      "address": "0x801FECE0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 148,
+      "status": "different"
+    },
+    {
+      "address": "0x801FF4D4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x801FF57C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 124,
+      "candidate_bytes": 292,
+      "status": "different"
+    },
+    {
+      "address": "0x801FF640",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x801FF930",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "match"
+    },
+    {
+      "address": "0x80203014",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 216,
+      "candidate_bytes": 232,
+      "status": "different"
+    },
+    {
+      "address": "0x80203198",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 24,
+      "status": "match"
+    },
+    {
+      "address": "0x802031B0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 140,
+      "candidate_bytes": 256,
+      "status": "different"
+    },
+    {
+      "address": "0x8020323C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 148,
+      "candidate_bytes": 264,
+      "status": "different"
+    },
+    {
+      "address": "0x802032D0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 172,
+      "candidate_bytes": 248,
+      "status": "different"
+    },
+    {
+      "address": "0x8020337C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 76,
+      "candidate_bytes": 132,
+      "status": "different"
+    },
+    {
+      "address": "0x802033C8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 108,
+      "candidate_bytes": 164,
+      "status": "different"
+    },
+    {
+      "address": "0x802035D4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 64,
+      "status": "different"
+    },
+    {
+      "address": "0x8020384C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 168,
+      "candidate_bytes": 480,
+      "status": "different"
+    },
+    {
+      "address": "0x802038F4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 52,
+      "status": "different"
+    },
+    {
+      "address": "0x8020403C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 148,
+      "status": "different"
+    },
+    {
+      "address": "0x802045FC",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80204608",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x80204618",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 12,
+      "status": "different"
+    },
+    {
+      "address": "0x80204900",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80204CEC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 80,
+      "candidate_bytes": 160,
+      "status": "different"
+    },
+    {
+      "address": "0x80205A88",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x80205BF0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 108,
+      "status": "different"
+    },
+    {
+      "address": "0x80205DC4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 32,
+      "status": "different"
+    },
+    {
+      "address": "0x80205DDC",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x80206290",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 48,
+      "status": "different"
+    },
+    {
+      "address": "0x802065A0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 228,
+      "candidate_bytes": 324,
+      "status": "different"
+    },
+    {
+      "address": "0x80206684",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 108,
+      "status": "different"
+    },
+    {
+      "address": "0x802066B4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 268,
+      "candidate_bytes": 380,
+      "status": "different"
+    },
+    {
+      "address": "0x802067C0",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 44,
+      "status": "match"
+    },
+    {
+      "address": "0x80206C60",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x80206C74",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 92,
+      "status": "different"
+    },
+    {
+      "address": "0x80206CF4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 100,
+      "status": "different"
+    },
+    {
+      "address": "0x80206DC8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 136,
+      "status": "different"
+    },
+    {
+      "address": "0x80206DFC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 80,
+      "candidate_bytes": 188,
+      "status": "different"
+    },
+    {
+      "address": "0x80206E4C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 92,
+      "status": "different"
+    },
+    {
+      "address": "0x80206E70",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 124,
+      "candidate_bytes": 260,
+      "status": "different"
+    },
+    {
+      "address": "0x80206EEC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 100,
+      "status": "different"
+    },
+    {
+      "address": "0x80206F18",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x80206F28",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 352,
+      "candidate_bytes": 576,
+      "status": "different"
+    },
+    {
+      "address": "0x80207088",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 64,
+      "status": "different"
+    },
+    {
+      "address": "0x802070AC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 64,
+      "status": "different"
+    },
+    {
+      "address": "0x802070D0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 288,
+      "candidate_bytes": 708,
+      "status": "different"
+    },
+    {
+      "address": "0x802071F0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 64,
+      "candidate_bytes": 148,
+      "status": "different"
+    },
+    {
+      "address": "0x802072A4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 152,
+      "status": "different"
+    },
+    {
+      "address": "0x802072E8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 64,
+      "candidate_bytes": 152,
+      "status": "different"
+    },
+    {
+      "address": "0x80207328",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 140,
+      "candidate_bytes": 364,
+      "status": "different"
+    },
+    {
+      "address": "0x802075D8",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x802075EC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 132,
+      "candidate_bytes": 280,
+      "status": "different"
+    },
+    {
+      "address": "0x80207670",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 124,
+      "candidate_bytes": 292,
+      "status": "different"
+    },
+    {
+      "address": "0x802076EC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 148,
+      "candidate_bytes": 116,
+      "status": "different"
+    },
+    {
+      "address": "0x80207780",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 64,
+      "status": "different"
+    },
+    {
+      "address": "0x80209038",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 48,
+      "status": "different"
+    },
+    {
+      "address": "0x8020BD38",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x8020C508",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 212,
+      "candidate_bytes": 584,
+      "status": "different"
+    },
+    {
+      "address": "0x8020C8DC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 312,
+      "candidate_bytes": 676,
+      "status": "different"
+    },
+    {
+      "address": "0x8020F964",
+      "source": "src/recovered/runtime_helpers.c",
+      "original_bytes": 100,
+      "candidate_bytes": 100,
+      "status": "match"
+    },
+    {
+      "address": "0x8020F9C8",
+      "source": "src/recovered/application_flag.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80210158",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8021018C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 108,
+      "status": "different"
+    },
+    {
+      "address": "0x80211404",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 148,
+      "candidate_bytes": 420,
+      "status": "different"
+    },
+    {
+      "address": "0x80211554",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 28,
+      "status": "different"
+    },
+    {
+      "address": "0x8021180C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 164,
+      "status": "different"
+    },
+    {
+      "address": "0x80211844",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 88,
+      "candidate_bytes": 172,
+      "status": "different"
+    },
+    {
+      "address": "0x80211CEC",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 48,
+      "status": "different"
+    },
+    {
+      "address": "0x80211ED4",
+      "source": "src/recovered/runtime_helpers.c",
+      "original_bytes": 128,
+      "candidate_bytes": 124,
+      "status": "different"
+    },
+    {
+      "address": "0x80211F54",
+      "source": "src/recovered/runtime_helpers.c",
+      "original_bytes": 132,
+      "candidate_bytes": 132,
+      "status": "different"
+    },
+    {
+      "address": "0x80211FE4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x80212078",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 144,
+      "candidate_bytes": 536,
+      "status": "different"
+    },
+    {
+      "address": "0x802122A4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 420,
+      "candidate_bytes": 1372,
+      "status": "different"
+    },
+    {
+      "address": "0x80212448",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 64,
+      "candidate_bytes": 176,
+      "status": "different"
+    },
+    {
+      "address": "0x80212488",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 192,
+      "candidate_bytes": 176,
+      "status": "different"
+    },
+    {
+      "address": "0x802125A8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 192,
+      "candidate_bytes": 176,
+      "status": "different"
+    },
+    {
+      "address": "0x8021311C",
+      "source": "src/recovered/runtime_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 36,
+      "status": "match"
+    },
+    {
+      "address": "0x80213140",
+      "source": "src/recovered/state_lifecycle.c",
+      "original_bytes": 96,
+      "candidate_bytes": 96,
+      "status": "match"
+    },
+    {
+      "address": "0x802131A0",
+      "source": "src/recovered/state_lifecycle.c",
+      "original_bytes": 116,
+      "candidate_bytes": 116,
+      "status": "match"
+    },
+    {
+      "address": "0x80213480",
+      "source": "src/recovered/runtime_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 72,
+      "status": "match"
+    },
+    {
+      "address": "0x80213584",
+      "source": "src/recovered/application_iteration.c",
+      "original_bytes": 124,
+      "candidate_bytes": 124,
+      "status": "match"
+    },
+    {
+      "address": "0x80213708",
+      "source": "src/recovered/runtime_helpers.c",
+      "original_bytes": 8,
+      "candidate_bytes": 8,
+      "status": "match"
+    },
+    {
+      "address": "0x80213710",
+      "source": "src/recovered/runtime_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 52,
+      "status": "match"
+    },
+    {
+      "address": "0x80213744",
+      "source": "src/recovered/runtime_helpers.c",
+      "original_bytes": 56,
+      "candidate_bytes": 56,
+      "status": "match"
+    },
+    {
+      "address": "0x80213850",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 36,
+      "status": "match"
+    },
+    {
+      "address": "0x8021387C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x80213E00",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 100,
+      "status": "different"
+    },
+    {
+      "address": "0x80213EE0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 100,
+      "status": "different"
+    },
+    {
+      "address": "0x80214A48",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x80216E9C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 64,
+      "candidate_bytes": 92,
+      "status": "different"
+    },
+    {
+      "address": "0x80217834",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "match"
+    },
+    {
+      "address": "0x80217E54",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x80217E74",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 112,
+      "candidate_bytes": 168,
+      "status": "different"
+    },
+    {
+      "address": "0x80217FA0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 236,
+      "candidate_bytes": 432,
+      "status": "different"
+    },
+    {
+      "address": "0x8021808C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 132,
+      "candidate_bytes": 244,
+      "status": "different"
+    },
+    {
+      "address": "0x80218110",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 36,
+      "status": "match"
+    },
+    {
+      "address": "0x8021876C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 92,
+      "candidate_bytes": 204,
+      "status": "different"
+    },
+    {
+      "address": "0x8021F908",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 372,
+      "candidate_bytes": 648,
+      "status": "different"
+    },
+    {
+      "address": "0x802205FC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 172,
+      "candidate_bytes": 284,
+      "status": "different"
+    },
+    {
+      "address": "0x80220F90",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 76,
+      "candidate_bytes": 132,
+      "status": "different"
+    },
+    {
+      "address": "0x80220FDC",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "match"
+    },
+    {
+      "address": "0x80221008",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x8022918C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 56,
+      "status": "different"
+    },
+    {
+      "address": "0x802291A8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 144,
+      "status": "different"
+    },
+    {
+      "address": "0x802299F0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 56,
+      "status": "different"
+    },
+    {
+      "address": "0x80229D3C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x80229D4C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x80229E74",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80229E80",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 160,
+      "status": "different"
+    },
+    {
+      "address": "0x8022D5D8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 80,
+      "candidate_bytes": 108,
+      "status": "different"
+    },
+    {
+      "address": "0x8022DCF8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 100,
+      "candidate_bytes": 156,
+      "status": "different"
+    },
+    {
+      "address": "0x8022E908",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8022EC98",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 132,
+      "candidate_bytes": 356,
+      "status": "different"
+    },
+    {
+      "address": "0x8022EE98",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 164,
+      "status": "different"
+    },
+    {
+      "address": "0x8022EEE0",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 48,
+      "status": "different"
+    },
+    {
+      "address": "0x8022F3C0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 200,
+      "status": "different"
+    },
+    {
+      "address": "0x8022F654",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 52,
+      "candidate_bytes": 148,
+      "status": "different"
+    },
+    {
+      "address": "0x8022FA18",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 224,
+      "candidate_bytes": 224,
+      "status": "different"
+    },
+    {
+      "address": "0x802328B4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80234F24",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8023503C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 28,
+      "status": "match"
+    },
+    {
+      "address": "0x80239760",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 40,
+      "status": "different"
+    },
+    {
+      "address": "0x80239784",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 40,
+      "status": "different"
+    },
+    {
+      "address": "0x802397A8",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 36,
+      "status": "different"
+    },
+    {
+      "address": "0x8023B124",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x8023B1F4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x802424A4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 24,
+      "status": "match"
+    },
+    {
+      "address": "0x80242558",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 24,
+      "status": "match"
+    },
+    {
+      "address": "0x8024257C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 72,
+      "status": "different"
+    },
+    {
+      "address": "0x80243F1C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 80,
+      "status": "different"
+    },
+    {
+      "address": "0x802440D0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 64,
+      "candidate_bytes": 164,
+      "status": "different"
+    },
+    {
+      "address": "0x80246B4C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 124,
+      "candidate_bytes": 308,
+      "status": "different"
+    },
+    {
+      "address": "0x8024E44C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 248,
+      "candidate_bytes": 508,
+      "status": "different"
+    },
+    {
+      "address": "0x8024EC14",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 28,
+      "candidate_bytes": 56,
+      "status": "different"
+    },
+    {
+      "address": "0x8025175C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 88,
+      "candidate_bytes": 188,
+      "status": "different"
+    },
+    {
+      "address": "0x8025195C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 72,
+      "candidate_bytes": 184,
+      "status": "different"
+    },
+    {
+      "address": "0x80252ED8",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x80257F7C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 48,
+      "status": "different"
+    },
+    {
+      "address": "0x80257F90",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x802598C0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 52,
+      "status": "different"
+    },
+    {
+      "address": "0x8025A6C4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 64,
+      "candidate_bytes": 164,
+      "status": "different"
+    },
+    {
+      "address": "0x8025AFD0",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x8025B038",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 100,
+      "candidate_bytes": 256,
+      "status": "different"
+    },
+    {
+      "address": "0x8025B09C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x802602E0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 76,
+      "status": "different"
+    },
+    {
+      "address": "0x80260304",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 76,
+      "status": "different"
+    },
+    {
+      "address": "0x80260328",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 76,
+      "status": "different"
+    },
+    {
+      "address": "0x8026034C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 76,
+      "status": "different"
+    },
+    {
+      "address": "0x8026060C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80260650",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 20,
+      "status": "different"
+    },
+    {
+      "address": "0x80260AA8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8026139C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x802613A8",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x802613B4",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 36,
+      "status": "different"
+    },
+    {
+      "address": "0x80261884",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80261898",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 48,
+      "candidate_bytes": 120,
+      "status": "different"
+    },
+    {
+      "address": "0x80262BE8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 52,
+      "status": "different"
+    },
+    {
+      "address": "0x80262D78",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 88,
+      "candidate_bytes": 84,
+      "status": "different"
+    },
+    {
+      "address": "0x80262EE0",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80262EEC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 96,
+      "status": "different"
+    },
+    {
+      "address": "0x802631EC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 76,
+      "status": "different"
+    },
+    {
+      "address": "0x802634A4",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 64,
+      "status": "different"
+    },
+    {
+      "address": "0x802645DC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80265914",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80265920",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8026592C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80265938",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80265944",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80265950",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8026595C",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80265968",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80265C10",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x802660D0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x802660DC",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 36,
+      "status": "match"
+    },
+    {
+      "address": "0x80266384",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 92,
+      "candidate_bytes": 204,
+      "status": "different"
+    },
+    {
+      "address": "0x80266400",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 96,
+      "status": "different"
+    },
+    {
+      "address": "0x80266424",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 36,
+      "candidate_bytes": 100,
+      "status": "different"
+    },
+    {
+      "address": "0x80266448",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x802664CC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x802664EC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x80268790",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x802687A0",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80268E24",
+      "source": "src/recovered/scalar_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80268F70",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 24,
+      "candidate_bytes": 24,
+      "status": "match"
+    },
+    {
+      "address": "0x80268FA8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80269378",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 16,
+      "candidate_bytes": 16,
+      "status": "match"
+    },
+    {
+      "address": "0x8026943C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x8026945C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80269468",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80269474",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 20,
+      "candidate_bytes": 20,
+      "status": "match"
+    },
+    {
+      "address": "0x80269560",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80269894",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8026D1A8",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 40,
+      "candidate_bytes": 112,
+      "status": "different"
+    },
+    {
+      "address": "0x8026D384",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 92,
+      "candidate_bytes": 204,
+      "status": "different"
+    },
+    {
+      "address": "0x8026D3E0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 32,
+      "candidate_bytes": 60,
+      "status": "different"
+    },
+    {
+      "address": "0x8026DB7C",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 68,
+      "candidate_bytes": 168,
+      "status": "different"
+    },
+    {
+      "address": "0x8026DBC0",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 124,
+      "candidate_bytes": 316,
+      "status": "different"
+    },
+    {
+      "address": "0x8026EE40",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x8026EEAC",
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "original_bytes": 12,
+      "candidate_bytes": 12,
+      "status": "match"
+    },
+    {
+      "address": "0x80280928",
+      "source": "src/recovered/runtime_helpers.c",
+      "original_bytes": 44,
+      "candidate_bytes": 44,
+      "status": "match"
+    }
+  ]
+}

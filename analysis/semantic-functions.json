@@ -2,8 +2,8 @@
   "revision": "GJUE78 rev 0",
   "dol_sha256": "49faf28a7d2e25422c145754ef41b0c8a8dfcd83e688db1c39ecf21f6e34b706",
   "scope": "Complete routine semantics; callback callees and original ABI are separate; not a binary matching manifest",
-  "complete_functions": 400,
-  "original_bytes": 12952,
+  "complete_functions": 1000,
+  "original_bytes": 69852,
   "routines": [
     {
       "address": "0x8020F9C8",
@@ -2804,6 +2804,5406 @@
       "source": "src/recovered/scalar_leaf_helpers.c",
       "symbol": "tak_scalar_80268E24",
       "status": "complete-semantic-model"
+    },
+    {
+      "address": "0x80003140",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80003140",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "__set_debug_bba"
+    },
+    {
+      "address": "0x80003540",
+      "original_bytes": 80,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80003540",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "memcpy"
+    },
+    {
+      "address": "0x800035C0",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800035C0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800035C0"
+    },
+    {
+      "address": "0x800090BC",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800090BC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800090BC"
+    },
+    {
+      "address": "0x800090E8",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800090E8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800090E8"
+    },
+    {
+      "address": "0x8000CC20",
+      "original_bytes": 48,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8000CC20",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8000CC20"
+    },
+    {
+      "address": "0x80017D64",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80017D64",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80017D64"
+    },
+    {
+      "address": "0x800294BC",
+      "original_bytes": 56,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800294BC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800294BC"
+    },
+    {
+      "address": "0x8002D6B4",
+      "original_bytes": 208,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8002D6B4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8002D6B4"
+    },
+    {
+      "address": "0x8002DAD4",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8002DAD4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8002DAD4"
+    },
+    {
+      "address": "0x8002ECA4",
+      "original_bytes": 192,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8002ECA4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8002ECA4"
+    },
+    {
+      "address": "0x8002ED64",
+      "original_bytes": 192,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8002ED64",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8002ED64"
+    },
+    {
+      "address": "0x8002EE24",
+      "original_bytes": 184,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8002EE24",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8002EE24"
+    },
+    {
+      "address": "0x8002EEDC",
+      "original_bytes": 184,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8002EEDC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8002EEDC"
+    },
+    {
+      "address": "0x8002EF94",
+      "original_bytes": 184,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8002EF94",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8002EF94"
+    },
+    {
+      "address": "0x80031890",
+      "original_bytes": 80,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80031890",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80031890"
+    },
+    {
+      "address": "0x800318E0",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800318E0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800318E0"
+    },
+    {
+      "address": "0x8003D548",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8003D548",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8003D548"
+    },
+    {
+      "address": "0x8003DDBC",
+      "original_bytes": 84,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8003DDBC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8003DDBC"
+    },
+    {
+      "address": "0x8003E388",
+      "original_bytes": 24,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8003E388",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8003E388"
+    },
+    {
+      "address": "0x8003EA9C",
+      "original_bytes": 24,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8003EA9C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8003EA9C"
+    },
+    {
+      "address": "0x80040AFC",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80040AFC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80040AFC"
+    },
+    {
+      "address": "0x80040B40",
+      "original_bytes": 84,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80040B40",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80040B40"
+    },
+    {
+      "address": "0x80040E2C",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80040E2C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80040E2C"
+    },
+    {
+      "address": "0x80040F18",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80040F18",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80040F18"
+    },
+    {
+      "address": "0x80041590",
+      "original_bytes": 72,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80041590",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80041590"
+    },
+    {
+      "address": "0x80043C84",
+      "original_bytes": 60,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80043C84",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80043C84"
+    },
+    {
+      "address": "0x80045490",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80045490",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80045490"
+    },
+    {
+      "address": "0x8004788C",
+      "original_bytes": 44,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8004788C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8004788C"
+    },
+    {
+      "address": "0x800478B8",
+      "original_bytes": 56,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800478B8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800478B8"
+    },
+    {
+      "address": "0x8004B5CC",
+      "original_bytes": 24,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8004B5CC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8004B5CC"
+    },
+    {
+      "address": "0x8004B5E4",
+      "original_bytes": 20,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8004B5E4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8004B5E4"
+    },
+    {
+      "address": "0x8004B668",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8004B668",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8004B668"
+    },
+    {
+      "address": "0x8004E26C",
+      "original_bytes": 48,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8004E26C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8004E26C"
+    },
+    {
+      "address": "0x8004EB34",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8004EB34",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8004EB34"
+    },
+    {
+      "address": "0x8004F814",
+      "original_bytes": 92,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8004F814",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8004F814"
+    },
+    {
+      "address": "0x80053598",
+      "original_bytes": 52,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80053598",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80053598"
+    },
+    {
+      "address": "0x80053B30",
+      "original_bytes": 108,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80053B30",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80053B30"
+    },
+    {
+      "address": "0x80053B9C",
+      "original_bytes": 132,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80053B9C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80053B9C"
+    },
+    {
+      "address": "0x80054B94",
+      "original_bytes": 128,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80054B94",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80054B94"
+    },
+    {
+      "address": "0x80054C14",
+      "original_bytes": 128,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80054C14",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80054C14"
+    },
+    {
+      "address": "0x80057848",
+      "original_bytes": 104,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80057848",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80057848"
+    },
+    {
+      "address": "0x80057940",
+      "original_bytes": 60,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80057940",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80057940"
+    },
+    {
+      "address": "0x80061E50",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80061E50",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80061E50"
+    },
+    {
+      "address": "0x8006A514",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8006A514",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8006A514"
+    },
+    {
+      "address": "0x8006DA54",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8006DA54",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8006DA54"
+    },
+    {
+      "address": "0x80073594",
+      "original_bytes": 124,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80073594",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80073594"
+    },
+    {
+      "address": "0x80073610",
+      "original_bytes": 132,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80073610",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80073610"
+    },
+    {
+      "address": "0x80073694",
+      "original_bytes": 308,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80073694",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80073694"
+    },
+    {
+      "address": "0x800737C8",
+      "original_bytes": 56,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800737C8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800737C8"
+    },
+    {
+      "address": "0x80073C5C",
+      "original_bytes": 144,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80073C5C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80073C5C"
+    },
+    {
+      "address": "0x8007981C",
+      "original_bytes": 88,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8007981C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8007981C"
+    },
+    {
+      "address": "0x8007BE6C",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8007BE6C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8007BE6C"
+    },
+    {
+      "address": "0x8007E1D8",
+      "original_bytes": 108,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8007E1D8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8007E1D8"
+    },
+    {
+      "address": "0x8007E244",
+      "original_bytes": 108,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8007E244",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8007E244"
+    },
+    {
+      "address": "0x8007E5FC",
+      "original_bytes": 108,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8007E5FC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8007E5FC"
+    },
+    {
+      "address": "0x8007E668",
+      "original_bytes": 128,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8007E668",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8007E668"
+    },
+    {
+      "address": "0x80080CF0",
+      "original_bytes": 84,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80080CF0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80080CF0"
+    },
+    {
+      "address": "0x800829A8",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800829A8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800829A8"
+    },
+    {
+      "address": "0x80083580",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80083580",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80083580"
+    },
+    {
+      "address": "0x80084EB8",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80084EB8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80084EB8"
+    },
+    {
+      "address": "0x800946F0",
+      "original_bytes": 24,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800946F0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800946F0"
+    },
+    {
+      "address": "0x8009633C",
+      "original_bytes": 56,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8009633C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8009633C"
+    },
+    {
+      "address": "0x8009C86C",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8009C86C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8009C86C"
+    },
+    {
+      "address": "0x800A20B4",
+      "original_bytes": 208,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800A20B4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800A20B4"
+    },
+    {
+      "address": "0x800AB8D4",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800AB8D4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800AB8D4"
+    },
+    {
+      "address": "0x800B088C",
+      "original_bytes": 136,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800B088C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800B088C"
+    },
+    {
+      "address": "0x800B17AC",
+      "original_bytes": 48,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800B17AC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800B17AC"
+    },
+    {
+      "address": "0x800B398C",
+      "original_bytes": 104,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800B398C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800B398C"
+    },
+    {
+      "address": "0x800B5ED4",
+      "original_bytes": 228,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800B5ED4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800B5ED4"
+    },
+    {
+      "address": "0x800B6688",
+      "original_bytes": 232,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800B6688",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800B6688"
+    },
+    {
+      "address": "0x800B6EB4",
+      "original_bytes": 76,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800B6EB4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800B6EB4"
+    },
+    {
+      "address": "0x800B92F8",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800B92F8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800B92F8"
+    },
+    {
+      "address": "0x800BB508",
+      "original_bytes": 48,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800BB508",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800BB508"
+    },
+    {
+      "address": "0x800BC61C",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800BC61C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800BC61C"
+    },
+    {
+      "address": "0x800C022C",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800C022C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800C022C"
+    },
+    {
+      "address": "0x800C3B64",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800C3B64",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800C3B64"
+    },
+    {
+      "address": "0x800C4C08",
+      "original_bytes": 44,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800C4C08",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800C4C08"
+    },
+    {
+      "address": "0x800C4C34",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800C4C34",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800C4C34"
+    },
+    {
+      "address": "0x800C66BC",
+      "original_bytes": 108,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800C66BC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800C66BC"
+    },
+    {
+      "address": "0x800C67B0",
+      "original_bytes": 84,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800C67B0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800C67B0"
+    },
+    {
+      "address": "0x800C6968",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800C6968",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800C6968"
+    },
+    {
+      "address": "0x800C8738",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800C8738",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800C8738"
+    },
+    {
+      "address": "0x800C890C",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800C890C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800C890C"
+    },
+    {
+      "address": "0x800C9CF8",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800C9CF8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800C9CF8"
+    },
+    {
+      "address": "0x800CF868",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800CF868",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800CF868"
+    },
+    {
+      "address": "0x800D76E4",
+      "original_bytes": 52,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800D76E4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800D76E4"
+    },
+    {
+      "address": "0x800E0314",
+      "original_bytes": 72,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800E0314",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800E0314"
+    },
+    {
+      "address": "0x800E3F3C",
+      "original_bytes": 44,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800E3F3C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800E3F3C"
+    },
+    {
+      "address": "0x800E5A28",
+      "original_bytes": 296,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800E5A28",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800E5A28"
+    },
+    {
+      "address": "0x800E5B50",
+      "original_bytes": 296,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800E5B50",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800E5B50"
+    },
+    {
+      "address": "0x800E5C78",
+      "original_bytes": 200,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800E5C78",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800E5C78"
+    },
+    {
+      "address": "0x800E5E98",
+      "original_bytes": 116,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800E5E98",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800E5E98"
+    },
+    {
+      "address": "0x800F64D8",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800F64D8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800F64D8"
+    },
+    {
+      "address": "0x800F6500",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800F6500",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800F6500"
+    },
+    {
+      "address": "0x800FE5EC",
+      "original_bytes": 136,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800FE5EC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800FE5EC"
+    },
+    {
+      "address": "0x800FE674",
+      "original_bytes": 144,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800FE674",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800FE674"
+    },
+    {
+      "address": "0x800FE704",
+      "original_bytes": 52,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800FE704",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800FE704"
+    },
+    {
+      "address": "0x800FE738",
+      "original_bytes": 60,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800FE738",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800FE738"
+    },
+    {
+      "address": "0x800FF2C0",
+      "original_bytes": 464,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800FF2C0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800FF2C0"
+    },
+    {
+      "address": "0x800FF490",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800FF490",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800FF490"
+    },
+    {
+      "address": "0x800FF49C",
+      "original_bytes": 104,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_800FF49C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_800FF49C"
+    },
+    {
+      "address": "0x8010A080",
+      "original_bytes": 56,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010A080",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8010A080"
+    },
+    {
+      "address": "0x8010A794",
+      "original_bytes": 120,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010A794",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8010A794"
+    },
+    {
+      "address": "0x8010AB00",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010AB00",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8010AB00"
+    },
+    {
+      "address": "0x8010AC50",
+      "original_bytes": 60,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010AC50",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "InquiryCallback"
+    },
+    {
+      "address": "0x8010B30C",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010B30C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "__OSSetExceptionHandler"
+    },
+    {
+      "address": "0x8010B328",
+      "original_bytes": 20,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010B328",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "__OSGetExceptionHandler"
+    },
+    {
+      "address": "0x8010B484",
+      "original_bytes": 20,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010B484",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8010B484"
+    },
+    {
+      "address": "0x8010B510",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010B510",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "OSCreateAlarm"
+    },
+    {
+      "address": "0x8010BBF0",
+      "original_bytes": 172,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010BBF0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8010BBF0"
+    },
+    {
+      "address": "0x8010BC9C",
+      "original_bytes": 252,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010BC9C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8010BC9C"
+    },
+    {
+      "address": "0x8010BE14",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010BE14",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8010BE14"
+    },
+    {
+      "address": "0x8010BE24",
+      "original_bytes": 112,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010BE24",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8010BE24"
+    },
+    {
+      "address": "0x8010BE94",
+      "original_bytes": 108,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010BE94",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8010BE94"
+    },
+    {
+      "address": "0x8010BF20",
+      "original_bytes": 44,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010BF20",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8010BF20"
+    },
+    {
+      "address": "0x8010C8F4",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010C8F4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8010C8F4"
+    },
+    {
+      "address": "0x8010CA90",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010CA90",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "OSClearContext"
+    },
+    {
+      "address": "0x8010E550",
+      "original_bytes": 88,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010E550",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8010E550"
+    },
+    {
+      "address": "0x8010ECB8",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010ECB8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "__OSSetInterruptHandler"
+    },
+    {
+      "address": "0x8010ECD4",
+      "original_bytes": 20,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010ECD4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8010ECD4"
+    },
+    {
+      "address": "0x8010ED5C",
+      "original_bytes": 728,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010ED5C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8010ED5C"
+    },
+    {
+      "address": "0x8010F4D8",
+      "original_bytes": 24,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010F4D8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "__OSModuleInit"
+    },
+    {
+      "address": "0x8010FC28",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010FC28",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8010FC28"
+    },
+    {
+      "address": "0x8010FF74",
+      "original_bytes": 132,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8010FF74",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "OSRegisterResetFunction"
+    },
+    {
+      "address": "0x801103CC",
+      "original_bytes": 48,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801103CC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "OSGetResetCode"
+    },
+    {
+      "address": "0x80110E3C",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80110E3C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "__OSSyncSram"
+    },
+    {
+      "address": "0x80111410",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80111410",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "OSInitThreadQueue"
+    },
+    {
+      "address": "0x80111420",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80111420",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80111420"
+    },
+    {
+      "address": "0x8011142C",
+      "original_bytes": 52,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011142C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8011142C"
+    },
+    {
+      "address": "0x801114E0",
+      "original_bytes": 104,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801114E0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801114E0"
+    },
+    {
+      "address": "0x80111548",
+      "original_bytes": 60,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80111548",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80111548"
+    },
+    {
+      "address": "0x80112B94",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80112B94",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "DBInit"
+    },
+    {
+      "address": "0x80112C14",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80112C14",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "__DBIsExceptionMarked"
+    },
+    {
+      "address": "0x8011384C",
+      "original_bytes": 44,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011384C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "DVDLowWaitCoverClose"
+    },
+    {
+      "address": "0x80113D4C",
+      "original_bytes": 20,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80113D4C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80113D4C"
+    },
+    {
+      "address": "0x80113D60",
+      "original_bytes": 24,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80113D60",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80113D60"
+    },
+    {
+      "address": "0x80113DBC",
+      "original_bytes": 56,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80113DBC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "__DVDFSInit"
+    },
+    {
+      "address": "0x801140E8",
+      "original_bytes": 116,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801140E8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801140E8"
+    },
+    {
+      "address": "0x80114678",
+      "original_bytes": 108,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80114678",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80114678"
+    },
+    {
+      "address": "0x801149DC",
+      "original_bytes": 180,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801149DC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801149DC"
+    },
+    {
+      "address": "0x80116A54",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80116A54",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80116A54"
+    },
+    {
+      "address": "0x8011701C",
+      "original_bytes": 56,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011701C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "__DVDClearWaitingQueue"
+    },
+    {
+      "address": "0x80117214",
+      "original_bytes": 284,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80117214",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "ErrorCode2Num"
+    },
+    {
+      "address": "0x801195E0",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801195E0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801195E0"
+    },
+    {
+      "address": "0x80119600",
+      "original_bytes": 60,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80119600",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80119600"
+    },
+    {
+      "address": "0x8011A210",
+      "original_bytes": 20,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011A210",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8011A210"
+    },
+    {
+      "address": "0x8011A224",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011A224",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8011A224"
+    },
+    {
+      "address": "0x8011B500",
+      "original_bytes": 72,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011B500",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "EXIClearInterrupts"
+    },
+    {
+      "address": "0x8011C3C4",
+      "original_bytes": 24,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011C3C4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8011C3C4"
+    },
+    {
+      "address": "0x8011DD64",
+      "original_bytes": 96,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011DD64",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8011DD64"
+    },
+    {
+      "address": "0x8011DDC4",
+      "original_bytes": 372,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011DDC4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8011DDC4"
+    },
+    {
+      "address": "0x8011DF38",
+      "original_bytes": 372,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011DF38",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8011DF38"
+    },
+    {
+      "address": "0x8011E0AC",
+      "original_bytes": 1016,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011E0AC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8011E0AC"
+    },
+    {
+      "address": "0x8011E834",
+      "original_bytes": 24,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011E834",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8011E834"
+    },
+    {
+      "address": "0x8011E84C",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011E84C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8011E84C"
+    },
+    {
+      "address": "0x8011E85C",
+      "original_bytes": 24,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011E85C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8011E85C"
+    },
+    {
+      "address": "0x8011E94C",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011E94C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8011E94C"
+    },
+    {
+      "address": "0x8011EA3C",
+      "original_bytes": 20,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011EA3C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8011EA3C"
+    },
+    {
+      "address": "0x8011EB24",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011EB24",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8011EB24"
+    },
+    {
+      "address": "0x8011EB34",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011EB34",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8011EB34"
+    },
+    {
+      "address": "0x8011EB50",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011EB50",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8011EB50"
+    },
+    {
+      "address": "0x8011EB60",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011EB60",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8011EB60"
+    },
+    {
+      "address": "0x8011EB7C",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011EB7C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8011EB7C"
+    },
+    {
+      "address": "0x8011F318",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011F318",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8011F318"
+    },
+    {
+      "address": "0x8011F338",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8011F338",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8011F338"
+    },
+    {
+      "address": "0x80120F14",
+      "original_bytes": 24,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80120F14",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80120F14"
+    },
+    {
+      "address": "0x80120FA0",
+      "original_bytes": 180,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80120FA0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80120FA0"
+    },
+    {
+      "address": "0x80121054",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80121054",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80121054"
+    },
+    {
+      "address": "0x80121074",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80121074",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80121074"
+    },
+    {
+      "address": "0x80121084",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80121084",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80121084"
+    },
+    {
+      "address": "0x801210A0",
+      "original_bytes": 148,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801210A0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801210A0"
+    },
+    {
+      "address": "0x801214B4",
+      "original_bytes": 52,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801214B4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801214B4"
+    },
+    {
+      "address": "0x801214E8",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801214E8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801214E8"
+    },
+    {
+      "address": "0x80121508",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80121508",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80121508"
+    },
+    {
+      "address": "0x80121524",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80121524",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80121524"
+    },
+    {
+      "address": "0x80121544",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80121544",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80121544"
+    },
+    {
+      "address": "0x80121564",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80121564",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80121564"
+    },
+    {
+      "address": "0x80121584",
+      "original_bytes": 52,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80121584",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80121584"
+    },
+    {
+      "address": "0x801215B8",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801215B8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801215B8"
+    },
+    {
+      "address": "0x801215D4",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801215D4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801215D4"
+    },
+    {
+      "address": "0x801215F0",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801215F0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801215F0"
+    },
+    {
+      "address": "0x80121848",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80121848",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80121848"
+    },
+    {
+      "address": "0x8012185C",
+      "original_bytes": 60,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8012185C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8012185C"
+    },
+    {
+      "address": "0x80121F48",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80121F48",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80121F48"
+    },
+    {
+      "address": "0x80122164",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80122164",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80122164"
+    },
+    {
+      "address": "0x80122608",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80122608",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80122608"
+    },
+    {
+      "address": "0x80122A0C",
+      "original_bytes": 44,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80122A0C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80122A0C"
+    },
+    {
+      "address": "0x80122A38",
+      "original_bytes": 148,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80122A38",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80122A38"
+    },
+    {
+      "address": "0x80122AD4",
+      "original_bytes": 1800,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80122AD4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80122AD4"
+    },
+    {
+      "address": "0x80123444",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80123444",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80123444"
+    },
+    {
+      "address": "0x80123450",
+      "original_bytes": 60,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80123450",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80123450"
+    },
+    {
+      "address": "0x80124580",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80124580",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80124580"
+    },
+    {
+      "address": "0x8012458C",
+      "original_bytes": 188,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8012458C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8012458C"
+    },
+    {
+      "address": "0x80125594",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80125594",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80125594"
+    },
+    {
+      "address": "0x801255B4",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801255B4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801255B4"
+    },
+    {
+      "address": "0x801255DC",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801255DC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801255DC"
+    },
+    {
+      "address": "0x801266EC",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801266EC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801266EC"
+    },
+    {
+      "address": "0x801266FC",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801266FC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801266FC"
+    },
+    {
+      "address": "0x8012670C",
+      "original_bytes": 24,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8012670C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8012670C"
+    },
+    {
+      "address": "0x80126724",
+      "original_bytes": 20,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80126724",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80126724"
+    },
+    {
+      "address": "0x801270DC",
+      "original_bytes": 160,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801270DC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801270DC"
+    },
+    {
+      "address": "0x8012717C",
+      "original_bytes": 148,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8012717C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8012717C"
+    },
+    {
+      "address": "0x80128138",
+      "original_bytes": 56,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80128138",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80128138"
+    },
+    {
+      "address": "0x80128548",
+      "original_bytes": 364,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80128548",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80128548"
+    },
+    {
+      "address": "0x8012C2E0",
+      "original_bytes": 104,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8012C2E0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8012C2E0"
+    },
+    {
+      "address": "0x8012C3E0",
+      "original_bytes": 48,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8012C3E0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8012C3E0"
+    },
+    {
+      "address": "0x8012DA18",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8012DA18",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8012DA18"
+    },
+    {
+      "address": "0x8012EF30",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8012EF30",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8012EF30"
+    },
+    {
+      "address": "0x8012F1C4",
+      "original_bytes": 80,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8012F1C4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8012F1C4"
+    },
+    {
+      "address": "0x8012F214",
+      "original_bytes": 152,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8012F214",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8012F214"
+    },
+    {
+      "address": "0x8012F420",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8012F420",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8012F420"
+    },
+    {
+      "address": "0x8012F444",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8012F444",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8012F444"
+    },
+    {
+      "address": "0x8012F464",
+      "original_bytes": 60,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8012F464",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8012F464"
+    },
+    {
+      "address": "0x8012F4A0",
+      "original_bytes": 60,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8012F4A0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8012F4A0"
+    },
+    {
+      "address": "0x8012F4DC",
+      "original_bytes": 60,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8012F4DC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8012F4DC"
+    },
+    {
+      "address": "0x8012F628",
+      "original_bytes": 344,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8012F628",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8012F628"
+    },
+    {
+      "address": "0x8012FB24",
+      "original_bytes": 292,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8012FB24",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8012FB24"
+    },
+    {
+      "address": "0x8012FC48",
+      "original_bytes": 56,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8012FC48",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8012FC48"
+    },
+    {
+      "address": "0x80130350",
+      "original_bytes": 156,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80130350",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80130350"
+    },
+    {
+      "address": "0x801303EC",
+      "original_bytes": 140,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801303EC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801303EC"
+    },
+    {
+      "address": "0x80130478",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80130478",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80130478"
+    },
+    {
+      "address": "0x80130758",
+      "original_bytes": 64,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80130758",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80130758"
+    },
+    {
+      "address": "0x80130C1C",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80130C1C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80130C1C"
+    },
+    {
+      "address": "0x80130CA8",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80130CA8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80130CA8"
+    },
+    {
+      "address": "0x80130CCC",
+      "original_bytes": 20,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80130CCC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80130CCC"
+    },
+    {
+      "address": "0x80130CE0",
+      "original_bytes": 20,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80130CE0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80130CE0"
+    },
+    {
+      "address": "0x80130CF4",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80130CF4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80130CF4"
+    },
+    {
+      "address": "0x80130D98",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80130D98",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80130D98"
+    },
+    {
+      "address": "0x80130DB4",
+      "original_bytes": 20,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80130DB4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80130DB4"
+    },
+    {
+      "address": "0x80130DC8",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80130DC8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80130DC8"
+    },
+    {
+      "address": "0x80130DE4",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80130DE4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80130DE4"
+    },
+    {
+      "address": "0x801311B0",
+      "original_bytes": 136,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801311B0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801311B0"
+    },
+    {
+      "address": "0x80131238",
+      "original_bytes": 72,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80131238",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80131238"
+    },
+    {
+      "address": "0x80131280",
+      "original_bytes": 72,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80131280",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80131280"
+    },
+    {
+      "address": "0x801312C8",
+      "original_bytes": 92,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801312C8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801312C8"
+    },
+    {
+      "address": "0x80131324",
+      "original_bytes": 76,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80131324",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80131324"
+    },
+    {
+      "address": "0x80131370",
+      "original_bytes": 60,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80131370",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80131370"
+    },
+    {
+      "address": "0x801313AC",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801313AC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801313AC"
+    },
+    {
+      "address": "0x801313D0",
+      "original_bytes": 144,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801313D0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801313D0"
+    },
+    {
+      "address": "0x80131460",
+      "original_bytes": 144,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80131460",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80131460"
+    },
+    {
+      "address": "0x801314F0",
+      "original_bytes": 60,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801314F0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801314F0"
+    },
+    {
+      "address": "0x80131680",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80131680",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80131680"
+    },
+    {
+      "address": "0x801316A8",
+      "original_bytes": 104,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801316A8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801316A8"
+    },
+    {
+      "address": "0x801317D8",
+      "original_bytes": 104,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801317D8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801317D8"
+    },
+    {
+      "address": "0x80131A68",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80131A68",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80131A68"
+    },
+    {
+      "address": "0x80131A84",
+      "original_bytes": 348,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80131A84",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80131A84"
+    },
+    {
+      "address": "0x80131BE0",
+      "original_bytes": 380,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80131BE0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80131BE0"
+    },
+    {
+      "address": "0x80131D5C",
+      "original_bytes": 56,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80131D5C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80131D5C"
+    },
+    {
+      "address": "0x80131E90",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80131E90",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80131E90"
+    },
+    {
+      "address": "0x80131F18",
+      "original_bytes": 244,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80131F18",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80131F18"
+    },
+    {
+      "address": "0x8013200C",
+      "original_bytes": 244,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013200C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013200C"
+    },
+    {
+      "address": "0x80132100",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80132100",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80132100"
+    },
+    {
+      "address": "0x8013243C",
+      "original_bytes": 288,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013243C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "GXInitTexCacheRegion"
+    },
+    {
+      "address": "0x8013255C",
+      "original_bytes": 72,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013255C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "GXInitTlutRegion"
+    },
+    {
+      "address": "0x801325EC",
+      "original_bytes": 20,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801325EC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801325EC"
+    },
+    {
+      "address": "0x80132600",
+      "original_bytes": 20,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80132600",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80132600"
+    },
+    {
+      "address": "0x80132614",
+      "original_bytes": 140,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80132614",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80132614"
+    },
+    {
+      "address": "0x801326A0",
+      "original_bytes": 184,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801326A0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801326A0"
+    },
+    {
+      "address": "0x80132BB0",
+      "original_bytes": 380,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80132BB0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80132BB0"
+    },
+    {
+      "address": "0x80132D2C",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80132D2C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80132D2C"
+    },
+    {
+      "address": "0x80132D9C",
+      "original_bytes": 204,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80132D9C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80132D9C"
+    },
+    {
+      "address": "0x80132E68",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80132E68",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "__GXFlushTextureState"
+    },
+    {
+      "address": "0x80132E8C",
+      "original_bytes": 140,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80132E8C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80132E8C"
+    },
+    {
+      "address": "0x80132F18",
+      "original_bytes": 116,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80132F18",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80132F18"
+    },
+    {
+      "address": "0x80132F8C",
+      "original_bytes": 116,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80132F8C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80132F8C"
+    },
+    {
+      "address": "0x80133000",
+      "original_bytes": 108,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80133000",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80133000"
+    },
+    {
+      "address": "0x8013306C",
+      "original_bytes": 108,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013306C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013306C"
+    },
+    {
+      "address": "0x801330D8",
+      "original_bytes": 84,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801330D8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801330D8"
+    },
+    {
+      "address": "0x8013312C",
+      "original_bytes": 152,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013312C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013312C"
+    },
+    {
+      "address": "0x801331C4",
+      "original_bytes": 84,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801331C4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801331C4"
+    },
+    {
+      "address": "0x80133218",
+      "original_bytes": 132,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80133218",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80133218"
+    },
+    {
+      "address": "0x80133474",
+      "original_bytes": 48,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80133474",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80133474"
+    },
+    {
+      "address": "0x801336C0",
+      "original_bytes": 256,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801336C0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801336C0"
+    },
+    {
+      "address": "0x801337C0",
+      "original_bytes": 84,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801337C0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801337C0"
+    },
+    {
+      "address": "0x80133814",
+      "original_bytes": 44,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80133814",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80133814"
+    },
+    {
+      "address": "0x80133840",
+      "original_bytes": 44,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80133840",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80133840"
+    },
+    {
+      "address": "0x8013386C",
+      "original_bytes": 52,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013386C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013386C"
+    },
+    {
+      "address": "0x801338A0",
+      "original_bytes": 56,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801338A0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801338A0"
+    },
+    {
+      "address": "0x801338D8",
+      "original_bytes": 232,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801338D8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801338D8"
+    },
+    {
+      "address": "0x801339C0",
+      "original_bytes": 44,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801339C0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801339C0"
+    },
+    {
+      "address": "0x801339EC",
+      "original_bytes": 60,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801339EC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801339EC"
+    },
+    {
+      "address": "0x80133A28",
+      "original_bytes": 56,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80133A28",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80133A28"
+    },
+    {
+      "address": "0x80133F78",
+      "original_bytes": 144,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80133F78",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80133F78"
+    },
+    {
+      "address": "0x80134048",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80134048",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80134048"
+    },
+    {
+      "address": "0x80134070",
+      "original_bytes": 132,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80134070",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80134070"
+    },
+    {
+      "address": "0x8013493C",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013493C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013493C"
+    },
+    {
+      "address": "0x8013494C",
+      "original_bytes": 196,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013494C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013494C"
+    },
+    {
+      "address": "0x80134A10",
+      "original_bytes": 24,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80134A10",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80134A10"
+    },
+    {
+      "address": "0x80134A54",
+      "original_bytes": 248,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80134A54",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80134A54"
+    },
+    {
+      "address": "0x80137C84",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80137C84",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80137C84"
+    },
+    {
+      "address": "0x80137CDC",
+      "original_bytes": 24,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80137CDC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80137CDC"
+    },
+    {
+      "address": "0x80137CF4",
+      "original_bytes": 20,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80137CF4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80137CF4"
+    },
+    {
+      "address": "0x801380CC",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801380CC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801380CC"
+    },
+    {
+      "address": "0x801380DC",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801380DC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801380DC"
+    },
+    {
+      "address": "0x801380EC",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801380EC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801380EC"
+    },
+    {
+      "address": "0x801380F8",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801380F8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801380F8"
+    },
+    {
+      "address": "0x80138450",
+      "original_bytes": 24,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80138450",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80138450"
+    },
+    {
+      "address": "0x80138AF0",
+      "original_bytes": 60,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80138AF0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80138AF0"
+    },
+    {
+      "address": "0x80138DD8",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80138DD8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80138DD8"
+    },
+    {
+      "address": "0x8013943C",
+      "original_bytes": 108,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013943C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013943C"
+    },
+    {
+      "address": "0x801394A8",
+      "original_bytes": 108,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801394A8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801394A8"
+    },
+    {
+      "address": "0x80139644",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80139644",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80139644"
+    },
+    {
+      "address": "0x80139A14",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80139A14",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80139A14"
+    },
+    {
+      "address": "0x8013A06C",
+      "original_bytes": 64,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013A06C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013A06C"
+    },
+    {
+      "address": "0x8013A120",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013A120",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013A120"
+    },
+    {
+      "address": "0x8013A1CC",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013A1CC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013A1CC"
+    },
+    {
+      "address": "0x8013A6DC",
+      "original_bytes": 20,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013A6DC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013A6DC"
+    },
+    {
+      "address": "0x8013A6F0",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013A6F0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013A6F0"
+    },
+    {
+      "address": "0x8013A6FC",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013A6FC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013A6FC"
+    },
+    {
+      "address": "0x8013A708",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013A708",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013A708"
+    },
+    {
+      "address": "0x8013A714",
+      "original_bytes": 72,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013A714",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013A714"
+    },
+    {
+      "address": "0x8013A8F4",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013A8F4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013A8F4"
+    },
+    {
+      "address": "0x8013C664",
+      "original_bytes": 44,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013C664",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013C664"
+    },
+    {
+      "address": "0x8013C83C",
+      "original_bytes": 348,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013C83C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013C83C"
+    },
+    {
+      "address": "0x8013CD88",
+      "original_bytes": 92,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013CD88",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013CD88"
+    },
+    {
+      "address": "0x8013DC24",
+      "original_bytes": 80,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013DC24",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013DC24"
+    },
+    {
+      "address": "0x8013DE4C",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013DE4C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013DE4C"
+    },
+    {
+      "address": "0x8013DE58",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013DE58",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013DE58"
+    },
+    {
+      "address": "0x8013DE78",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013DE78",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013DE78"
+    },
+    {
+      "address": "0x8013DE98",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013DE98",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013DE98"
+    },
+    {
+      "address": "0x8013E1A0",
+      "original_bytes": 20,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013E1A0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013E1A0"
+    },
+    {
+      "address": "0x8013EC08",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013EC08",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013EC08"
+    },
+    {
+      "address": "0x8013EDFC",
+      "original_bytes": 20,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8013EDFC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8013EDFC"
+    },
+    {
+      "address": "0x80140F24",
+      "original_bytes": 96,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80140F24",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80140F24"
+    },
+    {
+      "address": "0x8014100C",
+      "original_bytes": 100,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8014100C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8014100C"
+    },
+    {
+      "address": "0x80141070",
+      "original_bytes": 144,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80141070",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80141070"
+    },
+    {
+      "address": "0x80141100",
+      "original_bytes": 124,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80141100",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80141100"
+    },
+    {
+      "address": "0x80141974",
+      "original_bytes": 88,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80141974",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80141974"
+    },
+    {
+      "address": "0x80141CCC",
+      "original_bytes": 120,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80141CCC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80141CCC"
+    },
+    {
+      "address": "0x80141DFC",
+      "original_bytes": 124,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80141DFC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80141DFC"
+    },
+    {
+      "address": "0x80141F38",
+      "original_bytes": 148,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80141F38",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80141F38"
+    },
+    {
+      "address": "0x801428D4",
+      "original_bytes": 112,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801428D4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801428D4"
+    },
+    {
+      "address": "0x80142CC4",
+      "original_bytes": 104,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80142CC4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80142CC4"
+    },
+    {
+      "address": "0x80142D2C",
+      "original_bytes": 152,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80142D2C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80142D2C"
+    },
+    {
+      "address": "0x80142DC4",
+      "original_bytes": 100,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80142DC4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80142DC4"
+    },
+    {
+      "address": "0x80142E28",
+      "original_bytes": 144,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80142E28",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80142E28"
+    },
+    {
+      "address": "0x80142EB8",
+      "original_bytes": 128,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80142EB8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80142EB8"
+    },
+    {
+      "address": "0x801438F4",
+      "original_bytes": 92,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801438F4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801438F4"
+    },
+    {
+      "address": "0x80143950",
+      "original_bytes": 128,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80143950",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80143950"
+    },
+    {
+      "address": "0x80145124",
+      "original_bytes": 140,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80145124",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80145124"
+    },
+    {
+      "address": "0x801451B0",
+      "original_bytes": 252,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801451B0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801451B0"
+    },
+    {
+      "address": "0x801452AC",
+      "original_bytes": 112,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801452AC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801452AC"
+    },
+    {
+      "address": "0x8014531C",
+      "original_bytes": 196,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8014531C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8014531C"
+    },
+    {
+      "address": "0x801453E0",
+      "original_bytes": 96,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801453E0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801453E0"
+    },
+    {
+      "address": "0x80145440",
+      "original_bytes": 164,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80145440",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80145440"
+    },
+    {
+      "address": "0x801454E4",
+      "original_bytes": 188,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801454E4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801454E4"
+    },
+    {
+      "address": "0x801456E0",
+      "original_bytes": 160,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801456E0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801456E0"
+    },
+    {
+      "address": "0x80145888",
+      "original_bytes": 136,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80145888",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80145888"
+    },
+    {
+      "address": "0x801459F8",
+      "original_bytes": 84,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801459F8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801459F8"
+    },
+    {
+      "address": "0x80145A4C",
+      "original_bytes": 140,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80145A4C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80145A4C"
+    },
+    {
+      "address": "0x80145AD8",
+      "original_bytes": 124,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80145AD8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80145AD8"
+    },
+    {
+      "address": "0x80146BD8",
+      "original_bytes": 96,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80146BD8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80146BD8"
+    },
+    {
+      "address": "0x80146C38",
+      "original_bytes": 104,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80146C38",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80146C38"
+    },
+    {
+      "address": "0x80147384",
+      "original_bytes": 88,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80147384",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80147384"
+    },
+    {
+      "address": "0x801473DC",
+      "original_bytes": 212,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801473DC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801473DC"
+    },
+    {
+      "address": "0x80148FFC",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80148FFC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80148FFC"
+    },
+    {
+      "address": "0x8014AB20",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8014AB20",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8014AB20"
+    },
+    {
+      "address": "0x80161A64",
+      "original_bytes": 124,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80161A64",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80161A64"
+    },
+    {
+      "address": "0x80178510",
+      "original_bytes": 252,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80178510",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80178510"
+    },
+    {
+      "address": "0x8017864C",
+      "original_bytes": 180,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8017864C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8017864C"
+    },
+    {
+      "address": "0x8017BE98",
+      "original_bytes": 108,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8017BE98",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8017BE98"
+    },
+    {
+      "address": "0x8017BF04",
+      "original_bytes": 108,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8017BF04",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8017BF04"
+    },
+    {
+      "address": "0x8017E62C",
+      "original_bytes": 196,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8017E62C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8017E62C"
+    },
+    {
+      "address": "0x8017FAA0",
+      "original_bytes": 200,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8017FAA0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8017FAA0"
+    },
+    {
+      "address": "0x8018578C",
+      "original_bytes": 128,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8018578C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8018578C"
+    },
+    {
+      "address": "0x80185EC0",
+      "original_bytes": 396,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80185EC0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80185EC0"
+    },
+    {
+      "address": "0x80186B50",
+      "original_bytes": 176,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80186B50",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80186B50"
+    },
+    {
+      "address": "0x8018B8D0",
+      "original_bytes": 48,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8018B8D0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8018B8D0"
+    },
+    {
+      "address": "0x8018C6C0",
+      "original_bytes": 24,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8018C6C0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8018C6C0"
+    },
+    {
+      "address": "0x8018CE68",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8018CE68",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8018CE68"
+    },
+    {
+      "address": "0x8018D138",
+      "original_bytes": 240,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8018D138",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8018D138"
+    },
+    {
+      "address": "0x8018D560",
+      "original_bytes": 100,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8018D560",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8018D560"
+    },
+    {
+      "address": "0x8018D5C4",
+      "original_bytes": 100,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8018D5C4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8018D5C4"
+    },
+    {
+      "address": "0x8018D628",
+      "original_bytes": 104,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8018D628",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8018D628"
+    },
+    {
+      "address": "0x8019DB58",
+      "original_bytes": 56,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8019DB58",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8019DB58"
+    },
+    {
+      "address": "0x801A0AF8",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801A0AF8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801A0AF8"
+    },
+    {
+      "address": "0x801A4C50",
+      "original_bytes": 76,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801A4C50",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801A4C50"
+    },
+    {
+      "address": "0x801AE3E8",
+      "original_bytes": 120,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801AE3E8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801AE3E8"
+    },
+    {
+      "address": "0x801B55FC",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801B55FC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801B55FC"
+    },
+    {
+      "address": "0x801B5608",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801B5608",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801B5608"
+    },
+    {
+      "address": "0x801B5614",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801B5614",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801B5614"
+    },
+    {
+      "address": "0x801B70A0",
+      "original_bytes": 228,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801B70A0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801B70A0"
+    },
+    {
+      "address": "0x801C45F8",
+      "original_bytes": 136,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801C45F8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801C45F8"
+    },
+    {
+      "address": "0x801CC4A4",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801CC4A4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801CC4A4"
+    },
+    {
+      "address": "0x801CF4F8",
+      "original_bytes": 160,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801CF4F8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801CF4F8"
+    },
+    {
+      "address": "0x801D9DE8",
+      "original_bytes": 116,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801D9DE8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801D9DE8"
+    },
+    {
+      "address": "0x801E6950",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E6950",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E6950"
+    },
+    {
+      "address": "0x801E6994",
+      "original_bytes": 92,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E6994",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E6994"
+    },
+    {
+      "address": "0x801E69F0",
+      "original_bytes": 92,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E69F0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E69F0"
+    },
+    {
+      "address": "0x801E6A4C",
+      "original_bytes": 120,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E6A4C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E6A4C"
+    },
+    {
+      "address": "0x801E6AC4",
+      "original_bytes": 176,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E6AC4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E6AC4"
+    },
+    {
+      "address": "0x801E6B7C",
+      "original_bytes": 132,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E6B7C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E6B7C"
+    },
+    {
+      "address": "0x801E6C00",
+      "original_bytes": 132,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E6C00",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E6C00"
+    },
+    {
+      "address": "0x801E6C84",
+      "original_bytes": 132,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E6C84",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E6C84"
+    },
+    {
+      "address": "0x801E6D08",
+      "original_bytes": 92,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E6D08",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E6D08"
+    },
+    {
+      "address": "0x801E6D64",
+      "original_bytes": 140,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E6D64",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E6D64"
+    },
+    {
+      "address": "0x801E6DF0",
+      "original_bytes": 56,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E6DF0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E6DF0"
+    },
+    {
+      "address": "0x801E7058",
+      "original_bytes": 96,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7058",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7058"
+    },
+    {
+      "address": "0x801E70B8",
+      "original_bytes": 96,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E70B8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E70B8"
+    },
+    {
+      "address": "0x801E7118",
+      "original_bytes": 80,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7118",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7118"
+    },
+    {
+      "address": "0x801E7168",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7168",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7168"
+    },
+    {
+      "address": "0x801E71AC",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E71AC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E71AC"
+    },
+    {
+      "address": "0x801E71F0",
+      "original_bytes": 56,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E71F0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E71F0"
+    },
+    {
+      "address": "0x801E7228",
+      "original_bytes": 56,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7228",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7228"
+    },
+    {
+      "address": "0x801E7260",
+      "original_bytes": 92,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7260",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7260"
+    },
+    {
+      "address": "0x801E72BC",
+      "original_bytes": 92,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E72BC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E72BC"
+    },
+    {
+      "address": "0x801E7318",
+      "original_bytes": 92,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7318",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7318"
+    },
+    {
+      "address": "0x801E7374",
+      "original_bytes": 56,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7374",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7374"
+    },
+    {
+      "address": "0x801E73AC",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E73AC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E73AC"
+    },
+    {
+      "address": "0x801E73F0",
+      "original_bytes": 92,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E73F0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E73F0"
+    },
+    {
+      "address": "0x801E744C",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E744C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E744C"
+    },
+    {
+      "address": "0x801E7490",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7490",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7490"
+    },
+    {
+      "address": "0x801E74D4",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E74D4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E74D4"
+    },
+    {
+      "address": "0x801E75DC",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E75DC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E75DC"
+    },
+    {
+      "address": "0x801E7620",
+      "original_bytes": 92,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7620",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7620"
+    },
+    {
+      "address": "0x801E767C",
+      "original_bytes": 80,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E767C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E767C"
+    },
+    {
+      "address": "0x801E76CC",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E76CC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E76CC"
+    },
+    {
+      "address": "0x801E7710",
+      "original_bytes": 132,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7710",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7710"
+    },
+    {
+      "address": "0x801E7794",
+      "original_bytes": 132,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7794",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7794"
+    },
+    {
+      "address": "0x801E7818",
+      "original_bytes": 132,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7818",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7818"
+    },
+    {
+      "address": "0x801E789C",
+      "original_bytes": 132,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E789C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E789C"
+    },
+    {
+      "address": "0x801E7920",
+      "original_bytes": 132,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7920",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7920"
+    },
+    {
+      "address": "0x801E7A98",
+      "original_bytes": 84,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7A98",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7A98"
+    },
+    {
+      "address": "0x801E7AEC",
+      "original_bytes": 100,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7AEC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7AEC"
+    },
+    {
+      "address": "0x801E7B50",
+      "original_bytes": 100,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7B50",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7B50"
+    },
+    {
+      "address": "0x801E7BB4",
+      "original_bytes": 116,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7BB4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7BB4"
+    },
+    {
+      "address": "0x801E7E60",
+      "original_bytes": 148,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7E60",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7E60"
+    },
+    {
+      "address": "0x801E7EF4",
+      "original_bytes": 56,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7EF4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7EF4"
+    },
+    {
+      "address": "0x801E7F2C",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7F2C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7F2C"
+    },
+    {
+      "address": "0x801E7F70",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7F70",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7F70"
+    },
+    {
+      "address": "0x801E7FB4",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7FB4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7FB4"
+    },
+    {
+      "address": "0x801E7FF8",
+      "original_bytes": 72,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E7FF8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E7FF8"
+    },
+    {
+      "address": "0x801E80C0",
+      "original_bytes": 92,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E80C0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E80C0"
+    },
+    {
+      "address": "0x801E9488",
+      "original_bytes": 156,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E9488",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E9488"
+    },
+    {
+      "address": "0x801E9524",
+      "original_bytes": 156,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E9524",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E9524"
+    },
+    {
+      "address": "0x801E95C0",
+      "original_bytes": 156,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E95C0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E95C0"
+    },
+    {
+      "address": "0x801E965C",
+      "original_bytes": 156,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E965C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E965C"
+    },
+    {
+      "address": "0x801E96F8",
+      "original_bytes": 156,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E96F8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E96F8"
+    },
+    {
+      "address": "0x801E9794",
+      "original_bytes": 156,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E9794",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E9794"
+    },
+    {
+      "address": "0x801E9830",
+      "original_bytes": 188,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E9830",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E9830"
+    },
+    {
+      "address": "0x801E98EC",
+      "original_bytes": 188,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E98EC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E98EC"
+    },
+    {
+      "address": "0x801E99A8",
+      "original_bytes": 188,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E99A8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E99A8"
+    },
+    {
+      "address": "0x801E9A64",
+      "original_bytes": 188,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E9A64",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E9A64"
+    },
+    {
+      "address": "0x801E9B20",
+      "original_bytes": 188,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E9B20",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E9B20"
+    },
+    {
+      "address": "0x801E9BDC",
+      "original_bytes": 188,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E9BDC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E9BDC"
+    },
+    {
+      "address": "0x801E9D1C",
+      "original_bytes": 132,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E9D1C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E9D1C"
+    },
+    {
+      "address": "0x801E9DA0",
+      "original_bytes": 88,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E9DA0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E9DA0"
+    },
+    {
+      "address": "0x801E9E74",
+      "original_bytes": 104,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801E9E74",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801E9E74"
+    },
+    {
+      "address": "0x801EA2C8",
+      "original_bytes": 116,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801EA2C8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801EA2C8"
+    },
+    {
+      "address": "0x801EA414",
+      "original_bytes": 104,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801EA414",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801EA414"
+    },
+    {
+      "address": "0x801EA47C",
+      "original_bytes": 104,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801EA47C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801EA47C"
+    },
+    {
+      "address": "0x801EA88C",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801EA88C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801EA88C"
+    },
+    {
+      "address": "0x801EA8D0",
+      "original_bytes": 100,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801EA8D0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801EA8D0"
+    },
+    {
+      "address": "0x801EAB7C",
+      "original_bytes": 108,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801EAB7C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801EAB7C"
+    },
+    {
+      "address": "0x801EAC70",
+      "original_bytes": 108,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801EAC70",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801EAC70"
+    },
+    {
+      "address": "0x801EBAF0",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801EBAF0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801EBAF0"
+    },
+    {
+      "address": "0x801ED180",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801ED180",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801ED180"
+    },
+    {
+      "address": "0x801EE704",
+      "original_bytes": 84,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801EE704",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801EE704"
+    },
+    {
+      "address": "0x801EEBBC",
+      "original_bytes": 48,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801EEBBC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801EEBBC"
+    },
+    {
+      "address": "0x801EEC78",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801EEC78",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801EEC78"
+    },
+    {
+      "address": "0x801EF774",
+      "original_bytes": 176,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801EF774",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801EF774"
+    },
+    {
+      "address": "0x801EF94C",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801EF94C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801EF94C"
+    },
+    {
+      "address": "0x801EFEF8",
+      "original_bytes": 164,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801EFEF8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801EFEF8"
+    },
+    {
+      "address": "0x801EFFB0",
+      "original_bytes": 52,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801EFFB0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801EFFB0"
+    },
+    {
+      "address": "0x801F89F4",
+      "original_bytes": 564,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801F89F4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801F89F4"
+    },
+    {
+      "address": "0x801F93F4",
+      "original_bytes": 288,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801F93F4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801F93F4"
+    },
+    {
+      "address": "0x801FAE38",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801FAE38",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801FAE38"
+    },
+    {
+      "address": "0x801FAE5C",
+      "original_bytes": 140,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801FAE5C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801FAE5C"
+    },
+    {
+      "address": "0x801FAEE8",
+      "original_bytes": 116,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801FAEE8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801FAEE8"
+    },
+    {
+      "address": "0x801FAF5C",
+      "original_bytes": 392,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801FAF5C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801FAF5C"
+    },
+    {
+      "address": "0x801FBB3C",
+      "original_bytes": 108,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801FBB3C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801FBB3C"
+    },
+    {
+      "address": "0x801FBBA8",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801FBBA8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801FBBA8"
+    },
+    {
+      "address": "0x801FBBD0",
+      "original_bytes": 76,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801FBBD0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801FBBD0"
+    },
+    {
+      "address": "0x801FD8D4",
+      "original_bytes": 48,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801FD8D4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801FD8D4"
+    },
+    {
+      "address": "0x801FDC68",
+      "original_bytes": 72,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801FDC68",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801FDC68"
+    },
+    {
+      "address": "0x801FECE0",
+      "original_bytes": 52,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801FECE0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801FECE0"
+    },
+    {
+      "address": "0x801FF57C",
+      "original_bytes": 124,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_801FF57C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_801FF57C"
+    },
+    {
+      "address": "0x80203014",
+      "original_bytes": 216,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80203014",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80203014"
+    },
+    {
+      "address": "0x802031B0",
+      "original_bytes": 140,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802031B0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802031B0"
+    },
+    {
+      "address": "0x8020323C",
+      "original_bytes": 148,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8020323C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8020323C"
+    },
+    {
+      "address": "0x802032D0",
+      "original_bytes": 172,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802032D0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802032D0"
+    },
+    {
+      "address": "0x8020337C",
+      "original_bytes": 76,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8020337C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8020337C"
+    },
+    {
+      "address": "0x802033C8",
+      "original_bytes": 108,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802033C8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802033C8"
+    },
+    {
+      "address": "0x802035D4",
+      "original_bytes": 20,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802035D4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802035D4"
+    },
+    {
+      "address": "0x8020384C",
+      "original_bytes": 168,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8020384C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8020384C"
+    },
+    {
+      "address": "0x802038F4",
+      "original_bytes": 24,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802038F4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802038F4"
+    },
+    {
+      "address": "0x8020403C",
+      "original_bytes": 72,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8020403C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8020403C"
+    },
+    {
+      "address": "0x80204CEC",
+      "original_bytes": 80,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80204CEC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80204CEC"
+    },
+    {
+      "address": "0x80205BF0",
+      "original_bytes": 72,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80205BF0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80205BF0"
+    },
+    {
+      "address": "0x80206290",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80206290",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80206290"
+    },
+    {
+      "address": "0x802065A0",
+      "original_bytes": 228,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802065A0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802065A0"
+    },
+    {
+      "address": "0x80206684",
+      "original_bytes": 48,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80206684",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80206684"
+    },
+    {
+      "address": "0x802066B4",
+      "original_bytes": 268,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802066B4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802066B4"
+    },
+    {
+      "address": "0x80206C74",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80206C74",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80206C74"
+    },
+    {
+      "address": "0x80206CF4",
+      "original_bytes": 44,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80206CF4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80206CF4"
+    },
+    {
+      "address": "0x80206DC8",
+      "original_bytes": 52,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80206DC8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80206DC8"
+    },
+    {
+      "address": "0x80206DFC",
+      "original_bytes": 80,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80206DFC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80206DFC"
+    },
+    {
+      "address": "0x80206E4C",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80206E4C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80206E4C"
+    },
+    {
+      "address": "0x80206E70",
+      "original_bytes": 124,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80206E70",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80206E70"
+    },
+    {
+      "address": "0x80206EEC",
+      "original_bytes": 44,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80206EEC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80206EEC"
+    },
+    {
+      "address": "0x80206F28",
+      "original_bytes": 352,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80206F28",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80206F28"
+    },
+    {
+      "address": "0x80207088",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80207088",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80207088"
+    },
+    {
+      "address": "0x802070AC",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802070AC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802070AC"
+    },
+    {
+      "address": "0x802070D0",
+      "original_bytes": 288,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802070D0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802070D0"
+    },
+    {
+      "address": "0x802071F0",
+      "original_bytes": 64,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802071F0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802071F0"
+    },
+    {
+      "address": "0x802072A4",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802072A4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802072A4"
+    },
+    {
+      "address": "0x802072E8",
+      "original_bytes": 64,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802072E8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802072E8"
+    },
+    {
+      "address": "0x80207328",
+      "original_bytes": 140,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80207328",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80207328"
+    },
+    {
+      "address": "0x802075EC",
+      "original_bytes": 132,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802075EC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802075EC"
+    },
+    {
+      "address": "0x80207670",
+      "original_bytes": 124,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80207670",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80207670"
+    },
+    {
+      "address": "0x802076EC",
+      "original_bytes": 148,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802076EC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802076EC"
+    },
+    {
+      "address": "0x80207780",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80207780",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80207780"
+    },
+    {
+      "address": "0x8020C508",
+      "original_bytes": 212,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8020C508",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8020C508"
+    },
+    {
+      "address": "0x8020C8DC",
+      "original_bytes": 312,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8020C8DC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8020C8DC"
+    },
+    {
+      "address": "0x8021018C",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8021018C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8021018C"
+    },
+    {
+      "address": "0x80211404",
+      "original_bytes": 148,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80211404",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80211404"
+    },
+    {
+      "address": "0x8021180C",
+      "original_bytes": 56,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8021180C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8021180C"
+    },
+    {
+      "address": "0x80211844",
+      "original_bytes": 88,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80211844",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80211844"
+    },
+    {
+      "address": "0x80211FE4",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80211FE4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80211FE4"
+    },
+    {
+      "address": "0x80212078",
+      "original_bytes": 144,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80212078",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80212078"
+    },
+    {
+      "address": "0x802122A4",
+      "original_bytes": 420,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802122A4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802122A4"
+    },
+    {
+      "address": "0x80212448",
+      "original_bytes": 64,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80212448",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80212448"
+    },
+    {
+      "address": "0x80212488",
+      "original_bytes": 192,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80212488",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80212488"
+    },
+    {
+      "address": "0x802125A8",
+      "original_bytes": 192,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802125A8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802125A8"
+    },
+    {
+      "address": "0x80213E00",
+      "original_bytes": 52,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80213E00",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80213E00"
+    },
+    {
+      "address": "0x80213EE0",
+      "original_bytes": 48,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80213EE0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80213EE0"
+    },
+    {
+      "address": "0x80216E9C",
+      "original_bytes": 64,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80216E9C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80216E9C"
+    },
+    {
+      "address": "0x80217E54",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80217E54",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80217E54"
+    },
+    {
+      "address": "0x80217E74",
+      "original_bytes": 112,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80217E74",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80217E74"
+    },
+    {
+      "address": "0x80217FA0",
+      "original_bytes": 236,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80217FA0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80217FA0"
+    },
+    {
+      "address": "0x8021808C",
+      "original_bytes": 132,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8021808C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8021808C"
+    },
+    {
+      "address": "0x8021876C",
+      "original_bytes": 92,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8021876C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8021876C"
+    },
+    {
+      "address": "0x8021F908",
+      "original_bytes": 372,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8021F908",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8021F908"
+    },
+    {
+      "address": "0x802205FC",
+      "original_bytes": 172,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802205FC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802205FC"
+    },
+    {
+      "address": "0x80220F90",
+      "original_bytes": 76,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80220F90",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80220F90"
+    },
+    {
+      "address": "0x8022918C",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8022918C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8022918C"
+    },
+    {
+      "address": "0x802291A8",
+      "original_bytes": 48,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802291A8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802291A8"
+    },
+    {
+      "address": "0x802299F0",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802299F0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802299F0"
+    },
+    {
+      "address": "0x80229E74",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80229E74",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80229E74"
+    },
+    {
+      "address": "0x80229E80",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80229E80",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80229E80"
+    },
+    {
+      "address": "0x8022D5D8",
+      "original_bytes": 80,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8022D5D8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8022D5D8"
+    },
+    {
+      "address": "0x8022DCF8",
+      "original_bytes": 100,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8022DCF8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8022DCF8"
+    },
+    {
+      "address": "0x8022E908",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8022E908",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8022E908"
+    },
+    {
+      "address": "0x8022EC98",
+      "original_bytes": 132,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8022EC98",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8022EC98"
+    },
+    {
+      "address": "0x8022EE98",
+      "original_bytes": 72,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8022EE98",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8022EE98"
+    },
+    {
+      "address": "0x8022F3C0",
+      "original_bytes": 72,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8022F3C0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8022F3C0"
+    },
+    {
+      "address": "0x8022F654",
+      "original_bytes": 52,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8022F654",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8022F654"
+    },
+    {
+      "address": "0x8022FA18",
+      "original_bytes": 224,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8022FA18",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8022FA18"
+    },
+    {
+      "address": "0x802328B4",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802328B4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802328B4"
+    },
+    {
+      "address": "0x80234F24",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80234F24",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80234F24"
+    },
+    {
+      "address": "0x8024257C",
+      "original_bytes": 44,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8024257C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8024257C"
+    },
+    {
+      "address": "0x80243F1C",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80243F1C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80243F1C"
+    },
+    {
+      "address": "0x802440D0",
+      "original_bytes": 64,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802440D0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802440D0"
+    },
+    {
+      "address": "0x80246B4C",
+      "original_bytes": 124,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80246B4C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80246B4C"
+    },
+    {
+      "address": "0x8024E44C",
+      "original_bytes": 248,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8024E44C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8024E44C"
+    },
+    {
+      "address": "0x8024EC14",
+      "original_bytes": 28,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8024EC14",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8024EC14"
+    },
+    {
+      "address": "0x8025175C",
+      "original_bytes": 88,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8025175C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8025175C"
+    },
+    {
+      "address": "0x8025195C",
+      "original_bytes": 72,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8025195C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8025195C"
+    },
+    {
+      "address": "0x80257F7C",
+      "original_bytes": 20,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80257F7C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80257F7C"
+    },
+    {
+      "address": "0x802598C0",
+      "original_bytes": 24,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802598C0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802598C0"
+    },
+    {
+      "address": "0x8025A6C4",
+      "original_bytes": 64,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8025A6C4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8025A6C4"
+    },
+    {
+      "address": "0x8025B038",
+      "original_bytes": 100,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8025B038",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8025B038"
+    },
+    {
+      "address": "0x8025B09C",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8025B09C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8025B09C"
+    },
+    {
+      "address": "0x802602E0",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802602E0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802602E0"
+    },
+    {
+      "address": "0x80260304",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80260304",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80260304"
+    },
+    {
+      "address": "0x80260328",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80260328",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80260328"
+    },
+    {
+      "address": "0x8026034C",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8026034C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8026034C"
+    },
+    {
+      "address": "0x80260AA8",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80260AA8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80260AA8"
+    },
+    {
+      "address": "0x80261898",
+      "original_bytes": 48,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80261898",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80261898"
+    },
+    {
+      "address": "0x80262BE8",
+      "original_bytes": 24,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80262BE8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80262BE8"
+    },
+    {
+      "address": "0x80262D78",
+      "original_bytes": 88,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80262D78",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80262D78"
+    },
+    {
+      "address": "0x80262EEC",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80262EEC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80262EEC"
+    },
+    {
+      "address": "0x802631EC",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802631EC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802631EC"
+    },
+    {
+      "address": "0x802634A4",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802634A4",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802634A4"
+    },
+    {
+      "address": "0x802645DC",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802645DC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802645DC"
+    },
+    {
+      "address": "0x80265C10",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80265C10",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80265C10"
+    },
+    {
+      "address": "0x802660D0",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802660D0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802660D0"
+    },
+    {
+      "address": "0x80266384",
+      "original_bytes": 92,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80266384",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80266384"
+    },
+    {
+      "address": "0x80266400",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80266400",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80266400"
+    },
+    {
+      "address": "0x80266424",
+      "original_bytes": 36,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80266424",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80266424"
+    },
+    {
+      "address": "0x80266448",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80266448",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80266448"
+    },
+    {
+      "address": "0x802664CC",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802664CC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802664CC"
+    },
+    {
+      "address": "0x802664EC",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_802664EC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_802664EC"
+    },
+    {
+      "address": "0x80268F70",
+      "original_bytes": 24,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80268F70",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80268F70"
+    },
+    {
+      "address": "0x80268FA8",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80268FA8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80268FA8"
+    },
+    {
+      "address": "0x80269378",
+      "original_bytes": 16,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80269378",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80269378"
+    },
+    {
+      "address": "0x8026943C",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8026943C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8026943C"
+    },
+    {
+      "address": "0x8026945C",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8026945C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8026945C"
+    },
+    {
+      "address": "0x80269468",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80269468",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80269468"
+    },
+    {
+      "address": "0x80269474",
+      "original_bytes": 20,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80269474",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80269474"
+    },
+    {
+      "address": "0x80269560",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80269560",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80269560"
+    },
+    {
+      "address": "0x80269894",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_80269894",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_80269894"
+    },
+    {
+      "address": "0x8026D1A8",
+      "original_bytes": 40,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8026D1A8",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8026D1A8"
+    },
+    {
+      "address": "0x8026D384",
+      "original_bytes": 92,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8026D384",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8026D384"
+    },
+    {
+      "address": "0x8026D3E0",
+      "original_bytes": 32,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8026D3E0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8026D3E0"
+    },
+    {
+      "address": "0x8026DB7C",
+      "original_bytes": 68,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8026DB7C",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8026DB7C"
+    },
+    {
+      "address": "0x8026DBC0",
+      "original_bytes": 124,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8026DBC0",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8026DBC0"
+    },
+    {
+      "address": "0x8026EE40",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8026EE40",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8026EE40"
+    },
+    {
+      "address": "0x8026EEAC",
+      "original_bytes": 12,
+      "source": "src/recovered/integer_leaf_helpers.c",
+      "symbol": "tak_integer_8026EEAC",
+      "status": "complete-semantic-model",
+      "model_kind": "generated low-level integer C control flow",
+      "original_name": "fn_8026EEAC"
     }
   ]
 }

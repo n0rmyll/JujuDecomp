@@ -1,0 +1,120 @@
+{
+  "function": "fn_801FCFF4",
+  "source": "analysis/split/asm/auto_03_801FC144_text.s",
+  "start": "0x801FCFF4",
+  "instruction_count": 133,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801FD01C",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x801FD040",
+      "target": "fn_80295974"
+    },
+    {
+      "site": "0x801FD050",
+      "target": "fn_80295904"
+    },
+    {
+      "site": "0x801FD05C",
+      "target": "fn_80295904"
+    },
+    {
+      "site": "0x801FD068",
+      "target": "fn_80295904"
+    },
+    {
+      "site": "0x801FD070",
+      "target": "fn_801B48C4"
+    },
+    {
+      "site": "0x801FD080",
+      "target": "fn_801B74F0"
+    },
+    {
+      "site": "0x801FD0B4",
+      "target": "fn_80295974"
+    },
+    {
+      "site": "0x801FD0BC",
+      "target": "strlen"
+    },
+    {
+      "site": "0x801FD0CC",
+      "target": "strlen"
+    },
+    {
+      "site": "0x801FD0EC",
+      "target": "fn_80295904"
+    },
+    {
+      "site": "0x801FD0F8",
+      "target": "fn_80295904"
+    },
+    {
+      "site": "0x801FD110",
+      "target": "fn_802956D8"
+    },
+    {
+      "site": "0x801FD124",
+      "target": "strchr"
+    },
+    {
+      "site": "0x801FD138",
+      "target": "fn_80295904"
+    },
+    {
+      "site": "0x801FD144",
+      "target": "fn_80295904"
+    },
+    {
+      "site": "0x801FD180",
+      "target": "fn_801B7378"
+    },
+    {
+      "site": "0x801FD1A0",
+      "target": "fn_801B8AAC"
+    },
+    {
+      "site": "0x801FD1B0",
+      "target": "fn_801B87A8"
+    },
+    {
+      "site": "0x801FD1C8",
+      "target": "fn_801B4878"
+    },
+    {
+      "site": "0x801FD1E4",
+      "target": "fn_8015E174"
+    }
+  ],
+  "strings": [
+    {
+      "site": "0x801FD014",
+      "address": "0x80331FF4",
+      "text": "none",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x801FD04C",
+      "address": "0x802EE1E8",
+      "text": "Replace\\",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x801FD064",
+      "address": "0x80331FFC",
+      "text": ".dbl",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x801FD1D4",
+      "address": "0x802EE1F4",
+      "text": " >>>>>>>> Overriding %s with file: %s\n",
+      "basis": "direct operand; may be a load rather than an address argument"
+    }
+  ]
+}

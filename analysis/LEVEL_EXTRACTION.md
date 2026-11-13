@@ -6,6 +6,13 @@ serialized matrices and mesh references rather than positioning meshes by
 name or visual guesswork. Generated game data stays under ignored
 `assets/levels/Hub/`.
 
+An optional `--actors` pass now replaces 20 explicit box placements with
+eight extracted actor/prop models. It produces 1,025 embedded meshes,
+348,140 placed triangles, and 194 images while retaining all 1,888 original
+placement matrices. These are static/bind-pose previews. The baseline
+counts and static-world findings below describe the export without that
+option; see [actor placement findings](ACTOR_PLACEMENT.md) for the new pass.
+
 ## Original-code evidence
 
 The new reports for `0x801BA628` and `0x801BA264` verify all 72 and 154
@@ -90,7 +97,8 @@ Five new tests cover tagged model references, nonuniform/negative scale,
 bad/unsupported instance records, actual texture deduplication during merge,
 shared mesh references, a known rotated/scaled/translated triangle, and all
 1,888 actual Hub placements. The full `test_decode_*.py` selection passes
-39 tests. Viewer JavaScript passes `node --check`.
+39 tests before the actor pass; its five additional tests bring the
+selection to 44. Viewer JavaScript passes `node --check`.
 
 The in-app browser rejected the local `file:` URL, so interactive WebGL
 execution was not verified in this session. The two CPU renders were

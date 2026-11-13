@@ -169,10 +169,8 @@ u32 NAME(Header *p, Header *h, void **out, u32 *size)
 #elif TAK_FN == 0x801B90D0
 void fn_801B90D0(u32 amount)
 {
-    u8 *cursor = lbl_80322E00.cursor;
-    u32 remaining = lbl_80322E00.remaining;
-    lbl_80322E00.cursor = cursor + amount;
-    lbl_80322E00.remaining = remaining - amount;
+    lbl_80322E00.cursor += amount;
+    lbl_80322E00.remaining -= amount;
 }
 #elif TAK_FN == 0x801B90F4
 u32 fn_801B90F4(u32 mode, u32 reset)

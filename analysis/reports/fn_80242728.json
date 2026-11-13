@@ -1,0 +1,36 @@
+{
+  "function": "fn_80242728",
+  "source": "analysis/split/asm/auto_03_802421DC_text.s",
+  "start": "0x80242728",
+  "instruction_count": 39,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x80242758",
+      "target": "fn_8029239C"
+    },
+    {
+      "site": "0x80242768",
+      "target": "fn_801B7378"
+    },
+    {
+      "site": "0x80242784",
+      "target": "fn_801B8658"
+    }
+  ],
+  "strings": [
+    {
+      "site": "0x8024273C",
+      "address": "0x802F01FC",
+      "text": "Worlds\\%s\\%s.env",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x8024277C",
+      "address": "0x803321D8",
+      "text": "1000",
+      "basis": "direct operand; may be a load rather than an address argument"
+    }
+  ]
+}
