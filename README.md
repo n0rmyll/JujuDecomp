@@ -176,10 +176,13 @@ a separate gallery at `assets/rigs/index.html`.
 
 The first pass exported 274 skinned meshes and decoded 949 clips from 41
 unique motion banks. Matching rigs received 772 clips across 28 animated
-GLBs, including Tak's 137-bone rig and 186 motions. The animation-bank
+GLBs, including Tak's 137-bone rig and 185 bound motions from its 186-clip bank.
+The blink clip has no matching bone tracks and remains in the JSON export. The animation-bank
 parser reported no errors; 80 skeletal model records remain unresolved.
 Some reduced rigs omit unmatched animation tracks, listed in the manifest.
-Motion is baked at 30 Hz from the game's 300 Hz timeline; gameplay blending,
+Serialized helper-bone rotations are also baked, including Tak's 21 hand,
+arm, spine, and leg helpers. The remaining neck deformation gap still needs
+verification against gameplay. Motion is baked at 30 Hz from the game's 300 Hz timeline; gameplay blending,
 mirroring, IK, and procedural effects are not reconstructed. See
 [skeletal extraction findings](analysis/SKELETAL_EXTRACTION.md).
 

@@ -1,0 +1,31 @@
+{
+  "function": "fn_801ED2A4",
+  "source": "analysis/split/asm/auto_03_801EC688_text.s",
+  "start": "0x801ED2A4",
+  "instruction_count": 44,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801ED2C8",
+      "target": "fn_801ED354"
+    },
+    {
+      "site": "0x801ED2E4",
+      "target": "fn_800100B0"
+    },
+    {
+      "site": "0x801ED2F8",
+      "target": "fn_801ECEC0"
+    },
+    {
+      "site": "0x801ED32C",
+      "target": "fn_801ED2A4"
+    },
+    {
+      "site": "0x801ED33C",
+      "target": "fn_801ED2A4"
+    }
+  ],
+  "strings": []
+}

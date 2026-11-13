@@ -61,7 +61,10 @@ def decode_skeleton(data, record_offset=0):
         source_id=data[offset+201]
         bones[index]=dict(index=index,source_id=source_id,name=raw.decode('ascii'),parent=parent,
                           bind=bind,inverse_bind=invert(bind),stored_inverse_bind=inverse,source_offset=offset,
-                          inverse_error=error)
+                          inverse_error=error,pivot=list(unpack(data,'3f',offset+0x94)),
+                          helper=dict(mode=data[offset+0xca],x=data[offset+0xcb],
+                                      y=data[offset+0xcc],z=data[offset+0xcd],
+                                      target=data[offset+0xce],second_target=data[offset+0xcf]))
         active.add(index)
         if child:visit(child,index)
         active.remove(index)

@@ -88,15 +88,54 @@ resource stems and bone names; it does not silently retarget missing bones.
   zero bank-decoding errors.
 - 28 animated GLBs with 772 attached clips. Thirteen banks lack a matching
   exported rig and remain structured JSON motion exports.
-- Tak: 137 serialized bones, 186 named clips, including `DVWALK`, `DVRUN`,
-  `DVJOG`, and jump/weapon motions.
+- Tak: 137 serialized bones, 186 parsed clips and 185 bound clips, including
+  `DVWALK`, `DVRUN`, `DVJOG`, and jump/weapon motions. `B_BLINK` has only
+  unmatched eyelid tracks and is retained in JSON without a GLB animation.
 
 Some reduced character rigs lack tracks present in the full animation bank.
 The exported bank manifest lists unmatched names. These partial bindings,
 30 Hz baking, and glTF quaternion interpolation mean the exports are a first
 animation reconstruction, not verified frame-for-frame gameplay playback.
 Gameplay state transitions, blended animation layers, mirrored motions,
-IK, and procedural helper-bone/effect updates remain separate work.
+IK, and procedural effects remain separate work. Serialized helper-bone
+updates are now baked as described below.
+
+## Procedural helper bones
+
+`0x801ED2A4` calls `0x801ED354` when serialized bone byte `+0xCE`
+is nonzero. Bytes `+0xCA..0xCF` contain a mode, three unsigned percentage
+weights, a source bone ID, and an optional second source bone ID. The
+exporter retains these bytes as named helper fields, plus the pivot at
+`+0x94`, in each skeleton JSON.
+
+The routine reads the referenced bone's local **skin deformation** matrix
+at runtime `+0x40`, extracts its quaternion, and either scales quaternion
+XYZ components independently (with W=1), slerps from identity by the first
+percentage, or applies an X-only quaternion component. A second weighted
+reference, when enabled, is blended with the first using a 0.5 slerp.
+The percentage and blend constants are 0.01 and 0.5 in the original DOL.
+`0x801ED354` and `0x801ED680` compose the result about the serialized
+object-space pivot: `T(pivot) * R * T(-pivot)`.
+
+For glTF, the exporter converts this replacement local skin deformation
+back into joint-local TRS with `parentInverseBind * deformation * bind`.
+Using the helper quaternion directly as a joint-local rotation would
+rotate about the wrong origin. Dependencies are evaluated recursively;
+missing targets and cycles are reported as errors. Tak has 21 such helpers,
+covering hands, arms, spine, and legs. Their TRS channels are baked along
+with ordinary tracks, including helpers with no named animation track.
+
+The ordinary transform composition is consistent with the original matrix
+preparation: `0x801EC180` yields the rotation `inverseBind * parentBind`,
+and `0x801EC338` cancels the first factor when preparing the track basis.
+Together with `0x801EC504`, this preserves local bind translation and
+composes the sampled TRS in the track basis, as the exporter already did.
+
+Two independently rasterized walk frames were inspected after adding
+helpers. The neck separation remains visible; this change does **not**
+establish that the neck/shoulder deformation issue is resolved. There is
+still no comparison against original gameplay, and ordinary transform
+composition was not changed speculatively to hide the gap.
 
 ## Validation and preview
 
@@ -106,6 +145,10 @@ EQM fixture, channel quantization/interpolation, TRS round-trip, hidden
 zero-scale channels, and all 137 real Tak bind/inverse products. A separate
 model regression test preserves UVs when textured and untextured primitives
 share the same vertex buffer.
+Helper tests additionally cover serialized percentages, rotation about an
+object-space pivot under a translated parent, independent XYZ weighting,
+two-reference blending, X-only mode, shortest-arc interpolation, and invalid
+dependencies. The texture/model/rig test selection contains 21 passing tests.
 
 `tools/check_rig_exports.py` reopens 302 skinned GLBs and checks hierarchy,
 bind reconstruction, joint bounds, normalized weights, accessor bounds,

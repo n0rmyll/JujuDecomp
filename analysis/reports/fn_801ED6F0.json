@@ -1,0 +1,67 @@
+{
+  "function": "fn_801ED6F0",
+  "source": "analysis/split/asm/auto_03_801EC688_text.s",
+  "start": "0x801ED6F0",
+  "instruction_count": 143,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801ED740",
+      "target": "fn_801ED6F0"
+    },
+    {
+      "site": "0x801ED750",
+      "target": "fn_800100B0"
+    },
+    {
+      "site": "0x801ED760",
+      "target": "fn_801ED9B4"
+    },
+    {
+      "site": "0x801ED774",
+      "target": "fn_801ECEC0"
+    },
+    {
+      "site": "0x801ED7A8",
+      "target": "fn_800100B0"
+    },
+    {
+      "site": "0x801ED840",
+      "target": "fn_801ED9B0"
+    },
+    {
+      "site": "0x801ED878",
+      "target": "fn_801ED964"
+    },
+    {
+      "site": "0x801ED880",
+      "target": "fn_8000BD30"
+    },
+    {
+      "site": "0x801ED88C",
+      "target": "fn_801ED948"
+    },
+    {
+      "site": "0x801ED898",
+      "target": "fn_80193A48"
+    },
+    {
+      "site": "0x801ED8A8",
+      "target": "fn_80028678"
+    },
+    {
+      "site": "0x801ED8B8",
+      "target": "fn_80028600"
+    },
+    {
+      "site": "0x801ED8C4",
+      "target": "fn_801ED92C"
+    },
+    {
+      "site": "0x801ED8D4",
+      "target": "fn_800100B0"
+    }
+  ],
+  "strings": []
+}

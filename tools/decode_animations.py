@@ -124,9 +124,67 @@ def pose(track,time,bind_local):
     return translation,rotation,[values[3+k]*base_scale[k] for k in range(3)]
 
 
+def slerp(a,b,factor):
+    a,b=normalize(a),normalize(b)
+    dot=sum(x*y for x,y in zip(a,b))
+    if dot<0:b=[-v for v in b];dot=-dot
+    dot=min(1.,max(-1.,dot))
+    if dot>0.9995:return normalize([x+(y-x)*factor for x,y in zip(a,b)])
+    angle=math.acos(dot);divisor=math.sin(angle)
+    return normalize([(math.sin((1-factor)*angle)*x+math.sin(factor*angle)*y)/divisor for x,y in zip(a,b)])
+
+
+def clip_poses(bones,tracks,time,bind_poses=None):
+    """Bake object-space local skin deltas, including fn_801ED354 helpers."""
+    by_index={b['index']:i for i,b in enumerate(bones)}
+    by_id={b['source_id']:i for i,b in enumerate(bones)}
+    by_name={t['name'].lower():t for t in tracks}
+    poses=[]
+    for index,bone in enumerate(bones):
+        track=by_name.get(bone['name'].lower())
+        poses.append(pose(track,time,bone['local']) if track else
+                     bind_poses[index] if bind_poses is not None else decompose(bone['local']))
+    local_skin={};visiting=set()
+    def delta(index):
+        if index in local_skin:return local_skin[index]
+        if index in visiting:raise ValueError('Cyclic procedural bone dependencies')
+        visiting.add(index);bone=bones[index];helper=bone.get('helper',{})
+        parent=by_index.get(bone['parent'])
+        parent_bind=bones[parent]['bind'] if parent is not None else IDENTITY
+        if helper.get('target',0):
+            target=by_id.get(helper['target'])
+            if target is None:raise ValueError('Helper target missing from rig')
+            q=quaternion(delta(target))
+            if helper['mode']:
+                result=[q[0]*helper['x']/100,q[1]*helper['y']/100,q[2]*helper['z']/100,1.]
+            elif helper['x']:
+                result=slerp([0,0,0,1],q,helper['x']/100)
+                if helper['y'] and helper['second_target']:
+                    other=by_id.get(helper['second_target'])
+                    if other is None:raise ValueError('Second helper target missing from rig')
+                    result=slerp(result,slerp([0,0,0,1],quaternion(delta(other)),helper['y']/100),.5)
+            else:
+                result=[q[0]*helper['z']/100,0.,0.,1.]
+            pivot=bone['pivot']
+            transform=multiply(compose(pivot,[0,0,0,1],[1,1,1]),
+                               multiply(compose([0,0,0],result,[1,1,1]),compose([-v for v in pivot],[0,0,0,1],[1,1,1])))
+            # Runtime helpers replace local skin deformation, not the local joint rotation.
+            parent_inverse=bones[parent]['inverse_bind'] if parent is not None else IDENTITY
+            poses[index]=decompose(multiply(parent_inverse,multiply(transform,bone['bind'])))
+        else:
+            t,q,s=poses[index]
+            transform=multiply(parent_bind,multiply(compose(t,q,s),bone['inverse_bind']))
+        visiting.remove(index);local_skin[index]=transform
+        return transform
+    for i,bone in enumerate(bones):
+        if bone.get('helper',{}).get('target'):delta(i)
+    return poses
+
+
 def attach_animations(source, output, skeleton, bank):
     document,blob=read_glb(source)
     bones=skeleton['bones']
+    bind_poses=[decompose(b['local']) for b in bones]
     names={b['name'].lower():i for i,b in enumerate(bones)}
     for b,node in zip(bones,document['nodes'][1:]):
         t,q,s=decompose(b['local']);node.pop('matrix',None);node.update(translation=t,rotation=q,scale=s)
@@ -138,9 +196,14 @@ def attach_animations(source, output, skeleton, bank):
         input_index=add_accessor(document,blob,[t/300 for t in ticks],1)
         animation=dict(name=clip['name'],samplers=[],channels=[])
         for track in clip['tracks']:
-            index=names.get(track['name'].lower())
-            if index is None:unmatched.add(track['name']);continue
-            poses=[pose(track,t,bones[index]['local']) for t in ticks]
+            if track['name'].lower() not in names:unmatched.add(track['name'])
+        updated={names[t['name'].lower()] for t in clip['tracks'] if t['name'].lower() in names}
+        # Helpers alone must not turn an entirely unmatched clip into a bound one.
+        if not updated:continue
+        samples=[clip_poses(bones,clip['tracks'],t,bind_poses) for t in ticks]
+        updated.update(i for i,b in enumerate(bones) if b.get('helper',{}).get('target'))
+        for index in sorted(updated):
+            poses=[p[index] for p in samples]
             # Choose continuous signs so glTF interpolation stays on the same quaternion arc.
             for i in range(1,len(poses)):
                 if sum(a*b for a,b in zip(poses[i-1][1],poses[i][1]))<0:poses[i][1][:]=[-v for v in poses[i][1]]
@@ -151,6 +214,7 @@ def attach_animations(source, output, skeleton, bank):
                 animation['channels'].append(dict(sampler=len(animation['samplers'])-1,target=dict(node=index+1,path=path)))
         if animation['channels']:animations.append(animation)
     document['animations']=animations
+    document.setdefault('extras',{})['proceduralHelpers']=sum(bool(b.get('helper',{}).get('target')) for b in bones)
     output.parent.mkdir(parents=True,exist_ok=True);save_glb(output,document,blob)
     return len(animations),sorted(unmatched)
 

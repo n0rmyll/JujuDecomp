@@ -7,7 +7,7 @@ import unittest
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'tools'))
 from decode_rigs import IDENTITY, multiply, invert, decode_skeleton, attach_skin, read_glb
 from decode_models import write_glb
-from decode_animations import parse_bank,sample,compose,decompose,pose
+from decode_animations import parse_bank,sample,compose,decompose,pose,clip_poses,slerp,attach_animations
 
 
 def skeleton_fixture():
@@ -26,6 +26,54 @@ def skeleton_fixture():
 
 
 class RigTests(unittest.TestCase):
+    def test_helper_metadata(self):
+        data=skeleton_fixture()
+        data[160+240+202:160+240+208]=bytes((1,25,50,75,1,0))
+        bone=decode_skeleton(data)['bones'][1]
+        self.assertEqual(bone['helper'],dict(mode=1,x=25,y=50,z=75,target=1,second_target=0))
+        self.assertEqual(bone['pivot'],[0,0,0])
+
+    def test_helper_rotation_about_object_pivot(self):
+        # A translated parent distinguishes object-space skin deltas from joint TRS.
+        import math
+        def bone(index,parent,x,helper=None):
+            bind=compose([x,0,0],[0,0,0,1],[1,1,1])
+            return dict(index=index,source_id=index+1,name=f'b{index}',parent=parent,
+                        bind=bind,inverse_bind=invert(bind),local=compose([x-(3 if parent==0 else 0),0,0],[0,0,0,1],[1,1,1]),
+                        pivot=[x,0,0],helper=helper or {})
+        bones=[bone(0,None,3),bone(1,0,5),bone(2,0,7,dict(mode=0,x=50,y=0,z=0,target=2,second_target=0))]
+        track=dict(name='b1',rotation_basis=[1,0,0,0,1,0,0,0,1],channels={8:dict(keys=[(0,math.sqrt(.5))]),9:dict(keys=[(0,math.sqrt(.5))])})
+        poses=clip_poses(bones,[track],0)
+        delta=multiply(bones[0]['bind'],multiply(compose(*poses[2]),bones[2]['inverse_bind']))
+        # Half of 90 degrees, preserving the helper's object-space pivot at x=7.
+        self.assertAlmostEqual(delta[0],math.sqrt(.5))
+        self.assertAlmostEqual(delta[1],math.sqrt(.5))
+        self.assertAlmostEqual(delta[0]*7+delta[12],7)
+        self.assertAlmostEqual(delta[1]*7+delta[13],0)
+        bones[2]['helper'].update(mode=1,x=0,y=0,z=50)
+        delta=multiply(bones[0]['bind'],multiply(compose(*clip_poses(bones,[track],0)[2]),bones[2]['inverse_bind']))
+        self.assertAlmostEqual(delta[0],7/9)
+        self.assertAlmostEqual(delta[1],4*math.sqrt(2)/9)
+        # Blend the 45-degree first reference with a zero-weight identity second one.
+        bones[2]['helper'].update(mode=0,x=50,y=50,z=0,second_target=1)
+        delta=multiply(bones[0]['bind'],multiply(compose(*clip_poses(bones,[track],0)[2]),bones[2]['inverse_bind']))
+        self.assertAlmostEqual(delta[0],math.cos(math.pi/8))
+        self.assertAlmostEqual(delta[1],math.sin(math.pi/8))
+        # X-only mode discards a reference's Z rotation.
+        bones[2]['helper'].update(x=0,y=0,z=50,second_target=0)
+        delta=multiply(bones[0]['bind'],multiply(compose(*clip_poses(bones,[track],0)[2]),bones[2]['inverse_bind']))
+        for a,b in zip(delta,IDENTITY):self.assertAlmostEqual(a,b)
+        bones[2]['helper']['target']=3
+        with self.assertRaisesRegex(ValueError,'Cyclic'):clip_poses(bones,[track],0)
+        bones[2]['helper']['target']=99
+        with self.assertRaisesRegex(ValueError,'missing'):clip_poses(bones,[track],0)
+
+    def test_slerp_shortest_arc(self):
+        import math
+        q=slerp([0,0,0,1],[0,0,-math.sqrt(.5),-math.sqrt(.5)],.5)
+        self.assertAlmostEqual(q[2],math.sin(math.pi/8))
+        self.assertAlmostEqual(q[3],math.cos(math.pi/8))
+
     def test_inverse_and_hierarchy(self):
         skeleton=decode_skeleton(skeleton_fixture())
         self.assertEqual([b['parent'] for b in skeleton['bones']],[None,0])
@@ -49,6 +97,12 @@ class RigTests(unittest.TestCase):
             a=g['accessors'][p['attributes']['JOINTS_0']];v=g['bufferViews'][a['bufferView']]
             self.assertEqual(a['componentType'],5123)
             self.assertEqual(struct.unpack_from('<12H',binary,v['byteOffset']),(0,0,0,0,1,0,0,0,1,0,0,0))
+            skeleton['bones'][1]['helper'].update(target=1,x=50)
+            bank=dict(clips=[dict(name='unbound',frames=1,tracks=[dict(name='missing',channels={})])])
+            output=Path(temp)/'animated.glb'
+            count,unmatched=attach_animations(path,output,skeleton,bank)
+            self.assertEqual((count,unmatched),(0,['missing']))
+            self.assertEqual(read_glb(output)[0]['animations'],[])
 
     def test_clip_parsing_and_quantization(self):
         data=bytearray(128);data[:4]=b'EQM\0';struct.pack_into('<H',data,6,1)

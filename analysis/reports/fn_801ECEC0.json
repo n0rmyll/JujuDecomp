@@ -1,0 +1,15 @@
+{
+  "function": "fn_801ECEC0",
+  "source": "analysis/split/asm/auto_03_801EC688_text.s",
+  "start": "0x801ECEC0",
+  "instruction_count": 68,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801ECFAC",
+      "target": "fn_800100B0"
+    }
+  ],
+  "strings": []
+}
