@@ -89,6 +89,26 @@ directly. No source from that repository has been imported.
 
 ## Next concrete milestone
 
+### Recovered DBU payload dispatch
+
+`src/recovered/dbu_payload_dispatch.c` models the complete 68-byte routine
+at **0x801B8FD0**. It reads the u16 at **0x80322E4E**, then the u32 at
+**0x80322E50**, and passes the latter to **0x801B9014** when flag bit zero
+is set, otherwise to **0x801B90D0**. Both handler names remain address-based;
+this recovery does not claim to recover their implementations.
+
+`python3 tools/function_report.py fn_801B8FD0` verified all 17 instructions
+against the local executable. The host behavior test covers all 65,536
+flag values and four argument bit patterns, checking the read addresses,
+read order, selected handler, argument, and exactly one call:
+
+```sh
+clang -std=c11 -Wall -Wextra -Werror -O2 src/recovered/dbu_payload_dispatch.c tests/dbu_payload_dispatch.c -o /tmp/tak-dbu-payload-dispatch-test
+/tmp/tak-dbu-payload-dispatch-test
+```
+
+This is a semantic reconstruction using callbacks, not a PowerPC binary match.
+
 Update: the constructor and live tables have now been traced. See
 `APPLICATION_DISPATCH.md` and `application-map.json` for the recovered
 application iteration and active-state dispatch. The following was the
