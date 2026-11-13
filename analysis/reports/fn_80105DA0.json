@@ -1,0 +1,27 @@
+{
+  "function": "fn_80105DA0",
+  "source": "analysis/split/asm/auto_03_800FFC58_text.s",
+  "start": "0x80105DA0",
+  "instruction_count": 51,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x80105DBC",
+      "target": "fn_800E5540"
+    },
+    {
+      "site": "0x80105DF0",
+      "target": "fn_800E55B8"
+    },
+    {
+      "site": "0x80105E10",
+      "target": "fn_800E5540"
+    },
+    {
+      "site": "0x80105E44",
+      "target": "fn_800E55B8"
+    }
+  ],
+  "strings": []
+}

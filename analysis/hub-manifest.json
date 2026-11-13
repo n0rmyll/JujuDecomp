@@ -1,0 +1,465 @@
+{
+  "archive": "Hub.dbu",
+  "sha256": "edd718a44cdb470cb7530fe73713a4caf22224ce4426fe89527df14577fb8eb8",
+  "file_size": 11603616,
+  "observed_binary_offset": 7808,
+  "build_header": "File ..\\..\\Hub.dbu created by DBLMerge\nCommand line:\n   -UBERDBL -PARAMLIST ..\\..\\fluff\\fonttex.dbl ..\\..\\miscobj\\water.dbl ..\\..\\particles\\hubparticles.dbl ..\\..\\replace\\abt_bush_l.dbl ..\\..\\replace\\abt_bush_s.dbl ..\\..\\replace\\abt_fern_l.dbl ..\\..\\replace\\abt_fern_s.dbl ..\\..\\replace\\abt_flower_l.dbl ..\\..\\replace\\abt_flower_s.dbl ..\\..\\replace\\abt_palm_l.dbl ..\\..\\replace\\abt_palm_s.dbl ..\\..\\replace\\abt_shrub_l.dbl ..\\..\\replace\\abt_shrub_m.dbl ..\\..\\replace\\abt_shrub_s.dbl ..\\..\\replace\\abt_tree_l.dbl ..\\..\\replace\\chblmp.dbl ..\\..\\replace\\chicken.dbl ..\\..\\replace\\chicken_plucked.dbl ..\\..\\replace\\dinkyjuju.dbl ..\\..\\replace\\feather.dbl ..\\..\\replace\\gnblmp.dbl ..\\..\\replace\\hw_cage.dbl ..\\..\\replace\\hw_tramp.dbl ..\\..\\replace\\jujupowerup.dbl ..\\..\\replace\\monkey.dbl ..\\..\\replace\\rhino.dbl ..\\..\\replace\\shrineorbsgreen.dbl ..\\..\\replace\\snowboard.dbl ..\\..\\replace\\splashexplode.dbl ..\\..\\replace\\splashsmall.dbl ..\\..\\replace\\splashtak.dbl ..\\..\\replace\\suspensionbridge10.dbl ..\\..\\replace\\tiki.dbl ..\\..\\replace\\vine1.dbl ..\\..\\replace\\yorbel.dbl ..\\..\\replace\\zipline50.dbl ..\\..\\..\\Data\\tables\\avasurf.dsd ..\\..\\..\\Data\\tables\\avatype.dst ..\\..\\..\\Data\\tables\\surfsurf.dsd ..\\..\\..\\Data\\tables\\surftype.dst ..\\..\\..\\Data\\var\\chichair.dv ..\\..\\..\\Data\\var\\chictail.dv ..\\..\\..\\Data\\var\\chictaill.dv ..\\..\\..\\Data\\var\\chictailr.dv ..\\..\\..\\Data\\var\\grearl.dv ..\\..\\..\\Data\\var\\grearr.dv ..\\..\\..\\Data\\var\\grtail.dv ..\\..\\weapons\\egg.dbl ..\\..\\weapons\\egg2.dbl ..\\..\\worlds\\hub\\hub.dbl ..\\..\\..\\Data\\environ\\monkey\\monkey.mdb ..\\..\\..\\Data\\environ\\rhino\\rhino.mdb ..\\..\\..\\Data\\environ\\chicken\\chicken.mdb ..\\..\\..\\Data\\environ\\spawngenerator\\spawngenerator.adb ..\\..\\..\\Data\\environ\\chicken\\chicken.adb ..\\..\\..\\Data\\worlds\\hub\\hub.adb ..\\..\\..\\Data\\environ\\rhino\\rhino.adb ..\\..\\..\\Data\\environ\\monkey\\monkey.adb ..\\..\\..\\Data\\environ\\pickupgenerator\\pickupgenerator.adb ..\\..\\..\\Data\\environ\\vehicle\\vehicle.adb ..\\..\\..\\Data\\environ\\chicken\\chicken.sdb ..\\..\\..\\Data\\environ/trigsound/trigsound.adb ..\\..\\..\\Data\\environ\\partjr\\partjr.adb ..\\..\\..\\Data\\environ/triggers/particletrg.adb ..\\..\\..\\Data\\environ/blocks/slidingblock.adb ..\\..\\..\\Data\\environ/darts/triggerplate.adb ..\\..\\..\\Data\\environ\\rhino\\rhino.sdb ..\\..\\..\\Data\\environ\\pathcam\\pathcam.adb ..\\..\\..\\Data\\environ\\shrine\\shrine.adb ..\\..\\..\\Data\\environ\\platforms\\twistbridge.adb ..\\..\\..\\Data\\environ/triggers/warpfxtrigger.adb ..\\..\\..\\Data\\environ\\dinkyjuju\\dinkyjuju.adb ..\\..\\..\\Data\\environ/triggers/volumetrg.adb ..\\..\\..\\Data\\environ/platforms/riser.adb ..\\..\\..\\Data\\environ/triggers/fcamattrib.adb ..\\..\\..\\Data\\environ\\platforms\\tippydisc.adb ..\\..\\..\\Data\\environ\\shrineorbs\\shrineorbs.adb ..\\..\\..\\Data\\environ\\gremlin\\gremlinspirit.adb ..\\..\\..\\Data\\environ/triggers/leveltrg.adb ..\\..\\..\\Data\\environ/triggers/spawnpoint.adb ..\\..\\..\\Data\\environ\\dinkyjuju\\dinkyjuju.sdb ..\\..\\..\\Data\\environ\\monkey\\monkey.sdb ..\\..\\..\\Data\\environ\\triggers\\falldie.adb ..\\..\\..\\Data\\environ\\shrineorbs\\shrineorbs.mdb ..\\..\\..\\Data\\environ\\shrineorbs\\shrineorbs.sdb ..\\..\\..\\Data\\environ\\watereffects\\splashexplode.mdb ..\\..\\..\\Data\\environ\\watereffects\\splashsmall.mdb ..\\..\\..\\Data\\environ\\watereffects\\splashtak.mdb ..\\..\\..\\Data\\worlds\\hub\\hubx.dbx ..\\..\\worlds\\hub\\hub.env ..\\..\\worlds\\hub\\hub.dbv ..\\..\\Hub.dbu ",
+  "caveat": "Text metadata only. Source sizes are not payload offsets; no binary extraction layout inferred.",
+  "entries": [
+    {
+      "index": 0,
+      "source_path": "..\\..\\fluff\\fonttex.dbl",
+      "declared_size": 71264
+    },
+    {
+      "index": 1,
+      "source_path": "..\\..\\miscobj\\water.dbl",
+      "declared_size": 107392
+    },
+    {
+      "index": 2,
+      "source_path": "..\\..\\particles\\hubparticles.dbl",
+      "declared_size": 154176
+    },
+    {
+      "index": 3,
+      "source_path": "..\\..\\replace\\abt_bush_l.dbl",
+      "declared_size": 20032
+    },
+    {
+      "index": 4,
+      "source_path": "..\\..\\replace\\abt_bush_s.dbl",
+      "declared_size": 20032
+    },
+    {
+      "index": 5,
+      "source_path": "..\\..\\replace\\abt_fern_l.dbl",
+      "declared_size": 11808
+    },
+    {
+      "index": 6,
+      "source_path": "..\\..\\replace\\abt_fern_s.dbl",
+      "declared_size": 11808
+    },
+    {
+      "index": 7,
+      "source_path": "..\\..\\replace\\abt_flower_l.dbl",
+      "declared_size": 15296
+    },
+    {
+      "index": 8,
+      "source_path": "..\\..\\replace\\abt_flower_s.dbl",
+      "declared_size": 15328
+    },
+    {
+      "index": 9,
+      "source_path": "..\\..\\replace\\abt_palm_l.dbl",
+      "declared_size": 21632
+    },
+    {
+      "index": 10,
+      "source_path": "..\\..\\replace\\abt_palm_s.dbl",
+      "declared_size": 21632
+    },
+    {
+      "index": 11,
+      "source_path": "..\\..\\replace\\abt_shrub_l.dbl",
+      "declared_size": 7968
+    },
+    {
+      "index": 12,
+      "source_path": "..\\..\\replace\\abt_shrub_m.dbl",
+      "declared_size": 7968
+    },
+    {
+      "index": 13,
+      "source_path": "..\\..\\replace\\abt_shrub_s.dbl",
+      "declared_size": 7968
+    },
+    {
+      "index": 14,
+      "source_path": "..\\..\\replace\\abt_tree_l.dbl",
+      "declared_size": 27328
+    },
+    {
+      "index": 15,
+      "source_path": "..\\..\\replace\\chblmp.dbl",
+      "declared_size": 129120
+    },
+    {
+      "index": 16,
+      "source_path": "..\\..\\replace\\chicken.dbl",
+      "declared_size": 94304
+    },
+    {
+      "index": 17,
+      "source_path": "..\\..\\replace\\chicken_plucked.dbl",
+      "declared_size": 94912
+    },
+    {
+      "index": 18,
+      "source_path": "..\\..\\replace\\dinkyjuju.dbl",
+      "declared_size": 199680
+    },
+    {
+      "index": 19,
+      "source_path": "..\\..\\replace\\feather.dbl",
+      "declared_size": 4864
+    },
+    {
+      "index": 20,
+      "source_path": "..\\..\\replace\\gnblmp.dbl",
+      "declared_size": 371712
+    },
+    {
+      "index": 21,
+      "source_path": "..\\..\\replace\\hw_cage.dbl",
+      "declared_size": 44032
+    },
+    {
+      "index": 22,
+      "source_path": "..\\..\\replace\\hw_tramp.dbl",
+      "declared_size": 19680
+    },
+    {
+      "index": 23,
+      "source_path": "..\\..\\replace\\jujupowerup.dbl",
+      "declared_size": 6528
+    },
+    {
+      "index": 24,
+      "source_path": "..\\..\\replace\\monkey.dbl",
+      "declared_size": 284992
+    },
+    {
+      "index": 25,
+      "source_path": "..\\..\\replace\\rhino.dbl",
+      "declared_size": 149984
+    },
+    {
+      "index": 26,
+      "source_path": "..\\..\\replace\\shrineorbsgreen.dbl",
+      "declared_size": 8064
+    },
+    {
+      "index": 27,
+      "source_path": "..\\..\\replace\\snowboard.dbl",
+      "declared_size": 33888
+    },
+    {
+      "index": 28,
+      "source_path": "..\\..\\replace\\splashexplode.dbl",
+      "declared_size": 12320
+    },
+    {
+      "index": 29,
+      "source_path": "..\\..\\replace\\splashsmall.dbl",
+      "declared_size": 11264
+    },
+    {
+      "index": 30,
+      "source_path": "..\\..\\replace\\splashtak.dbl",
+      "declared_size": 11264
+    },
+    {
+      "index": 31,
+      "source_path": "..\\..\\replace\\suspensionbridge10.dbl",
+      "declared_size": 90656
+    },
+    {
+      "index": 32,
+      "source_path": "..\\..\\replace\\tiki.dbl",
+      "declared_size": 25024
+    },
+    {
+      "index": 33,
+      "source_path": "..\\..\\replace\\vine1.dbl",
+      "declared_size": 27872
+    },
+    {
+      "index": 34,
+      "source_path": "..\\..\\replace\\yorbel.dbl",
+      "declared_size": 11296
+    },
+    {
+      "index": 35,
+      "source_path": "..\\..\\replace\\zipline50.dbl",
+      "declared_size": 46848
+    },
+    {
+      "index": 36,
+      "source_path": "..\\..\\..\\Data\\tables\\avasurf.dsd",
+      "declared_size": 66592
+    },
+    {
+      "index": 37,
+      "source_path": "..\\..\\..\\Data\\tables\\avatype.dst",
+      "declared_size": 320
+    },
+    {
+      "index": 38,
+      "source_path": "..\\..\\..\\Data\\tables\\surfsurf.dsd",
+      "declared_size": 67744
+    },
+    {
+      "index": 39,
+      "source_path": "..\\..\\..\\Data\\tables\\surftype.dst",
+      "declared_size": 1696
+    },
+    {
+      "index": 40,
+      "source_path": "..\\..\\..\\Data\\var\\chichair.dv",
+      "declared_size": 416
+    },
+    {
+      "index": 41,
+      "source_path": "..\\..\\..\\Data\\var\\chictail.dv",
+      "declared_size": 416
+    },
+    {
+      "index": 42,
+      "source_path": "..\\..\\..\\Data\\var\\chictaill.dv",
+      "declared_size": 416
+    },
+    {
+      "index": 43,
+      "source_path": "..\\..\\..\\Data\\var\\chictailr.dv",
+      "declared_size": 416
+    },
+    {
+      "index": 44,
+      "source_path": "..\\..\\..\\Data\\var\\grearl.dv",
+      "declared_size": 672
+    },
+    {
+      "index": 45,
+      "source_path": "..\\..\\..\\Data\\var\\grearr.dv",
+      "declared_size": 672
+    },
+    {
+      "index": 46,
+      "source_path": "..\\..\\..\\Data\\var\\grtail.dv",
+      "declared_size": 1216
+    },
+    {
+      "index": 47,
+      "source_path": "..\\..\\weapons\\egg.dbl",
+      "declared_size": 9920
+    },
+    {
+      "index": 48,
+      "source_path": "..\\..\\weapons\\egg2.dbl",
+      "declared_size": 9920
+    },
+    {
+      "index": 49,
+      "source_path": "..\\..\\worlds\\hub\\hub.dbl",
+      "declared_size": 8208064
+    },
+    {
+      "index": 50,
+      "source_path": "..\\..\\..\\Data\\environ\\monkey\\monkey.mdb",
+      "declared_size": 366024
+    },
+    {
+      "index": 51,
+      "source_path": "..\\..\\..\\Data\\environ\\rhino\\rhino.mdb",
+      "declared_size": 179092
+    },
+    {
+      "index": 52,
+      "source_path": "..\\..\\..\\Data\\environ\\chicken\\chicken.mdb",
+      "declared_size": 113008
+    },
+    {
+      "index": 53,
+      "source_path": "..\\..\\..\\Data\\environ\\spawngenerator\\spawngenerator.adb",
+      "declared_size": 59836
+    },
+    {
+      "index": 54,
+      "source_path": "..\\..\\..\\Data\\environ\\chicken\\chicken.adb",
+      "declared_size": 58664
+    },
+    {
+      "index": 55,
+      "source_path": "..\\..\\..\\Data\\worlds\\hub\\hub.adb",
+      "declared_size": 54336
+    },
+    {
+      "index": 56,
+      "source_path": "..\\..\\..\\Data\\environ\\rhino\\rhino.adb",
+      "declared_size": 54308
+    },
+    {
+      "index": 57,
+      "source_path": "..\\..\\..\\Data\\environ\\monkey\\monkey.adb",
+      "declared_size": 46760
+    },
+    {
+      "index": 58,
+      "source_path": "..\\..\\..\\Data\\environ\\pickupgenerator\\pickupgenerator.adb",
+      "declared_size": 41108
+    },
+    {
+      "index": 59,
+      "source_path": "..\\..\\..\\Data\\environ\\vehicle\\vehicle.adb",
+      "declared_size": 32820
+    },
+    {
+      "index": 60,
+      "source_path": "..\\..\\..\\Data\\environ\\chicken\\chicken.sdb",
+      "declared_size": 29020
+    },
+    {
+      "index": 61,
+      "source_path": "..\\..\\..\\Data\\environ/trigsound/trigsound.adb",
+      "declared_size": 28836
+    },
+    {
+      "index": 62,
+      "source_path": "..\\..\\..\\Data\\environ\\partjr\\partjr.adb",
+      "declared_size": 27560
+    },
+    {
+      "index": 63,
+      "source_path": "..\\..\\..\\Data\\environ/triggers/particletrg.adb",
+      "declared_size": 26112
+    },
+    {
+      "index": 64,
+      "source_path": "..\\..\\..\\Data\\environ/blocks/slidingblock.adb",
+      "declared_size": 25248
+    },
+    {
+      "index": 65,
+      "source_path": "..\\..\\..\\Data\\environ/darts/triggerplate.adb",
+      "declared_size": 24300
+    },
+    {
+      "index": 66,
+      "source_path": "..\\..\\..\\Data\\environ\\rhino\\rhino.sdb",
+      "declared_size": 23512
+    },
+    {
+      "index": 67,
+      "source_path": "..\\..\\..\\Data\\environ\\pathcam\\pathcam.adb",
+      "declared_size": 22552
+    },
+    {
+      "index": 68,
+      "source_path": "..\\..\\..\\Data\\environ\\shrine\\shrine.adb",
+      "declared_size": 22452
+    },
+    {
+      "index": 69,
+      "source_path": "..\\..\\..\\Data\\environ\\platforms\\twistbridge.adb",
+      "declared_size": 22444
+    },
+    {
+      "index": 70,
+      "source_path": "..\\..\\..\\Data\\environ/triggers/warpfxtrigger.adb",
+      "declared_size": 22420
+    },
+    {
+      "index": 71,
+      "source_path": "..\\..\\..\\Data\\environ\\dinkyjuju\\dinkyjuju.adb",
+      "declared_size": 21748
+    },
+    {
+      "index": 72,
+      "source_path": "..\\..\\..\\Data\\environ/triggers/volumetrg.adb",
+      "declared_size": 21456
+    },
+    {
+      "index": 73,
+      "source_path": "..\\..\\..\\Data\\environ/platforms/riser.adb",
+      "declared_size": 21368
+    },
+    {
+      "index": 74,
+      "source_path": "..\\..\\..\\Data\\environ/triggers/fcamattrib.adb",
+      "declared_size": 21348
+    },
+    {
+      "index": 75,
+      "source_path": "..\\..\\..\\Data\\environ\\platforms\\tippydisc.adb",
+      "declared_size": 20844
+    },
+    {
+      "index": 76,
+      "source_path": "..\\..\\..\\Data\\environ\\shrineorbs\\shrineorbs.adb",
+      "declared_size": 19876
+    },
+    {
+      "index": 77,
+      "source_path": "..\\..\\..\\Data\\environ\\gremlin\\gremlinspirit.adb",
+      "declared_size": 18892
+    },
+    {
+      "index": 78,
+      "source_path": "..\\..\\..\\Data\\environ/triggers/leveltrg.adb",
+      "declared_size": 18476
+    },
+    {
+      "index": 79,
+      "source_path": "..\\..\\..\\Data\\environ/triggers/spawnpoint.adb",
+      "declared_size": 17216
+    },
+    {
+      "index": 80,
+      "source_path": "..\\..\\..\\Data\\environ\\dinkyjuju\\dinkyjuju.sdb",
+      "declared_size": 14032
+    },
+    {
+      "index": 81,
+      "source_path": "..\\..\\..\\Data\\environ\\monkey\\monkey.sdb",
+      "declared_size": 11884
+    },
+    {
+      "index": 82,
+      "source_path": "..\\..\\..\\Data\\environ\\triggers\\falldie.adb",
+      "declared_size": 11320
+    },
+    {
+      "index": 83,
+      "source_path": "..\\..\\..\\Data\\environ\\shrineorbs\\shrineorbs.mdb",
+      "declared_size": 2340
+    },
+    {
+      "index": 84,
+      "source_path": "..\\..\\..\\Data\\environ\\shrineorbs\\shrineorbs.sdb",
+      "declared_size": 1128
+    },
+    {
+      "index": 85,
+      "source_path": "..\\..\\..\\Data\\environ\\watereffects\\splashexplode.mdb",
+      "declared_size": 644
+    },
+    {
+      "index": 86,
+      "source_path": "..\\..\\..\\Data\\environ\\watereffects\\splashsmall.mdb",
+      "declared_size": 476
+    },
+    {
+      "index": 87,
+      "source_path": "..\\..\\..\\Data\\environ\\watereffects\\splashtak.mdb",
+      "declared_size": 476
+    },
+    {
+      "index": 88,
+      "source_path": "..\\..\\..\\Data\\worlds\\hub\\hubx.dbx",
+      "declared_size": 480
+    },
+    {
+      "index": 89,
+      "source_path": "..\\..\\worlds\\hub\\hub.env",
+      "declared_size": 178976
+    },
+    {
+      "index": 90,
+      "source_path": "..\\..\\worlds\\hub\\hub.dbv",
+      "declared_size": 13504
+    }
+  ]
+}

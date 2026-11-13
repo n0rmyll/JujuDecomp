@@ -1,0 +1,765 @@
+{
+  "table": "0x802CD918",
+  "stride": 28,
+  "count": 54,
+  "boundary": "First record with invalid string pointers; original count constant not recovered",
+  "caveat": "Includes development/FMV descriptors; does not establish assets exist or entries are playable.",
+  "entries": [
+    {
+      "index": 0,
+      "address": "0x802CD918",
+      "internal_name": "Hub",
+      "display_name": "Tak's Village",
+      "resource_path": "Hub\\Hub",
+      "unknown_words": [
+        "0x00000000",
+        "0x00000007",
+        "0x00000000",
+        "0x415CCCCD"
+      ],
+      "unknown_18_float": 13.800000190734863
+    },
+    {
+      "index": 1,
+      "address": "0x802CD934",
+      "internal_name": "Lok_Training",
+      "display_name": "Lok's Training",
+      "resource_path": "Hub\\Hub",
+      "unknown_words": [
+        "0x00010000",
+        "0x00000007",
+        "0x00000000",
+        "0x413E6666"
+      ],
+      "unknown_18_float": 11.899999618530273
+    },
+    {
+      "index": 2,
+      "address": "0x802CD950",
+      "internal_name": "MTemple",
+      "display_name": "Moon Temple",
+      "resource_path": "Hub\\Hub",
+      "unknown_words": [
+        "0x00000000",
+        "0x00000000",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 3,
+      "address": "0x802CD96C",
+      "internal_name": "Burial",
+      "display_name": "Burial Ground",
+      "resource_path": "Burial\\burial",
+      "unknown_words": [
+        "0x00010000",
+        "0x00000007",
+        "0x00000000",
+        "0x413CCCCD"
+      ],
+      "unknown_18_float": 11.800000190734863
+    },
+    {
+      "index": 4,
+      "address": "0x802CD988",
+      "internal_name": "Tombs",
+      "display_name": "Mummy Tombs",
+      "resource_path": "Tombs\\mummy",
+      "unknown_words": [
+        "0x01010000",
+        "0x00000007",
+        "0x00000000",
+        "0x414CCCCD"
+      ],
+      "unknown_18_float": 12.800000190734863
+    },
+    {
+      "index": 5,
+      "address": "0x802CD9A4",
+      "internal_name": "MtnTop",
+      "display_name": "Mountain Top",
+      "resource_path": "MtnTop\\MtTop",
+      "unknown_words": [
+        "0x00000000",
+        "0x00000007",
+        "0x00000000",
+        "0x4154CCCD"
+      ],
+      "unknown_18_float": 13.300000190734863
+    },
+    {
+      "index": 6,
+      "address": "0x802CD9C0",
+      "internal_name": "CIsland",
+      "display_name": "Chicken Island",
+      "resource_path": "CIsland\\chikil",
+      "unknown_words": [
+        "0x00000000",
+        "0x00000007",
+        "0x00000000",
+        "0x4154CCCD"
+      ],
+      "unknown_18_float": 13.300000190734863
+    },
+    {
+      "index": 7,
+      "address": "0x802CD9DC",
+      "internal_name": "C2Island",
+      "display_name": "Chicken Island West",
+      "resource_path": "CIsland\\chikil",
+      "unknown_words": [
+        "0x00000000",
+        "0x00000007",
+        "0x00000000",
+        "0x41500000"
+      ],
+      "unknown_18_float": 13.0
+    },
+    {
+      "index": 8,
+      "address": "0x802CD9F8",
+      "internal_name": "CTemple",
+      "display_name": "Chicken Temple",
+      "resource_path": "CTemple\\chktmp",
+      "unknown_words": [
+        "0x00000000",
+        "0x00000007",
+        "0x00000000",
+        "0x414B3333"
+      ],
+      "unknown_18_float": 12.699999809265137
+    },
+    {
+      "index": 9,
+      "address": "0x802CDA14",
+      "internal_name": "Canyon",
+      "display_name": "Dryrock Canyon",
+      "resource_path": "Canyon\\canyon",
+      "unknown_words": [
+        "0x00010000",
+        "0x00000007",
+        "0x00000000",
+        "0x41500000"
+      ],
+      "unknown_18_float": 13.0
+    },
+    {
+      "index": 10,
+      "address": "0x802CDA30",
+      "internal_name": "CanUnd",
+      "display_name": "Dryrock Caverns",
+      "resource_path": "Canyon\\canund",
+      "unknown_words": [
+        "0x01010000",
+        "0x00000007",
+        "0x00000000",
+        "0x41266666"
+      ],
+      "unknown_18_float": 10.399999618530273
+    },
+    {
+      "index": 11,
+      "address": "0x802CDA4C",
+      "internal_name": "MTop2",
+      "display_name": "Mountain Top North",
+      "resource_path": "MtnTop\\MtTop",
+      "unknown_words": [
+        "0x00000000",
+        "0x00000007",
+        "0x00000000",
+        "0x41166666"
+      ],
+      "unknown_18_float": 9.399999618530273
+    },
+    {
+      "index": 12,
+      "address": "0x802CDA68",
+      "internal_name": "TVillage",
+      "display_name": "Lower Tree Village",
+      "resource_path": "TVillage\\treevil",
+      "unknown_words": [
+        "0x00010000",
+        "0x00000007",
+        "0x00000000",
+        "0x41380000"
+      ],
+      "unknown_18_float": 11.5
+    },
+    {
+      "index": 13,
+      "address": "0x802CDA84",
+      "internal_name": "Sand",
+      "display_name": "Numa Dunes",
+      "resource_path": "Sand\\sandbd",
+      "unknown_words": [
+        "0x00010000",
+        "0x00000007",
+        "0x80331360",
+        "0x41000000"
+      ],
+      "unknown_18_float": 8.0
+    },
+    {
+      "index": 14,
+      "address": "0x802CDAA0",
+      "internal_name": "Hanuma",
+      "display_name": "Numa Bay",
+      "resource_path": "Hanuma\\numbay",
+      "unknown_words": [
+        "0x00000000",
+        "0x00000000",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 15,
+      "address": "0x802CDABC",
+      "internal_name": "STemple",
+      "display_name": "Sun Temple",
+      "resource_path": "STemple\\suntmp",
+      "unknown_words": [
+        "0x00010000",
+        "0x00000007",
+        "0x00000000",
+        "0x413B3333"
+      ],
+      "unknown_18_float": 11.699999809265137
+    },
+    {
+      "index": 16,
+      "address": "0x802CDAD8",
+      "internal_name": "T2Village",
+      "display_name": "Upper Tree Village",
+      "resource_path": "TVillage\\treevil",
+      "unknown_words": [
+        "0x00000000",
+        "0x00000007",
+        "0x00000000",
+        "0x4134CCCD"
+      ],
+      "unknown_18_float": 11.300000190734863
+    },
+    {
+      "index": 17,
+      "address": "0x802CDAF4",
+      "internal_name": "Snow",
+      "display_name": "Powder Canyon",
+      "resource_path": "Snow\\snowbd",
+      "unknown_words": [
+        "0x00000000",
+        "0x00000007",
+        "0x80331360",
+        "0x4109999A"
+      ],
+      "unknown_18_float": 8.600000381469727
+    },
+    {
+      "index": 18,
+      "address": "0x802CDB10",
+      "internal_name": "Spirit",
+      "display_name": "Spirit World",
+      "resource_path": "Spirit\\spirit",
+      "unknown_words": [
+        "0x00000000",
+        "0x00000007",
+        "0x00000000",
+        "0x414E6666"
+      ],
+      "unknown_18_float": 12.899999618530273
+    },
+    {
+      "index": 19,
+      "address": "0x802CDB2C",
+      "internal_name": "TlalocBoss",
+      "display_name": "Dark Temple",
+      "resource_path": "inbboss",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000007",
+        "0x00000000",
+        "0x41233333"
+      ],
+      "unknown_18_float": 10.199999809265137
+    },
+    {
+      "index": 20,
+      "address": "0x802CDB48",
+      "internal_name": "TDemoVillage",
+      "display_name": "Lower Tree Village Demo",
+      "resource_path": "TVillage\\treevil",
+      "unknown_words": [
+        "0x00000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 21,
+      "address": "0x802CDB64",
+      "internal_name": "HOLO",
+      "display_name": "HOLO",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 22,
+      "address": "0x802CDB80",
+      "internal_name": "HOLO2",
+      "display_name": "HOLO2",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 23,
+      "address": "0x802CDB9C",
+      "internal_name": "HOLOBEC",
+      "display_name": "HoloBEC",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 24,
+      "address": "0x802CDBB8",
+      "internal_name": "HOLONED",
+      "display_name": "HOLONed",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 25,
+      "address": "0x802CDBD4",
+      "internal_name": "HOLODJR",
+      "display_name": "HOLODJR",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 26,
+      "address": "0x802CDBF0",
+      "internal_name": "HOLOJIM",
+      "display_name": "HOLOJim",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 27,
+      "address": "0x802CDC0C",
+      "internal_name": "RODNEY",
+      "display_name": "Rodney",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 28,
+      "address": "0x802CDC28",
+      "internal_name": "JEFFH",
+      "display_name": "JeffH",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 29,
+      "address": "0x802CDC44",
+      "internal_name": "HOLOHENN",
+      "display_name": "HOLOHenn",
+      "resource_path": "ddisco",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 30,
+      "address": "0x802CDC60",
+      "internal_name": "showcase",
+      "display_name": "ShowCase",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 31,
+      "address": "0x802CDC7C",
+      "internal_name": "world",
+      "display_name": "World",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000000",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 32,
+      "address": "0x802CDC98",
+      "internal_name": "HoloJoe",
+      "display_name": "HoloJoe",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 33,
+      "address": "0x802CDCB4",
+      "internal_name": "Intro",
+      "display_name": "Intro",
+      "resource_path": "CIsland\\chikil",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x40E66666"
+      ],
+      "unknown_18_float": 7.199999809265137
+    },
+    {
+      "index": 34,
+      "address": "0x802CDCD0",
+      "internal_name": "HoloDS",
+      "display_name": "HoloDS",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 35,
+      "address": "0x802CDCEC",
+      "internal_name": "HoloTN",
+      "display_name": "HoloTN",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 36,
+      "address": "0x802CDD08",
+      "internal_name": "HoloGABE",
+      "display_name": "HoloGABE",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 37,
+      "address": "0x802CDD24",
+      "internal_name": "Alex",
+      "display_name": "Alex",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 38,
+      "address": "0x802CDD40",
+      "internal_name": "HoloNATE",
+      "display_name": "HoloNATE",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 39,
+      "address": "0x802CDD5C",
+      "internal_name": "HoloJON",
+      "display_name": "HOLOJon",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 40,
+      "address": "0x802CDD78",
+      "internal_name": "HOLOROB",
+      "display_name": "HoloRob",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 41,
+      "address": "0x802CDD94",
+      "internal_name": "HOLOBRI",
+      "display_name": "HoloBri",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 42,
+      "address": "0x802CDDB0",
+      "internal_name": "MatLab",
+      "display_name": "Materials Lab",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 43,
+      "address": "0x802CDDCC",
+      "internal_name": "Planetarium",
+      "display_name": "Planetarium",
+      "resource_path": "CIsland\\chikil",
+      "unknown_words": [
+        "0x00000000",
+        "0x00000000",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 44,
+      "address": "0x802CDDE8",
+      "internal_name": "HoloYEE",
+      "display_name": "HoloYEE",
+      "resource_path": "",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 45,
+      "address": "0x802CDE04",
+      "internal_name": "TVillageBoss",
+      "display_name": "Tree Village Boss Fight",
+      "resource_path": "mboss",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000001",
+        "0x00000000",
+        "0x41200000"
+      ],
+      "unknown_18_float": 10.0
+    },
+    {
+      "index": 46,
+      "address": "0x802CDE20",
+      "internal_name": "STempleBoss",
+      "display_name": "Sun Temple Boss Fight",
+      "resource_path": "mboss",
+      "unknown_words": [
+        "0x01010000",
+        "0x00000007",
+        "0x00000000",
+        "0x40A9999A"
+      ],
+      "unknown_18_float": 5.300000190734863
+    },
+    {
+      "index": 47,
+      "address": "0x802CDE3C",
+      "internal_name": "GetPlantsFMV",
+      "display_name": "Sun Temple Boss Fight",
+      "resource_path": "mboss",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000000",
+        "0x00000000",
+        "0x40800000"
+      ],
+      "unknown_18_float": 4.0
+    },
+    {
+      "index": 48,
+      "address": "0x802CDE58",
+      "internal_name": "LokDeadFMV",
+      "display_name": "Sun Temple Boss Fight",
+      "resource_path": "mboss",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000000",
+        "0x00000000",
+        "0x40800000"
+      ],
+      "unknown_18_float": 4.0
+    },
+    {
+      "index": 49,
+      "address": "0x802CDE74",
+      "internal_name": "LokResFMV",
+      "display_name": "Sun Temple Boss Fight",
+      "resource_path": "mboss",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000000",
+        "0x00000000",
+        "0x40800000"
+      ],
+      "unknown_18_float": 4.0
+    },
+    {
+      "index": 50,
+      "address": "0x802CDE90",
+      "internal_name": "TakHeroFMV",
+      "display_name": "Sun Temple Boss Fight",
+      "resource_path": "mboss",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000000",
+        "0x00000000",
+        "0x40800000"
+      ],
+      "unknown_18_float": 4.0
+    },
+    {
+      "index": 51,
+      "address": "0x802CDEAC",
+      "internal_name": "CreditsFMV",
+      "display_name": "Sun Temple Boss Fight",
+      "resource_path": "mboss",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000000",
+        "0x00000000",
+        "0x40800000"
+      ],
+      "unknown_18_float": 4.0
+    },
+    {
+      "index": 52,
+      "address": "0x802CDEC8",
+      "internal_name": "SandBoardFMV",
+      "display_name": "Sun Temple Boss Fight",
+      "resource_path": "mboss",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000000",
+        "0x00000000",
+        "0x40800000"
+      ],
+      "unknown_18_float": 4.0
+    },
+    {
+      "index": 53,
+      "address": "0x802CDEE4",
+      "internal_name": "SnowBoardFMV",
+      "display_name": "Sun Temple Boss Fight",
+      "resource_path": "mboss",
+      "unknown_words": [
+        "0x01000000",
+        "0x00000000",
+        "0x00000000",
+        "0x40800000"
+      ],
+      "unknown_18_float": 4.0
+    }
+  ]
+}

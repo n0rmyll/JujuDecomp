@@ -1,0 +1,54 @@
+{
+  "function": "fn_800DA524",
+  "source": "analysis/split/asm/auto_03_800C023C_text.s",
+  "start": "0x800DA524",
+  "instruction_count": 174,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x800DA558",
+      "target": "fn_8026D450"
+    },
+    {
+      "site": "0x800DA560",
+      "target": "fn_8026D40C"
+    },
+    {
+      "site": "0x800DA5E0",
+      "target": "fn_8026D2A8"
+    },
+    {
+      "site": "0x800DA5F0",
+      "target": "fn_8026D2A8"
+    },
+    {
+      "site": "0x800DA634",
+      "target": "fn_8026D450"
+    },
+    {
+      "site": "0x800DA63C",
+      "target": "fn_8026D40C"
+    },
+    {
+      "site": "0x800DA714",
+      "target": "fn_8026D450"
+    },
+    {
+      "site": "0x800DA720",
+      "target": "fn_8026D40C"
+    },
+    {
+      "site": "0x800DA744",
+      "target": "fn_8026D40C"
+    }
+  ],
+  "strings": [
+    {
+      "site": "0x800DA544",
+      "address": "0x802C4EB8",
+      "text": "shell\\gadgets.dbl",
+      "basis": "direct operand; may be a load rather than an address argument"
+    }
+  ]
+}

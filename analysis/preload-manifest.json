@@ -1,0 +1,215 @@
+{
+  "archive": "Preload.dbu",
+  "sha256": "df6224662ad1bd0a8baa3a88809ff707289e55bc7346915f891613140ad5a87c",
+  "file_size": 4277216,
+  "observed_binary_offset": 3168,
+  "build_header": "File ..\\..\\Preload.dbu created by DBLMerge\nCommand line:\n   -UBERDBL -PARAMLIST ..\\..\\fluff\\inventoryicons.dbl ..\\..\\fluff\\loading.dbl ..\\..\\miscobj\\boneinfo.dbl ..\\..\\miscobj\\lfoot.dbl ..\\..\\miscobj\\rfoot.dbl ..\\..\\miscobj\\shadow.dbl ..\\..\\miscobj\\sqarshad.dbl ..\\..\\particles\\jujuparticles.dbl ..\\..\\particles\\jujuwaterparticles.dbl ..\\..\\players\\dave\\dave.dbl ..\\..\\replace\\bluefeather.dbl ..\\..\\replace\\coconut.dbl ..\\..\\replace\\explodingcoconut.dbl ..\\..\\replace\\gremlin.dbl ..\\..\\replace\\melon.dbl ..\\..\\replace\\purplefeather.dbl ..\\..\\replace\\sheep.dbl ..\\..\\replace\\sheepblownup.dbl ..\\..\\replace\\spawnfeather.dbl ..\\..\\replace\\yellowfeather.dbl ..\\..\\shell\\gadgets.dbl ..\\..\\shell\\shell.dbl ..\\..\\weapons\\acorn.dbl ..\\..\\weapons\\coconut.dbl ..\\..\\weapons\\jujupowerup.dbl ..\\..\\weapons\\magicplant.dbl ..\\..\\weapons\\melon.dbl ..\\..\\weapons\\null.dbl ..\\..\\weapons\\spiritstrike.dbl ..\\..\\weapons\\tiki.dbl ..\\..\\weapons\\tooth.dbl ..\\..\\..\\Data\\players\\dave\\dave.mdb ..\\..\\..\\Data\\environ\\gremlin\\gremlin.mdb ..\\..\\..\\Data\\environ\\sheep\\sheep.mdb ..\\..\\..\\Data\\players\\dave\\dave.sdb ..\\..\\..\\Data\\environ\\sheep\\sheep.adb ..\\..\\..\\Data\\environ\\sheep\\sheep.sdb ..\\..\\..\\Data\\environ\\gremlin\\gremlin.sdb ..\\..\\..\\Data\\players\\dave\\dave2.sdb ..\\..\\..\\Data\\environ\\gremlin\\gremlin.adb ..\\..\\..\\Data\\environ\\gremlin\\gremlin2.sdb ..\\..\\Preload.dbu ",
+  "caveat": "Text metadata only. Source sizes are not payload offsets; no binary extraction layout inferred.",
+  "entries": [
+    {
+      "index": 0,
+      "source_path": "..\\..\\fluff\\inventoryicons.dbl",
+      "declared_size": 199712
+    },
+    {
+      "index": 1,
+      "source_path": "..\\..\\fluff\\loading.dbl",
+      "declared_size": 17952
+    },
+    {
+      "index": 2,
+      "source_path": "..\\..\\miscobj\\boneinfo.dbl",
+      "declared_size": 8480
+    },
+    {
+      "index": 3,
+      "source_path": "..\\..\\miscobj\\lfoot.dbl",
+      "declared_size": 3360
+    },
+    {
+      "index": 4,
+      "source_path": "..\\..\\miscobj\\rfoot.dbl",
+      "declared_size": 3360
+    },
+    {
+      "index": 5,
+      "source_path": "..\\..\\miscobj\\shadow.dbl",
+      "declared_size": 7424
+    },
+    {
+      "index": 6,
+      "source_path": "..\\..\\miscobj\\sqarshad.dbl",
+      "declared_size": 1856
+    },
+    {
+      "index": 7,
+      "source_path": "..\\..\\particles\\jujuparticles.dbl",
+      "declared_size": 285312
+    },
+    {
+      "index": 8,
+      "source_path": "..\\..\\particles\\jujuwaterparticles.dbl",
+      "declared_size": 59040
+    },
+    {
+      "index": 9,
+      "source_path": "..\\..\\players\\dave\\dave.dbl",
+      "declared_size": 447200
+    },
+    {
+      "index": 10,
+      "source_path": "..\\..\\replace\\bluefeather.dbl",
+      "declared_size": 7008
+    },
+    {
+      "index": 11,
+      "source_path": "..\\..\\replace\\coconut.dbl",
+      "declared_size": 4416
+    },
+    {
+      "index": 12,
+      "source_path": "..\\..\\replace\\explodingcoconut.dbl",
+      "declared_size": 4416
+    },
+    {
+      "index": 13,
+      "source_path": "..\\..\\replace\\gremlin.dbl",
+      "declared_size": 166080
+    },
+    {
+      "index": 14,
+      "source_path": "..\\..\\replace\\melon.dbl",
+      "declared_size": 4416
+    },
+    {
+      "index": 15,
+      "source_path": "..\\..\\replace\\purplefeather.dbl",
+      "declared_size": 7008
+    },
+    {
+      "index": 16,
+      "source_path": "..\\..\\replace\\sheep.dbl",
+      "declared_size": 74784
+    },
+    {
+      "index": 17,
+      "source_path": "..\\..\\replace\\sheepblownup.dbl",
+      "declared_size": 72768
+    },
+    {
+      "index": 18,
+      "source_path": "..\\..\\replace\\spawnfeather.dbl",
+      "declared_size": 4864
+    },
+    {
+      "index": 19,
+      "source_path": "..\\..\\replace\\yellowfeather.dbl",
+      "declared_size": 4800
+    },
+    {
+      "index": 20,
+      "source_path": "..\\..\\shell\\gadgets.dbl",
+      "declared_size": 330464
+    },
+    {
+      "index": 21,
+      "source_path": "..\\..\\shell\\shell.dbl",
+      "declared_size": 608
+    },
+    {
+      "index": 22,
+      "source_path": "..\\..\\weapons\\acorn.dbl",
+      "declared_size": 68544
+    },
+    {
+      "index": 23,
+      "source_path": "..\\..\\weapons\\coconut.dbl",
+      "declared_size": 4416
+    },
+    {
+      "index": 24,
+      "source_path": "..\\..\\weapons\\jujupowerup.dbl",
+      "declared_size": 6528
+    },
+    {
+      "index": 25,
+      "source_path": "..\\..\\weapons\\magicplant.dbl",
+      "declared_size": 49728
+    },
+    {
+      "index": 26,
+      "source_path": "..\\..\\weapons\\melon.dbl",
+      "declared_size": 4416
+    },
+    {
+      "index": 27,
+      "source_path": "..\\..\\weapons\\null.dbl",
+      "declared_size": 1056
+    },
+    {
+      "index": 28,
+      "source_path": "..\\..\\weapons\\spiritstrike.dbl",
+      "declared_size": 23136
+    },
+    {
+      "index": 29,
+      "source_path": "..\\..\\weapons\\tiki.dbl",
+      "declared_size": 25024
+    },
+    {
+      "index": 30,
+      "source_path": "..\\..\\weapons\\tooth.dbl",
+      "declared_size": 13952
+    },
+    {
+      "index": 31,
+      "source_path": "..\\..\\..\\Data\\players\\dave\\dave.mdb",
+      "declared_size": 1602328
+    },
+    {
+      "index": 32,
+      "source_path": "..\\..\\..\\Data\\environ\\gremlin\\gremlin.mdb",
+      "declared_size": 366824
+    },
+    {
+      "index": 33,
+      "source_path": "..\\..\\..\\Data\\environ\\sheep\\sheep.mdb",
+      "declared_size": 287872
+    },
+    {
+      "index": 34,
+      "source_path": "..\\..\\..\\Data\\players\\dave\\dave.sdb",
+      "declared_size": 197900
+    },
+    {
+      "index": 35,
+      "source_path": "..\\..\\..\\Data\\environ\\sheep\\sheep.adb",
+      "declared_size": 77628
+    },
+    {
+      "index": 36,
+      "source_path": "..\\..\\..\\Data\\environ\\sheep\\sheep.sdb",
+      "declared_size": 43876
+    },
+    {
+      "index": 37,
+      "source_path": "..\\..\\..\\Data\\environ\\gremlin\\gremlin.sdb",
+      "declared_size": 42908
+    },
+    {
+      "index": 38,
+      "source_path": "..\\..\\..\\Data\\players\\dave\\dave2.sdb",
+      "declared_size": 32672
+    },
+    {
+      "index": 39,
+      "source_path": "..\\..\\..\\Data\\environ\\gremlin\\gremlin.adb",
+      "declared_size": 18040
+    },
+    {
+      "index": 40,
+      "source_path": "..\\..\\..\\Data\\environ\\gremlin\\gremlin2.sdb",
+      "declared_size": 15852
+    }
+  ]
+}

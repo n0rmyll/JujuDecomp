@@ -1,0 +1,58 @@
+{
+  "function": "fn_800E7810",
+  "source": "analysis/split/asm/auto_03_800E5FA0_text.s",
+  "start": "0x800E7810",
+  "instruction_count": 54,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x800E7830",
+      "target": "fn_8029239C"
+    },
+    {
+      "site": "0x800E7840",
+      "target": "fn_80204BCC"
+    },
+    {
+      "site": "0x800E785C",
+      "target": "fn_80204FC0"
+    },
+    {
+      "site": "0x800E7874",
+      "target": "fn_80205040"
+    },
+    {
+      "site": "0x800E7878",
+      "target": "fn_801B7300"
+    },
+    {
+      "site": "0x800E7880",
+      "target": "fn_801B72EC"
+    },
+    {
+      "site": "0x800E7888",
+      "target": "fn_801B72EC"
+    },
+    {
+      "site": "0x800E7890",
+      "target": "fn_801B72EC"
+    },
+    {
+      "site": "0x800E78AC",
+      "target": "fn_801B7468"
+    },
+    {
+      "site": "0x800E78B4",
+      "target": "fn_801B7328"
+    }
+  ],
+  "strings": [
+    {
+      "site": "0x800E781C",
+      "address": "0x803315BC",
+      "text": "%s.dbu",
+      "basis": "direct operand; may be a load rather than an address argument"
+    }
+  ]
+}

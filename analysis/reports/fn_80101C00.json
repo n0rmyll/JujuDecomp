@@ -1,0 +1,76 @@
+{
+  "function": "fn_80101C00",
+  "source": "analysis/split/asm/auto_03_800FFC58_text.s",
+  "start": "0x80101C00",
+  "instruction_count": 75,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x80101C18",
+      "target": "_savegpr_26"
+    },
+    {
+      "site": "0x80101C28",
+      "target": "fn_80103438"
+    },
+    {
+      "site": "0x80101C38",
+      "target": "fn_8015E374"
+    },
+    {
+      "site": "0x80101C48",
+      "target": "fn_8015E6F4"
+    },
+    {
+      "site": "0x80101C7C",
+      "target": "fn_8029239C"
+    },
+    {
+      "site": "0x80101CAC",
+      "target": "fn_8015F870"
+    },
+    {
+      "site": "0x80101CC0",
+      "target": "fn_8029239C"
+    },
+    {
+      "site": "0x80101CE8",
+      "target": "fn_8015F06C"
+    },
+    {
+      "site": "0x80101D08",
+      "target": "fn_8015E934"
+    },
+    {
+      "site": "0x80101D18",
+      "target": "_restgpr_26"
+    }
+  ],
+  "strings": [
+    {
+      "site": "0x80101C24",
+      "address": "0x80331778",
+      "text": "player",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x80101C2C",
+      "address": "0x80331778",
+      "text": "player",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x80101C60",
+      "address": "0x802D2764",
+      "text": "startPos%d",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x80101C64",
+      "address": "0x802D2770",
+      "text": "startRot%d",
+      "basis": "direct operand; may be a load rather than an address argument"
+    }
+  ]
+}

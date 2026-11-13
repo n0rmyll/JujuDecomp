@@ -1,0 +1,92 @@
+{
+  "function": "fn_80107E80",
+  "source": "analysis/split/asm/auto_03_800FFC58_text.s",
+  "start": "0x80107E80",
+  "instruction_count": 68,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x80107EB4",
+      "target": "fn_80295974"
+    },
+    {
+      "site": "0x80107EC0",
+      "target": "fn_80212004"
+    },
+    {
+      "site": "0x80107EE0",
+      "target": "fn_8029239C"
+    },
+    {
+      "site": "0x80107EF0",
+      "target": "fn_801B4B10"
+    },
+    {
+      "site": "0x80107EF8",
+      "target": "fn_801B5608"
+    },
+    {
+      "site": "0x80107F0C",
+      "target": "fn_80283330"
+    },
+    {
+      "site": "0x80107F20",
+      "target": "fn_80282FA0"
+    },
+    {
+      "site": "0x80107F30",
+      "target": "fn_80283BCC"
+    },
+    {
+      "site": "0x80107F3C",
+      "target": "fn_80279800"
+    },
+    {
+      "site": "0x80107F50",
+      "target": "fn_80282ADC"
+    },
+    {
+      "site": "0x80107F70",
+      "target": "fn_80282ADC"
+    }
+  ],
+  "strings": [
+    {
+      "site": "0x80107EBC",
+      "address": "0x80331840",
+      "text": "none",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x80107ED4",
+      "address": "0x802D2B48",
+      "text": "level\\%sSound",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x80107F04",
+      "address": "0x802D2B58",
+      "text": "EnvironmentalAI",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x80107F14",
+      "address": "0x803318B8",
+      "text": "Plants",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x80107F28",
+      "address": "0x803318C0",
+      "text": "plants",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x80107F2C",
+      "address": "0x803318B8",
+      "text": "Plants",
+      "basis": "direct operand; may be a load rather than an address argument"
+    }
+  ]
+}

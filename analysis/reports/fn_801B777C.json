@@ -1,0 +1,259 @@
+{
+  "function": "fn_801B777C",
+  "source": "analysis/split/asm/auto_03_801B5A1C_text.s",
+  "start": "0x801B777C",
+  "instruction_count": 664,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801B778C",
+      "target": "_savegpr_18"
+    },
+    {
+      "site": "0x801B77A8",
+      "target": "fn_801B81DC"
+    },
+    {
+      "site": "0x801B77C4",
+      "target": "fn_801B65AC"
+    },
+    {
+      "site": "0x801B77D0",
+      "target": "fn_801B8C80"
+    },
+    {
+      "site": "0x801B77E4",
+      "target": "fn_801B90F4"
+    },
+    {
+      "site": "0x801B781C",
+      "target": "fn_801D90B4"
+    },
+    {
+      "site": "0x801B7824",
+      "target": "fn_801B8E60"
+    },
+    {
+      "site": "0x801B7A60",
+      "target": "fn_801C4324"
+    },
+    {
+      "site": "0x801B7A78",
+      "target": "fn_801C4468"
+    },
+    {
+      "site": "0x801B7A90",
+      "target": "fn_801C5524"
+    },
+    {
+      "site": "0x801B7AA8",
+      "target": "fn_801BA628"
+    },
+    {
+      "site": "0x801B7AC0",
+      "target": "fn_801C5680"
+    },
+    {
+      "site": "0x801B7AD8",
+      "target": "fn_801C586C"
+    },
+    {
+      "site": "0x801B7AF0",
+      "target": "fn_801C58D8"
+    },
+    {
+      "site": "0x801B7B08",
+      "target": "fn_801C5944"
+    },
+    {
+      "site": "0x801B7B20",
+      "target": "fn_801C59A4"
+    },
+    {
+      "site": "0x801B7B38",
+      "target": "fn_801C5A04"
+    },
+    {
+      "site": "0x801B7B50",
+      "target": "fn_801C5A64"
+    },
+    {
+      "site": "0x801B7B68",
+      "target": "fn_801C5A84"
+    },
+    {
+      "site": "0x801B7B80",
+      "target": "fn_801C5BAC"
+    },
+    {
+      "site": "0x801B7B98",
+      "target": "fn_801C6020"
+    },
+    {
+      "site": "0x801B7BB0",
+      "target": "fn_801C5C34"
+    },
+    {
+      "site": "0x801B7BC8",
+      "target": "fn_801C5CBC"
+    },
+    {
+      "site": "0x801B7BE0",
+      "target": "fn_8018BF18"
+    },
+    {
+      "site": "0x801B7BF8",
+      "target": "fn_8018C42C"
+    },
+    {
+      "site": "0x801B7C10",
+      "target": "fn_801C33C4"
+    },
+    {
+      "site": "0x801B7C28",
+      "target": "fn_801C45F8"
+    },
+    {
+      "site": "0x801B7C40",
+      "target": "fn_801B5A1C"
+    },
+    {
+      "site": "0x801B7C58",
+      "target": "fn_8018C7FC"
+    },
+    {
+      "site": "0x801B7C70",
+      "target": "fn_801C608C"
+    },
+    {
+      "site": "0x801B7C88",
+      "target": "fn_801C60F8"
+    },
+    {
+      "site": "0x801B7CA0",
+      "target": "fn_801C6164"
+    },
+    {
+      "site": "0x801B7CB8",
+      "target": "fn_801C61D0"
+    },
+    {
+      "site": "0x801B7CD0",
+      "target": "fn_801B9190"
+    },
+    {
+      "site": "0x801B7CE8",
+      "target": "fn_801C6338"
+    },
+    {
+      "site": "0x801B7D00",
+      "target": "fn_801C63A4"
+    },
+    {
+      "site": "0x801B7D18",
+      "target": "fn_801C6B2C"
+    },
+    {
+      "site": "0x801B7D30",
+      "target": "fn_801C6BC8"
+    },
+    {
+      "site": "0x801B7D48",
+      "target": "fn_801C6C80"
+    },
+    {
+      "site": "0x801B7D70",
+      "target": "fn_801BA748"
+    },
+    {
+      "site": "0x801B7DC4",
+      "target": "OSDisableInterrupts"
+    },
+    {
+      "site": "0x801B7DCC",
+      "target": "OSDisableScheduler"
+    },
+    {
+      "site": "0x801B7DD4",
+      "target": "OSRestoreInterrupts"
+    },
+    {
+      "site": "0x801B7DDC",
+      "target": "fn_80206174"
+    },
+    {
+      "site": "0x801B7DF4",
+      "target": "fn_80205DF0"
+    },
+    {
+      "site": "0x801B7E04",
+      "target": "fn_80206174"
+    },
+    {
+      "site": "0x801B7E08",
+      "target": "OSDisableInterrupts"
+    },
+    {
+      "site": "0x801B7E10",
+      "target": "OSEnableScheduler"
+    },
+    {
+      "site": "0x801B7E18",
+      "target": "OSRestoreInterrupts"
+    },
+    {
+      "site": "0x801B7E50",
+      "target": "memcpy"
+    },
+    {
+      "site": "0x801B7E74",
+      "target": "fn_801B9244"
+    },
+    {
+      "site": "0x801B7E8C",
+      "target": "fn_801B92FC"
+    },
+    {
+      "site": "0x801B7FE4",
+      "target": "fn_8025B790"
+    },
+    {
+      "site": "0x801B8004",
+      "target": "fn_801B81DC"
+    },
+    {
+      "site": "0x801B8014",
+      "target": "fn_801B65AC"
+    },
+    {
+      "site": "0x801B804C",
+      "target": "fn_80282B5C"
+    },
+    {
+      "site": "0x801B80F0",
+      "target": "fn_801B65D8"
+    },
+    {
+      "site": "0x801B8104",
+      "target": "fn_801B8FD0"
+    },
+    {
+      "site": "0x801B8118",
+      "target": "fn_80207ED4"
+    },
+    {
+      "site": "0x801B8128",
+      "target": "fn_8010A8FC"
+    },
+    {
+      "site": "0x801B81A0",
+      "target": "fn_801B90F4"
+    },
+    {
+      "site": "0x801B81C8",
+      "target": "_restgpr_18"
+    }
+  ],
+  "strings": []
+}

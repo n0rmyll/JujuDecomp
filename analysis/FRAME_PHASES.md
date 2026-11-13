@@ -1,5 +1,8 @@
 # State identities and frame phases: GJUE78 revision 0
 
+Further progress: `LEVEL_LOADING.md` documents the descriptor table, DBU
+loading path, and working text-manifest inspection on two real archives.
+
 ## Evidence now stronger than size-based guesses
 
 The 0x32A0 state initializes particle libraries

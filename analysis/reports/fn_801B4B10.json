@@ -1,0 +1,68 @@
+{
+  "function": "fn_801B4B10",
+  "source": "analysis/split/asm/auto_03_801AE290_text.s",
+  "start": "0x801B4B10",
+  "instruction_count": 65,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801B4B3C",
+      "target": "fn_80282B90"
+    },
+    {
+      "site": "0x801B4B48",
+      "target": "fn_801B5608"
+    },
+    {
+      "site": "0x801B4B5C",
+      "target": "fn_80282FA0"
+    },
+    {
+      "site": "0x801B4B64",
+      "target": "fn_801B5614"
+    },
+    {
+      "site": "0x801B4B78",
+      "target": "fn_80282FA0"
+    },
+    {
+      "site": "0x801B4B80",
+      "target": "fn_801B5608"
+    },
+    {
+      "site": "0x801B4B90",
+      "target": "fn_80283BCC"
+    },
+    {
+      "site": "0x801B4B9C",
+      "target": "fn_801B5614"
+    },
+    {
+      "site": "0x801B4BAC",
+      "target": "fn_80283DA4"
+    },
+    {
+      "site": "0x801B4BC0",
+      "target": "fn_8028064C"
+    },
+    {
+      "site": "0x801B4BC8",
+      "target": "fn_801B4CA4"
+    }
+  ],
+  "strings": [
+    {
+      "site": "0x801B4B8C",
+      "address": "0x80331EF4",
+      "text": "Sfx3D",
+      "basis": "direct operand; may be a load rather than an address argument"
+    },
+    {
+      "site": "0x801B4BA8",
+      "address": "0x80331EFC",
+      "text": "SfxEnv",
+      "basis": "direct operand; may be a load rather than an address argument"
+    }
+  ]
+}

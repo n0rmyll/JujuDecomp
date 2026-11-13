@@ -1,0 +1,10 @@
+{
+  "function": "fn_801042FC",
+  "source": "analysis/split/asm/auto_03_800FFC58_text.s",
+  "start": "0x801042FC",
+  "instruction_count": 7,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [],
+  "strings": []
+}

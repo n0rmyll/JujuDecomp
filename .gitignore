@@ -1,4 +1,5 @@
 # Local disc images and game-derived binaries/data
+/assets/
 *.[rR][vV][zZ]
 *.[iI][sS][oO]
 *.[gG][cC][mM]
@@ -36,3 +37,4 @@ __pycache__/
 
 # Script extracted verbatim from the disc
 /analysis/copydata.bat
+/analysis/*.dbu

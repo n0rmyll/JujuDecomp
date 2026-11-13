@@ -97,6 +97,25 @@ The expected executable SHA-256 is `49faf28a7d2e25422c145754ef41b0c8a8dfcd83e688
 
 Read [decompilation notes](analysis/DECOMP_NOTES.md) and [application dispatch findings](analysis/APPLICATION_DISPATCH.md) for current evidence and limitations. `src/recovered/` contains semantic reconstructions; original-target compiler identification, binary matching, asset decoding, and platform replacement work remain before a game source build is possible.
 
+## Extract local assets
+
+With `tools/dtk` installed and your disc image available, run:
+
+```sh
+python3 tools/extract_assets.py 'Tak and the Power of Juju (USA).rvz'
+```
+
+This recursively copies `files/data_gcn` into ignored `assets/disc/` and writes
+`assets/manifest.json` with file sizes, SHA-256 hashes, and the first 16 bytes
+of each file. Rebuild the inventory without extracting again with
+`python3 tools/extract_assets.py --inventory-only`.
+
+The local revision 0 extraction contains 1,163 files (1,447,253,921 bytes):
+21 `.dbu` bundles, 18 `.dbl` files, 27 `.cut` files, 39 `.dba` files,
+1,005 `.dsp` files, 19 `.adp` files, 33 `.bik` movies, and one `.fnt` file.
+These are original resource files; models, textures, and audio have not been
+decoded or converted. DBU/DBL format recovery is the next step.
+
 ## Check the first recovered function
 
 From the repository root, run:

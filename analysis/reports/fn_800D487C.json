@@ -1,0 +1,10 @@
+{
+  "function": "fn_800D487C",
+  "source": "analysis/split/asm/auto_03_800C023C_text.s",
+  "start": "0x800D487C",
+  "instruction_count": 20,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [],
+  "strings": []
+}

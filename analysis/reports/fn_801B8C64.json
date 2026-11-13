@@ -1,0 +1,10 @@
+{
+  "function": "fn_801B8C64",
+  "source": "analysis/split/asm/auto_03_801B5A1C_text.s",
+  "start": "0x801B8C64",
+  "instruction_count": 7,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [],
+  "strings": []
+}
