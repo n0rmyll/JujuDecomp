@@ -1,0 +1,67 @@
+{
+  "function": "fn_801BA628",
+  "source": "analysis/split/asm/auto_03_801B5A1C_text.s",
+  "start": "0x801BA628",
+  "instruction_count": 72,
+  "byte_checks": "PASS",
+  "supplied_bases": {},
+  "calls": [
+    {
+      "site": "0x801BA638",
+      "target": "_savegpr_24"
+    },
+    {
+      "site": "0x801BA64C",
+      "target": "fn_801B91FC"
+    },
+    {
+      "site": "0x801BA654",
+      "target": "fn_801B7350"
+    },
+    {
+      "site": "0x801BA664",
+      "target": "fn_801B86A0"
+    },
+    {
+      "site": "0x801BA674",
+      "target": "fn_801B7350"
+    },
+    {
+      "site": "0x801BA684",
+      "target": "fn_801B86A0"
+    },
+    {
+      "site": "0x801BA698",
+      "target": "fn_801B7350"
+    },
+    {
+      "site": "0x801BA6A8",
+      "target": "fn_801B86A0"
+    },
+    {
+      "site": "0x801BA6B4",
+      "target": "fn_801B7350"
+    },
+    {
+      "site": "0x801BA6C4",
+      "target": "fn_801B86A0"
+    },
+    {
+      "site": "0x801BA6DC",
+      "target": "fn_801B92FC"
+    },
+    {
+      "site": "0x801BA6F0",
+      "target": "fn_801BA264"
+    },
+    {
+      "site": "0x801BA6F8",
+      "target": "fn_801CB7C4"
+    },
+    {
+      "site": "0x801BA734",
+      "target": "_restgpr_24"
+    }
+  ],
+  "strings": []
+}

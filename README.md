@@ -28,6 +28,7 @@ Snapshot: **November 13, 2026**, GJUE78 revision 0. These measure separate stage
 | Skeletal model records exported as skinned GLB | 341 / 354 attempted skeletal records | **96.33%** | Separate rig pass; corrected runtime root ID recovered 67 records. Thirteen records retain inconsistent bind matrices. These records overlap the model scan and are not additive completion totals. |
 | Unique motion banks decoded | 41 / 41 encountered unique banks | **100%** | 949 parsed clips, zero bank-decoding errors; banks deduplicated by source SHA-256. |
 | Motion banks attached to exported rigs | 30 / 41 decoded banks | **73.17%** | 30 animated GLBs with 808 attached clips; 11 banks remain JSON-only. Partial track bindings and 30 Hz baking are not verified gameplay playback. |
+| Hub authored static placements assembled | 1,888 / 1,888 Hub instance records | **100%** | One sampled level only: 1,017 shared meshes and 320,475 placed triangles. Every original matrix and mesh reference retained; gameplay actors, visibility, LOD, lighting, and effects are not reconstructed. |
 
 The asset inventory totals **1,447,253,921 bytes** (about **1.35 GiB**):
 
@@ -154,8 +155,9 @@ the coconut is embedded as its default example. The viewer has no external depen
 
 The static-pass manifest records source offsets and 350 unresolved records.
 The separate rig/animation pass below handles supported skeletal meshes.
-Level object placement, baked vertex colors, and layered materials remain
-unreconstructed. See [model extraction findings](analysis/MODEL_EXTRACTION.md).
+Baked vertex colors and layered materials remain unreconstructed. Hub's
+static object placements are assembled in the level pass below. See
+[model extraction findings](analysis/MODEL_EXTRACTION.md).
 
 ## Export skeletons and animations
 
@@ -187,6 +189,27 @@ arm, spine, and leg helpers. The remaining neck deformation gap still needs
 verification against gameplay. Motion is baked at 30 Hz from the game's 300 Hz timeline; gameplay blending,
 mirroring, IK, and procedural effects are not reconstructed. See
 [skeletal extraction findings](analysis/SKELETAL_EXTRACTION.md).
+
+## Assemble the Hub level
+
+After the texture and static-model exports, run:
+
+```sh
+python3 tools/decode_level.py
+python3 tools/check_level_export.py
+python3 tools/render_level_preview.py
+```
+
+Open `assets/levels/Hub/index.html` for the offline level viewer, or import
+`assets/levels/Hub/Hub.glb` into Blender. The scene contains 1,888 placements,
+1,017 shared meshes, 320,475 placed triangles, and 145 unique embedded textures.
+The viewer starts with a cutaway; enable canopy, sky, backdrop, and helper
+groups to inspect additional records. All placements remain in the GLB.
+
+Matrices and model references are checked against original archive bytes.
+This is an authored static scene; gameplay actors, visibility/LOD selection,
+lighting, and effects are not reconstructed. See
+[level extraction findings](analysis/LEVEL_EXTRACTION.md).
 
 ## Check the first recovered function
 

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>__LEVEL_NAME__ — Tak level export</title>
+<style>
+body{margin:0;background:#171c23;color:#e5ebf1;font:15px system-ui}header{padding:20px 26px 10px}h1{font-size:26px;margin:0 0 8px}p{max-width:1100px;line-height:1.5;margin:6px 0}a{color:#a4d3ff}
+.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px}button,input{font:inherit;padding:7px 10px;border:1px solid #586373;border-radius:5px;background:#252e3a;color:inherit}input[type=checkbox]{padding:0}button{cursor:pointer}button:hover{background:#384655}#search{width:220px}#status{margin:12px 0;font-variant-numeric:tabular-nums;color:#b4c6d8}canvas{display:block;width:100%;height:calc(100vh - 240px);min-height:420px;background:#242d37;touch-action:none}footer{padding:10px 26px;color:#a9b7c7;font-size:13px}
+</style>
+<header><h1>__LEVEL_NAME__ · assembled level</h1>
+<p>Drag to orbit, Shift-drag or right-drag to pan, and scroll to zoom. Search for a mesh name, then use Fit view to inspect the matching pieces.</p>
+<p>Authored static placements, shown as a cutaway for inspection. Gameplay visibility, LOD selection, actors, lighting, and effects are not reproduced. <a href="__LEVEL_FILE__" download>Download level GLB</a> · <a href="manifest.json">Placement manifest</a></p>
+<div class="controls"><button id="fit">Fit view</button><button id="top">Top view</button><button id="reset">Reset</button><input id="search" aria-label="Filter mesh names" placeholder="Filter mesh names"><label><input type="checkbox" id="textured" checked>Textures</label><label><input type="checkbox" id="canopy">Canopy and outer trees</label><label><input type="checkbox" id="sky">Sky</label><label><input type="checkbox" id="backdrop">Distant backdrop</label><label><input type="checkbox" id="helper">Helpers and box markers</label></div>
+<div id="status" role="status">Loading level…</div></header>
+<canvas aria-label="Interactive assembled level" id="view"></canvas>
+<footer>Display filters use mesh names and untextured box geometry; they do not reproduce the game's visibility rules. The GLB retains every placement, including canopy and sky.</footer>
+<script>
+'use strict';
+const canvas=document.querySelector('#view'),status=document.querySelector('#status'),gl=canvas.getContext('webgl2',{alpha:false,antialias:true});
+let draws=[],allBounds=null,target=[0,0,0],radius=1,distance=3,yaw=-.65,pitch=.65,query='',textureMode=true,ready=false;
+const identity=()=>[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];
+const mul=(a,b)=>Array.from({length:16},(_,i)=>{const r=i%4,c=Math.floor(i/4);let x=0;for(let k=0;k<4;k++)x+=a[k*4+r]*b[c*4+k];return x;});
+const sub=(a,b)=>a.map((v,i)=>v-b[i]),dot=(a,b)=>a.reduce((n,v,i)=>n+v*b[i],0),cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
+const unit=a=>{const n=Math.hypot(...a)||1;return a.map(v=>v/n);};
+function camera(){const eye=target.map((v,i)=>v+distance*[Math.cos(pitch)*Math.sin(yaw),Math.sin(pitch),Math.cos(pitch)*Math.cos(yaw)][i]);
+ const z=unit(sub(eye,target)),x=unit(cross([0,1,0],z)),y=cross(z,x);
+ return {x,y,view:[x[0],y[0],z[0],0,x[1],y[1],z[1],0,x[2],y[2],z[2],0,-dot(x,eye),-dot(y,eye),-dot(z,eye),1]};}
+function matched(){return draws.filter(d=>(d.group==='scenery'||document.querySelector('#'+d.group).checked)&&(!query||d.name.toLowerCase().includes(query)));}
+function fit(bounds){target=bounds.min.map((v,k)=>(v+bounds.max[k])/2);radius=Math.hypot(...bounds.min.map((v,k)=>(bounds.max[k]-v)/2))||1;
+ distance=radius*2.8;render();}
+function boundsOf(items){return {min:[0,1,2].map(k=>Math.min(...items.map(d=>d.bounds.min[k]))),max:[0,1,2].map(k=>Math.max(...items.map(d=>d.bounds.max[k])))};}
+let program,locations;
+function shader(type,source){const s=gl.createShader(type);gl.shaderSource(s,source);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(s));return s;}
+function setup(){program=gl.createProgram();gl.attachShader(program,shader(gl.VERTEX_SHADER,`#version 300 es
+ in vec3 position; in vec3 normal; in vec2 uv; uniform mat4 model; uniform mat4 viewProjection;
+ out vec3 n; out vec2 texcoord;
+ void main(){gl_Position=viewProjection*model*vec4(position,1.0);n=transpose(inverse(mat3(model)))*normal;texcoord=uv;}`));
+ gl.attachShader(program,shader(gl.FRAGMENT_SHADER,`#version 300 es
+ precision highp float; in vec3 n; in vec2 texcoord; uniform sampler2D image; uniform bool useTexture;
+ out vec4 color;
+ void main(){vec4 base=useTexture?texture(image,texcoord):vec4(.64,.69,.72,1.0);if(base.a<.5)discard;
+ vec3 normal=normalize(n)*(gl_FrontFacing?1.0:-1.0);float light=.55+.45*max(dot(normal,normalize(vec3(.4,.85,.3))),0.0);
+ color=vec4(base.rgb*light,1.0);}`));
+ gl.linkProgram(program);if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(program));gl.useProgram(program);
+ locations=Object.fromEntries(['model','viewProjection','image','useTexture'].map(n=>[n,gl.getUniformLocation(program,n)]));
+ gl.uniform1i(locations.image,0);gl.enable(gl.DEPTH_TEST);gl.clearColor(.14,.18,.22,1);}
+async function load(){if(!gl)throw Error('WebGL 2 is unavailable. Download the GLB to inspect the scene in Blender.');setup();
+ const bytes=Uint8Array.from(atob('__LEVEL_GLB__'),c=>c.charCodeAt(0)),view=new DataView(bytes.buffer),jsonSize=view.getUint32(12,true);
+ const g=JSON.parse(new TextDecoder().decode(bytes.subarray(20,20+jsonSize))),binary=28+jsonSize;
+ function accessor(i){const a=g.accessors[i],v=g.bufferViews[a.bufferView],n={SCALAR:1,VEC2:2,VEC3:3,VEC4:4}[a.type],C={5126:Float32Array,5125:Uint32Array,5123:Uint16Array}[a.componentType];
+  if(v.byteStride)throw Error('Interleaved vertex data is unsupported');return new C(bytes.buffer,binary+(v.byteOffset||0)+(a.byteOffset||0),a.count*n);}
+ const textures=await Promise.all((g.images||[]).map(async image=>{const v=g.bufferViews[image.bufferView],bitmap=await createImageBitmap(new Blob([bytes.subarray(binary+v.byteOffset,binary+v.byteOffset+v.byteLength)],{type:image.mimeType}));
+  const t=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,t);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,bitmap);gl.generateMipmap(gl.TEXTURE_2D);
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR_MIPMAP_LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);bitmap.close();return t;}));
+ const gpu=new Map();
+ function attribute(name,data,components){const buffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buffer);gl.bufferData(gl.ARRAY_BUFFER,data,gl.STATIC_DRAW);const location=gl.getAttribLocation(program,name);gl.enableVertexAttribArray(location);gl.vertexAttribPointer(location,components,gl.FLOAT,false,0,0);}
+ const meshes=g.meshes.map(mesh=>mesh.primitives.map(p=>{const a=p.attributes,positions=accessor(a.POSITION),indices=accessor(p.indices),material=g.materials[p.material];
+  const key=[a.POSITION,a.NORMAL,a.TEXCOORD_0,p.indices].join('/');let geometry=gpu.get(key);
+  if(!geometry){let normals=a.NORMAL===undefined?new Float32Array(positions.length):accessor(a.NORMAL);
+   if(a.NORMAL===undefined){for(let i=0;i<indices.length;i+=3){const ids=[indices[i],indices[i+1],indices[i+2]],points=ids.map(j=>Array.from(positions.subarray(j*3,j*3+3))),n=cross(sub(points[1],points[0]),sub(points[2],points[0]));for(const j of ids)for(let k=0;k<3;k++)normals[j*3+k]+=n[k];}
+    for(let i=0;i<normals.length;i+=3){const n=unit(Array.from(normals.subarray(i,i+3)));normals.set(n,i);}}
+   const vao=gl.createVertexArray();gl.bindVertexArray(vao);attribute('position',positions,3);attribute('normal',normals,3);attribute('uv',a.TEXCOORD_0===undefined?new Float32Array(positions.length/3*2):accessor(a.TEXCOORD_0),2);
+   const ib=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,ib);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,indices,gl.STATIC_DRAW);
+   geometry={vao,count:indices.length,type:indices instanceof Uint32Array?gl.UNSIGNED_INT:gl.UNSIGNED_SHORT};gpu.set(key,geometry);}
+  const texture=material.pbrMetallicRoughness?.baseColorTexture;return {...geometry,texture:texture?textures[g.textures[texture.index].source]:null,positions};}));
+ const world=g.extras;
+ for(const node of g.nodes){if(node.mesh===undefined)continue;const m=node.matrix||identity(),parts=meshes[node.mesh],lo=[Infinity,Infinity,Infinity],hi=[-Infinity,-Infinity,-Infinity];
+  for(const part of parts)for(let i=0;i<part.positions.length;i+=3)for(let k=0;k<3;k++){const v=m[k]*part.positions[i]+m[k+4]*part.positions[i+1]+m[k+8]*part.positions[i+2]+m[k+12];lo[k]=Math.min(lo[k],v);hi[k]=Math.max(hi[k],v);}
+  draws.push({name:node.name,group:node.extras?.previewGroup||'scenery',matrix:m,parts,bounds:{min:lo,max:hi}});}
+ allBounds=world.preview_bounds;ready=true;fit(allBounds);window.levelViewerState={instances:draws.length,meshes:g.meshes.length,triangles:world.triangles,bounds:allBounds};
+}
+function render(){if(!ready)return;
+ const ratio=Math.min(devicePixelRatio,2),w=Math.round(canvas.clientWidth*ratio),h=Math.round(canvas.clientHeight*ratio);if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;}
+ gl.viewport(0,0,w,h);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.useProgram(program);const c=camera(),near=Math.max(.001,distance*.001),far=distance+radius*50,f=1/Math.tan(Math.PI/8),a=w/h;
+ const projection=[f/a,0,0,0,0,f,0,0,0,0,(far+near)/(near-far),-1,0,0,2*far*near/(near-far),0];gl.uniformMatrix4fv(locations.viewProjection,false,mul(projection,c.view));
+ const items=matched();let triangles=0;
+ for(const d of items){gl.uniformMatrix4fv(locations.model,false,d.matrix);for(const p of d.parts){gl.bindVertexArray(p.vao);gl.uniform1i(locations.useTexture,textureMode&&!!p.texture);if(p.texture)gl.bindTexture(gl.TEXTURE_2D,p.texture);gl.drawElements(gl.TRIANGLES,p.count,p.type,0);triangles+=p.count/3;}}
+ status.textContent=items.length.toLocaleString()+' / '+draws.length.toLocaleString()+' placements · '+triangles.toLocaleString()+' triangles'+(query?' · filtered':'');
+}
+let drag=null;canvas.oncontextmenu=e=>e.preventDefault();canvas.onpointerdown=e=>{drag={x:e.clientX,y:e.clientY,pan:e.shiftKey||e.button===2};canvas.setPointerCapture(e.pointerId);};
+canvas.onpointerup=canvas.onpointercancel=()=>drag=null;
+canvas.onpointermove=e=>{if(!drag||!ready)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(drag.pan){const c=camera(),scale=distance*.0013;target=target.map((v,k)=>v-dx*c.x[k]*scale+dy*c.y[k]*scale);}else{yaw-=dx*.006;pitch=Math.max(-1.55,Math.min(1.55,pitch+dy*.006));}drag.x=e.clientX;drag.y=e.clientY;render();};
+canvas.onwheel=e=>{e.preventDefault();distance=Math.max(radius*.015,Math.min(radius*30,distance*Math.exp(e.deltaY*.001)));render();};
+document.querySelector('#search').oninput=e=>{query=e.target.value.trim().toLowerCase();render();};
+document.querySelector('#textured').onchange=e=>{textureMode=e.target.checked;render();};
+for(const id of ['sky','backdrop','helper','canopy'])document.querySelector('#'+id).onchange=render;
+document.querySelector('#fit').onclick=()=>{const items=matched();if(items.length)fit(boundsOf(items));};
+document.querySelector('#top').onclick=()=>{pitch=1.55;render();};
+document.querySelector('#reset').onclick=()=>{query='';document.querySelector('#search').value='';for(const id of ['sky','backdrop','helper','canopy'])document.querySelector('#'+id).checked=false;yaw=-.65;pitch=.65;if(allBounds)fit(allBounds);};
+window.onresize=render;load().catch(e=>{status.textContent=e.message;window.levelViewerError=e.message;});
+</script></html>
