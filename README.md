@@ -115,7 +115,20 @@ Open `assets/audio/index.html` to search and play the exported clips. The
 decoder preserves the original sample rate and writes mono 16-bit PCM WAVs;
 `assets/audio/manifest.json` records source/PCM hashes, durations, peak levels,
 and loop metadata. It uses only Python's standard library. DBA sound banks
-and ADP music require separate decoders. See [audio findings](analysis/AUDIO_EXTRACTION.md).
+require a separate decoder. See [audio findings](analysis/AUDIO_EXTRACTION.md).
+
+To convert the ADP music streams (requires Python 3 and Clang):
+
+```sh
+python3 tools/decode_music.py
+python3 -m unittest discover -s tests -p test_decode_music.py
+```
+
+Open `assets/music/index.html` to search and play all 19 tracks. The exporter
+writes stereo 48 kHz PCM WAVs and a manifest with original filenames, sample
+counts, durations, and source/PCM hashes. The first full pass exported 35.80
+minutes with no errors. Tracks play once without inferred loop points or
+trimming. See [music format findings](analysis/MUSIC_EXTRACTION.md).
 
 ## Check the first recovered function
 
