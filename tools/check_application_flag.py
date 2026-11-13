@@ -2,6 +2,7 @@
 """Check the host model and original bytes; optionally compare a PPC compile."""
 import argparse
 import hashlib
+import json
 from pathlib import Path
 import struct
 import subprocess
@@ -56,10 +57,16 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--cc', default='clang', help='Host C compiler executable')
     parser.add_argument('--dol', type=Path, default=ROOT / 'analysis/main.dol')
-    parser.add_argument('--ppc-cc', help='Optional Clang with the PowerPC backend')
+    compilers = parser.add_mutually_exclusive_group()
+    compilers.add_argument('--ppc-cc', help='Optional Clang with the PowerPC backend')
+    compilers.add_argument('--mw-cc', type=Path, help='CodeWarrior mwcceppc.exe')
+    parser.add_argument('--runner', type=Path, help='Win32 runner, e.g. tools/wibo')
     args = parser.parse_args()
     build = ROOT / 'build/application-flag'
     build.mkdir(parents=True, exist_ok=True)
+    report = build / 'match.json'
+    # A failed or host-only rerun must not leave a stale success report.
+    report.unlink(missing_ok=True)
     source = ROOT / 'src/recovered/application_flag.c'
     executable = build / 'behavior-test'
     subprocess.run([args.cc, '-std=c11', '-Wall', '-Wextra', '-Werror',
@@ -69,18 +76,35 @@ def main():
     if original_code(args.dol) != EXPECTED_CODE:
         raise ValueError('Original stop setter differs from the recorded instructions')
     print('PASS: original DOL identity and stop-setter instructions', flush=True)
-    if not args.ppc_cc:
-        print('SKIP: compiled PowerPC comparison (supply --ppc-cc)')
+    if not args.ppc_cc and not args.mw_cc:
+        print('SKIP: compiled PowerPC comparison (supply --mw-cc or --ppc-cc)')
         return
     obj = build / 'application_flag.o'
-    subprocess.run([args.ppc_cc, '--target=powerpc-unknown-eabi', '-ffreestanding',
-                    '-fno-unwind-tables', '-fno-asynchronous-unwind-tables',
-                    '-O2', '-c', str(source), '-o', str(obj)], check=True)
+    if args.mw_cc:
+        command = ([str(args.runner.resolve())] if args.runner else []) + [
+            str(args.mw_cc.resolve()), '-c', '-lang', 'c', '-proc', 'gekko',
+            '-O4,p', '-nodefaults', str(source), '-o', str(obj)]
+    else:
+        command = [args.ppc_cc, '--target=powerpc-unknown-eabi', '-ffreestanding',
+                   '-fno-unwind-tables', '-fno-asynchronous-unwind-tables',
+                   '-O2', '-c', str(source), '-o', str(obj)]
+    obj.unlink(missing_ok=True)
+    subprocess.run(command, check=True)
     candidate = object_text(obj)
     if candidate != EXPECTED_CODE:
         raise ValueError(f'PowerPC .text differs: {candidate.hex(" ")}; '
                          f'expected {EXPECTED_CODE.hex(" ")}')
     print('PASS: compiled PowerPC .text exactly matches the original 12 bytes')
+    report.write_text(json.dumps({
+        'function': '0x8020F9C8', 'size': len(candidate), 'exact_match': True,
+        'dol_sha256': EXPECTED_HASH,
+        'source_sha256': hashlib.sha256(source.read_bytes()).hexdigest(),
+        'object_sha256': hashlib.sha256(obj.read_bytes()).hexdigest(),
+        'compiler_sha256': (hashlib.sha256(args.mw_cc.read_bytes()).hexdigest()
+                            if args.mw_cc else None),
+        'command': command, 'text_hex': candidate.hex(),
+        'scope': 'Single relocation-free function; no linked executable verification',
+    }, indent=2) + '\n')
 
 
 if __name__ == '__main__':

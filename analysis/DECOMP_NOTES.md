@@ -56,7 +56,8 @@ return 0
 `fn_8020F9C8` stores 1 into application byte `+0x04` and returns.
 `src/recovered/application_flag.c` is the first small semantic C
 reconstruction, with provenance. It passes the host Clang syntax check;
-it is not compiler-matched or integrated into the original executable.
+it now has an exact 12-byte CodeWarrior GC 1.3.2 object-code match, but is not
+integrated into the original executable. See `BINARY_MATCHING.md`.
 
 The actual derived application vtable must be recovered from static
 initialization before naming its methods. The nearby base-class vtable at

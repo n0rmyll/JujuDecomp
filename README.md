@@ -2,7 +2,7 @@
 
 An early reverse-engineering workspace for **Tak and the Power of Juju (USA)** on GameCube, disc ID **GJUE78**, revision 0. Includes analysis tools, research notes, thirty complete routine models, two partial routine models, and a portable world-record reader in C.
 
-**This is not a completed decompilation or a native source port.** There is no build system that recreates the original game executable yet. The recovered C files are research models, not matching replacements. Tak boot, gameplay, audio, performance, and saves have not yet been verified in this workspace.
+**This is not a completed decompilation or a native source port.** There is no build system that recreates the original game executable yet. The recovered C files are research models; one small routine now has an exact original-target object-code match, but none are integrated into a rebuilt executable. Tak boot, gameplay, audio, performance, and saves have not yet been verified in this workspace.
 
 No game image, extracted executable, game assets, or generated disassembly is included. Supply your own legally obtained copy of the game. Keep game files local; the ignore rules exclude disc images, extracted binaries, saves, and build outputs.
 
@@ -12,7 +12,7 @@ Snapshot: **November 12, 2026**, GJUE78 revision 0. These measure separate stage
 
 | Area | Current / measured total | Progress | Meaning |
 | --- | ---: | ---: | --- |
-| Game functions rebuilt and verified as matching | 0 / 9,667 indexed function regions | **0%** | No original-target matching compilation has been verified. Host syntax/behavior checks do not count as matching. |
+| Game functions compiled and verified as matching | 1 / 9,667 indexed function regions | **0.010%** | The 12-byte stop-request setter matches exactly with CodeWarrior GC 1.3.2. This is an isolated object-code comparison, not a linked executable rebuild. |
 | Game functions modeled in semantic C | 30 / 9,667 indexed function regions | **0.310%** | Thirty complete routines represented in nine C files; two additional C files contain partial DBU/world-volume models and an offline record reader, excluded from this count. Callbacks and host layouts may replace original mechanisms. |
 | Original code bytes covered by those models | 2,448 / 2,747,776 DOL text-section bytes | **0.089%** | Size of the thirty fully modeled original routines; excludes partial DBU/world-volume models, the offline reader, generated C/object size, and verified matching bytes. |
 | Extracted resource files inventoried | 1,163 / 1,163 locally extracted files | **100%** | File paths, sizes, and hashes recorded for the local `files/data_gcn` extraction; not proof of complete disc coverage. |
@@ -69,7 +69,7 @@ The expected executable SHA-256 is `49faf28a7d2e25422c145754ef41b0c8a8dfcd83e688
 
 The latest recovered batch and its checks are documented in [runtime helper findings](analysis/RUNTIME_HELPERS.md).
 
-Read [decompilation notes](analysis/DECOMP_NOTES.md) and [application dispatch findings](analysis/APPLICATION_DISPATCH.md) for current evidence and limitations. `src/recovered/` contains semantic reconstructions; original-target compiler identification, binary matching, asset decoding, and platform replacement work remain before a game source build is possible.
+Read [decompilation notes](analysis/DECOMP_NOTES.md) and [application dispatch findings](analysis/APPLICATION_DISPATCH.md) for current evidence and limitations. `src/recovered/` contains semantic reconstructions; original compiler identification, broader binary matching, asset decoding, and platform replacement work remain before a game source build is possible.
 
 ## Extract local assets
 
@@ -113,22 +113,32 @@ python3 tools/check_application_flag.py
 
 This compiles and runs a host behavior test for `application_flag.c`, checking
 all 256 prior flag values, neighboring bytes, and repeated calls. It also checks
-the local original DOL's SHA-256 and the 12 original instructions' bytes.
+the local original DOL's SHA-256 and the three original instructions (12 bytes).
 Requires Python 3, Clang, and the extracted `analysis/main.dol`. Outputs go under
 ignored `build/application-flag/`. A missing or wrong DOL fails the check.
 
-For a Clang installation with a PowerPC backend, additionally run:
+The first exact PowerPC match is reproducible with locally installed, pinned
+CodeWarrior GC 1.3.2 and wibo 1.2.0 (Intel macOS or x86-64 Linux):
 
 ```sh
-python3 tools/check_application_flag.py --ppc-cc /path/to/llvm/bin/clang
+python3 tools/setup_matching.py
+python3 tools/check_application_flag.py --mw-cc tools/mwcc/GC/1.3.2/mwcceppc.exe --runner tools/wibo
 ```
 
-That compiles a freestanding PowerPC ELF object and compares its `.text` with
-the original function's 12 bytes, failing on differences or text relocations.
-Apple's installed Clang lacks this backend. This optional comparison has not
-yet been run successfully here. It is specific to this single-function object;
-it does not establish the original CodeWarrior toolchain, ABI compatibility, or
-a complete executable rebuild. Larger objects should use objdiff.
+Setup downloads tools into ignored paths, checks SHA-256 hashes, and makes no
+system-wide changes. Use `--archive /path/to/compilers_20251015.zip` to supply
+an existing archive. The checker runs the host behavior test, verifies the DOL
+revision, compiles the actual recovered source, rejects text relocations, and
+compares its entire `.text` with the original 12 bytes. A successful comparison
+writes `build/application-flag/match.json` with source, compiler, and object
+hashes plus the compilation command. A new run clears any previous report.
+
+A Clang with a PowerPC backend can alternatively be tested with
+`--ppc-cc /path/to/clang`; Apple Clang lacks that backend. Only the CodeWarrior
+command above has been verified as matching here. This single-function match
+does not identify the original compiler version/flags, prove broader ABI
+compatibility, or establish a complete executable rebuild. See
+[binary matching findings](analysis/BINARY_MATCHING.md) for evidence and next steps.
 
 ## Attribution
 

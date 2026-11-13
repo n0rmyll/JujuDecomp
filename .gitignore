@@ -18,6 +18,8 @@
 
 # Downloaded tools and compiled/generated output
 /tools/dtk
+/tools/wibo
+/tools/mwcc/
 **/build/
 **/dist/
 **/node_modules/
