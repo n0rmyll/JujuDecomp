@@ -8,7 +8,7 @@ No game image, extracted executable, game assets, or generated disassembly is in
 
 ## Progress statistics
 
-Snapshot: **November 13, 2026**, GJUE78 revision 0. These measure separate stages; they are not an overall completion percentage.
+Snapshot: **November 14, 2026**, GJUE78 revision 0. These measure separate stages; they are not an overall completion percentage.
 
 | Area | Current / measured total | Progress | Meaning |
 | --- | ---: | ---: | --- |
