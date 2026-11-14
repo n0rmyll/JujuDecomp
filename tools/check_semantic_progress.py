@@ -29,7 +29,7 @@ def main():
         path = entry['source']
         if path not in definitions:
             source = (ROOT/path).read_text()
-            definitions[path] = set(re.findall(r'\b(tak_\w+)\s*\([^;]*?\)\s*\{', source, re.S))
+            definitions[path] = set(re.findall(r'\b((?:tak_|small_)\w+)\s*\([^;]*?\)\s*\{', source, re.S))
             macros[path] = set(re.findall(r'^FN\(([0-9A-F]{8})\)', source, re.M))
         found = address in macros[path] or entry['symbol'] in definitions[path]
         if not found:
@@ -41,7 +41,7 @@ def main():
     total = sum(entry['original_bytes'] for entry in entries)
     if len(entries) != manifest['complete_functions'] or total != manifest['original_bytes']:
         raise ValueError('Manifest totals disagree')
-    print(f'PASS: {len(entries)} unique complete semantic models, {total} original bytes; '
+    print(f'PASS: {len(entries)} unique indexed routine models, {total} original bytes; '
           'source definitions, indexed regions and original instruction bytes verified')
 
 

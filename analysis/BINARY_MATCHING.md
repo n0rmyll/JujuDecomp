@@ -1,5 +1,28 @@
 # Binary matching: GJUE78 revision 0
 
+## Current combined snapshot
+
+The first 1,000-model survey below established 255 exact matches. A disjoint
+batch of 802 small target-layout C routines now also matches completely with
+CodeWarrior GC 1.3.2 using `-fp hard`, bringing the combined total to **1,057
+unique function-code matches / 11,096 original bytes**. This includes empty
+methods and constant-return stubs, listed explicitly in the batch report.
+
+See [the matching overview](matching-overview.json), [small-routine proof](small-matching-summary.json),
+and [second-thousand findings](SECOND_THOUSAND.md). The combined survey covers
+1,802 of the now 7,160 modeled routines. The remaining 5,358 register-context,
+compositional caller and finite-domain scalar-transfer models have comparison evidence but have not been
+surveyed for compiler matching; see [remaining-function findings](REMAINING_FUNCTIONS.md).
+Earlier sections and the all-model survey snapshot retain their original
+scope. No linked game executable is rebuilt.
+
+Reproduce the new matches and combine the reports with:
+
+```sh
+python3 tools/check_small_helpers.py
+python3 tools/update_matching_overview.py
+```
+
 On November 12, 2026, `src/recovered/application_flag.c` compiled to the exact
 12 bytes at `0x8020F9C8` in the original executable:
 

@@ -1,5 +1,9 @@
 # Six hundred complete low-level integer C models
 
+This page describes the earlier call-free batch. The later call-aware variant
+of the shared recovery code is documented in [third-thousand findings](THIRD_THOUSAND.md),
+including its explicit opaque-callee boundary and verification limits.
+
 This batch adds **600 complete indexed routine models**, covering **56,900
 original bytes and 14,225 instructions** in GJUE78 revision 0. Combined with
 the previous 400 models, the inventory reaches **1,000 routines covering

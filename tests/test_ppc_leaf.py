@@ -22,6 +22,52 @@ class Memory:
 
 
 class PowerPCOracleTests(unittest.TestCase):
+    def test_indirect_tail_dispatch(self):
+        initial=[0]*42;initial[33]=5
+        words={0:0x4e800420,4:0x38600009,8:0x4e800020}
+        self.assertEqual(execute(words,(0,),Memory(),initial_context=initial),9)
+        initial[33]=0x80002003;events=[]
+        def invoke(target,state):
+            events.append(target);state[3]=17
+        self.assertEqual(execute(words,(0,),Memory(),initial_context=initial,calls=invoke),17)
+        self.assertEqual(events,[0x80002000])
+
+    def test_signed_high_multiply_and_division(self):
+        def run(xo,a,b):
+            return execute({0:(31<<26)|(3<<21)|(3<<16)|(4<<11)|(xo<<1),4:0x4e800020},(a,b,0,0),Memory())
+        self.assertEqual(run(75,0xffffffff,2),0xffffffff)
+        self.assertEqual(run(75,0x80000000,0x80000000),0x40000000)
+        self.assertEqual(run(491,0xfffffff9,2),0xfffffffd)
+        self.assertEqual(run(491,7,0xfffffffe),0xfffffffd)
+        self.assertEqual(run(459,0xffffffff,2),0x7fffffff)
+        for xo,a,b in ((491,0x80000000,0xffffffff),(491,1,0),(459,1,0)):
+            with self.assertRaisesRegex(ValueError,'Undefined integer division'):run(xo,a,b)
+
+    def test_subtract_from_carry_projection(self):
+        word=(31<<26)|(3<<21)|(3<<16)|(4<<11)|(8<<1)
+        self.assertEqual(execute({0:word,4:0x4e800020},(5,3,0,0),Memory()),0xfffffffe)
+
+    def test_high_xor_and_noop(self):
+        # xoris r3,r3,0xffff; nop; blr.
+        words={0:0x6c63ffff,4:0x60000000,8:0x4e800020}
+        self.assertEqual(execute(words,(0x12345678,0,0,0),Memory()),0xedcb5678)
+
+    def test_unsigned_high_multiply(self):
+        words={0:(31<<26)|(3<<21)|(3<<16)|(4<<11)|(11<<1),4:0x4e800020}
+        for a,b,want in ((0xffffffff,0xffffffff,0xfffffffe),(0x80000000,2,1),(1,1,0)):
+            self.assertEqual(execute(words,(a,b,0,0),Memory()),want)
+
+    def test_clear_set_condition_bit_preserves_neighbors(self):
+        for xo,want in ((193,3),(289,7)):
+            word=(19<<26)|(6<<21)|(6<<16)|(6<<11)|(xo<<1)
+            initial=[0]*42;initial[35]=7 if xo==193 else 3
+            out=[]
+            execute({0:word,4:0x4e800020},(0,0,0,0),Memory(),initial_context=initial,final_context=out)
+            self.assertEqual(out[35],want)
+        word=(19<<26)|(7<<21)|(7<<16)|(7<<11)|(193<<1)
+        with self.assertRaisesRegex(ValueError,'Unsupported CR'):
+            execute({0:word},(0,0,0,0),Memory())
+
     def test_bit_numbering(self):
         self.assertEqual(bitmask(0, 7), 0xff000000)
         self.assertEqual(bitmask(31, 29), 0xfffffffd)
@@ -160,6 +206,48 @@ class PowerPCOracleTests(unittest.TestCase):
                          (7, 0xffffffff, 2, 3, 4, 5, 6, 8), Memory(), final_registers=registers)
         self.assertEqual(result, 7)
         self.assertEqual(registers[3:11], [7, 0, 2, 3, 4, 5, 6, 8])
+
+    def test_stack_multiple_registers_and_link_register(self):
+        # stwu; mflr; stw; stmw; clear r30; lmw; lwz; mtlr; restore SP; blr
+        codes=[0x9421fff0,0x7c0802a6,0x90010014,0xbfc10008,0x3bc00000,
+               0xbbc10008,0x80010014,0x7c0803a6,0x38210010,0x4e800020]
+        context=[0]*42;context[1]=0x1000;context[3]=7
+        context[30]=0x11111111;context[31]=0x22222222;context[32]=0x13579bdf
+        memory=Memory();output=[]
+        self.assertEqual(execute({i*4:w for i,w in enumerate(codes)},
+                                 (7,0,0,0),memory,initial_context=context,final_context=output),7)
+        self.assertEqual(output[1],0x1000)
+        self.assertEqual(output[30:33],[0x11111111,0x22222222,0x13579bdf])
+        self.assertEqual(memory.events[:4],[('write',0xff0,0x1000,4),
+            ('write',0x1004,0x13579bdf,4),('write',0xff8,0x11111111,4),('write',0xffc,0x22222222,4)])
+
+    def test_direct_call_boundary_sets_link_and_resumes(self):
+        codes=[0x7fe802a6,0x480000fd,0x38630002,0x7fe803a6,0x4e800020]
+        context=[0]*42;context[3]=7;context[32]=0x8888
+        seen=[];output=[]
+        def callee(target,state):
+            seen.append((target,state[32],state[3]));state[3]=11
+        result=execute({i*4:w for i,w in enumerate(codes)},(7,0,0,0),Memory(),
+                       initial_context=context,final_context=output,calls=callee)
+        self.assertEqual(seen,[(0x100,8,7)])
+        self.assertEqual(result,13);self.assertEqual(output[32],0x8888)
+
+    def test_indirect_calls_capture_target_before_link_update(self):
+        for setup,call in ((0x7c8903a6,0x4e800421),(0x7c8803a6,0x4e800021)):
+            codes=[0x7fe802a6,setup,call,0x7fe803a6,0x4e800020]
+            context=[0]*42;context[4]=0x1000;context[32]=0x9999
+            seen=[]
+            def callee(target,state):seen.append((target,state[32]));state[3]=123
+            self.assertEqual(execute({i*4:w for i,w in enumerate(codes)},(0,0,0,0),Memory(),
+                                     initial_context=context,calls=callee),123)
+            self.assertEqual(seen,[(0x1000,12)])
+
+    def test_tail_call_boundary_preserves_link_and_returns(self):
+        context=[0]*42;context[32]=0x1234;seen=[]
+        def callee(target,state):seen.append((target,state[32]));state[3]=42
+        self.assertEqual(execute({0:0x48000100},(0,0,0,0),Memory(),
+                                 initial_context=context,calls=callee),42)
+        self.assertEqual(seen,[(0x100,0x1234)])
 
     def test_unsupported_instruction_fails(self):
         with self.assertRaisesRegex(ValueError, 'Unsupported'):
