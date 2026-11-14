@@ -20,7 +20,7 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def collect():
+def collect(allow_partial=False):
     manifest = json.loads((ROOT / 'analysis/semantic-functions.json').read_text())
     entries = {x['address']: x for x in manifest['routines']}
     words = load_functions([address[2:] for address in entries])
@@ -74,7 +74,7 @@ def collect():
         results.append(dict(address=address, source=entries[address]['source'],
                             original_bytes=len(expected), candidate_bytes=len(code),
                             status='match' if exact else 'different'))
-    if seen != set(entries) or len(entries) != manifest['complete_functions']:
+    if len(entries) != manifest['complete_functions'] or (seen != set(entries) and not allow_partial):
         raise ValueError('Matching results do not cover the complete inventory')
     matches = [x for x in results if x['status'] == 'match']
     families = {}
@@ -86,10 +86,12 @@ def collect():
                 compiler='CodeWarrior GC 1.3.2 (2.4.2 build 81)', compiler_sha256=compiler_hash,
                 scope='Exact relocated individual function code; no linked executable or data verification',
                 checked=len(results), matched=len(matches), different=len(results)-len(matches),
+                inventory_total=len(entries), not_yet_surveyed=len(entries)-len(results),
                 matched_bytes=sum(x['original_bytes'] for x in matches),
                 families=families,
                 source_hashes={p: digest(ROOT/p) for p in sorted({x['source'] for x in results} |
                     {'src/matching/routines.cpp', 'tools/check_new_matching.py', 'tools/ppc_matching.py',
+                     'analysis/matching-adaptations.json',
                      'analysis/semantic-functions.json'})},
                 results=sorted(results, key=lambda x: x['address']))
 
@@ -98,6 +100,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--collect-only', action='store_true', help='Revalidate existing objects without recompiling')
     parser.add_argument('--snapshot', type=Path, help='Also write a portable summary at this path')
+    parser.add_argument('--allow-partial', action='store_true', help='Explicitly report surveyed coverage if the inventory has grown')
     args = parser.parse_args()
     path = ROOT / 'build/all-matching/report.json'
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -109,7 +112,7 @@ def main():
             ['tools/check_new_matching.py'],
         ):
             subprocess.run([sys.executable, *command], cwd=ROOT, check=True)
-    report = collect()
+    report = collect(allow_partial=args.allow_partial)
     text = json.dumps(report, indent=2) + '\n'
     path.write_text(text)
     if args.snapshot:

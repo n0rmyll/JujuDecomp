@@ -2,7 +2,7 @@
 
 An early reverse-engineering workspace for **Tak and the Power of Juju (USA)** on GameCube, disc ID **GJUE78**, revision 0. Includes analysis tools, research notes, 7,160 indexed routine models (including exact-matched small routines, generated integer C, compositional caller bodies with opaque callees, and finite-domain scalar register transfers), two partial routine models, and a portable world-record reader in C.
 
-**This is not a completed decompilation or a native source port.** There is no build system that recreates the original game executable yet. The recovered C files are research models; target-layout C and candidates now establish 1,057 exact function-code matches, but none are integrated into a rebuilt executable. Tak boot, gameplay, audio, performance, and saves have not yet been verified in this workspace.
+**This is not a completed decompilation or a native source port.** There is no build system that recreates the original game executable yet. The recovered C files are research models; target-layout C and candidates now establish 1,085 exact function-code matches, but none are integrated into a rebuilt executable. Tak boot, gameplay, audio, performance, and saves have not yet been verified in this workspace.
 
 No game image, extracted executable, game assets, or generated disassembly is included. Supply your own legally obtained copy of the game. Keep game files local; the ignore rules exclude disc images, extracted binaries, saves, and build outputs.
 
@@ -12,8 +12,8 @@ Snapshot: **November 13, 2026**, GJUE78 revision 0. These measure separate stage
 
 | Area | Current / measured total | Progress | Meaning |
 | --- | ---: | ---: | --- |
-| Indexed functions compiled and verified as matching | 1,057 / 9,667 indexed function regions | **10.934%** | 1,802 of 7,160 models surveyed: 255 earlier matches plus 802 exact-matched small routines, including empty methods and constant stubs. Complete code and relocations compared; no linked executable rebuild. |
-| Original code bytes verified as matching | 11,096 / 2,747,776 DOL text-section bytes | **0.404%** | Complete instruction bytes of 1,057 functions, including resolved call/global operands. No masking or assembly substitution. |
+| Indexed functions compiled and verified as matching | 1,085 / 9,667 indexed function regions | **11.224%** | 1,802 of 7,160 models surveyed: 283 earlier-batch matches plus 802 exact-matched small routines, including empty methods and constant stubs. Complete code and relocations compared; no linked executable rebuild. |
+| Original code bytes verified as matching | 11,604 / 2,747,776 DOL text-section bytes | **0.422%** | Complete instruction bytes of 1,085 functions, including resolved call/global operands. No masking or assembly substitution. |
 | Indexed routine models in C/C++ | 7,160 / 9,667 indexed function regions | **74.066%** | Complete modeled bodies in twenty source files, including game and SDK/runtime code. The latest 1,160 include 50 integer-context models and 1,110 finite-domain scalar PS0 transfer projections. Real callees, original ABI, PS1 and FPSCR remain unresolved. Another 2,507 indexed regions are explicitly unresolved. Two additional C files contain partial DBU/world-volume models and an offline record reader, excluded from this count. Callbacks and host layouts may replace original mechanisms. |
 | Original code bytes covered by those models | 1,158,944 / 2,747,776 DOL text-section bytes | **42.178%** | Indexed caller/routine bytes represented by the 7,160 models; excludes partial DBU/world-volume models, the offline reader, and generated C/object size. This is semantic coverage; verified matching bytes are measured separately. |
 | Extracted resource files inventoried | 1,163 / 1,163 locally extracted files | **100%** | File paths, sizes, and hashes recorded for the local `files/data_gcn` extraction; not proof of complete disc coverage. |
@@ -285,17 +285,17 @@ python3 -m unittest discover -s tests -p test_new_matching.py
 ```
 
 The complete survey covers all 1,000 entries in the semantic inventory:
-**255 match exactly (6,088 bytes), and 745 differ**. The 970 newer routines
-contribute 232 matches; the original 30 contribute 23. Generated candidates
+**283 match exactly (6,596 bytes), and 717 differ**. The 970 newer routines
+contribute 260 matches; the original 30 contribute 23. Generated candidates
 replace host memory callbacks with target-width accesses and remove harness
 output buffers; their current compiler results do not imply every source
 model is suitable as an original-ABI replacement.
 
 The new-family checker is `tools/check_new_matching.py`. Generated candidates,
 objects, logs, and differences stay in ignored `build/new-matching/`.
-`tools/check_all_matching.py --collect-only` independently rechecks existing
-objects against the original DOL, verifies source/object hashes, and requires
-exact coverage of the current semantic inventory. It writes
+`tools/check_all_matching.py --collect-only --allow-partial` independently rechecks existing
+objects against the original DOL, verifies source/object hashes, and reports
+explicit surveyed coverage as the semantic inventory grows. It writes
 `build/all-matching/report.json`. Add `--snapshot analysis/all-matching-summary.json`
 to refresh the portable per-function summary. Unmatched routines remain
 explicit byte differences; no unresolved comparisons are counted as matches.

@@ -1,0 +1,33 @@
+{
+  "scope": "Verified source-level adaptations for individual direct-memory candidates; no opcode substitution",
+  "routines": {
+    "0x80184564": "globals",
+    "0x80184574": "globals",
+    "0x801862E8": "globals",
+    "0x80186CC8": "globals",
+    "0x80188834": "globals",
+    "0x801C235C": "signed",
+    "0x80096894": "globals",
+    "0x800D56B4": "globals",
+    "0x800D56C4": "globals",
+    "0x800E5540": "globals",
+    "0x801636B8": "globals",
+    "0x801C3BE0": "globals",
+    "0x80205A88": "globals",
+    "0x80003140": "globals",
+    "0x8010BE14": "globals",
+    "0x8010FC28": "globals",
+    "0x80116A54": "globals",
+    "0x80121074": "globals",
+    "0x80121848": "globals",
+    "0x80122164": "globals",
+    "0x80122A0C": "globals",
+    "0x80124580": "globals",
+    "0x80130C1C": "globals",
+    "0x80130CE0": "globals",
+    "0x8013493C": "globals",
+    "0x801380CC": "globals",
+    "0x801380DC": "globals",
+    "0x801380EC": "globals"
+  }
+}

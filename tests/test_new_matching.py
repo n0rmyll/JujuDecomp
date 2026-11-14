@@ -3,7 +3,7 @@ from pathlib import Path
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
-from check_new_matching import definitions, direct, original_bytes, unroll_offsets
+from check_new_matching import PREAMBLE, adapt_candidate, definitions, direct, original_bytes, unroll_offsets
 
 
 class CandidateTests(unittest.TestCase):
@@ -19,6 +19,19 @@ class CandidateTests(unittest.TestCase):
         self.assertIn('WRITE16(a, (uint16_t)READ32(a+4))', text)
         self.assertIn('helper(a)', text)
         self.assertNotIn('TakTarget', text)
+
+    def test_global_adaptation_precedes_helpers_and_preserves_width(self):
+        source = PREAMBLE + 'static inline uint32_t h() { return READ32(0x803312fc); }'
+        adapted = adapt_candidate(source, 'globals')
+        self.assertIn('extern uint8_t lbl_803312FC[1];', adapted)
+        self.assertIn('READ32(((uint32_t)&lbl_803312FC))', adapted)
+        self.assertLess(adapted.index('extern uint8_t'), adapted.index('static inline'))
+
+    def test_signed_adaptation_is_explicit_and_unknown_variants_fail(self):
+        self.assertEqual(adapt_candidate('(a ^ 0x80000000u) < (b ^ 0x80000000u)', 'signed'),
+                         '(int32_t)a < (int32_t)b')
+        with self.assertRaisesRegex(ValueError, 'Unknown'):
+            adapt_candidate(PREAMBLE, 'unverified')
 
     def test_unknown_callbacks_fail(self):
         with self.assertRaisesRegex(ValueError, 'Unconverted'):

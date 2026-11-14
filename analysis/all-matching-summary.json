@@ -5,9 +5,11 @@
   "compiler_sha256": "7cbae0a5bd81e07d7fa8975bbc4e969b5dea265cc29c5ee6bae0453a6e25f225",
   "scope": "Exact relocated individual function code; no linked executable or data verification",
   "checked": 1000,
-  "matched": 255,
-  "different": 745,
-  "matched_bytes": 6088,
+  "matched": 283,
+  "different": 717,
+  "inventory_total": 7160,
+  "not_yet_surveyed": 6160,
+  "matched_bytes": 6596,
   "families": {
     "src/recovered/application_flag.c": {
       "checked": 1,
@@ -26,13 +28,13 @@
     },
     "src/recovered/integer_leaf_helpers.c": {
       "checked": 600,
-      "matched": 50,
-      "matched_bytes": 728
+      "matched": 65,
+      "matched_bytes": 972
     },
     "src/recovered/leaf_helpers.c": {
       "checked": 70,
-      "matched": 18,
-      "matched_bytes": 556
+      "matched": 23,
+      "matched_bytes": 656
     },
     "src/recovered/level_name.c": {
       "checked": 1,
@@ -46,8 +48,8 @@
     },
     "src/recovered/resource_leaf_helpers.c": {
       "checked": 100,
-      "matched": 25,
-      "matched_bytes": 696
+      "matched": 26,
+      "matched_bytes": 748
     },
     "src/recovered/resource_loaders.c": {
       "checked": 6,
@@ -61,8 +63,8 @@
     },
     "src/recovered/scalar_leaf_helpers.c": {
       "checked": 200,
-      "matched": 139,
-      "matched_bytes": 2560
+      "matched": 146,
+      "matched_bytes": 2672
     },
     "src/recovered/startup_state_finish.c": {
       "checked": 1,
@@ -76,7 +78,8 @@
     }
   },
   "source_hashes": {
-    "analysis/semantic-functions.json": "2ea1bbc200f3a215f3a5e423368c54aa16791504ec5308be0ccfd251ae4f4b2e",
+    "analysis/matching-adaptations.json": "e25bae690aff60fe2fe700e2d9cdd65a5c6c12158595a4cb3205ad3d3b242d6f",
+    "analysis/semantic-functions.json": "474f50a1cbe749c42ad295143c4b6f1fed19c02c872924777f0721cae18a85d7",
     "src/matching/routines.cpp": "23d92e6814c7fa1aa213a91385613ad41c506995b43e31dc5842312138729c5f",
     "src/recovered/application_flag.c": "02b9a32864d0acf8424727e8e662dedaedc87fa4208023e191ca35c44db0177f",
     "src/recovered/application_iteration.c": "c563d968c399560d7d65af2fd3b3623247428c3c1d4ed25304e759bac34a46b6",
@@ -91,7 +94,7 @@
     "src/recovered/scalar_leaf_helpers.c": "78b780b8b0a7868ef8128be63bc992435ebc1185cf21300445ee3016eae127ab",
     "src/recovered/startup_state_finish.c": "3cf5e9ad2554d31721b3df30654b033ae990d122b2bbda8e5d7500f0f2310d89",
     "src/recovered/state_lifecycle.c": "4fde571e721febf7bdc1409888a658f0649b1a726fa584b778b7fc9373ddbb96",
-    "tools/check_new_matching.py": "3dae3ee43fb263066baf623d1ca2c64bdb2ebfc068e3751f696bce82877612bf",
+    "tools/check_new_matching.py": "d69c91c08ba398e0f9a62693ac10ecacc7c616ad6287a0cc8a73849eba6cbb62",
     "tools/ppc_matching.py": "fdbf374e00e97298d5595f9c075f21ffba3616c8612a75c620075682445697d6"
   },
   "results": [
@@ -99,8 +102,8 @@
       "address": "0x80003140",
       "source": "src/recovered/integer_leaf_helpers.c",
       "original_bytes": 12,
-      "candidate_bytes": 16,
-      "status": "different"
+      "candidate_bytes": 12,
+      "status": "match"
     },
     {
       "address": "0x80003540",
@@ -1044,8 +1047,8 @@
       "address": "0x80096894",
       "source": "src/recovered/scalar_leaf_helpers.c",
       "original_bytes": 24,
-      "candidate_bytes": 28,
-      "status": "different"
+      "candidate_bytes": 24,
+      "status": "match"
     },
     {
       "address": "0x8009C86C",
@@ -1261,15 +1264,15 @@
       "address": "0x800D56B4",
       "source": "src/recovered/scalar_leaf_helpers.c",
       "original_bytes": 16,
-      "candidate_bytes": 20,
-      "status": "different"
+      "candidate_bytes": 16,
+      "status": "match"
     },
     {
       "address": "0x800D56C4",
       "source": "src/recovered/scalar_leaf_helpers.c",
       "original_bytes": 16,
-      "candidate_bytes": 20,
-      "status": "different"
+      "candidate_bytes": 16,
+      "status": "match"
     },
     {
       "address": "0x800D76E4",
@@ -1338,8 +1341,8 @@
       "address": "0x800E5540",
       "source": "src/recovered/scalar_leaf_helpers.c",
       "original_bytes": 16,
-      "candidate_bytes": 20,
-      "status": "different"
+      "candidate_bytes": 16,
+      "status": "match"
     },
     {
       "address": "0x800E5A28",
@@ -1597,8 +1600,8 @@
       "address": "0x8010BE14",
       "source": "src/recovered/integer_leaf_helpers.c",
       "original_bytes": 16,
-      "candidate_bytes": 20,
-      "status": "different"
+      "candidate_bytes": 16,
+      "status": "match"
     },
     {
       "address": "0x8010BE24",
@@ -1674,8 +1677,8 @@
       "address": "0x8010FC28",
       "source": "src/recovered/integer_leaf_helpers.c",
       "original_bytes": 12,
-      "candidate_bytes": 16,
-      "status": "different"
+      "candidate_bytes": 12,
+      "status": "match"
     },
     {
       "address": "0x8010FF74",
@@ -1800,8 +1803,8 @@
       "address": "0x80116A54",
       "source": "src/recovered/integer_leaf_helpers.c",
       "original_bytes": 16,
-      "candidate_bytes": 20,
-      "status": "different"
+      "candidate_bytes": 16,
+      "status": "match"
     },
     {
       "address": "0x8011701C",
@@ -1996,8 +1999,8 @@
       "address": "0x80121074",
       "source": "src/recovered/integer_leaf_helpers.c",
       "original_bytes": 16,
-      "candidate_bytes": 20,
-      "status": "different"
+      "candidate_bytes": 16,
+      "status": "match"
     },
     {
       "address": "0x80121084",
@@ -2087,8 +2090,8 @@
       "address": "0x80121848",
       "source": "src/recovered/integer_leaf_helpers.c",
       "original_bytes": 12,
-      "candidate_bytes": 16,
-      "status": "different"
+      "candidate_bytes": 12,
+      "status": "match"
     },
     {
       "address": "0x8012185C",
@@ -2108,8 +2111,8 @@
       "address": "0x80122164",
       "source": "src/recovered/integer_leaf_helpers.c",
       "original_bytes": 12,
-      "candidate_bytes": 16,
-      "status": "different"
+      "candidate_bytes": 12,
+      "status": "match"
     },
     {
       "address": "0x80122608",
@@ -2122,8 +2125,8 @@
       "address": "0x80122A0C",
       "source": "src/recovered/integer_leaf_helpers.c",
       "original_bytes": 44,
-      "candidate_bytes": 48,
-      "status": "different"
+      "candidate_bytes": 44,
+      "status": "match"
     },
     {
       "address": "0x80122A38",
@@ -2157,8 +2160,8 @@
       "address": "0x80124580",
       "source": "src/recovered/integer_leaf_helpers.c",
       "original_bytes": 12,
-      "candidate_bytes": 16,
-      "status": "different"
+      "candidate_bytes": 12,
+      "status": "match"
     },
     {
       "address": "0x8012458C",
@@ -2374,8 +2377,8 @@
       "address": "0x80130C1C",
       "source": "src/recovered/integer_leaf_helpers.c",
       "original_bytes": 12,
-      "candidate_bytes": 16,
-      "status": "different"
+      "candidate_bytes": 12,
+      "status": "match"
     },
     {
       "address": "0x80130CA8",
@@ -2395,8 +2398,8 @@
       "address": "0x80130CE0",
       "source": "src/recovered/integer_leaf_helpers.c",
       "original_bytes": 20,
-      "candidate_bytes": 24,
-      "status": "different"
+      "candidate_bytes": 20,
+      "status": "match"
     },
     {
       "address": "0x80130CF4",
@@ -2815,8 +2818,8 @@
       "address": "0x8013493C",
       "source": "src/recovered/integer_leaf_helpers.c",
       "original_bytes": 16,
-      "candidate_bytes": 20,
-      "status": "different"
+      "candidate_bytes": 16,
+      "status": "match"
     },
     {
       "address": "0x8013494C",
@@ -2864,22 +2867,22 @@
       "address": "0x801380CC",
       "source": "src/recovered/integer_leaf_helpers.c",
       "original_bytes": 16,
-      "candidate_bytes": 20,
-      "status": "different"
+      "candidate_bytes": 16,
+      "status": "match"
     },
     {
       "address": "0x801380DC",
       "source": "src/recovered/integer_leaf_helpers.c",
       "original_bytes": 16,
-      "candidate_bytes": 20,
-      "status": "different"
+      "candidate_bytes": 16,
+      "status": "match"
     },
     {
       "address": "0x801380EC",
       "source": "src/recovered/integer_leaf_helpers.c",
       "original_bytes": 12,
-      "candidate_bytes": 16,
-      "status": "different"
+      "candidate_bytes": 12,
+      "status": "match"
     },
     {
       "address": "0x801380F8",
@@ -3389,8 +3392,8 @@
       "address": "0x801636B8",
       "source": "src/recovered/scalar_leaf_helpers.c",
       "original_bytes": 12,
-      "candidate_bytes": 16,
-      "status": "different"
+      "candidate_bytes": 12,
+      "status": "match"
     },
     {
       "address": "0x80167CCC",
@@ -3536,15 +3539,15 @@
       "address": "0x80184564",
       "source": "src/recovered/leaf_helpers.c",
       "original_bytes": 16,
-      "candidate_bytes": 20,
-      "status": "different"
+      "candidate_bytes": 16,
+      "status": "match"
     },
     {
       "address": "0x80184574",
       "source": "src/recovered/leaf_helpers.c",
       "original_bytes": 16,
-      "candidate_bytes": 20,
-      "status": "different"
+      "candidate_bytes": 16,
+      "status": "match"
     },
     {
       "address": "0x8018578C",
@@ -3592,8 +3595,8 @@
       "address": "0x801862E8",
       "source": "src/recovered/leaf_helpers.c",
       "original_bytes": 24,
-      "candidate_bytes": 16,
-      "status": "different"
+      "candidate_bytes": 24,
+      "status": "match"
     },
     {
       "address": "0x8018640C",
@@ -3662,8 +3665,8 @@
       "address": "0x80186CC8",
       "source": "src/recovered/leaf_helpers.c",
       "original_bytes": 28,
-      "candidate_bytes": 24,
-      "status": "different"
+      "candidate_bytes": 28,
+      "status": "match"
     },
     {
       "address": "0x80186D28",
@@ -3725,8 +3728,8 @@
       "address": "0x80188834",
       "source": "src/recovered/leaf_helpers.c",
       "original_bytes": 16,
-      "candidate_bytes": 20,
-      "status": "different"
+      "candidate_bytes": 16,
+      "status": "match"
     },
     {
       "address": "0x8018B424",
@@ -4327,8 +4330,8 @@
       "address": "0x801C235C",
       "source": "src/recovered/resource_leaf_helpers.c",
       "original_bytes": 52,
-      "candidate_bytes": 60,
-      "status": "different"
+      "candidate_bytes": 52,
+      "status": "match"
     },
     {
       "address": "0x801C275C",
@@ -4390,8 +4393,8 @@
       "address": "0x801C3BE0",
       "source": "src/recovered/scalar_leaf_helpers.c",
       "original_bytes": 12,
-      "candidate_bytes": 16,
-      "status": "different"
+      "candidate_bytes": 12,
+      "status": "match"
     },
     {
       "address": "0x801C3BEC",
@@ -5867,8 +5870,8 @@
       "address": "0x80205A88",
       "source": "src/recovered/scalar_leaf_helpers.c",
       "original_bytes": 16,
-      "candidate_bytes": 20,
-      "status": "different"
+      "candidate_bytes": 16,
+      "status": "match"
     },
     {
       "address": "0x80205BF0",

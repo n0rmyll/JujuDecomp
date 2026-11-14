@@ -209,3 +209,35 @@ python3 -m unittest discover -s tests -p test_new_matching.py
 
 The eight relocation tests and the original setter's exhaustive host behavior
 check also pass. Existing unrelated semantic and asset work is retained.
+
+## Bounded improvement pass: 28 additional matches
+
+A later pass retained every earlier match and added 28 functions / 508 bytes.
+The original 1,000-routine survey now has **283 exact matches / 6,596 bytes**;
+717 differ, with no unresolved comparisons. Together with the separately
+verified 802 small routines, the overview totals **1,085 matches / 11,604 bytes**.
+Of the expanded 7,160-model inventory, 1,802 have been surveyed and 5,358 have
+not yet been surveyed. See `matching-overview.json` for the combined totals.
+
+`matching-adaptations.json` explicitly selects the 28 verified source-level
+adaptations: named global declarations enable the original small-data
+addressing; a signed comparison replaces an equivalent unsigned sign-bit
+comparison. No opcode substitution, operand masking, or host-model edits are
+used. The target candidate preamble also accepts 64-bit integer helpers now
+present in the shared recovery tooling. All generated candidate bytes are
+still compared in full with the original function region.
+
+Eight candidate-generation tests and eight relocation tests pass. Independent
+object revalidation confirms that all 255 previous survey matches remain and
+exactly 28 new matches were added. To reproduce the 970 newer candidate checks
+and collect their results within the larger inventory:
+
+```sh
+python3 tools/check_new_matching.py
+python3 tools/check_all_matching.py --collect-only --allow-partial --snapshot analysis/all-matching-summary.json
+python3 tools/update_matching_overview.py
+```
+
+The collector rejects incomplete coverage by default. `--allow-partial` opts
+into an explicitly counted subset and records the inventory total and the
+number not yet surveyed; it does not turn missing comparisons into matches.

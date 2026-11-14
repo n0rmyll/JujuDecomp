@@ -22,7 +22,10 @@ PREAMBLE = '''typedef unsigned char uint8_t;
 typedef unsigned short uint16_t;
 typedef unsigned int uint32_t;
 typedef signed int int32_t;
+typedef unsigned long long uint64_t;
+typedef signed long long int64_t;
 #define UINT32_C(x) x##u
+#define INT64_C(x) x##ll
 #define UINT16_C(x) x##u
 #define UINT32_MAX 0xffffffffu
 #define READ8(a) (*(uint8_t *)(a))
@@ -84,6 +87,31 @@ def original_bytes(words):
     return b''.join(value.to_bytes(4, 'big') for _, value in sorted(words.items()))
 
 
+def adapt_candidate(source, variant):
+    """Apply explicitly selected source-level matching adaptations."""
+    if variant not in ('globals', 'signed', 'both'):
+        raise ValueError('Unknown matching adaptation: ' + variant)
+    if variant in ('signed', 'both'):
+        source = source.replace('(a ^ 0x80000000u) < (b ^ 0x80000000u)',
+                                '(int32_t)a < (int32_t)b')
+    if variant in ('globals', 'both'):
+        labels = set()
+        pattern = r'((?:READ|WRITE)(?:8|16|32)\(\s*\(*\s*)(?:UINT32_C\((0x80[0-9a-fA-F]{6})\)|(0x80[0-9a-fA-F]{6})[uU]?)'
+        def replace(match):
+            address = int(match[2] or match[3], 16)
+            labels.add(address)
+            return match[1] + f'((uint32_t)&lbl_{address:08X})'
+        source = re.sub(pattern, replace, source)
+        declarations = '\n'.join(
+            f'extern uint8_t lbl_{address:08X}[{1 if 0x80330280 <= address < 0x80333140 else 16}];'
+            for address in sorted(labels))
+        marker = '#define __builtin_clz(x) __cntlzw(x)'
+        if source.count(marker) != 1:
+            raise ValueError('Missing unique candidate preamble')
+        source = source.replace(marker, marker + '\n' + declarations, 1)
+    return source
+
+
 def prepare(entries):
     families = {}
     for filename in SOURCES[:-1]:
@@ -102,6 +130,7 @@ def prepare(entries):
         for item in json.loads((ROOT / 'analysis' / filename).read_text())['routines']:
             return_checked[item['address']] = item['return_checked']
     candidates = {}
+    adaptations = json.loads((ROOT / 'analysis/matching-adaptations.json').read_text())['routines']
     for entry in entries:
         filename = Path(entry['source']).name
         address = entry['address']
@@ -123,6 +152,8 @@ def prepare(entries):
         body = unroll_offsets(body)
         helpers = direct(helpers).replace('static ', 'static inline ')
         candidates[address] = PREAMBLE + '\n' + helpers + '\nextern "C" ' + direct(signature) + '{\n' + direct(body) + '\n}\n'
+        if address in adaptations:
+            candidates[address] = adapt_candidate(candidates[address], adaptations[address])
     return candidates
 
 
@@ -185,7 +216,8 @@ def main():
         results.append(result)
         if index % 50 == 0 or index == len(entries):
             print(f'{index}/{len(entries)} checked: {dict(collections.Counter(x["status"] for x in results))}', flush=True)
-    sources = {entry['source'] for entry in entries}
+    sources = {entry['source'] for entry in entries} | {
+        'analysis/matching-adaptations.json', 'tools/check_new_matching.py'}
     report = dict(dol_sha256=manifest['dol_sha256'],
                   scope='Direct-memory adaptations of semantic C; full relocated function byte comparison, no linked rebuild',
                   compiler_sha256=hashlib.sha256(cc.read_bytes()).hexdigest(),
