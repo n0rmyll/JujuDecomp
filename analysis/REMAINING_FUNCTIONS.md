@@ -130,7 +130,7 @@ python3 tools/update_matching_overview.py
 identifiers and source artifacts are preserved. Selection summaries retain
 excluded candidates separately from successful final verification summaries.
 
-**Exact compiler matches now total 1,118 routines / 12,184 original bytes.**
+**Exact compiler matches now total 1,140 routines / 13,240 original bytes.**
 Of 7,160 models, 3,000 have compiler-survey results and 4,160 have not been
 surveyed for matching. No linked executable rebuild or playable native port is
 claimed. The 2,507 unresolved regions need substantive recovery work; they are

@@ -7,14 +7,15 @@
   "candidate_interfaces": {
     "leaf": "direct target arguments",
     "context": "r3..r10 then remaining integer context as explicit arguments; original ABI unresolved",
-    "call": "integer C ABI call hypothesis: r3..r10 arguments, r3 result; extra context effects unresolved"
+    "call": "integer C ABI call hypothesis: r3..r10 arguments, r3 result; extra context effects unresolved",
+    "caller-interfaces": "Recognized 48-byte fill, virtual, swap, nested/bit-guard, and byte-bool wrappers; types provisional; compiler-managed frames"
   },
   "checked": 2198,
-  "matched": 316,
-  "different": 1882,
+  "matched": 338,
+  "different": 1860,
   "inventory_total": 7160,
   "not_yet_surveyed": 4962,
-  "matched_bytes": 7176,
+  "matched_bytes": 8232,
   "families": {
     "src/recovered/application_flag.c": {
       "checked": 1,
@@ -28,8 +29,8 @@
     },
     "src/recovered/call_leaf_helpers.c": {
       "checked": 1000,
-      "matched": 0,
-      "matched_bytes": 0
+      "matched": 22,
+      "matched_bytes": 1056
     },
     "src/recovered/context_leaf_helpers.c": {
       "checked": 198,
@@ -97,6 +98,7 @@
     "analysis/context-helper-specs.json": "205aa65f251188637dd3732e51aa85c04af5732d9510649b2a4c88bf651149a9",
     "analysis/matching-adaptations.json": "e25bae690aff60fe2fe700e2d9cdd65a5c6c12158595a4cb3205ad3d3b242d6f",
     "analysis/semantic-functions.json": "474f50a1cbe749c42ad295143c4b6f1fed19c02c872924777f0721cae18a85d7",
+    "src/matching/caller_interfaces.cpp": "b192dca96bcb667296e704da986282a50b67594cb98dcc483d209c47212f425b",
     "src/matching/routines.cpp": "23d92e6814c7fa1aa213a91385613ad41c506995b43e31dc5842312138729c5f",
     "src/recovered/application_flag.c": "02b9a32864d0acf8424727e8e662dedaedc87fa4208023e191ca35c44db0177f",
     "src/recovered/application_iteration.c": "c563d968c399560d7d65af2fd3b3623247428c3c1d4ed25304e759bac34a46b6",
@@ -113,6 +115,9 @@
     "src/recovered/scalar_leaf_helpers.c": "78b780b8b0a7868ef8128be63bc992435ebc1185cf21300445ee3016eae127ab",
     "src/recovered/startup_state_finish.c": "3cf5e9ad2554d31721b3df30654b033ae990d122b2bbda8e5d7500f0f2310d89",
     "src/recovered/state_lifecycle.c": "4fde571e721febf7bdc1409888a658f0649b1a726fa584b778b7fc9373ddbb96",
+    "tools/caller_interfaces.py": "e0c6b2b7927374c75884015af0ec59727e3e583ba3161082af506cf2f0faba9a",
+    "tools/check_all_matching.py": "0cfcaa7fa4b9521b9eaab6b2bb161e73c1a09a6fcbcf43c008448f4bf502cd32",
+    "tools/check_caller_interfaces.py": "b147652ff9c7d123571a4ce4336c7ddc2df0aa90d105d58d5f7fc17a9dd0cc4c",
     "tools/check_new_matching.py": "5ba5a9effac9e24d23c0c738bf97bcc5bd8618aadddc2da7b0a746a82a90d399",
     "tools/integer_recovery.py": "dbb12a0586381a38c1dca872623bd9e08a25d829479284b126c7eb3aa85dc49f",
     "tools/ppc_matching.py": "fdbf374e00e97298d5595f9c075f21ffba3616c8612a75c620075682445697d6"
@@ -150,8 +155,8 @@
       "address": "0x80003458",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 72,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x80003488",
@@ -171,8 +176,8 @@
       "address": "0x80003590",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 72,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x800035C0",
@@ -367,15 +372,15 @@
       "address": "0x80017024",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 64,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x80017054",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 64,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x80017084",
@@ -556,8 +561,8 @@
       "address": "0x8001F174",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 80,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x8001F300",
@@ -766,15 +771,15 @@
       "address": "0x8002D92C",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 64,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x8002D95C",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 64,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x8002D98C",
@@ -1452,8 +1457,8 @@
       "address": "0x8003F054",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 80,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x8003F084",
@@ -1872,8 +1877,8 @@
       "address": "0x8004D4B8",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 64,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x8004D934",
@@ -1893,8 +1898,8 @@
       "address": "0x8004D9FC",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 64,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x8004E1F8",
@@ -1914,8 +1919,8 @@
       "address": "0x8004E29C",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 64,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x8004E5B8",
@@ -1942,8 +1947,8 @@
       "address": "0x8004EE08",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 64,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x8004F108",
@@ -1956,8 +1961,8 @@
       "address": "0x8004F114",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 64,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x8004F144",
@@ -1984,8 +1989,8 @@
       "address": "0x8004F1E8",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 64,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x8004F260",
@@ -1998,22 +2003,22 @@
       "address": "0x8004F298",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 64,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x8004F2C8",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 64,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x8004F2F8",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 64,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x8004F328",
@@ -2502,8 +2507,8 @@
       "address": "0x80057A24",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 64,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x80057CFC",
@@ -5526,8 +5531,8 @@
       "address": "0x800C87D0",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 64,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x800C890C",
@@ -5589,22 +5594,22 @@
       "address": "0x800CAD70",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 112,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x800CADA0",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 112,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x800CADD0",
       "source": "src/recovered/call_leaf_helpers.c",
       "original_bytes": 48,
-      "candidate_bytes": 112,
-      "status": "different"
+      "candidate_bytes": 48,
+      "status": "match"
     },
     {
       "address": "0x800CAE00",

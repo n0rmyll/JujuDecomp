@@ -344,3 +344,119 @@ interfaces for a small representative group. Replacing modeled spills and
 restores with compiler-managed locals, and establishing which values survive
 each call, should produce more informative candidates than expanding this
 unchanged projection into another caller batch.
+
+## Focused caller frame and interface recovery: 12 exact matches
+
+A bounded follow-up replaces the register-context projection for twelve
+48-byte caller wrappers with ordinary C++ interfaces. **All twelve match
+exactly, adding 576 original bytes.** Two wrappers forward destination, fill
+value, and size to separately inspected byte-fill implementations at
+`0x80003488` and `0x8029DAD4`, then return the original destination. Ten load
+an object pointer from a recovered field and call a recovered virtual slot.
+
+The compiler now generates the 16-byte frames, link-register save/restore,
+and (for the fill wrappers) r31 preservation. The source contains no explicit
+stack pointer, LR, register context, assembly, opcode substitution, or masked
+comparison. The virtual declarations account for CodeWarrior's two reserved
+vtable words. Exact source types and meaningful return types for the virtual
+wrappers remain provisional; matching their instruction bytes does not prove
+those types or recover their callees.
+
+`tools/caller_interfaces.py` recognizes only complete normalized executable
+bodies with the expected frame, all argument/field operations, call target,
+return address, and epilogue. Recognition is restricted to 48-byte regions.
+A changed instruction statement, unknown fill target, unsupported virtual slot,
+or different shape is excluded. The entire caller model source must still
+reproduce from its specifications. The generated tracked C++ source must also
+reproduce exactly unless `--write-source` is explicitly requested.
+
+```sh
+python3 tools/check_caller_interfaces.py --write-source
+python3 tools/check_caller_interfaces.py
+python3 tools/check_all_matching.py --collect-only --allow-partial --snapshot analysis/all-matching-summary.json
+python3 tools/update_matching_overview.py
+python3 -m unittest discover -s tests -p test_caller_interfaces.py
+```
+
+The checker compiles each candidate independently, verifies original words
+against the local revision-checked DOL, applies all relocations, and compares
+the complete function. Reports, candidate copies, objects, full byte streams,
+word differences, hashes and compiler logs stay in `build/caller-interfaces/`.
+The collector independently rechecks the original caller baseline objects
+before rechecking the refined objects; it rejects duplicate refinements,
+addresses outside the caller baseline, stale hashes, inconsistent saved
+comparisons, and replacement of an existing match by a mismatch. Each refined
+address replaces its earlier result rather than increasing the surveyed count.
+
+The caller family now has **12 / 1,000 exact matches**, with 988 differences.
+The aggregate survey has **328 / 2,198 exact matches / 7,752 bytes**, with
+1,870 differences. With the separate 802 small routines, totals are **1,130
+exact matches / 12,760 bytes**, **3,000 distinct functions surveyed**, and
+**4,160 unsurveyed**. Every previous match is retained. No linked executable
+or in-game test is added.
+
+Five new tests cover complete-body recognition and rejection of every altered
+executable statement, unknown fill targets, wrong region sizes, compiled
+three-argument forwarding with destination preservation, and compiled virtual
+slot dispatch. All five pass, along with the twelve existing candidate tests,
+eight relocation tests, semantic inventory verification, and two consecutive
+12-function target matching runs. Host dispatch uses host-aligned fields;
+original target field offsets are verified by the exact PowerPC comparisons.
+
+## Four more small caller shapes: 10 additional matches
+
+The next focused pass adds **10 exact matches / 480 original bytes**, retaining
+all twelve earlier caller matches. The interface checker now recognizes and
+exactly matches **22 / 22 routines / 1,056 bytes**. The added shapes are:
+
+| Shape | Matches | Recovered source behavior |
+| --- | ---: | --- |
+| Argument-swapping delegate | 4 | Load the object at offset `0x80`, pass the third argument second and the second argument third. |
+| Nested-field guard | 2 | Load the object at `0x9c`, read an 8-bit or 32-bit field, call with the original object only when nonzero. |
+| Byte-to-boolean result | 1 | Call the observed callee and normalize its low-byte result to false/true. |
+| Flag-bit subobject guard | 3 | Test the high bit of the byte at `0x490`, call with the subobject at `0x3dc` when set. |
+
+`extended_body` describes every normalized executable statement, including
+call destinations and return addresses, conditional branch destinations,
+load widths, offsets, argument ordering, and frame epilogues. Recovery accepts
+a candidate only when its entire normalized body equals a supported template
+and the indexed original region is 48 bytes. It does not remove arbitrary
+spills, infer arbitrary callee effects, or relax byte comparisons.
+
+For the flag guard, an unsigned-char bitfield with the active flag first
+reproduces the original PowerPC rotate-and-mask extraction. A direct mask and
+a right-shift expression were also probed locally but produced different
+instructions. This establishes a matching source representation, not the
+original declaration. Host bitfield layout is implementation-dependent; host
+behavior tests set the named field, while the target layout and instruction
+sequence are verified by full CodeWarrior-to-DOL equality.
+
+The simple guarded-subobject routine at `0x800099CC` remains outside these
+recognized shapes. Its straightforward C candidate combined the field load
+and pointer adjustment into an update-form load and did not match. It is not
+counted as an improvement. Exploratory probes remain local under `build/`.
+
+Reproduce the focused survey and the independent aggregate comparison with:
+
+```sh
+python3 tools/check_caller_interfaces.py --write-source
+python3 tools/check_caller_interfaces.py
+python3 tools/check_all_matching.py --collect-only --allow-partial --snapshot analysis/all-matching-summary.json
+python3 tools/update_matching_overview.py
+python3 -m unittest discover -s tests -p test_caller_interfaces.py
+```
+
+All **nine** focused tests pass, including both paths for both nested guard
+widths and the flag guard, actual object/argument forwarding for the swap,
+all 256 byte values for the boolean result, and rejection after changing each
+executable statement in representative bodies for all six supported shapes.
+The twelve existing candidate tests, eight relocation tests, and semantic
+inventory verification also pass.
+
+The caller family now has **22 exact matches / 978 differences**. The combined
+aggregate has **338 / 2,198 exact matches / 8,232 bytes**, with 1,860 differences
+and no unresolved comparisons. With the 802 separately matched small routines,
+totals are **1,140 exact matches / 13,240 original bytes**, **3,000 surveyed
+models**, and **4,160 unsurveyed models**. This pass improves already surveyed
+functions; it adds no regions to the surveyed count. Callee implementations,
+full source types, executable linking, and in-game verification remain unresolved.
