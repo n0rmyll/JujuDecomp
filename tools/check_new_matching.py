@@ -112,7 +112,67 @@ def adapt_candidate(source, variant):
     return source
 
 
+def context_candidate(spec):
+    """Project all integer inputs explicitly; extra registers have no recovered ABI.
+
+    Put r3..r10 first so ordinary argument-only routines retain their mapping.
+    Other live inputs become additional C arguments, never invented constants.
+    Full byte equality is required even for these exploratory projections.
+    """
+    order = list(range(3, 11)) + [i for i in range(42) if i not in range(3, 11)]
+    body = '\n'.join(spec['body']).replace('TAK_INTEGER_STEP();', '')
+    body = re.sub(r'input\[(\d+)\]', lambda m: 'arg' + str(order.index(int(m[1]))), body)
+    from integer_recovery import HELPERS
+    helpers = '\n'.join(value for key, value in HELPERS.items() if key not in ('sign_byte', 'shift_signed', 'cmp_unsigned', 'cmp_signed'))
+    helpers += '\n#define sign_byte(x) ((uint32_t)(signed char)(x))\n'
+    helpers += '\n#define shift_signed(x,n) ((n) ? (((x) >> (n)) | ((x) & 0x80000000u ? ~(0xffffffffu >> (n)) : 0u)) : (x))\n'
+    helpers += '\n#define cmp_unsigned(a,b) ((a) < (b) ? 1u : (a) > (b) ? 2u : 4u)\n#define cmp_signed(a,b) cmp_unsigned((a)^0x80000000u,(b)^0x80000000u)\n'
+    signature = 'uint32_t fn_' + spec['address'][2:] + '(' + ', '.join(
+        f'uint32_t arg{i}' for i in range(42)) + ')'
+    return PREAMBLE + '\n' + direct(helpers).replace('static ', 'static inline ') + '\nextern "C" ' + signature + '{\n' + direct(body) + '\n}\n'
+
+
+def caller_candidate(spec):
+    """Test an integer C ABI hypothesis, not opaque-context equivalence."""
+    body = '\n'.join(spec['body'])
+    declarations = []
+    targets = {}
+    for match in re.finditer(r'uint32_t (call_target_[0-9A-Fa-f]+) = UINT32_C\((0x[0-9a-fA-F]+)\);', body):
+        targets[match[1]] = int(match[2], 16)
+    arguments = ', '.join(f'r{i}' for i in range(3, 11))
+    def call(match):
+        target = match[1]
+        if target in targets:
+            name = f'fn_{targets[target]:08X}'
+            declarations.append('extern "C" uint32_t ' + name + '(' + ', '.join(['uint32_t'] * 8) + ');')
+            return 'r3 = ' + name + '(' + arguments + ');'
+        # Indirect calls retain their computed destination, with the same hypothesis.
+        if not re.fullmatch(r'call_target_[0-9A-Fa-f]+', target):
+            raise ValueError('Unsupported opaque-call expression: ' + target)
+        return 'r3 = ((uint32_t (*)(' + ', '.join(['uint32_t'] * 8) + '))' + target + ')(' + arguments + ');'
+    body = re.sub(r'TAK_OPAQUE_CALL\((\w+)\);', call, body)
+    if 'TAK_OPAQUE_CALL' in body:
+        raise ValueError('Unconverted opaque call')
+    candidate = context_candidate(dict(spec, body=body.splitlines()))
+    return candidate.replace('extern "C" uint32_t fn_' + spec['address'][2:] + '(',
+                             '\n'.join(sorted(set(declarations))) + '\nextern "C" uint32_t fn_' + spec['address'][2:] + '(', 1)
+
+
 def prepare(entries):
+    if entries and all(Path(e['source']).name == 'context_leaf_helpers.c' for e in entries):
+        from integer_recovery import render
+        specs = json.loads((ROOT / 'analysis/context-helper-specs.json').read_text())['routines']
+        if (ROOT / 'src/recovered/context_leaf_helpers.c').read_text() != render(specs, full_context=True):
+            raise ValueError('Context source differs from current specifications')
+        selected = {e['address'] for e in entries}
+        return {s['address']: context_candidate(s) for s in specs if s['address'] in selected}
+    if entries and all(Path(e['source']).name == 'call_leaf_helpers.c' for e in entries):
+        from integer_recovery import render
+        specs = json.loads((ROOT / 'analysis/call-helper-specs.json').read_text())['routines']
+        if (ROOT / 'src/recovered/call_leaf_helpers.c').read_text() != render(specs, full_context=True, allow_calls=True):
+            raise ValueError('Caller source differs from current specifications')
+        selected = {e['address'] for e in entries}
+        return {s['address']: caller_candidate(s) for s in specs if s['address'] in selected}
     families = {}
     for filename in SOURCES[:-1]:
         raw = (ROOT / 'src/recovered' / filename).read_text()
@@ -159,16 +219,18 @@ def prepare(entries):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output', type=Path, default=ROOT / 'build/new-matching')
+    parser.add_argument('--output', type=Path)
+    parser.add_argument('--family', choices=('leaf', 'context', 'call'), default='leaf')
     parser.add_argument('--function', help='Check one address, e.g. 0x80003140')
     args = parser.parse_args()
     manifest = json.loads((ROOT / 'analysis/semantic-functions.json').read_text())
-    entries = [x for x in manifest['routines'] if Path(x['source']).name in SOURCES]
+    sources = {'leaf': SOURCES, 'context': ('context_leaf_helpers.c',), 'call': ('call_leaf_helpers.c',)}[args.family]
+    entries = [x for x in manifest['routines'] if Path(x['source']).name in sources]
     if args.function:
         entries = [x for x in entries if int(x['address'], 0) == int(args.function, 0)]
         if not entries:
             parser.error('Address is not in the new model families')
-    output = args.output.resolve()
+    output = (args.output or ROOT / ('build/new-matching' if args.family == 'leaf' else 'build/' + args.family + '-matching')).resolve()
     output.mkdir(parents=True, exist_ok=True)
     (output / 'report.json').unlink(missing_ok=True)
     words = load_functions([x['address'][2:] for x in entries])
@@ -218,7 +280,9 @@ def main():
             print(f'{index}/{len(entries)} checked: {dict(collections.Counter(x["status"] for x in results))}', flush=True)
     sources = {entry['source'] for entry in entries} | {
         'analysis/matching-adaptations.json', 'tools/check_new_matching.py'}
-    report = dict(dol_sha256=manifest['dol_sha256'],
+    if args.family in ('context', 'call'):
+        sources |= {'analysis/' + ('context' if args.family == 'context' else 'call') + '-helper-specs.json', 'tools/integer_recovery.py'}
+    report = dict(family=args.family, candidate_interface=('r3..r10 then remaining integer context as explicit arguments; original ABI unresolved' if args.family == 'context' else ('integer C ABI call hypothesis: r3..r10 arguments, r3 result; extra context effects unresolved' if args.family == 'call' else 'direct target arguments')), dol_sha256=manifest['dol_sha256'],
                   scope='Direct-memory adaptations of semantic C; full relocated function byte comparison, no linked rebuild',
                   compiler_sha256=hashlib.sha256(cc.read_bytes()).hexdigest(),
                   runner_sha256=hashlib.sha256(runner.read_bytes()).hexdigest(),

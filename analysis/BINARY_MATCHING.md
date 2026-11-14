@@ -241,3 +241,106 @@ python3 tools/update_matching_overview.py
 The collector rejects incomplete coverage by default. `--allow-partial` opts
 into an explicitly counted subset and records the inventory total and the
 number not yet surveyed; it does not turn missing comparisons into matches.
+
+## Integer context survey: 198 additional routines
+
+The November 14 pass surveys every model in `context_leaf_helpers.c` using
+`python3 tools/check_new_matching.py --family context`. **33 / 198 match exactly,
+covering 580 original bytes**; 165 differ. All candidates compile and every
+relocation resolves. No error or missing comparison counts as a match.
+
+The candidate interface places r3..r10 first, followed by all other modeled
+integer context inputs as explicit C arguments. Those extra arguments are an
+exploratory projection, not recovered original parameters. The candidate returns
+r3, removes the host output array and verification budget, and replaces memory
+callbacks with width-correct direct accesses. The generated source retains the
+recovered control flow. Byte sign extension, signed shifts, and comparisons use
+C casts/expressions expanded at their use sites to avoid out-of-line synthetic
+helpers in the largest routine. Arguments to these expressions are side-effect-free
+recovered register expressions. Other helper definitions remain inline C.
+
+The generator rejects context source that no longer reproduces from its saved
+specifications. Candidate, object, compiler and source hashes are recorded in
+`build/context-matching/report.json`; complete original and candidate bytes,
+word differences, and compiler logs stay local under the same directory.
+The all-inventory collector independently extracts and relocates each function
+again and rejects stale objects/candidates, mismatched saved results, duplicate
+addresses, and incomplete comparisons. Run:
+
+```sh
+python3 tools/check_new_matching.py
+python3 tools/check_new_matching.py --family context
+python3 tools/check_all_matching.py --collect-only --allow-partial --snapshot analysis/all-matching-summary.json
+python3 tools/update_matching_overview.py
+python3 -m unittest discover -s tests -p test_new_matching.py
+python3 -m unittest discover -s tests -p test_ppc_matching.py
+```
+
+Recompiling the earlier leaf family retains all 260 matches there and all 283
+matches in the original 1,000-routine survey. The expanded survey has **316 /
+1,198 exact matches / 7,176 bytes**, with 882 differences. Including the separate
+802 small matches gives **1,118 exact matches / 12,184 bytes**, with 2,000 of
+7,160 models surveyed and 5,160 unsurveyed. These remain individual function-code
+matches; no executable has been linked or tested in-game.
+
+Ten candidate tests and eight relocation tests pass. The added candidate tests
+check explicit context-input mapping and run compiled boundary checks for sign
+extension, every signed-shift count 0..31, and signed/unsigned comparisons.
+The semantic inventory check still verifies 7,160 models / 1,158,944 original bytes.
+
+## Integer caller baseline: 1,000 additional comparisons
+
+The next November 14 pass adds `--family call` for every model in
+`call_leaf_helpers.c`. All **1,000 compile and complete relocation and byte
+comparison; none match**. Candidate generation first checks that the saved
+call specifications reproduce the complete host source with
+`render(..., full_context=True, allow_calls=True)`.
+
+This is explicitly a candidate ABI hypothesis, not a behavior-preserving
+lowering of the opaque-call models. A direct callee becomes an external C
+function declared at its recovered address, taking eight integer arguments
+(r3..r10) and returning r3. Computed callees use a function-pointer call with
+the same signature. Other modeled context registers remain local values;
+arbitrary callee writes to them are not represented. All 42 initial integer
+inputs remain explicit as in the context survey. The full opaque host models
+and their sources remain unchanged. Candidate interfaces are retained in the
+portable aggregate report so this limitation travels with the results.
+
+Every modeled stack frame remains explicit in the candidate, in addition to
+whatever frame the C compiler generates. All 1,000 models contain r1-relative
+operations. Of their candidates, **997 are larger, two have equal size, and
+one is smaller** than the original. Original regions total **160,792 bytes**;
+candidates total **355,696 bytes**. The median size ratio is approximately
+**2.148**. All **4,522 applied relocations** are PPC relative branches. These
+measurements describe this initial projection; they do not prove the causes
+of every mismatch. Inspection of `0x8028D288`, for example, shows the compiler
+frame surrounding the modeled frame and extra input loads.
+
+Reproduce with:
+
+```sh
+python3 tools/check_new_matching.py --family call
+python3 tools/check_all_matching.py --collect-only --allow-partial --snapshot analysis/all-matching-summary.json
+python3 tools/update_matching_overview.py
+```
+
+Generated source, objects, complete original/candidate bytes, word differences,
+and compiler logs remain local under `build/call-matching/`. The collector
+independently extracts and relocates every function again, checking hashes and
+saved results. The existing leaf and context surveys are recompiled as well.
+The expanded aggregate covers **2,198 routines: 316 exact matches / 7,176 bytes,
+1,882 differences, zero unresolved comparisons**. With the separate small-routine
+survey, this is **3,000 distinct modeled functions surveyed**, **1,118 exact
+matches / 12,184 original bytes**, and **4,160 not yet surveyed**. Existing
+matches remain unchanged. No executable rebuild or in-game validation is added.
+
+Twelve candidate tests and eight relocation tests pass. New tests cover direct
+and computed destinations, rejected opaque-call syntax, and compiled host
+execution that verifies all eight integer arguments and the callee result.
+The semantic inventory still verifies 7,160 models / 1,158,944 original bytes.
+
+Before broadening this caller projection, recover the real frame and callee
+interfaces for a small representative group. Replacing modeled spills and
+restores with compiler-managed locals, and establishing which values survive
+each call, should produce more informative candidates than expanding this
+unchanged projection into another caller batch.

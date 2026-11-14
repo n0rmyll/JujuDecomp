@@ -2,7 +2,7 @@
 
 An early reverse-engineering workspace for **Tak and the Power of Juju (USA)** on GameCube, disc ID **GJUE78**, revision 0. Includes analysis tools, research notes, 7,160 indexed routine models (including exact-matched small routines, generated integer C, compositional caller bodies with opaque callees, and finite-domain scalar register transfers), two partial routine models, and a portable world-record reader in C.
 
-**This is not a completed decompilation or a native source port.** There is no build system that recreates the original game executable yet. The recovered C files are research models; target-layout C and candidates now establish 1,085 exact function-code matches, but none are integrated into a rebuilt executable. Tak boot, gameplay, audio, performance, and saves have not yet been verified in this workspace.
+**This is not a completed decompilation or a native source port.** There is no build system that recreates the original game executable yet. The recovered C files are research models; target-layout C and candidates now establish 1,118 exact function-code matches, but none are integrated into a rebuilt executable. Tak boot, gameplay, audio, performance, and saves have not yet been verified in this workspace.
 
 No game image, extracted executable, game assets, or generated disassembly is included. Supply your own legally obtained copy of the game. Keep game files local; the ignore rules exclude disc images, extracted binaries, saves, and build outputs.
 
@@ -12,8 +12,8 @@ Snapshot: **November 14, 2026**, GJUE78 revision 0. These measure separate stage
 
 | Area | Current / measured total | Progress | Meaning |
 | --- | ---: | ---: | --- |
-| Indexed functions compiled and verified as matching | 1,085 / 9,667 indexed function regions | **11.224%** | 1,802 of 7,160 models surveyed: 283 earlier-batch matches plus 802 exact-matched small routines, including empty methods and constant stubs. Complete code and relocations compared; no linked executable rebuild. |
-| Original code bytes verified as matching | 11,604 / 2,747,776 DOL text-section bytes | **0.422%** | Complete instruction bytes of 1,085 functions, including resolved call/global operands. No masking or assembly substitution. |
+| Indexed functions compiled and verified as matching | 1,118 / 9,667 indexed function regions | **11.565%** | 3,000 of 7,160 models surveyed: 316 survey matches plus 802 exact-matched small routines, including empty methods and constant stubs. Complete code and relocations compared; no linked executable rebuild. |
+| Original code bytes verified as matching | 12,184 / 2,747,776 DOL text-section bytes | **0.443%** | Complete instruction bytes of 1,118 functions, including resolved call/global operands. No masking or assembly substitution. |
 | Indexed routine models in C/C++ | 7,160 / 9,667 indexed function regions | **74.066%** | Complete modeled bodies in twenty source files, including game and SDK/runtime code. The latest 1,160 include 50 integer-context models and 1,110 finite-domain scalar PS0 transfer projections. Real callees, original ABI, PS1 and FPSCR remain unresolved. Another 2,507 indexed regions are explicitly unresolved. Two additional C files contain partial DBU/world-volume models and an offline record reader, excluded from this count. Callbacks and host layouts may replace original mechanisms. |
 | Original code bytes covered by those models | 1,158,944 / 2,747,776 DOL text-section bytes | **42.178%** | Indexed caller/routine bytes represented by the 7,160 models; excludes partial DBU/world-volume models, the offline reader, and generated C/object size. This is semantic coverage; verified matching bytes are measured separately. |
 | Extracted resource files inventoried | 1,163 / 1,163 locally extracted files | **100%** | File paths, sizes, and hashes recorded for the local `files/data_gcn` extraction; not proof of complete disc coverage. |
@@ -284,7 +284,7 @@ python3 tools/check_all_matching.py --snapshot analysis/all-matching-summary.jso
 python3 -m unittest discover -s tests -p test_new_matching.py
 ```
 
-The complete survey covers all 1,000 entries in the semantic inventory:
+The original survey covered 1,000 entries:
 **283 match exactly (6,596 bytes), and 717 differ**. The 970 newer routines
 contribute 260 matches; the original 30 contribute 23. Generated candidates
 replace host memory callbacks with target-width accesses and remove harness
@@ -299,6 +299,48 @@ explicit surveyed coverage as the semantic inventory grows. It writes
 `build/all-matching/report.json`. Add `--snapshot analysis/all-matching-summary.json`
 to refresh the portable per-function summary. Unmatched routines remain
 explicit byte differences; no unresolved comparisons are counted as matches.
+
+## Survey integer context models
+
+```sh
+python3 tools/check_new_matching.py --family context
+python3 tools/check_all_matching.py --collect-only --allow-partial --snapshot analysis/all-matching-summary.json
+python3 tools/update_matching_overview.py
+```
+
+The added family surveys all 198 `context_leaf_helpers.c` models: **33 exact
+matches / 580 bytes**, with 165 differences and no unresolved comparisons.
+The combined survey now covers 3,000 distinct models, with **1,118 exact
+matches / 12,184 bytes**; 4,160 models remain unsurveyed. The collector independently
+rechecks each compiled object, its relocations, and candidate/source hashes.
+
+Context candidates expose r3 through r10 as the first eight C arguments, then
+the remaining modeled integer registers as additional arguments. This preserves
+explicit inputs without inventing register values, but does not recover the
+original ABI. Context output buffers and verification budgets are removed;
+ordinary C memory accesses, expressions, and control flow remain. Full function
+byte equality is required to count a match. See [matching findings](analysis/BINARY_MATCHING.md).
+
+## Survey integer callers
+
+```sh
+python3 tools/check_new_matching.py --family call
+python3 tools/check_all_matching.py --collect-only --allow-partial --snapshot analysis/all-matching-summary.json
+python3 tools/update_matching_overview.py
+```
+
+All 1,000 models in `call_leaf_helpers.c` now have completed byte comparisons.
+This first caller pass produces **zero exact matches**, with 1,000 differences
+and no compile or relocation errors. It tests a conventional integer C ABI
+hypothesis: callees take r3..r10 and return r3, while other modeled context
+values remain local. This does not preserve the opaque callees' arbitrary
+context effects and is not an equivalent replacement for the host models.
+
+The candidates retain explicit modeled frame operations; 997 are larger than
+the original. Recovering real stack frames, callee signatures, and live values
+across calls is the next step for this family. Combined coverage is now 3,000
+surveyed models; the verified match total remains 1,118 / 12,184 bytes.
+See [matching findings](analysis/BINARY_MATCHING.md) for the measured baseline.
 
 ## Attribution
 

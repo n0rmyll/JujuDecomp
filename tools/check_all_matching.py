@@ -26,16 +26,19 @@ def collect(allow_partial=False):
     words = load_functions([address[2:] for address in entries])
     old = json.loads((ROOT / 'build/matching/report.json').read_text())
     new = json.loads((ROOT / 'build/new-matching/report.json').read_text())
+    context = json.loads((ROOT / 'build/context-matching/report.json').read_text())
+    calls = json.loads((ROOT / 'build/call-matching/report.json').read_text())
     flag = json.loads((ROOT / 'build/application-flag/match.json').read_text())
     if old['source_sha256'] != digest(ROOT / 'src/matching/routines.cpp'):
         raise ValueError('Stale original candidate report')
     if flag['source_sha256'] != digest(ROOT / 'src/recovered/application_flag.c'):
         raise ValueError('Stale stop-setter report')
-    for source, expected in new['model_hashes'].items():
-        if digest(ROOT / source) != expected:
-            raise ValueError('Stale new-model report: ' + source)
+    for report in (new, context, calls):
+        for source, expected in report['model_hashes'].items():
+            if digest(ROOT / source) != expected:
+                raise ValueError('Stale model report: ' + source)
     compiler_hash = digest(ROOT / 'tools/mwcc/GC/1.3.2/mwcceppc.exe')
-    if any(report['compiler_sha256'] != compiler_hash for report in (old, new, flag)):
+    if any(report['compiler_sha256'] != compiler_hash for report in (old, new, context, calls, flag)):
         raise ValueError('Compiler hashes disagree')
     with (ROOT / 'analysis/functions.csv').open() as stream:
         symbols = {r['name']: int(r['address'], 0) for r in csv.DictReader(stream)}
@@ -46,6 +49,10 @@ def collect(allow_partial=False):
                for r in old['results']]
     records += [(r, ROOT / 'build/new-matching', r['function'], r['function'] + '.o')
                 for r in new['results']]
+    records += [(r, ROOT / 'build/context-matching', r['function'], r['function'] + '.o')
+                for r in context['results']]
+    records += [(r, ROOT / 'build/call-matching', r['function'], r['function'] + '.o')
+                for r in calls['results']]
     records += [(dict(address='0x8020F9C8', status='match', exact_match=True,
                      object_sha256=flag['object_sha256']), ROOT / 'build/application-flag',
                  'tak_application_request_stop', 'application_flag.o')]
@@ -85,13 +92,17 @@ def collect(allow_partial=False):
     return dict(revision=manifest['revision'], dol_sha256=manifest['dol_sha256'],
                 compiler='CodeWarrior GC 1.3.2 (2.4.2 build 81)', compiler_sha256=compiler_hash,
                 scope='Exact relocated individual function code; no linked executable or data verification',
+                candidate_interfaces={report.get('family', 'leaf'): report.get('candidate_interface', 'direct target arguments')
+                                      for report in (new, context, calls)},
                 checked=len(results), matched=len(matches), different=len(results)-len(matches),
                 inventory_total=len(entries), not_yet_surveyed=len(entries)-len(results),
                 matched_bytes=sum(x['original_bytes'] for x in matches),
                 families=families,
                 source_hashes={p: digest(ROOT/p) for p in sorted({x['source'] for x in results} |
                     {'src/matching/routines.cpp', 'tools/check_new_matching.py', 'tools/ppc_matching.py',
-                     'analysis/matching-adaptations.json',
+                     'analysis/matching-adaptations.json', 'analysis/context-helper-specs.json',
+                     'analysis/call-helper-specs.json',
+                     'tools/integer_recovery.py',
                      'analysis/semantic-functions.json'})},
                 results=sorted(results, key=lambda x: x['address']))
 
@@ -110,6 +121,8 @@ def main():
             ['tools/check_matching.py'],
             ['tools/check_application_flag.py', '--mw-cc', 'tools/mwcc/GC/1.3.2/mwcceppc.exe', '--runner', 'tools/wibo'],
             ['tools/check_new_matching.py'],
+            ['tools/check_new_matching.py', '--family', 'context'],
+            ['tools/check_new_matching.py', '--family', 'call'],
         ):
             subprocess.run([sys.executable, *command], cwd=ROOT, check=True)
     report = collect(allow_partial=args.allow_partial)
