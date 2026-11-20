@@ -2,18 +2,20 @@
 
 An early reverse-engineering workspace for **Tak and the Power of Juju (USA)** on GameCube, disc ID **GJUE78**, revision 0. Includes analysis tools, research notes, 7,160 indexed routine models (including exact-matched small routines, generated integer C, compositional caller bodies with opaque callees, and finite-domain scalar register transfers), two partial routine models, and a portable world-record reader in C.
 
-**This is not a completed decompilation or a native source port.** There is no build system that recreates the original game executable yet. The recovered C files are research models; target-layout C and candidates now establish 1,140 exact function-code matches, but none are integrated into a rebuilt executable. Tak boot, gameplay, audio, performance, and saves have not yet been verified in this workspace.
+**This is not a completed decompilation or a native source port.** An incremental build now links one recovered C function with binary-derived fallbacks and reproduces the entire original DOL exactly. The recovered C files are research models; target-layout C and candidates now establish 1,152 exact function-code matches, and the 12-byte stop setter is integrated into that executable link. Tak boot, gameplay, audio, performance, and saves have not yet been verified in this workspace.
 
 No game image, extracted executable, game assets, or generated disassembly is included. Supply your own legally obtained copy of the game. Keep game files local; the ignore rules exclude disc images, extracted binaries, saves, and build outputs.
 
 ## Progress statistics
 
-Snapshot: **November 14, 2026**, GJUE78 revision 0. These measure separate stages; they are not an overall completion percentage.
+Snapshot: **November 20, 2026**, GJUE78 revision 0. These measure separate stages; they are not an overall completion percentage.
 
 | Area | Current / measured total | Progress | Meaning |
 | --- | ---: | ---: | --- |
-| Indexed functions compiled and verified as matching | 1,140 / 9,667 indexed function regions | **11.793%** | 3,000 of 7,160 models surveyed: 338 survey matches plus 802 exact-matched small routines, including empty methods and constant stubs. Complete code and relocations compared; no linked executable rebuild. |
-| Original code bytes verified as matching | 13,240 / 2,747,776 DOL text-section bytes | **0.482%** | Complete instruction bytes of 1,140 functions, including resolved call/global operands. No masking or assembly substitution. |
+| Indexed functions compiled and verified as matching | 1,152 / 9,667 indexed function regions | **11.917%** | 3,000 of 7,160 models surveyed: 350 survey matches plus 802 exact-matched small routines, including empty methods and constant stubs. Complete code and relocations compared; source integration is counted separately. |
+| Original code bytes verified as matching | 13,848 / 2,747,776 DOL text-section bytes | **0.504%** | Complete instruction bytes of 1,152 functions, including resolved call/global operands. No masking or assembly substitution. |
+| Original binary-derived object relink | 146 / 146 DTK split objects | **100% of this baseline** | Full 3,113,248-byte DOL equality after real linking and ELF-to-DOL conversion. Zero recovered-source replacements; separate from function-code matching. |
+| Recovered source in the full executable link | 1 function / 12 original code bytes | — | The compiled stop setter replaces its extracted unit; 147 binary-derived fallback objects remain. Complete 3,113,248-byte DOL equality, with source ownership and placement verified. |
 | Indexed routine models in C/C++ | 7,160 / 9,667 indexed function regions | **74.066%** | Complete modeled bodies in twenty source files, including game and SDK/runtime code. The latest 1,160 include 50 integer-context models and 1,110 finite-domain scalar PS0 transfer projections. Real callees, original ABI, PS1 and FPSCR remain unresolved. Another 2,507 indexed regions are explicitly unresolved. Two additional C files contain partial DBU/world-volume models and an offline record reader, excluded from this count. Callbacks and host layouts may replace original mechanisms. |
 | Original code bytes covered by those models | 1,158,944 / 2,747,776 DOL text-section bytes | **42.178%** | Indexed caller/routine bytes represented by the 7,160 models; excludes partial DBU/world-volume models, the offline reader, and generated C/object size. This is semantic coverage; verified matching bytes are measured separately. |
 | Extracted resource files inventoried | 1,163 / 1,163 locally extracted files | **100%** | File paths, sizes, and hashes recorded for the local `files/data_gcn` extraction; not proof of complete disc coverage. |
@@ -57,7 +59,7 @@ cd JujuDecomp
 
 ## Testing with your own emulator
 
-Use your own GameCube emulator and legally obtained game image to test the original game's behavior. This repository does not include an emulator or a runnable game build; the recovered C files are research models and cannot yet be tested as a rebuilt game.
+Use your own GameCube emulator and legally obtained game image to test the original game's behavior. This repository does not include an emulator or a runnable game build; most recovered C files remain research models. Only the stop setter is integrated into the byte-identical source/binary link; emulator boot and gameplay have not been tested here.
 
 ## Reproduce the executable analysis
 
@@ -79,6 +81,48 @@ The expected executable SHA-256 is `49faf28a7d2e25422c145754ef41b0c8a8dfcd83e688
 The remaining-routine pass, its checks, and the 2,507 unresolved regions are documented in [remaining-function findings](analysis/REMAINING_FUNCTIONS.md). Earlier batches are documented in [fifth/sixth-thousand findings](analysis/FIFTH_SIXTH_THOUSAND.md), [fourth-thousand findings](analysis/FOURTH_THOUSAND.md), [third-thousand findings](analysis/THIRD_THOUSAND.md), [second-thousand findings](analysis/SECOND_THOUSAND.md), [integer helper findings](analysis/INTEGER_HELPERS.md), [scalar helper findings](analysis/SCALAR_HELPERS.md), [resource leaf helper findings](analysis/RESOURCE_LEAF_HELPERS.md), [leaf helper findings](analysis/LEAF_HELPERS.md), and [runtime helper findings](analysis/RUNTIME_HELPERS.md).
 
 Read [decompilation notes](analysis/DECOMP_NOTES.md) and [application dispatch findings](analysis/APPLICATION_DISPATCH.md) for current evidence and limitations. `src/recovered/` contains semantic reconstructions; original compiler identification, broader binary matching, asset decoding, and platform replacement work remain before a game source build is possible.
+
+## Verify the original-object link baseline
+
+After extracting the DOL, generating the DTK split objects, and installing the
+matching tools, run:
+
+```sh
+python3 tools/check_rebuild_foundation.py
+python3 -m unittest discover -s tests -p test_rebuild_foundation.py
+```
+
+The checker links all 146 original binary-derived objects in split-config order
+with the local CodeWarrior linker and converts the ELF with DTK. It requires
+complete equality with the original 3,113,248-byte DOL, including data and headers.
+Outputs, commands, input/tool hashes, and section hashes remain under ignored
+`build/rebuild-foundation/`.
+
+This original-object baseline contains zero recovered-source replacements.
+The separate source-integrated check below now replaces the matched stop setter
+with compiled source while preserving full-DOL equality. See [rebuild foundation](analysis/REBUILD_FOUNDATION.md)
+for the verified layout, commands, and remaining integration work.
+
+## Link the first recovered C unit
+
+```sh
+python3 tools/check_source_link.py
+python3 -m unittest discover -s tests -p test_source_link.py
+```
+
+This checker generates an isolated split from `analysis/source-link-splits.txt`,
+compiles the unchanged `src/recovered/application_flag.c`, and substitutes its
+object for the extracted 12-byte unit at `0x8020F9C8`. The preprocessor maps the
+descriptive function name to the original linker symbol. The link contains one
+source object and 147 binary-derived fallback objects; the original extracted
+setter object is excluded. Original analysis splits and binaries are unchanged.
+
+The checker verifies exhaustive host behavior, function bytes, sole source
+ownership of the target symbol, original address/size in the linker map, and
+complete DOL equality. Logs and a hashed audit report are written to ignored
+`build/source-link/`. This is the first source-integrated executable baseline,
+not a native port or a complete source reconstruction. See
+[rebuild foundation](analysis/REBUILD_FOUNDATION.md#first-recovered-source-replacement).
 
 ## Extract local assets
 
@@ -280,7 +324,7 @@ Use `--function 0x801B91FC --output build/matching-one` for an isolated check.
 ## Check all modeled routines
 
 ```sh
-python3 tools/check_all_matching.py --snapshot analysis/all-matching-summary.json
+python3 tools/check_all_matching.py --allow-partial --snapshot analysis/all-matching-summary.json
 python3 -m unittest discover -s tests -p test_new_matching.py
 ```
 
@@ -310,8 +354,8 @@ python3 tools/update_matching_overview.py
 
 The added family surveys all 198 `context_leaf_helpers.c` models: **33 exact
 matches / 580 bytes**, with 165 differences and no unresolved comparisons.
-The combined survey now covers 3,000 distinct models, with **1,140 exact
-matches / 13,240 bytes**; 4,160 models remain unsurveyed. The collector independently
+The combined survey now covers 3,000 distinct models, with **1,152 exact
+matches / 13,848 bytes**; 4,160 models remain unsurveyed. The collector independently
 rechecks each compiled object, its relocations, and candidate/source hashes.
 
 Context candidates expose r3 through r10 as the first eight C arguments, then
@@ -340,7 +384,7 @@ The candidates retain explicit modeled frame operations; 997 are larger than
 the original. Recovering real stack frames, callee signatures, and live values
 across calls is the next step for this family. Combined coverage is now 3,000
 surveyed models. The frame/interface recovery below brings the verified match
-total to 1,140 / 13,240 bytes.
+total to 1,152 / 13,848 bytes.
 See [matching findings](analysis/BINARY_MATCHING.md) for the measured baseline.
 
 ## Recover small caller interfaces
@@ -368,8 +412,33 @@ remain provisional.
 `python3 tools/check_caller_interfaces.py --write-source` to regenerate it explicitly.
 Unrecognized bodies are excluded. The aggregate collector verifies both the
 original caller baseline objects and these replacements before counting each
-address once. The caller family now has **22 matches and 978 differences**;
+address once. After the parallel pass below, the caller family has **34 matches and 966 differences**;
 total surveyed coverage remains 3,000 distinct functions.
+
+## Reproduce the parallel caller pass
+
+```sh
+python3 tools/caller_patterns_next.py
+python3 tools/caller_compiler_fixes.py
+python3 tools/check_all_matching.py --collect-only --allow-partial --snapshot analysis/all-matching-summary.json
+python3 tools/update_matching_overview.py
+python3 -m unittest discover -s tests -p test_caller_patterns_next.py
+python3 -m unittest discover -s tests -p test_caller_compiler_fixes.py
+python3 -m unittest discover -s tests -p test_matching_refinements.py
+```
+
+The 52-byte pattern pass adds **eight exact matches / 416 bytes** across seven
+complete caller shapes. The compiler-fix pass adds **four / 192 bytes**, including
+the guarded-subobject routine at `0x800099CC`. A typed embedded member avoids
+its raw-cast candidate's update-form load; another guard requires a `switch`
+to preserve its original branch layout.
+
+Workers use separate source files and build directories. The collector rechecks
+all baseline and refined objects, rejects overlapping worker addresses and stale
+hashes, and counts each address once. All 1,140 previous matches remain. Combined
+totals are **1,152 exact matches / 13,848 bytes**; surveyed coverage remains 3,000.
+For a clean full survey, use `python3 tools/check_all_matching.py --allow-partial`
+to compile every registered candidate family before collection.
 
 ## Attribution
 

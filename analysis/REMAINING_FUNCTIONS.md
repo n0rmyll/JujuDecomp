@@ -130,8 +130,10 @@ python3 tools/update_matching_overview.py
 identifiers and source artifacts are preserved. Selection summaries retain
 excluded candidates separately from successful final verification summaries.
 
-**Exact compiler matches now total 1,140 routines / 13,240 original bytes.**
+**Exact compiler matches now total 1,152 routines / 13,848 original bytes.**
 Of 7,160 models, 3,000 have compiler-survey results and 4,160 have not been
-surveyed for matching. No linked executable rebuild or playable native port is
-claimed. The 2,507 unresolved regions need substantive recovery work; they are
+surveyed for matching. An original-object full-DOL relink is separately
+verified in REBUILD_FOUNDATION.md. A second full-DOL-equal link now includes
+one recovered 12-byte setter with binary-derived fallbacks. No playable native
+port or gameplay verification is claimed. The 2,507 unresolved regions need substantive recovery work; they are
 not counted as complete.

@@ -460,3 +460,95 @@ totals are **1,140 exact matches / 13,240 original bytes**, **3,000 surveyed
 models**, and **4,160 unsurveyed models**. This pass improves already surveyed
 functions; it adds no regions to the surveyed count. Callee implementations,
 full source types, executable linking, and in-game verification remain unresolved.
+
+## November 20 parallel caller pass: 12 more matches
+
+Two isolated matching workers add **12 exact matches / 608 original bytes**,
+while a third establishes the independent executable relink foundation described
+in [REBUILD_FOUNDATION.md](REBUILD_FOUNDATION.md). Matching totals still count
+individual compiled functions; the original-object relink adds no source matches.
+
+`tools/caller_patterns_next.py` recognizes seven complete 52-byte caller shapes
+and matches **eight routines / 416 bytes**: two calls with the same object,
+guarded byte clearing, post-call result storage, subobject-pointer initialization,
+null-checked delegation, small-data sentinel update, and clearing a field before
+calling a subobject. Repeated placeholders must agree throughout the body, and
+call destinations, return addresses, branches and frame operations all have to
+match the template. Its generated source is `src/matching/caller_patterns_next.cpp`.
+
+`tools/caller_compiler_fixes.py` matches **four 48-byte routines / 192 bytes**:
+
+| Address | Matching source representation |
+| --- | --- |
+| `0x800099CC` | A typed embedded subobject prevents the raw-pointer candidate's update-form load fusion. |
+| `0x800C76F8` | A `switch` with case 2 retains the original two-branch layout. |
+| `0x800718D4` | Swap two pointer arguments and append zero. |
+| `0x8008A318` | Update two byte flags on the pointer returned by the callee. |
+
+Its generated source is `src/matching/caller_compiler_fixes.cpp`. Both passes
+use unchanged GC 1.3.2 `-O4,p`, compiler-managed frames, and ordinary C/C++.
+Declarations and inferred types remain provisional. No assembly substitution,
+operand masking, or edits to recovered host models are used.
+
+```sh
+python3 tools/caller_patterns_next.py
+python3 tools/caller_compiler_fixes.py
+python3 tools/check_all_matching.py --collect-only --allow-partial --snapshot analysis/all-matching-summary.json
+python3 tools/update_matching_overview.py
+```
+
+Candidate objects and reports live separately under `build/agent-caller-patterns/`
+and `build/agent-compiler-fixes/`. The all-inventory collector validates all
+registered report DOL, source, compiler, runner, candidate and object identities;
+it independently extracts and relocates the baseline and refined functions.
+Overlapping worker results and addresses outside the caller baseline are rejected.
+Every refinement requires a validated baseline, and an existing match cannot be
+replaced by a mismatch. Dynamic source hashes include each registered report's
+source inputs so both new source files remain covered by the portable snapshot.
+
+Four focused pattern tests cover recognition/rejection and compiled behavior
+for all seven shapes, including a callee changing the result destination before
+the post-call load. Five compiler-fix tests cover full-body recognition and
+compiled behavior for all four fixes. Eight integration tests cover disjoint
+worker outputs, duplicate and unknown addresses, symbol/address disagreement,
+replacement without double counting, missing baselines, and match-regression
+rejection. The existing 29 matching tests and semantic inventory also pass.
+
+All **1,140 previous exact matches are retained**. The caller family now has
+**34 / 1,000 matches / 1,664 bytes**, with 966 differences. The aggregate survey
+has **350 / 2,198 matches / 8,840 bytes**, with 1,848 differences. With the
+802 separate small-routine matches, totals are **1,152 matches / 13,848 bytes**,
+**3,000 distinct models surveyed**, and **4,160 unsurveyed**. No surveyed-region
+count increases in this pass. No recovered-source executable or gameplay
+validation is claimed.
+
+## First source-integrated full executable link
+
+`python3 tools/check_source_link.py` now places the already matched 12-byte
+stop setter into the executable as compiled recovered C. It splits exactly
+`0x8020F9C8..0x8020F9D4`, substitutes the compiled source object for the extracted
+unit, and links it with 147 binary-derived fallback objects. All **3,113,248
+DOL bytes compare equal** to the revision-checked original. This adds no new
+function matches: the setter was already included in the **1,152 / 13,848-byte**
+matching totals. Linked recovered-source coverage is now **one function / 12
+original code bytes**, tracked separately from the function survey.
+
+The unchanged `application_flag.c` is compiled as C with GC 1.3.2, `-O4,p`,
+`-proc gekko`, and `-fp hardware`. A preprocessor definition maps its descriptive
+name to the original `fn_8020F9C8` link symbol. The checker verifies its complete
+function bytes, excludes the extracted target object from link inputs, checks
+that only the compiled object defines the target globally, and checks the
+linker's map for the original address and size in that compiled object.
+It then compares every original and rebuilt DOL byte, including data and headers.
+
+The former 146-object binary baseline becomes a 148-input source-integrated
+link: the original containing object is split into a prefix, the source-sized
+unit, and a suffix; only the source-sized unit is replaced. The first standalone
+probe and the complete reproducible checker both passed. The seven focused
+source-link tests and six original foundation tests pass. The checker also runs
+the existing exhaustive flag behavior test. Original models, matching reports,
+source bytes, and extracted binaries remain unchanged.
+
+See [rebuild foundation](REBUILD_FOUNDATION.md#first-recovered-source-replacement)
+for the command, exact ownership checks, audit outputs, and remaining scope.
+No emulator boot or gameplay test has been performed.
