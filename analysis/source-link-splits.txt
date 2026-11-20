@@ -1,4 +1,4 @@
-// First recovered-source unit; remaining regions stay binary-derived.
+// Section layout template. Unit ranges come from source-link-manifest.json.
 Sections:
 	.init       type:code align:4
 	extab       type:rodata align:32
@@ -13,6 +13,3 @@ Sections:
 	.sbss       type:bss align:8
 	.sdata2     type:rodata align:32
 	.sbss2      type:bss align:32
-
-recovered/application_flag.c:
-	.text       start:0x8020F9C8 end:0x8020F9D4

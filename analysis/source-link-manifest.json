@@ -1,0 +1,84 @@
+{
+  "revision": "GJUE78 rev 0",
+  "dol_sha256": "49faf28a7d2e25422c145754ef41b0c8a8dfcd83e688db1c39ecf21f6e34b706",
+  "replacements": [
+    {
+      "id": "application_flag",
+      "unit": "recovered/application_flag.c",
+      "address": "0x8020F9C8",
+      "size": 12,
+      "symbol": "fn_8020F9C8",
+      "source": "src/recovered/application_flag.c",
+      "language": "c",
+      "defines": {
+        "tak_application_request_stop": "fn_8020F9C8"
+      },
+      "relocations": [],
+      "behavior_test": "tests/application_flag.c"
+    },
+    {
+      "id": "level_name",
+      "unit": "matching/level_name.cpp",
+      "address": "0x801042FC",
+      "size": 28,
+      "symbol": "fn_801042FC",
+      "source": "src/matching/routines.cpp",
+      "language": "c++",
+      "defines": {
+        "TAK_FN": "0x801042FC"
+      },
+      "relocations": [
+        {
+          "offset": 6,
+          "type": 6,
+          "symbol": "lbl_802CD918",
+          "target": "0x802CD918",
+          "addend": 0
+        },
+        {
+          "offset": 10,
+          "type": 4,
+          "symbol": "lbl_802CD918",
+          "target": "0x802CD918",
+          "addend": 0
+        }
+      ]
+    },
+    {
+      "id": "application_iteration",
+      "unit": "matching/application_iteration.cpp",
+      "address": "0x80213584",
+      "size": 124,
+      "symbol": "fn_80213584",
+      "source": "src/matching/routines.cpp",
+      "language": "c++",
+      "defines": {
+        "TAK_FN": "0x80213584"
+      },
+      "relocations": [
+        {
+          "offset": 44,
+          "type": 10,
+          "symbol": "fn_80283F7C",
+          "target": "0x80283F7C",
+          "addend": 0
+        },
+        {
+          "offset": 48,
+          "type": 109,
+          "symbol": "lbl_803312F8",
+          "target": "0x803312F8",
+          "addend": 0
+        },
+        {
+          "offset": 80,
+          "type": 10,
+          "symbol": "fn_8020F9C8",
+          "target": "0x8020F9C8",
+          "addend": 0
+        }
+      ],
+      "cpp_exceptions": false
+    }
+  ]
+}

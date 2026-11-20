@@ -552,3 +552,65 @@ source bytes, and extracted binaries remain unchanged.
 See [rebuild foundation](REBUILD_FOUNDATION.md#first-recovered-source-replacement)
 for the command, exact ownership checks, audit outputs, and remaining scope.
 No emulator boot or gameplay test has been performed.
+
+## Manifest-driven second source replacement: global relocations
+
+The source-integrated build now retains the stop setter and adds the already
+matched level-name lookup at `0x801042FC` (28 bytes). The default manifest links
+**two compiled source functions / 40 original code bytes** with **148 binary-derived
+fallback objects**. All **3,113,248 DOL bytes remain equal** to the original.
+No new individual match is counted: both functions were already included in
+the 1,152-match / 13,848-byte survey.
+
+`analysis/source-link-manifest.json` supplies source/unit identity, exact code
+range, language, defines and expected relocation records. The checker derives
+split ranges from this manifest, rejects overlaps/duplicates and unsupported
+inputs, and substitutes every manifest object exactly once in DTK's ordered
+unit list. The section template no longer duplicates function coordinates.
+
+The lookup selects the existing C++ target-layout candidate in
+`src/matching/routines.cpp` using `TAK_FN=0x801042FC`. The stop setter retains its
+unchanged recovered C body. The lookup has two zero-addend relocations to
+`lbl_802CD918`: HA at function offset 6 and LO at offset 10. The global table
+remains binary-derived in `auto_07_802ADBA0_data.o`; its single provider and
+`0x802CD918` map placement are checked. The compiled function's full relocated
+code is compared, then the real executable linker independently resolves the
+same external global, and the full output DOL is compared again.
+
+The checker requires sole source ownership and original placement/size for both
+functions, excludes both extracted target objects, verifies the exact relocation
+contracts, and audits the manifest, source, tool and all actual input hashes.
+Twelve source-link tests, six DOL layout/comparison tests, and eight PowerPC
+relocation tests pass. Two complete two-source builds passed. No emulator or
+gameplay test is claimed. See [rebuild foundation](REBUILD_FOUNDATION.md#manifest-driven-source-link)
+for reproduction and the remaining direct-call milestone.
+
+## Third source replacement: compiled application iteration calls compiled setter
+
+The default source-link manifest now adds `fn_80213584`, the already matched
+124-byte application iteration, while retaining the setter and level-name lookup.
+The executable contains **three source functions / 164 original code bytes**
+and **149 binary-derived fallback objects**. All **3,113,248 DOL bytes compare
+exactly** to the original. Isolated function-matching totals remain unchanged.
+
+The new source has three required relocation records: REL24 at offset 44 to
+binary-derived `fn_80283F7C`; EMB_SDA21 at offset 48 to binary-derived
+`lbl_803312F8`; and REL24 at offset 80 to source-owned `fn_8020F9C8`.
+The checker verifies each provider and original map address. In particular,
+the stop target is owned solely by `compiled_application_flag.o`, so this is
+now a compiled-source-to-compiled-source call within the full executable link.
+
+The first link with default C++ exception settings failed the full DOL/layout
+comparison despite exact instruction bytes. CodeWarrior emitted additional
+unwind and exception-index records. The explicit per-unit manifest option
+`cpp_exceptions: false` removes those records without changing any of the 124
+code bytes or relocation records. No post-link patching or masked
+comparison is used. This illustrates why isolated code matching does not
+establish complete object or executable compatibility.
+
+Fifteen source-link tests, six DOL layout/comparison tests, and eight relocation
+tests pass, along with the setter's exhaustive host behavior check. The
+corrected full executable link passes. Source types and larger subsystem
+semantics remain provisional; emulator execution is still untested. Reproduce
+with `python3 tools/check_source_link.py`; see
+[rebuild foundation](REBUILD_FOUNDATION.md#direct-call-and-small-data-integration).

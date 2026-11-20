@@ -2,7 +2,7 @@
 
 An early reverse-engineering workspace for **Tak and the Power of Juju (USA)** on GameCube, disc ID **GJUE78**, revision 0. Includes analysis tools, research notes, 7,160 indexed routine models (including exact-matched small routines, generated integer C, compositional caller bodies with opaque callees, and finite-domain scalar register transfers), two partial routine models, and a portable world-record reader in C.
 
-**This is not a completed decompilation or a native source port.** An incremental build now links one recovered C function with binary-derived fallbacks and reproduces the entire original DOL exactly. The recovered C files are research models; target-layout C and candidates now establish 1,152 exact function-code matches, and the 12-byte stop setter is integrated into that executable link. Tak boot, gameplay, audio, performance, and saves have not yet been verified in this workspace.
+**This is not a completed decompilation or a native source port.** An incremental build now links three recovered C/C++ functions with binary-derived fallbacks and reproduces the entire original DOL exactly. The recovered C files are research models; target-layout C and candidates now establish 1,152 exact function-code matches, and the stop setter, level-name lookup, and application iteration are integrated into that executable link. Tak boot, gameplay, audio, performance, and saves have not yet been verified in this workspace.
 
 No game image, extracted executable, game assets, or generated disassembly is included. Supply your own legally obtained copy of the game. Keep game files local; the ignore rules exclude disc images, extracted binaries, saves, and build outputs.
 
@@ -15,7 +15,7 @@ Snapshot: **November 20, 2026**, GJUE78 revision 0. These measure separate stage
 | Indexed functions compiled and verified as matching | 1,152 / 9,667 indexed function regions | **11.917%** | 3,000 of 7,160 models surveyed: 350 survey matches plus 802 exact-matched small routines, including empty methods and constant stubs. Complete code and relocations compared; source integration is counted separately. |
 | Original code bytes verified as matching | 13,848 / 2,747,776 DOL text-section bytes | **0.504%** | Complete instruction bytes of 1,152 functions, including resolved call/global operands. No masking or assembly substitution. |
 | Original binary-derived object relink | 146 / 146 DTK split objects | **100% of this baseline** | Full 3,113,248-byte DOL equality after real linking and ELF-to-DOL conversion. Zero recovered-source replacements; separate from function-code matching. |
-| Recovered source in the full executable link | 1 function / 12 original code bytes | — | The compiled stop setter replaces its extracted unit; 147 binary-derived fallback objects remain. Complete 3,113,248-byte DOL equality, with source ownership and placement verified. |
+| Recovered source in the full executable link | 3 functions / 164 original code bytes | — | Stop setter, level-name lookup, and application iteration replace their extracted copies; 149 binary-derived fallback objects remain. Complete 3,113,248-byte DOL equality, with source ownership and placement verified. |
 | Indexed routine models in C/C++ | 7,160 / 9,667 indexed function regions | **74.066%** | Complete modeled bodies in twenty source files, including game and SDK/runtime code. The latest 1,160 include 50 integer-context models and 1,110 finite-domain scalar PS0 transfer projections. Real callees, original ABI, PS1 and FPSCR remain unresolved. Another 2,507 indexed regions are explicitly unresolved. Two additional C files contain partial DBU/world-volume models and an offline record reader, excluded from this count. Callbacks and host layouts may replace original mechanisms. |
 | Original code bytes covered by those models | 1,158,944 / 2,747,776 DOL text-section bytes | **42.178%** | Indexed caller/routine bytes represented by the 7,160 models; excludes partial DBU/world-volume models, the offline reader, and generated C/object size. This is semantic coverage; verified matching bytes are measured separately. |
 | Extracted resource files inventoried | 1,163 / 1,163 locally extracted files | **100%** | File paths, sizes, and hashes recorded for the local `files/data_gcn` extraction; not proof of complete disc coverage. |
@@ -59,7 +59,7 @@ cd JujuDecomp
 
 ## Testing with your own emulator
 
-Use your own GameCube emulator and legally obtained game image to test the original game's behavior. This repository does not include an emulator or a runnable game build; most recovered C files remain research models. Only the stop setter is integrated into the byte-identical source/binary link; emulator boot and gameplay have not been tested here.
+Use your own GameCube emulator and legally obtained game image to test the original game's behavior. This repository does not include an emulator or a runnable game build; most recovered C files remain research models. The stop setter, level-name lookup, and application iteration are integrated into the byte-identical source/binary link; emulator boot and gameplay have not been tested here.
 
 ## Reproduce the executable analysis
 
@@ -99,30 +99,43 @@ Outputs, commands, input/tool hashes, and section hashes remain under ignored
 `build/rebuild-foundation/`.
 
 This original-object baseline contains zero recovered-source replacements.
-The separate source-integrated check below now replaces the matched stop setter
-with compiled source while preserving full-DOL equality. See [rebuild foundation](analysis/REBUILD_FOUNDATION.md)
+The separate manifest-driven check below now replaces the matched stop setter
+plus the level-name lookup and application iteration with compiled source while preserving full-DOL equality. See [rebuild foundation](analysis/REBUILD_FOUNDATION.md)
 for the verified layout, commands, and remaining integration work.
 
-## Link the first recovered C unit
+## Link recovered source units
 
 ```sh
 python3 tools/check_source_link.py
 python3 -m unittest discover -s tests -p test_source_link.py
 ```
 
-This checker generates an isolated split from `analysis/source-link-splits.txt`,
-compiles the unchanged `src/recovered/application_flag.c`, and substitutes its
-object for the extracted 12-byte unit at `0x8020F9C8`. The preprocessor maps the
-descriptive function name to the original linker symbol. The link contains one
-source object and 147 binary-derived fallback objects; the original extracted
-setter object is excluded. Original analysis splits and binaries are unchanged.
+`analysis/source-link-manifest.json` selects three already matched replacements:
+the 12-byte stop setter at `0x8020F9C8`, the 28-byte level-name lookup at
+`0x801042FC`, and the 124-byte application iteration at `0x80213584`. Each entry
+specifies its source, language, defines, exact range, and expected relocations.
+The checker derives unit boundaries from the manifest and the section-layout
+header in `analysis/source-link-splits.txt`. Use `--manifest PATH` for a different
+explicit source set.
 
-The checker verifies exhaustive host behavior, function bytes, sole source
-ownership of the target symbol, original address/size in the linker map, and
-complete DOL equality. Logs and a hashed audit report are written to ignored
-`build/source-link/`. This is the first source-integrated executable baseline,
-not a native port or a complete source reconstruction. See
-[rebuild foundation](analysis/REBUILD_FOUNDATION.md#first-recovered-source-replacement).
+The application iteration calls the compiled stop setter, calls a binary-derived
+subsystem, and reads the small-data global `lbl_803312F8`. The lookup retains
+its two global-table relocations. All targets' ownership and original map
+addresses are checked before requiring complete equality of the 3,113,248-byte DOL.
+
+The application-iteration entry explicitly sets `cpp_exceptions: false`. The
+compiler's default emitted extra unwind tables even though its instruction
+bytes matched; the full executable check rejected that layout. Disabling
+exceptions for this unit preserves the exact instructions and relocations and
+removes the unwanted metadata. This setting is local to the unit.
+
+The current link has three source objects / 164 original code bytes and
+149 binary-derived fallbacks. All extracted source-target copies are excluded.
+The stop setter's exhaustive host behavior check also runs. Logs, generated
+splits, linker outputs, and a hashed audit report remain in ignored
+`build/source-link/`. Source layouts and types remain provisional; this is an
+incremental source/binary build with no emulator or gameplay validation. See
+[rebuild foundation](analysis/REBUILD_FOUNDATION.md#manifest-driven-source-link).
 
 ## Extract local assets
 

@@ -134,6 +134,6 @@ excluded candidates separately from successful final verification summaries.
 Of 7,160 models, 3,000 have compiler-survey results and 4,160 have not been
 surveyed for matching. An original-object full-DOL relink is separately
 verified in REBUILD_FOUNDATION.md. A second full-DOL-equal link now includes
-one recovered 12-byte setter with binary-derived fallbacks. No playable native
+three recovered functions / 164 original code bytes with binary-derived fallbacks. No playable native
 port or gameplay verification is claimed. The 2,507 unresolved regions need substantive recovery work; they are
 not counted as complete.
